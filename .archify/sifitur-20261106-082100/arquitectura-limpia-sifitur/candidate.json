@@ -2,198 +2,698 @@
   "schema_version": 1,
   "diagram_type": "architecture",
   "meta": {
-    "title": "SIFITUR · Clean Architecture",
+    "title": "SIFITUR · Clean Architecture del módulo Inspecciones",
     "locale": "es",
     "output": ".archify/sifitur-20261106-082100/arquitectura-limpia-sifitur/arquitectura-limpia-sifitur.html",
     "quality_profile": "showcase",
     "repository": {
       "url": "https://github.com/PoolDYer/entregable02-jeanpoolkennerpalominomavila.git",
       "revision": "ac5bd7eb01bceee1c9230e675846fd9d1d4f79db"
+    },
+    "subtitle": "Presentación, casos de uso, entidades, puertos, adaptadores y composición · API y trabajador",
+    "legend": {
+      "mode": "auto",
+      "entries": {
+        "backend": {
+          "label": "Entradas, núcleo y composición"
+        },
+        "cloud": {
+          "label": "Adaptadores de infraestructura"
+        },
+        "security": {
+          "label": "Invariantes del dominio"
+        },
+        "external": {
+          "label": "Cliente / recursos externos"
+        }
+      }
     }
   },
   "components": [
     {
-      "id": "rest",
-      "type": "frontend",
-      "label": "Presentación REST",
-      "sublabel": "DTO y traducción HTTP",
+      "id": "client",
+      "type": "external",
+      "label": "Inspector / Flutter",
+      "sublabel": "SQLite cifrada · operación estable",
       "pos": [
         40,
         40
       ],
       "size": [
-        200,
-        72
+        210,
+        82
       ],
+      "tag": "Captura offline",
       "sources": [
         {
-          "path": "docs/02-arquitectura-software/enfoque-arquitectonico.md"
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
         }
       ]
     },
     {
-      "id": "app",
+      "id": "controller",
       "type": "backend",
-      "label": "Aplicación",
-      "sublabel": "Registrar / ProcesarActa",
+      "label": "InspectionController",
+      "sublabel": "DTO, actor validado y errores HTTP",
       "pos": [
-        420,
-        40
+        40,
+        260
       ],
       "size": [
         210,
-        72
+        90
       ],
+      "tag": "presentacion/",
       "sources": [
         {
-          "path": "docs/02-arquitectura-software/enfoque-arquitectonico.md"
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
         }
       ]
     },
     {
-      "id": "domain",
+      "id": "worker_entry",
       "type": "backend",
-      "label": "Dominio",
-      "sublabel": "Inspeccion, Evidencia y puertos",
+      "label": "Entrada del trabajador",
+      "sublabel": "Consume tarea de emisión durable",
       "pos": [
-        800,
-        40
+        40,
+        540
       ],
       "size": [
-        230,
-        72
+        210,
+        90
       ],
+      "tag": "RabbitMQ / reintentos",
       "sources": [
         {
-          "path": "docs/02-arquitectura-software/enfoque-arquitectonico.md"
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
         }
       ]
     },
     {
-      "id": "infra",
-      "type": "cloud",
-      "label": "Infraestructura",
-      "sublabel": "SQL, S3, PDF y correo",
+      "id": "notices",
+      "type": "backend",
+      "label": "Consumidor de avisos",
+      "sublabel": "Evento y destinatario deduplicados",
       "pos": [
-        800,
-        270
+        40,
+        980
       ],
       "size": [
-        230,
-        72
+        210,
+        90
       ],
+      "tag": "Otro consumidor",
       "sources": [
         {
-          "path": "docs/02-arquitectura-software/enfoque-arquitectonico.md"
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    },
+    {
+      "id": "register",
+      "type": "backend",
+      "label": "RegistrarInspeccionCasoUso",
+      "sublabel": "Autoriza, deduplica y confirma T1",
+      "pos": [
+        330,
+        260
+      ],
+      "size": [
+        220,
+        90
+      ],
+      "tag": "aplicacion/ · API",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    },
+    {
+      "id": "emit",
+      "type": "backend",
+      "label": "ProcesarActaCasoUso",
+      "sublabel": "Genera, custodia y confirma T2",
+      "pos": [
+        620,
+        260
+      ],
+      "size": [
+        220,
+        90
+      ],
+      "tag": "aplicacion/ · trabajador",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    },
+    {
+      "id": "inspection",
+      "type": "backend",
+      "label": "Inspeccion",
+      "sublabel": "Operación, ficha, evidencias y firma",
+      "pos": [
+        330,
+        500
+      ],
+      "size": [
+        220,
+        88
+      ],
+      "tag": "crear() · huella()",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    },
+    {
+      "id": "evidence",
+      "type": "backend",
+      "label": "Evidencia",
+      "sublabel": "Origen cámara, GPS y SHA-256",
+      "pos": [
+        330,
+        700
+      ],
+      "size": [
+        220,
+        88
+      ],
+      "tag": "Original verificable",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    },
+    {
+      "id": "acta",
+      "type": "backend",
+      "label": "Acta",
+      "sublabel": "Referencia PDF, hash y estado",
+      "pos": [
+        330,
+        900
+      ],
+      "size": [
+        220,
+        88
+      ],
+      "tag": "EMITIDA / ANULADA",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    },
+    {
+      "id": "rules",
+      "type": "security",
+      "label": "Invariantes del dominio",
+      "sublabel": "Sin NestJS, ORM, SDK ni red",
+      "pos": [
+        330,
+        1100
+      ],
+      "size": [
+        220,
+        88
+      ],
+      "tag": "RN-01 a RN-03",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    },
+    {
+      "id": "repo",
+      "type": "backend",
+      "label": "RepositorioInspecciones",
+      "sublabel": "buscarOperacion / registrarAtomico",
+      "pos": [
+        620,
+        500
+      ],
+      "size": [
+        220,
+        88
+      ],
+      "tag": "«interface» · confirmarActa",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    },
+    {
+      "id": "store",
+      "type": "backend",
+      "label": "AlmacenEvidencias",
+      "sublabel": "verificar / guardarActa",
+      "pos": [
+        620,
+        700
+      ],
+      "size": [
+        220,
+        88
+      ],
+      "tag": "«interface» · objetos y hash",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    },
+    {
+      "id": "pdf_port",
+      "type": "backend",
+      "label": "GeneradorActas",
+      "sublabel": "generar(inspeccion): Uint8Array",
+      "pos": [
+        620,
+        900
+      ],
+      "size": [
+        220,
+        88
+      ],
+      "tag": "«interface» · bytes PDF",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    },
+    {
+      "id": "notice_port",
+      "type": "backend",
+      "label": "Notificador",
+      "sublabel": "enviar(tarea): ResultadoEnvio",
+      "pos": [
+        620,
+        1100
+      ],
+      "size": [
+        220,
+        88
+      ],
+      "tag": "«interface» · aviso institucional",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    },
+    {
+      "id": "pg",
+      "type": "cloud",
+      "label": "RepositorioInspeccionesPostgres",
+      "sublabel": "PostgreSQL: datos + auditoría + outbox",
+      "pos": [
+        930,
+        500
+      ],
+      "size": [
+        240,
+        88
+      ],
+      "tag": "infraestructura/ · T1 / T2",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "type": "cloud",
+      "label": "AlmacenEvidenciasS3",
+      "sublabel": "S3: originales, firma y acta PDF",
+      "pos": [
+        930,
+        700
+      ],
+      "size": [
+        240,
+        88
+      ],
+      "tag": "infraestructura/ · SHA-256",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    },
+    {
+      "id": "pdf_adapter",
+      "type": "cloud",
+      "label": "GeneradorActasPdf",
+      "sublabel": "Biblioteca PDF; produce bytes",
+      "pos": [
+        930,
+        900
+      ],
+      "size": [
+        240,
+        88
+      ],
+      "tag": "infraestructura/",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    },
+    {
+      "id": "mail",
+      "type": "cloud",
+      "label": "NotificadorInstitucional",
+      "sublabel": "Pasarela SMS / correo; resultado",
+      "pos": [
+        930,
+        1100
+      ],
+      "size": [
+        240,
+        88
+      ],
+      "tag": "infraestructura/",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
         }
       ]
     },
     {
       "id": "composition",
       "type": "backend",
-      "label": "InspeccionesModule",
-      "sublabel": "Raíz de composición NestJS",
+      "label": "InspeccionesModule · raíz de composición",
+      "sublabel": "Conecta contratos y adaptadores e inyecta casos de uso",
       "pos": [
-        420,
-        270
+        330,
+        1370
       ],
       "size": [
-        230,
-        72
+        510,
+        90
       ],
+      "tag": "inspecciones.module.ts · NestJS",
       "sources": [
         {
-          "path": "docs/02-arquitectura-software/enfoque-arquitectonico.md"
+          "path": "docs/03-diseño-de-software/diseño-interno/principios-de-diseño.md"
         }
       ]
     },
     {
       "id": "resources",
-      "type": "database",
-      "label": "Recursos externos",
-      "sublabel": "PostgreSQL, S3 y pasarela",
+      "type": "external",
+      "label": "Servicios / bibliotecas",
+      "sublabel": "PostgreSQL · S3 · PDF · SMS/correo",
       "pos": [
-        800,
-        500
+        930,
+        1370
       ],
       "size": [
-        230,
-        72
+        240,
+        90
       ],
+      "tag": "Fuera del núcleo",
       "sources": [
         {
-          "path": "docs/02-arquitectura-software/enfoque-arquitectonico.md"
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
         }
       ]
     }
   ],
   "connections": [
     {
-      "id": "rest-app",
-      "from": "rest",
-      "to": "app",
+      "id": "client-controller",
+      "from": "client",
+      "to": "controller",
+      "label": "HTTPS / gateway",
+      "variant": "default"
+    },
+    {
+      "id": "controller-register",
+      "from": "controller",
+      "to": "register",
       "label": "Invoca",
+      "variant": "emphasis"
+    },
+    {
+      "id": "worker_entry-emit",
+      "from": "worker_entry",
+      "to": "emit",
+      "label": "Invoca",
+      "variant": "emphasis"
+    },
+    {
+      "id": "register-inspection",
+      "from": "register",
+      "to": "inspection",
+      "label": "Crea / valida",
       "variant": "default"
     },
     {
-      "id": "app-domain",
-      "from": "app",
-      "to": "domain",
-      "label": "Importa",
+      "id": "register-repo",
+      "from": "register",
+      "to": "repo",
+      "label": "Usa puerto",
       "variant": "default"
     },
     {
-      "id": "infra-domain",
-      "from": "infra",
-      "to": "domain",
-      "label": "Implementa",
+      "id": "register-store",
+      "from": "register",
+      "to": "store",
+      "label": "Verifica",
       "variant": "default"
     },
     {
-      "id": "composition-app",
+      "id": "emit-repo",
+      "from": "emit",
+      "to": "repo",
+      "label": "Confirma T2",
+      "variant": "default"
+    },
+    {
+      "id": "emit-store",
+      "from": "emit",
+      "to": "store",
+      "label": "Custodia PDF",
+      "variant": "default"
+    },
+    {
+      "id": "emit-pdf_port",
+      "from": "emit",
+      "to": "pdf_port",
+      "label": "Genera",
+      "variant": "default"
+    },
+    {
+      "id": "notices-notice_port",
+      "from": "notices",
+      "to": "notice_port",
+      "label": "Solicita envío",
+      "variant": "emphasis"
+    },
+    {
+      "id": "inspection-evidence",
+      "from": "inspection",
+      "to": "evidence",
+      "label": "1..*",
+      "variant": "default"
+    },
+    {
+      "id": "inspection-acta",
+      "from": "inspection",
+      "to": "acta",
+      "label": "0..1",
+      "variant": "default"
+    },
+    {
+      "id": "pg-repo",
+      "from": "pg",
+      "to": "repo",
+      "label": "Realiza",
+      "variant": "dashed"
+    },
+    {
+      "id": "s3-store",
+      "from": "s3",
+      "to": "store",
+      "label": "Realiza",
+      "variant": "dashed"
+    },
+    {
+      "id": "pdf_adapter-pdf_port",
+      "from": "pdf_adapter",
+      "to": "pdf_port",
+      "label": "Realiza",
+      "variant": "dashed"
+    },
+    {
+      "id": "mail-notice_port",
+      "from": "mail",
+      "to": "notice_port",
+      "label": "Realiza",
+      "variant": "dashed"
+    },
+    {
+      "id": "composition-register",
       "from": "composition",
-      "to": "app",
+      "to": "register",
       "label": "Inyecta",
       "variant": "default"
     },
     {
-      "id": "composition-infra",
+      "id": "composition-emit",
       "from": "composition",
-      "to": "infra",
-      "label": "Conecta",
+      "to": "emit",
+      "label": "Inyecta",
       "variant": "default"
     },
     {
-      "id": "infra-resources",
-      "from": "infra",
+      "id": "composition-pg",
+      "from": "composition",
+      "to": "pg",
+      "label": "Registra",
+      "variant": "default"
+    },
+    {
+      "id": "composition-s3",
+      "from": "composition",
+      "to": "s3",
+      "label": "Registra",
+      "variant": "default"
+    },
+    {
+      "id": "composition-pdf_adapter",
+      "from": "composition",
+      "to": "pdf_adapter",
+      "label": "Registra",
+      "variant": "default"
+    },
+    {
+      "id": "composition-mail",
+      "from": "composition",
+      "to": "mail",
+      "label": "Registra",
+      "variant": "default"
+    },
+    {
+      "id": "pg-resources",
+      "from": "pg",
       "to": "resources",
-      "label": "SDK / SQL",
+      "label": "SQL/TLS",
+      "variant": "default"
+    },
+    {
+      "id": "s3-resources",
+      "from": "s3",
+      "to": "resources",
+      "label": "HTTPS/S3",
+      "variant": "default"
+    },
+    {
+      "id": "pdf_adapter-resources",
+      "from": "pdf_adapter",
+      "to": "resources",
+      "label": "Biblioteca",
+      "variant": "default"
+    },
+    {
+      "id": "mail-resources",
+      "from": "mail",
+      "to": "resources",
+      "label": "HTTPS",
       "variant": "default"
     }
   ],
   "cards": [
     {
       "dot": "cyan",
-      "title": "Regla de dependencia",
+      "title": "Lectura de las flechas",
       "items": [
-        "Dominio y aplicación no importan framework, ORM ni SDK.",
-        "El flujo de ejecución usa adaptadores detrás de los contratos internos."
+        "Invoca / usa: colaboración en ejecución; la aplicación conoce el contrato, no el adaptador.",
+        "Realiza: implementación del puerto por infraestructura; dependencia de código hacia el núcleo."
       ]
     },
     {
-      "dot": "cyan",
-      "title": "Ejecución",
+      "dot": "emerald",
+      "title": "Reglas de dependencia",
       "items": [
-        "RegistrarInspeccionCasoUso se ejecuta en API; ProcesarActaCasoUso en el trabajador.",
-        "Presentación y clientes móviles no deciden por sí solos la autorización institucional."
+        "Dominio depende de sí mismo y biblioteca estándar; aplicación depende de dominio.",
+        "Presentación transforma HTTP/DTO; infraestructura implementa contratos; composición conoce implementaciones."
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Recepción y emisión separadas",
+      "items": [
+        "API: T1 confirma inspección + auditoría + outbox después de verificar objetos. Reenvío idéntico: 200; otro contenido: 409.",
+        "Trabajador: T2 confirma PDF persistido y hash; después se programa el aviso. Error de correo no revierte EMITIDA."
       ]
     },
     {
       "dot": "slate",
-      "title": "Alcance del diseño",
+      "title": "Alcance",
       "items": [
-        "Arquitectura propuesta; implementación y validación pendientes."
+        "Diseño previsto del módulo Inspecciones; no representa una aplicación ya implementada.",
+        "API y trabajador son procesos distintos que comparten el diseño del módulo. SQLite pertenece al dispositivo Flutter."
       ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "PRESENTACIÓN / ENTRADAS",
+      "wraps": [
+        "controller",
+        "worker_entry",
+        "notices"
+      ],
+      "pad": 22
+    },
+    {
+      "kind": "region",
+      "label": "APLICACIÓN · casos de uso",
+      "wraps": [
+        "register",
+        "emit"
+      ],
+      "pad": 22
+    },
+    {
+      "kind": "region",
+      "label": "DOMINIO · entidades, reglas y puertos",
+      "wraps": [
+        "inspection",
+        "evidence",
+        "acta",
+        "rules",
+        "repo",
+        "store",
+        "pdf_port",
+        "notice_port"
+      ],
+      "pad": 22
+    },
+    {
+      "kind": "region",
+      "label": "INFRAESTRUCTURA · adaptadores",
+      "wraps": [
+        "pg",
+        "s3",
+        "pdf_adapter",
+        "mail"
+      ],
+      "pad": 22
     }
   ]
 }

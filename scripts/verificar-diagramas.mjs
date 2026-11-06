@@ -14,6 +14,12 @@ const errors=[];
 const rules=[];
 function check(rule,condition){rules.push({rule,result:condition?'conforme':'error'});if(!condition)errors.push(rule);}
 const specs=new Map(manifest.map(d=>[d.slug,JSON.parse(read(d.input))]));
+const clean=specs.get('arquitectura-limpia-sifitur');
+check('Enfoque ampliado: cuatro capas con elementos concretos',clean.boundaries.length===4&&clean.components.length===20);
+check('Enfoque ampliado: cuatro puertos y cuatro realizaciones', ['repo','store','pdf_port','notice_port'].every(id=>clean.connections.some(r=>r.to===id&&r.label==='Realiza'&&r.variant==='dashed')));
+check('Enfoque ampliado: casos de uso sin dependencia de adaptadores concretos',clean.connections.filter(r=>['register','emit'].includes(r.from)).every(r=>['inspection','repo','store','pdf_port'].includes(r.to)));
+check('Enfoque ampliado: invariantes del dominio limitadas a RN-01 a RN-03',clean.components.find(c=>c.id==='rules').tag==='RN-01 a RN-03');
+check('Enfoque ampliado: raíz de composición y separación API/trabajador',clean.components.some(c=>c.id==='composition'&&c.label.includes('InspeccionesModule'))&&clean.components.find(c=>c.id==='register').tag.includes('API')&&clean.components.find(c=>c.id==='emit').tag.includes('trabajador'));
 const native=JSON.parse(read('diagrams/structurizr/modelo/workspace.json'));
 const system=native.model.softwareSystems.find(s=>s.name==='SIFITUR Huamanga');
 const elements=[...(native.model.people??[]),...native.model.softwareSystems,...system.containers,...system.containers.flatMap(c=>c.components??[])];

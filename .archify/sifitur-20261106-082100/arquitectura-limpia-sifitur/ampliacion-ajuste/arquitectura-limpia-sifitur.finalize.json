@@ -1,0 +1,961 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "finalize",
+  "status": "fail",
+  "type": "architecture",
+  "quality": "showcase",
+  "startedAt": "2026-11-06T19:01:44.486Z",
+  "specification": {
+    "path": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-limpia-sifitur\\candidate.json",
+    "sha256": "4ed8f714bc915b8760db5b3bdd5e98d0e7f0cef8380288501399ba598f626ce0",
+    "bytes": 15288
+  },
+  "artifact": {
+    "path": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-limpia-sifitur\\arquitectura-limpia-sifitur.html",
+    "sha256": "2e89a924eec00c8c3d5a9832be8a40b7bb8a9e288d63753690a0fa65a5b7e8d0",
+    "bytes": 897629
+  },
+  "stages": {
+    "validate": {
+      "status": "fail",
+      "exitCode": 1,
+      "durationMs": null,
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Users\\TRANP_~1\\AppData\\Local\\Temp\\sifitur-diagram-tools\\archify\\archify\\bin\\archify.mjs",
+        "deliver",
+        "architecture",
+        "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-limpia-sifitur\\candidate.json",
+        "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-limpia-sifitur\\arquitectura-limpia-sifitur.html",
+        "--quality",
+        "showcase",
+        "--repo-root",
+        "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila",
+        "--json"
+      ],
+      "receipt": {
+        "schemaVersion": 1,
+        "ok": false,
+        "command": "deliver",
+        "receiptId": "0b65ea6c-0874-46e3-b13a-f16a55d6f0c9",
+        "stage": "check",
+        "type": "architecture",
+        "input": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-limpia-sifitur\\candidate.json",
+        "output": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-limpia-sifitur\\arquitectura-limpia-sifitur.html",
+        "error": "Final artifact check failed; the previous artifact was preserved.",
+        "diagnostics": [
+          {
+            "code": "composition/desktop-readability",
+            "severity": "error",
+            "message": "Final artifact failed composition/desktop-readability.",
+            "subject": {
+              "check": "composition"
+            },
+            "evidence": {
+              "owner": {
+                "kind": "edge",
+                "id": "client-controller",
+                "from": "client",
+                "to": "controller"
+              },
+              "viewportWidth": 1440,
+              "viewportHeight": 900,
+              "availableDiagramWidth": 930,
+              "budgetBasis": "legacy-930",
+              "readerContract": "declared-wide-v1",
+              "requestedTargetPx": 7.5,
+              "requestedTargetMet": false,
+              "budgetLimit": "legacy",
+              "viewBoxWidth": 1251,
+              "scale": 0.7434052757793765,
+              "text": "HTTPS / REST",
+              "detail": "edge",
+              "sourceFontPx": 8,
+              "projectedFontPx": 5.947242206235012,
+              "minimumProjectedFontPx": 6
+            },
+            "supportedFixes": [
+              "Preserve the semantic text and any supplied coordinates, routes, sides, channels, and labels. Compactly reflow automatic spacing and empty corridors so the complete viewBox width is at most 1240px (current 1251px; 8px source text at 930px desktop budget). If supplied geometry fixes that width, use a renderer-supported semantic text-size setting or renderer-level fix instead. Position-only label controls cannot repair its projection."
+            ]
+          }
+        ],
+        "provenance": "failed",
+        "checker": {
+          "ok": false,
+          "file": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-limpia-sifitur\\arquitectura-limpia-sifitur.html",
+          "artifact": {
+            "sha256": "2900c1861b790e5e9eabce9ed4b6f8f267265d0289486fa1ac06a8f16aacdc9b",
+            "bytes": 897080
+          },
+          "checks": [
+            {
+              "name": "single_svg",
+              "ok": true,
+              "details": [
+                "found 1 <svg> block(s)"
+              ]
+            },
+            {
+              "name": "finite_svg",
+              "ok": true,
+              "details": []
+            },
+            {
+              "name": "orthogonal_arrows",
+              "ok": true,
+              "details": []
+            },
+            {
+              "name": "label_route_clearance",
+              "ok": true,
+              "details": []
+            },
+            {
+              "name": "relationship_crossings",
+              "ok": true,
+              "details": []
+            },
+            {
+              "name": "relationship_corridors",
+              "ok": true,
+              "details": []
+            },
+            {
+              "name": "container_border_runs",
+              "ok": true,
+              "details": []
+            },
+            {
+              "name": "route_rhythm",
+              "ok": true,
+              "details": []
+            },
+            {
+              "name": "legend_clearance",
+              "ok": true,
+              "details": []
+            }
+          ],
+          "composition": {
+            "schemaVersion": 1,
+            "profile": "showcase",
+            "status": "fail",
+            "summary": {
+              "errors": 1,
+              "warnings": 0
+            },
+            "metrics": {
+              "properCrossings": 0,
+              "resolvedCrossovers": 22,
+              "ambiguousCorridors": 0,
+              "arrowheadCollisions": 0,
+              "containerBorderRuns": 0,
+              "labelRouteClearanceIssues": 0,
+              "labelCanvasOverflowIssues": 0,
+              "minLabelRouteClearance": 5.5,
+              "desktopReadabilityIssues": 1,
+              "viewportHeightIssues": 0,
+              "minProjectedNodeTextPx": 5.947242206235012,
+              "maxBends": 4,
+              "routesOverSuggestedBends": 6,
+              "maxStretch": 2.158,
+              "routesOverSuggestedStretch": 4,
+              "minSegmentPx": 24,
+              "minInteriorSegmentPx": 102,
+              "shortSegmentCount": 0,
+              "shortEndpointSegmentCount": 0,
+              "shortInteriorSegmentCount": 0,
+              "microSegmentCount": 0
+            },
+            "suggestedLimits": {
+              "bendsPerRelationship": 2,
+              "stretch": 1.35,
+              "segmentPx": 16,
+              "microSegmentPx": 8
+            },
+            "routeReview": {
+              "crossings": [
+                {
+                  "left": {
+                    "id": "client-controller",
+                    "from": "client",
+                    "to": "controller",
+                    "label": "HTTPS / REST",
+                    "collectionIndex": 0,
+                    "artifactIndex": 1
+                  },
+                  "right": {
+                    "id": "controller-register",
+                    "from": "controller",
+                    "to": "register",
+                    "label": "Invoca",
+                    "collectionIndex": 1,
+                    "artifactIndex": 2
+                  },
+                  "point": [
+                    253,
+                    305
+                  ],
+                  "sharedNode": "controller"
+                },
+                {
+                  "left": {
+                    "id": "client-controller",
+                    "from": "client",
+                    "to": "controller",
+                    "label": "HTTPS / REST",
+                    "collectionIndex": 0,
+                    "artifactIndex": 1
+                  },
+                  "right": {
+                    "id": "worker_entry-emit",
+                    "from": "worker_entry",
+                    "to": "emit",
+                    "label": "Invoca",
+                    "collectionIndex": 2,
+                    "artifactIndex": 3
+                  },
+                  "point": [
+                    253,
+                    224
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "worker_entry-emit",
+                    "from": "worker_entry",
+                    "to": "emit",
+                    "label": "Invoca",
+                    "collectionIndex": 2,
+                    "artifactIndex": 3
+                  },
+                  "right": {
+                    "id": "composition-register",
+                    "from": "composition",
+                    "to": "register",
+                    "label": "Inyecta",
+                    "collectionIndex": 16,
+                    "artifactIndex": 17
+                  },
+                  "point": [
+                    534,
+                    224
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "worker_entry-emit",
+                    "from": "worker_entry",
+                    "to": "emit",
+                    "label": "Invoca",
+                    "collectionIndex": 2,
+                    "artifactIndex": 3
+                  },
+                  "right": {
+                    "id": "composition-s3",
+                    "from": "composition",
+                    "to": "s3",
+                    "label": "Registra",
+                    "collectionIndex": 19,
+                    "artifactIndex": 20
+                  },
+                  "point": [
+                    613,
+                    224
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "worker_entry-emit",
+                    "from": "worker_entry",
+                    "to": "emit",
+                    "label": "Invoca",
+                    "collectionIndex": 2,
+                    "artifactIndex": 3
+                  },
+                  "right": {
+                    "id": "composition-pdf_adapter",
+                    "from": "composition",
+                    "to": "pdf_adapter",
+                    "label": "Registra",
+                    "collectionIndex": 20,
+                    "artifactIndex": 21
+                  },
+                  "point": [
+                    599,
+                    224
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "worker_entry-emit",
+                    "from": "worker_entry",
+                    "to": "emit",
+                    "label": "Invoca",
+                    "collectionIndex": 2,
+                    "artifactIndex": 3
+                  },
+                  "right": {
+                    "id": "composition-mail",
+                    "from": "composition",
+                    "to": "mail",
+                    "label": "Registra",
+                    "collectionIndex": 21,
+                    "artifactIndex": 22
+                  },
+                  "point": [
+                    585,
+                    224
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "register-repo",
+                    "from": "register",
+                    "to": "repo",
+                    "label": "Usa puerto",
+                    "collectionIndex": 4,
+                    "artifactIndex": 5
+                  },
+                  "right": {
+                    "id": "emit-store",
+                    "from": "emit",
+                    "to": "store",
+                    "label": "Custodia PDF",
+                    "collectionIndex": 7,
+                    "artifactIndex": 8
+                  },
+                  "point": [
+                    617,
+                    544
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "register-repo",
+                    "from": "register",
+                    "to": "repo",
+                    "label": "Usa puerto",
+                    "collectionIndex": 4,
+                    "artifactIndex": 5
+                  },
+                  "right": {
+                    "id": "emit-pdf_port",
+                    "from": "emit",
+                    "to": "pdf_port",
+                    "label": "Genera",
+                    "collectionIndex": 8,
+                    "artifactIndex": 9
+                  },
+                  "point": [
+                    596,
+                    415.9
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "register-repo",
+                    "from": "register",
+                    "to": "repo",
+                    "label": "Usa puerto",
+                    "collectionIndex": 4,
+                    "artifactIndex": 5
+                  },
+                  "right": {
+                    "id": "composition-s3",
+                    "from": "composition",
+                    "to": "s3",
+                    "label": "Registra",
+                    "collectionIndex": 19,
+                    "artifactIndex": 20
+                  },
+                  "point": [
+                    613,
+                    544
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "register-repo",
+                    "from": "register",
+                    "to": "repo",
+                    "label": "Usa puerto",
+                    "collectionIndex": 4,
+                    "artifactIndex": 5
+                  },
+                  "right": {
+                    "id": "composition-pdf_adapter",
+                    "from": "composition",
+                    "to": "pdf_adapter",
+                    "label": "Registra",
+                    "collectionIndex": 20,
+                    "artifactIndex": 21
+                  },
+                  "point": [
+                    599,
+                    542.7777777777778
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "register-repo",
+                    "from": "register",
+                    "to": "repo",
+                    "label": "Usa puerto",
+                    "collectionIndex": 4,
+                    "artifactIndex": 5
+                  },
+                  "right": {
+                    "id": "composition-mail",
+                    "from": "composition",
+                    "to": "mail",
+                    "label": "Registra",
+                    "collectionIndex": 21,
+                    "artifactIndex": 22
+                  },
+                  "point": [
+                    585,
+                    305
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "register-store",
+                    "from": "register",
+                    "to": "store",
+                    "label": "Verifica",
+                    "collectionIndex": 5,
+                    "artifactIndex": 6
+                  },
+                  "right": {
+                    "id": "emit-store",
+                    "from": "emit",
+                    "to": "store",
+                    "label": "Custodia PDF",
+                    "collectionIndex": 7,
+                    "artifactIndex": 8
+                  },
+                  "point": [
+                    617,
+                    656
+                  ],
+                  "sharedNode": "store"
+                },
+                {
+                  "left": {
+                    "id": "register-store",
+                    "from": "register",
+                    "to": "store",
+                    "label": "Verifica",
+                    "collectionIndex": 5,
+                    "artifactIndex": 6
+                  },
+                  "right": {
+                    "id": "emit-pdf_port",
+                    "from": "emit",
+                    "to": "pdf_port",
+                    "label": "Genera",
+                    "collectionIndex": 8,
+                    "artifactIndex": 9
+                  },
+                  "point": [
+                    595,
+                    655.9333333333333
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "register-store",
+                    "from": "register",
+                    "to": "store",
+                    "label": "Verifica",
+                    "collectionIndex": 5,
+                    "artifactIndex": 6
+                  },
+                  "right": {
+                    "id": "composition-s3",
+                    "from": "composition",
+                    "to": "s3",
+                    "label": "Registra",
+                    "collectionIndex": 19,
+                    "artifactIndex": 20
+                  },
+                  "point": [
+                    613,
+                    656
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "register-store",
+                    "from": "register",
+                    "to": "store",
+                    "label": "Verifica",
+                    "collectionIndex": 5,
+                    "artifactIndex": 6
+                  },
+                  "right": {
+                    "id": "composition-pdf_adapter",
+                    "from": "composition",
+                    "to": "pdf_adapter",
+                    "label": "Registra",
+                    "collectionIndex": 20,
+                    "artifactIndex": 21
+                  },
+                  "point": [
+                    599,
+                    656
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "register-store",
+                    "from": "register",
+                    "to": "store",
+                    "label": "Verifica",
+                    "collectionIndex": 5,
+                    "artifactIndex": 6
+                  },
+                  "right": {
+                    "id": "composition-mail",
+                    "from": "composition",
+                    "to": "mail",
+                    "label": "Registra",
+                    "collectionIndex": 21,
+                    "artifactIndex": 22
+                  },
+                  "point": [
+                    585,
+                    460.22222222222223
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "emit-repo",
+                    "from": "emit",
+                    "to": "repo",
+                    "label": "Confirma T2",
+                    "collectionIndex": 6,
+                    "artifactIndex": 7
+                  },
+                  "right": {
+                    "id": "emit-store",
+                    "from": "emit",
+                    "to": "store",
+                    "label": "Custodia PDF",
+                    "collectionIndex": 7,
+                    "artifactIndex": 8
+                  },
+                  "point": [
+                    730,
+                    484
+                  ],
+                  "sharedNode": "emit"
+                },
+                {
+                  "left": {
+                    "id": "emit-pdf_port",
+                    "from": "emit",
+                    "to": "pdf_port",
+                    "label": "Genera",
+                    "collectionIndex": 8,
+                    "artifactIndex": 9
+                  },
+                  "right": {
+                    "id": "composition-s3",
+                    "from": "composition",
+                    "to": "s3",
+                    "label": "Registra",
+                    "collectionIndex": 19,
+                    "artifactIndex": 20
+                  },
+                  "point": [
+                    613,
+                    412.5
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "emit-pdf_port",
+                    "from": "emit",
+                    "to": "pdf_port",
+                    "label": "Genera",
+                    "collectionIndex": 8,
+                    "artifactIndex": 9
+                  },
+                  "right": {
+                    "id": "composition-pdf_adapter",
+                    "from": "composition",
+                    "to": "pdf_adapter",
+                    "label": "Registra",
+                    "collectionIndex": 20,
+                    "artifactIndex": 21
+                  },
+                  "point": [
+                    599,
+                    413.22727272727275
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "pg-resources",
+                    "from": "pg",
+                    "to": "resources",
+                    "label": "SQL/TLS",
+                    "collectionIndex": 22,
+                    "artifactIndex": 23
+                  },
+                  "right": {
+                    "id": "pdf_adapter-resources",
+                    "from": "pdf_adapter",
+                    "to": "resources",
+                    "label": "Biblioteca",
+                    "collectionIndex": 24,
+                    "artifactIndex": 25
+                  },
+                  "point": [
+                    1057,
+                    194
+                  ],
+                  "sharedNode": "resources"
+                },
+                {
+                  "left": {
+                    "id": "s3-resources",
+                    "from": "s3",
+                    "to": "resources",
+                    "label": "HTTPS/S3",
+                    "collectionIndex": 23,
+                    "artifactIndex": 24
+                  },
+                  "right": {
+                    "id": "pdf_adapter-resources",
+                    "from": "pdf_adapter",
+                    "to": "resources",
+                    "label": "Biblioteca",
+                    "collectionIndex": 24,
+                    "artifactIndex": 25
+                  },
+                  "point": [
+                    1173,
+                    194
+                  ],
+                  "sharedNode": "resources"
+                },
+                {
+                  "left": {
+                    "id": "pdf_adapter-resources",
+                    "from": "pdf_adapter",
+                    "to": "resources",
+                    "label": "Biblioteca",
+                    "collectionIndex": 24,
+                    "artifactIndex": 25
+                  },
+                  "right": {
+                    "id": "mail-resources",
+                    "from": "mail",
+                    "to": "resources",
+                    "label": "HTTPS",
+                    "collectionIndex": 25,
+                    "artifactIndex": 26
+                  },
+                  "point": [
+                    1194,
+                    790.8461538461538
+                  ],
+                  "sharedNode": "resources"
+                }
+              ],
+              "detours": [
+                {
+                  "relationship": {
+                    "id": "client-controller",
+                    "from": "client",
+                    "to": "controller",
+                    "label": "HTTPS / REST",
+                    "collectionIndex": 0,
+                    "artifactIndex": 1
+                  },
+                  "bends": 4,
+                  "stretch": 2.158,
+                  "directCorridorBlockers": [
+                    {
+                      "id": "worker_entry",
+                      "label": "Entrada del trabajador",
+                      "box": [
+                        40,
+                        150,
+                        210,
+                        90
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "relationship": {
+                    "id": "register-store",
+                    "from": "register",
+                    "to": "store",
+                    "label": "Verifica",
+                    "collectionIndex": 5,
+                    "artifactIndex": 6
+                  },
+                  "bends": 4,
+                  "stretch": 1
+                },
+                {
+                  "relationship": {
+                    "id": "emit-store",
+                    "from": "emit",
+                    "to": "store",
+                    "label": "Custodia PDF",
+                    "collectionIndex": 7,
+                    "artifactIndex": 8
+                  },
+                  "bends": 4,
+                  "stretch": 1.672,
+                  "directCorridorBlockers": [
+                    {
+                      "id": "repo",
+                      "label": "RepositorioInspecciones",
+                      "box": [
+                        620,
+                        500,
+                        220,
+                        88
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "relationship": {
+                    "id": "emit-pdf_port",
+                    "from": "emit",
+                    "to": "pdf_port",
+                    "label": "Genera",
+                    "collectionIndex": 8,
+                    "artifactIndex": 9
+                  },
+                  "bends": 4,
+                  "stretch": 1.429,
+                  "directCorridorBlockers": [
+                    {
+                      "id": "repo",
+                      "label": "RepositorioInspecciones",
+                      "box": [
+                        620,
+                        500,
+                        220,
+                        88
+                      ]
+                    },
+                    {
+                      "id": "store",
+                      "label": "AlmacenEvidencias",
+                      "box": [
+                        620,
+                        700,
+                        220,
+                        88
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "relationship": {
+                    "id": "s3-resources",
+                    "from": "s3",
+                    "to": "resources",
+                    "label": "HTTPS/S3",
+                    "collectionIndex": 23,
+                    "artifactIndex": 24
+                  },
+                  "bends": 4,
+                  "stretch": 1.349,
+                  "directCorridorBlockers": [
+                    {
+                      "id": "pg",
+                      "label": "RepositorioInspeccionesPostgres",
+                      "box": [
+                        930,
+                        500,
+                        240,
+                        88
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "relationship": {
+                    "id": "pdf_adapter-resources",
+                    "from": "pdf_adapter",
+                    "to": "resources",
+                    "label": "Biblioteca",
+                    "collectionIndex": 24,
+                    "artifactIndex": 25
+                  },
+                  "bends": 4,
+                  "stretch": 1.365,
+                  "directCorridorBlockers": [
+                    {
+                      "id": "pg",
+                      "label": "RepositorioInspeccionesPostgres",
+                      "box": [
+                        930,
+                        500,
+                        240,
+                        88
+                      ]
+                    },
+                    {
+                      "id": "s3",
+                      "label": "AlmacenEvidenciasS3",
+                      "box": [
+                        930,
+                        700,
+                        240,
+                        88
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "leadingSpace": {
+              "measured": true,
+              "emptyTopPx": 40,
+              "emptyTopRatio": 0.031,
+              "occupiedTop": 40,
+              "viewBoxTop": 0,
+              "canvasHeight": 1276,
+              "typicalNodeHeight": 88,
+              "reviewSuggested": false
+            },
+            "desktopReadability": {
+              "budgetBasis": "legacy-930",
+              "readerContract": "declared-wide-v1",
+              "availableDiagramWidth": 930,
+              "actualBudgetPx": 930,
+              "limit": "legacy",
+              "requestedTargetPx": 7.5,
+              "requestedTargetMet": false,
+              "hardFloorPx": 6,
+              "hardFloorMet": false,
+              "minimumOwner": {
+                "kind": "edge",
+                "id": "client-controller",
+                "from": "client",
+                "to": "controller"
+              },
+              "minimumSourceTextPx": 8,
+              "minimumProjectedTextPx": 5.947242206235012,
+              "semanticTextCount": 70
+            },
+            "issues": [
+              {
+                "severity": "error",
+                "code": "composition/desktop-readability",
+                "owner": {
+                  "kind": "edge",
+                  "id": "client-controller",
+                  "from": "client",
+                  "to": "controller"
+                },
+                "viewportWidth": 1440,
+                "viewportHeight": 900,
+                "availableDiagramWidth": 930,
+                "budgetBasis": "legacy-930",
+                "readerContract": "declared-wide-v1",
+                "requestedTargetPx": 7.5,
+                "requestedTargetMet": false,
+                "budgetLimit": "legacy",
+                "viewBoxWidth": 1251,
+                "scale": 0.7434052757793765,
+                "text": "HTTPS / REST",
+                "detail": "edge",
+                "sourceFontPx": 8,
+                "projectedFontPx": 5.947242206235012,
+                "minimumProjectedFontPx": 6
+              }
+            ]
+          }
+        },
+        "update": {
+          "status": "unavailable",
+          "installedVersion": null,
+          "availableVersion": null,
+          "releaseNotes": null,
+          "checkedAt": null,
+          "source": null,
+          "noticeRequired": false,
+          "noticeText": null,
+          "reason": "disabled"
+        }
+      },
+      "execution": "embedded-in-deliver"
+    },
+    "deliver": {
+      "status": "not-run",
+      "execution": "blocked-by-validate"
+    }
+  },
+  "browserCheck": {
+    "requested": true,
+    "ran": false
+  },
+  "diagnostics": [
+    {
+      "code": "composition/desktop-readability",
+      "severity": "error",
+      "message": "Final artifact failed composition/desktop-readability.",
+      "subject": {
+        "check": "composition"
+      },
+      "evidence": {
+        "owner": {
+          "kind": "edge",
+          "id": "client-controller",
+          "from": "client",
+          "to": "controller"
+        },
+        "viewportWidth": 1440,
+        "viewportHeight": 900,
+        "availableDiagramWidth": 930,
+        "budgetBasis": "legacy-930",
+        "readerContract": "declared-wide-v1",
+        "requestedTargetPx": 7.5,
+        "requestedTargetMet": false,
+        "budgetLimit": "legacy",
+        "viewBoxWidth": 1251,
+        "scale": 0.7434052757793765,
+        "text": "HTTPS / REST",
+        "detail": "edge",
+        "sourceFontPx": 8,
+        "projectedFontPx": 5.947242206235012,
+        "minimumProjectedFontPx": 6
+      },
+      "supportedFixes": [
+        "Preserve the semantic text and any supplied coordinates, routes, sides, channels, and labels. Compactly reflow automatic spacing and empty corridors so the complete viewBox width is at most 1240px (current 1251px; 8px source text at 930px desktop budget). If supplied geometry fixes that width, use a renderer-supported semantic text-size setting or renderer-level fix instead. Position-only label controls cannot repair its projection."
+      ]
+    }
+  ],
+  "evidence": {
+    "receipt": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-limpia-sifitur\\ampliacion-ajuste\\arquitectura-limpia-sifitur.finalize.json",
+    "summaryReceipt": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-limpia-sifitur\\ampliacion-ajuste\\arquitectura-limpia-sifitur.finalize-summary.json"
+  },
+  "visualReview": "not-requested",
+  "failedStage": "validate",
+  "finishedAt": "2026-11-06T19:01:45.552Z",
+  "durationMs": 1066,
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-06T18:25:06.732Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  }
+}

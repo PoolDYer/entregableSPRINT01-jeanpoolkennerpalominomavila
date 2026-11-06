@@ -49,7 +49,7 @@
     },
     {
       "path": "docs\\02-arquitectura-software\\enfoque-arquitectonico.md",
-      "sha256": "d51f6831b20e32044f930c6dd3ebbe93d89e6d5c44222d7510fc2f29881a686d"
+      "sha256": "f8493ef419a5fbe9fe0d7f1faa2c681cf334993b3e62799d602ef74335c4f141"
     },
     {
       "path": "docs\\02-arquitectura-software\\estilo-arquitectonico.md",
@@ -85,8 +85,28 @@
     }
   ],
   "diagramCount": 25,
-  "checkedLinks": 169,
+  "checkedLinks": 173,
   "rules": [
+    {
+      "rule": "Enfoque ampliado: cuatro capas con elementos concretos",
+      "result": "conforme"
+    },
+    {
+      "rule": "Enfoque ampliado: cuatro puertos y cuatro realizaciones",
+      "result": "conforme"
+    },
+    {
+      "rule": "Enfoque ampliado: casos de uso sin dependencia de adaptadores concretos",
+      "result": "conforme"
+    },
+    {
+      "rule": "Enfoque ampliado: invariantes del dominio limitadas a RN-01 a RN-03",
+      "result": "conforme"
+    },
+    {
+      "rule": "Enfoque ampliado: raíz de composición y separación API/trabajador",
+      "result": "conforme"
+    },
     {
       "rule": "C4 N1: cinco actores humanos",
       "result": "conforme"
@@ -595,13 +615,13 @@
     {
       "slug": "arquitectura-limpia-sifitur",
       "source": ".archify/sifitur-20261106-082100/arquitectura-limpia-sifitur/candidate.json",
-      "sourceSha256": "6d1ff7035418a71904922d10007c5ebb10289d1935c7828e435595c5e99d4982",
+      "sourceSha256": "56a2656c096a79332fe9ca0af5ad859235b61e5cc5c0f250db96dd321370d38f",
       "html": ".archify/sifitur-20261106-082100/arquitectura-limpia-sifitur/arquitectura-limpia-sifitur.html",
-      "htmlSha256": "462b6740bbbdc365e2989a2dcca0ddbfbd77ce06abb9cb2848c2301b1cdfd89f",
-      "receipt": ".archify\\sifitur-20261106-082100\\arquitectura-limpia-sifitur\\arquitectura-limpia-sifitur.finalize-summary.json",
-      "img/arquitectura-limpia-sifitur.jpg": "8af8016f63ebc57713ad6425e469c0bca73685064a4df8597d32e69f37226fd6",
-      "img/arquitectura-limpia-sifitur.png": "41c4a183157a76e3fff551cb18221adeb004f0c888e353aff89412869bbf8ed2",
-      "img/fuentes-svg/arquitectura-limpia-sifitur.svg": "5ff1a5a67982a113b6b065d13b72262803f5c197b7929a0c08aa834b662fb84d"
+      "htmlSha256": "411247ccde413ec003f636d695f7d0666e1453000c6cdb2efa26546defdf0fd8",
+      "receipt": ".archify\\sifitur-20261106-082100\\arquitectura-limpia-sifitur\\ampliacion-final\\arquitectura-limpia-sifitur.finalize-summary.json",
+      "img/arquitectura-limpia-sifitur.jpg": "ef6e6aeb9489503ca19b32f1fd0ff2e34244d7cd12f0bf52e4d9897608d928fc",
+      "img/arquitectura-limpia-sifitur.png": "7930cbd5b7bab75665f20b87d97630ba73706ca4abbbf9c1411e97a9c2c0a175",
+      "img/fuentes-svg/arquitectura-limpia-sifitur.svg": "cfb98a72e05eb0ff9c7acb641b5108b209c10fa5ef3261e4b3a9bec02bd22f21"
     },
     {
       "slug": "arquitectura-monolitica-sifitur",

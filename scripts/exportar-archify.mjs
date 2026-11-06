@@ -9,7 +9,11 @@ const {chromium}=await import(pathToFileURL(modulePath));
 const browser=await chromium.launch({channel:'msedge',headless:true});
 try {
   const page=await browser.newPage({viewport:{width:1600,height:1100},acceptDownloads:true});
-  const manifest=JSON.parse(fs.readFileSync('diagrams/archify-manifest.json','utf8'));
+  const allDiagrams=JSON.parse(fs.readFileSync('diagrams/archify-manifest.json','utf8'));
+  const slugIndex=process.argv.indexOf('--slug');
+  const requestedSlug=slugIndex>=0?process.argv[slugIndex+1]:null;
+  const manifest=requestedSlug?allDiagrams.filter(d=>d.slug===requestedSlug):allDiagrams;
+  if(slugIndex>=0&&(!requestedSlug||!manifest.length))throw new Error('Diagrama Archify no encontrado.');
   for (const d of manifest) {
     await page.goto(pathToFileURL(path.resolve(d.output)).href);
     await page.waitForLoadState('networkidle');

@@ -23,7 +23,7 @@ Las abreviaturas de la columna de origen remiten a documentos y secciones de la 
 | Diagrama | Origen | Contenido contrastado | Resultado |
 |---|---|---|---|
 | arquitectura-alto-nivel | A1, rutas y continuidad | Cuatro canales; gateway; API sin estado; primaria, standby y réplica diferenciados; caché, objetos y trabajador con outbox. | Conforme |
-| arquitectura-limpia-sifitur | A2, capas y dependencias | Presentación → aplicación → dominio; infraestructura implementa contratos; composición e independencia de framework. | Conforme |
+| arquitectura-limpia-sifitur | A2, capas y dependencias; D1, §§2–10 | Vista ampliada con 20 elementos: entradas, casos de uso, entidades, cuatro puertos y adaptadores, reglas, composición y recursos; separación API/trabajador y dependencia hacia el núcleo. | Conforme |
 | arquitectura-monolitica-sifitur | A3, organización y reglas | Backend modular como unidad de publicación; clientes y trabajador independientes; propiedad de datos y ejecución por puertos. | Conforme |
 | componentes | A4, responsabilidades y propiedad | Identidad, padrón, riesgo, operativos, inspecciones, subsanaciones, consulta, indicadores, auditoría y procesamiento asíncrono. | Conforme |
 | paquetes-modulo-inspecciones | D1, §§2–3 y 10 | Carpetas previstas, dirección de importaciones, composición y API pública sin exposición de repositorios privados. | Conforme |
@@ -67,8 +67,8 @@ Actores, historias, RF, atributos de calidad, restricciones, drivers, ADR y esce
 
 ## Evidencia de publicación y límites
 
-La [evidencia reproducible](verificacion-final.json) registra **123 controles automáticos**, **169 enlaces locales**, las fuentes vigentes y los hashes de las 25 imágenes JPG, sus PNG/SVG y los HTML Archify. Los 18 HTML Archify tienen recibos de validación y comprobación de navegador que coinciden con sus candidatos actuales. El DSL Structurizr se validó con su herramienta y sus siete vistas se exportaron con el renderer oficial.
+La [evidencia reproducible](verificacion-final.json) registra los controles automáticos, los enlaces locales, las fuentes vigentes y los hashes de las 25 imágenes JPG, sus PNG/SVG y los HTML Archify. Los 18 HTML Archify tienen recibos de validación y comprobación de navegador que coinciden con sus candidatos actuales. El DSL Structurizr se validó con su herramienta y sus siete vistas se exportaron con el renderer oficial. La ampliación del enfoque incorpora cinco controles adicionales sobre sus capas, puertos, dependencias, invariantes y separación de procesos; las cifras vigentes se obtienen del JSON para evitar mantener conteos desactualizados al ampliar los documentos.
 
-La revisión semántica de la matriz anterior es una comparación documental; los controles automáticos comprueban un subconjunto explícito de sus reglas y la integridad de la publicación. No sustituyen esa interpretación por una simple búsqueda de palabras. Se inspeccionaron visualmente como muestra los JPG de sincronización, agregado y contenedores; no se afirma una inspección visual individual de las 25 imágenes.
+La revisión semántica de la matriz anterior es una comparación documental; los controles automáticos comprueban un subconjunto explícito de sus reglas y la integridad de la publicación. No sustituyen esa interpretación por una simple búsqueda de palabras. Se inspeccionaron visualmente como muestra los JPG de sincronización, agregado, contenedores y enfoque arquitectónico ampliado; no se afirma una inspección visual individual de las 25 imágenes.
 
 El nivel 4 usa el mecanismo oficial de vistas de imagen de Structurizr, con UML editable y renderizado local. Las vistas de conjunto agrupan responsabilidades según su alcance; los visores y SVG permiten ampliación. Esta verificación no constituye una prueba de funcionamiento, seguridad, rendimiento o cumplimiento normativo de una aplicación desplegada.
