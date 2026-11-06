@@ -1,0 +1,88 @@
+{
+  "schema_version": 3,
+  "diagram_type": "lifecycle",
+  "meta": {
+    "title": "SIFITUR · Estados de captura",
+    "locale": "es",
+    "output": ".archify/sifitur-20261106-082100/estados-captura/estados-captura.html",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/PoolDYer/entregable02-jeanpoolkennerpalominomavila.git",
+      "revision": "ac5bd7eb01bceee1c9230e675846fd9d1d4f79db"
+    }
+  },
+  "mainPath": [
+    "draft",
+    "ready",
+    "received"
+  ],
+  "states": [
+    {
+      "id": "draft",
+      "type": "start",
+      "label": "BORRADOR",
+      "sublabel": "Cifrado local",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    },
+    {
+      "id": "ready",
+      "type": "waiting",
+      "label": "LISTA",
+      "sublabel": "Ficha, firma y GPS válidos",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    },
+    {
+      "id": "received",
+      "type": "success",
+      "label": "RECIBIDA",
+      "sublabel": "T1 durable confirmada",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    }
+  ],
+  "transitions": [
+    {
+      "id": "draft-ready",
+      "from": "draft",
+      "to": "ready",
+      "label": "Validación completa",
+      "variant": "default"
+    },
+    {
+      "id": "ready-received",
+      "from": "ready",
+      "to": "received",
+      "label": "201 nueva / 200 idéntica",
+      "variant": "default"
+    },
+    {
+      "id": "ready-ready",
+      "from": "ready",
+      "to": "ready",
+      "label": "Error: conserva LISTA",
+      "variant": "default"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "slate",
+      "title": "Alcance del diseño",
+      "items": [
+        "Arquitectura propuesta; implementación y validación pendientes.",
+        "409 conserva LISTA y añade una incidencia para revisión; 401/403/422 no confirman recepción ni borran el borrador.",
+        "Sin red o fallo técnico conserva LISTA y la misma operación; no borra el original hasta el acuse durable."
+      ]
+    }
+  ]
+}

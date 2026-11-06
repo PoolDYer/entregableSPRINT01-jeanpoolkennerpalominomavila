@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "sequence",
+  "quality": "showcase",
+  "specification": {
+    "path": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\secuencia-registrar-inspeccion\\candidate.json",
+    "sha256": "68545621535bce4a02f90c6160c4d1964c28000d2f0b44981996c1d1032d237c",
+    "bytes": 5039
+  },
+  "artifact": {
+    "path": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\secuencia-registrar-inspeccion\\secuencia-registrar-inspeccion.html",
+    "sha256": "d38fb77c75f117e896d63d1817e11eda9f911f165caffd198d45131b95e6e7f8",
+    "bytes": 841822
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\secuencia-registrar-inspeccion\\revision-final\\secuencia-registrar-inspeccion.finalize.json",
+    "summaryReceipt": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\secuencia-registrar-inspeccion\\revision-final\\secuencia-registrar-inspeccion.finalize-summary.json",
+    "browserCheckReceipt": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\secuencia-registrar-inspeccion\\revision-final\\secuencia-registrar-inspeccion.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-06T18:25:06.732Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 2882,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "a67338cb-b171-44b1-ae01-475636b9ad57",
+  "status": "current",
+  "command": "deliver",
+  "type": "class",
+  "input": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\clases-modulo-inspecciones\\candidate.json",
+  "output": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\clases-modulo-inspecciones\\clases-modulo-inspecciones.html",
+  "specification": {
+    "sha256": "2830be27aadf0be7e5f42ca500ce313b74b0a684597b3e5f327eaa7b08a09a59",
+    "bytes": 8136
+  },
+  "artifact": {
+    "sha256": "73a4b73977813e8d4d7282b732e541c896d6b04dd5fa29ef527896f71b1df531",
+    "bytes": 862161
+  }
+}

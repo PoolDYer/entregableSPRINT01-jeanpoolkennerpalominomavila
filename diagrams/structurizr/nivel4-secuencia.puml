@@ -1,0 +1,47 @@
+@startuml
+title C4 · Nivel 4 · Emisión y notificación asíncrona\nSIFITUR Huamanga · RF11 · T1 ya confirmada
+skinparam backgroundColor #FFFFFF
+skinparam sequenceArrowColor #2463A0
+database "Outbox / PostgreSQL" as DB
+participant QueuePublisher as Publisher
+queue RabbitMQ as MQ
+participant ProcesarActaCasoUso as Caso
+participant GeneradorActas as PDF
+collections "AlmacenEvidencias / S3" as S3
+participant "Consumidor de avisos" as Avisos
+participant "Notificador / pasarela" as Notificador
+Publisher -> DB: leer InspeccionRecibida pendiente
+DB --> Publisher: evento estable
+Publisher -> MQ: publicar mensaje persistente
+MQ --> Publisher: confirmación del broker
+Publisher -> DB: marcar publicación confirmada
+loop entrega al menos una vez; consumidor idempotente
+  MQ -> Caso: InspeccionRecibida
+  Caso -> DB: consultar emisión por inspección
+  DB --> Caso: pendiente / EMITIDA
+  alt emisión pendiente
+    Caso -> PDF: generar(inspección)
+    PDF --> Caso: bytes PDF
+    Caso -> S3: guardarActa(clave estable, bytes); verificar SHA-256
+    S3 --> Caso: referencia y hash
+    critical T2 · Transacción local PostgreSQL
+      Caso -> DB: EMITIDA + auditoría + ActaEmitida en outbox
+      DB --> Caso: commit
+    end
+  end
+  Caso --> MQ: acuse después del commit; duplicado no regenera
+end
+Publisher -> DB: leer ActaEmitida
+Publisher -> MQ: publicar tarea de aviso con confirmación
+MQ -> Avisos: evento + destinatario institucional
+Avisos -> Notificador: enviar(tarea estable)
+Notificador --> Avisos: aceptación / confirmación verificable
+Avisos -> DB: persistir ACEPTADA / ENTREGADA y referencia externa
+Avisos --> MQ: acuse después de persistir
+note over DB,Notificador
+  Fallo transitorio: reintento; tres intentos: revisión operativa.
+  Timeout ambiguo de envío: conciliar identificador externo antes de repetir.
+  Error de correo no revierte EMITIDA. Emitir no acredita formalidad pública.
+  S3, PostgreSQL y RabbitMQ no comparten una transacción distribuida.
+end note
+@enduml

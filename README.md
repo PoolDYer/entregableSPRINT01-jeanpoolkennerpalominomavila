@@ -24,6 +24,12 @@ docs/
 ├── 02-arquitectura-software/
 ├── 03-diseño-de-software/diseño-interno/
 └── 04-modelo-c4/
+diagrams/
+├── index.html
+└── structurizr/
+.archify/
+└── sifitur-20261106-082100/
+scripts/
 img/
 └── fuentes-svg/
 ```
@@ -42,12 +48,14 @@ img/
 
 Backend monolítico modular Node.js/NestJS con Clean Architecture. App Flutter con SQLite cifrada, consola y portal del administrado React, portal público Next.js, PostgreSQL primaria y réplica, Redis, S3 y RabbitMQ. Las integraciones externas son SUNAT, MINCETUR, OpenStreetMap y pasarela SMS/correo.
 
-![Contexto de SIFITUR Huamanga](img/nivel1-contexto.png)
+![Contexto de SIFITUR Huamanga](img/nivel1-contexto.jpg)
 
 ## Convenciones de lectura
 
 La documentación especifica la arquitectura propuesta de SIFITUR Huamanga. Los RF, AC, DA, ADR y EQ enlazan requisitos, calidad, drivers, decisiones y escenarios de aceptación. Las métricas son objetivos de diseño; la validación de una aplicación desplegada corresponde a la etapa de implementación.
 
-Los diagramas se publican en PNG para lectura y en [SVG editable](img/fuentes-svg/) para ampliación sin pérdida. Cada vista identifica su alcance, fronteras y leyenda. El proceso se desarrolla en el análisis; C4 permite navegar de personas y sistemas a contenedores, componentes y clases; el diseño interno detalla sincronización, emisión y estados del expediente.
+Los diagramas generales se elaboran con **Archify** y los cuatro niveles C4 se gestionan con **Structurizr**, conforme al contenido de los Markdown de `docs/`. Cada diagrama se guarda como JPG en `img/` y se incrusta en su Markdown correspondiente. Las fuentes editables son JSON Archify, el modelo Structurizr DSL y las fuentes UML del nivel 4 incorporadas como vistas de imagen. PNG y [SVG](img/fuentes-svg/) se conservan como exportaciones adicionales. El [catálogo de diagramas](diagrams/index.html) reúne visores y fuentes; la [guía de reproducción](diagrams/README.md) explica cómo editarlos y regenerarlos.
+
+El proceso se desarrolla en el análisis; C4 permite navegar de personas y sistemas a contenedores, componentes y clases; el diseño interno detalla sincronización, emisión y estados del expediente.
 
 Base documental: Propuesta SIFITUR Huamanga; GUIA-004-ASF, laboratorio IS-488; estructura del [repositorio modelo](https://github.com/devlizbethjaico/Marketplace-arquitSoft-02). El alcance de esta entrega comprende documentación y diagramas.

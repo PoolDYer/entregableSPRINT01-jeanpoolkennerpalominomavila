@@ -1,0 +1,833 @@
+{
+  "date": "2026-11-06",
+  "scope": "Verificación documental y de artefactos; no prueba de una aplicación desplegada.",
+  "result": "conforme",
+  "docs": [
+    {
+      "path": "docs\\01-analisis-de-sistema\\00-necesidad-del-negocio.md",
+      "sha256": "c3ed4fe6b90fe2f35d23b2d38bbafb4d1b8c58f1dcc36c8ae625fa87908616d1"
+    },
+    {
+      "path": "docs\\01-analisis-de-sistema\\01-actores.md",
+      "sha256": "fe6c5dc7353ab4035a503660e5e6e4420cf20a317d64d011fa3f95795ae81d0a"
+    },
+    {
+      "path": "docs\\01-analisis-de-sistema\\02-historias-del-usuario.md",
+      "sha256": "bc0bdf6d2c7b059bb4af81a0f1d137c7ad9dae0f1bb21589b5ef1e7215d603a0"
+    },
+    {
+      "path": "docs\\01-analisis-de-sistema\\03-requisitos-funcionales.md",
+      "sha256": "727d9411747ac5aa71538d29f56775b28a4103dda3e42dc3478a1001b9b41c8a"
+    },
+    {
+      "path": "docs\\01-analisis-de-sistema\\04-atributos-de-calidad.md",
+      "sha256": "74913f914f73d01e9204f353f002118d61d46a4a757db9dfea0d82b6ff408389"
+    },
+    {
+      "path": "docs\\01-analisis-de-sistema\\05-restricciones.md",
+      "sha256": "5f03a677630f46a7168c6d1c9dd683dac20d74060d4109aafa1e115664524df4"
+    },
+    {
+      "path": "docs\\01-analisis-de-sistema\\06-driver-arquitectonicos.md",
+      "sha256": "af9c95780e2cd73dfd0e1d1e6fe15ab1f63dfa3e2a4eef89a15e80a30d995503"
+    },
+    {
+      "path": "docs\\01-analisis-de-sistema\\07-decisiones-arquitectonicas.md",
+      "sha256": "285f7d394be8154622b03ed47a5ed330c1be62b9b8be0bcf0b37a3996d5eed2b"
+    },
+    {
+      "path": "docs\\01-analisis-de-sistema\\08-escenarios-atributos-calidad.md",
+      "sha256": "6c1aa1bd23ac0ceeb985375de14fffaf5cf5d07e06e3dde7d2c2bc60688b3b98"
+    },
+    {
+      "path": "docs\\02-arquitectura-software\\arquitectura-inicial.md",
+      "sha256": "9821c0519da73deb389d0a043878c8a8ba7c0da9e8e8bf112d147ce053b771b7"
+    },
+    {
+      "path": "docs\\02-arquitectura-software\\componentes-arquitectonicos.md",
+      "sha256": "7337734a43eb1a862a3e9f3ea64eaa1b2c6ef8145887e58b57d1e9a1a3248982"
+    },
+    {
+      "path": "docs\\02-arquitectura-software\\enfoque-arquitectonico.md",
+      "sha256": "d51f6831b20e32044f930c6dd3ebbe93d89e6d5c44222d7510fc2f29881a686d"
+    },
+    {
+      "path": "docs\\02-arquitectura-software\\estilo-arquitectonico.md",
+      "sha256": "a1585521512a8f93b6c68d74ee61bc6e32f916811d8b1dab3becfafd3df53ebd"
+    },
+    {
+      "path": "docs\\03-diseño-de-software\\diseño-interno\\diseño-interno-de-modulos.md",
+      "sha256": "7ecd97dbe90a2740f1c54344e2b59f324408c458e303a28fec4ad6d1e547b747"
+    },
+    {
+      "path": "docs\\03-diseño-de-software\\diseño-interno\\patrones-de-diseño.md",
+      "sha256": "d52fd32a679d4d70dea9f53d3823ca1e93c01068134a34dd5e567e7abad132a8"
+    },
+    {
+      "path": "docs\\03-diseño-de-software\\diseño-interno\\principios-de-diseño.md",
+      "sha256": "1d51bacc8485f9188e3cbcb8612d21d49436cc35be41833125f889f53f5a0fc5"
+    },
+    {
+      "path": "docs\\04-modelo-c4\\Nivel1-DiagramadeContextodelSistema.md",
+      "sha256": "35bdf8a0d1ac6e1076bd3d8825bff8bb24e963342173f6d4b0358762a76bdfdb"
+    },
+    {
+      "path": "docs\\04-modelo-c4\\Nivel2-DiagramadeContenedores.md",
+      "sha256": "bc214b336c49add8ba61e369f1e8137b2d4611da4497e0b4f6ff6471477bf989"
+    },
+    {
+      "path": "docs\\04-modelo-c4\\Nivel3-Diagrama-de-Componentes.md",
+      "sha256": "3e462d6d973f98df058f434784c6962d22ddad9d5190b84314315fc863058fe9"
+    },
+    {
+      "path": "docs\\04-modelo-c4\\Nivel4-DiagramadeCodigo.md",
+      "sha256": "7b9fc437c7ef4bcbfa8056584169987061a068a1a3e16a85908a9bf59b56b3b8"
+    }
+  ],
+  "diagramCount": 25,
+  "checkedLinks": 169,
+  "rules": [
+    {
+      "rule": "C4 N1: cinco actores humanos",
+      "result": "conforme"
+    },
+    {
+      "rule": "C4 N1: cuatro sistemas externos",
+      "result": "conforme"
+    },
+    {
+      "rule": "C4 N2: trece contenedores lógicos documentados",
+      "result": "conforme"
+    },
+    {
+      "rule": "C4 N3: dieciséis grupos de componentes documentados",
+      "result": "conforme"
+    },
+    {
+      "rule": "Trabajador fuera de la frontera del Backend API",
+      "result": "conforme"
+    },
+    {
+      "rule": "La API no publica directamente en RabbitMQ",
+      "result": "conforme"
+    },
+    {
+      "rule": "Trabajador conectado a primaria, broker, objetos, Redis y pasarela",
+      "result": "conforme"
+    },
+    {
+      "rule": "Clientes de N2 pasan por gateway; enlaces inferidos directos a API excluidos",
+      "result": "conforme"
+    },
+    {
+      "rule": "Consulta pública sin JWT y a través de su proyección",
+      "result": "conforme"
+    },
+    {
+      "rule": "Revalidación de formalidad desde primaria y lectura de indicadores desde réplica",
+      "result": "conforme"
+    },
+    {
+      "rule": "Nivel 4: cuatro vistas de imagen vinculadas a Inspecciones",
+      "result": "conforme"
+    },
+    {
+      "rule": "Captura: solo BORRADOR, LISTA y RECIBIDA",
+      "result": "conforme"
+    },
+    {
+      "rule": "Conflicto de captura conserva LISTA",
+      "result": "conforme"
+    },
+    {
+      "rule": "Emisión: RECIBIDA, EMITIDA y ANULADA; error no abandona RECIBIDA",
+      "result": "conforme"
+    },
+    {
+      "rule": "Notificación: aceptación distinta de entrega, con revisión y reintento",
+      "result": "conforme"
+    },
+    {
+      "rule": "Subsanación: rechazo vuelve a pendiente y derivaciones requieren autorización",
+      "result": "conforme"
+    },
+    {
+      "rule": "DIP: nombres completos de adaptadores documentados",
+      "result": "conforme"
+    },
+    {
+      "rule": "DIP: los casos de uso dependen de interfaces, no de adaptadores",
+      "result": "conforme"
+    },
+    {
+      "rule": "Agregado: integridad del acta y vínculo de firma explícitos",
+      "result": "conforme"
+    },
+    {
+      "rule": "Agregado: evidencias 1..* y acta 0..1",
+      "result": "conforme"
+    },
+    {
+      "rule": "Sincronización: T1 e integridad condicionadas a operación nueva",
+      "result": "conforme"
+    },
+    {
+      "rule": "Sincronización: reenvío idéntico 200 y conflicto 409 terminan sin T1",
+      "result": "conforme"
+    },
+    {
+      "rule": "Emisión UML: acuse posterior al commit y fallo de correo no revierte EMITIDA",
+      "result": "conforme"
+    },
+    {
+      "rule": "arquitectura-alto-nivel: JPG incrustado en docs",
+      "result": "conforme"
+    },
+    {
+      "rule": "arquitectura-alto-nivel: exportaciones presentes",
+      "result": "conforme"
+    },
+    {
+      "rule": "arquitectura-alto-nivel: codificación JPEG real",
+      "result": "conforme"
+    },
+    {
+      "rule": "arquitectura-alto-nivel: fuente y HTML coinciden con validación y browser-check",
+      "result": "conforme"
+    },
+    {
+      "rule": "arquitectura-limpia-sifitur: JPG incrustado en docs",
+      "result": "conforme"
+    },
+    {
+      "rule": "arquitectura-limpia-sifitur: exportaciones presentes",
+      "result": "conforme"
+    },
+    {
+      "rule": "arquitectura-limpia-sifitur: codificación JPEG real",
+      "result": "conforme"
+    },
+    {
+      "rule": "arquitectura-limpia-sifitur: fuente y HTML coinciden con validación y browser-check",
+      "result": "conforme"
+    },
+    {
+      "rule": "arquitectura-monolitica-sifitur: JPG incrustado en docs",
+      "result": "conforme"
+    },
+    {
+      "rule": "arquitectura-monolitica-sifitur: exportaciones presentes",
+      "result": "conforme"
+    },
+    {
+      "rule": "arquitectura-monolitica-sifitur: codificación JPEG real",
+      "result": "conforme"
+    },
+    {
+      "rule": "arquitectura-monolitica-sifitur: fuente y HTML coinciden con validación y browser-check",
+      "result": "conforme"
+    },
+    {
+      "rule": "componentes: JPG incrustado en docs",
+      "result": "conforme"
+    },
+    {
+      "rule": "componentes: exportaciones presentes",
+      "result": "conforme"
+    },
+    {
+      "rule": "componentes: codificación JPEG real",
+      "result": "conforme"
+    },
+    {
+      "rule": "componentes: fuente y HTML coinciden con validación y browser-check",
+      "result": "conforme"
+    },
+    {
+      "rule": "paquetes-modulo-inspecciones: JPG incrustado en docs",
+      "result": "conforme"
+    },
+    {
+      "rule": "paquetes-modulo-inspecciones: exportaciones presentes",
+      "result": "conforme"
+    },
+    {
+      "rule": "paquetes-modulo-inspecciones: codificación JPEG real",
+      "result": "conforme"
+    },
+    {
+      "rule": "paquetes-modulo-inspecciones: fuente y HTML coinciden con validación y browser-check",
+      "result": "conforme"
+    },
+    {
+      "rule": "clases-modulo-inspecciones: JPG incrustado en docs",
+      "result": "conforme"
+    },
+    {
+      "rule": "clases-modulo-inspecciones: exportaciones presentes",
+      "result": "conforme"
+    },
+    {
+      "rule": "clases-modulo-inspecciones: codificación JPEG real",
+      "result": "conforme"
+    },
+    {
+      "rule": "clases-modulo-inspecciones: fuente y HTML coinciden con validación y browser-check",
+      "result": "conforme"
+    },
+    {
+      "rule": "patron-adapter: JPG incrustado en docs",
+      "result": "conforme"
+    },
+    {
+      "rule": "patron-adapter: exportaciones presentes",
+      "result": "conforme"
+    },
+    {
+      "rule": "patron-adapter: codificación JPEG real",
+      "result": "conforme"
+    },
+    {
+      "rule": "patron-adapter: fuente y HTML coinciden con validación y browser-check",
+      "result": "conforme"
+    },
+    {
+      "rule": "patron-repository: JPG incrustado en docs",
+      "result": "conforme"
+    },
+    {
+      "rule": "patron-repository: exportaciones presentes",
+      "result": "conforme"
+    },
+    {
+      "rule": "patron-repository: codificación JPEG real",
+      "result": "conforme"
+    },
+    {
+      "rule": "patron-repository: fuente y HTML coinciden con validación y browser-check",
+      "result": "conforme"
+    },
+    {
+      "rule": "patron-factory: JPG incrustado en docs",
+      "result": "conforme"
+    },
+    {
+      "rule": "patron-factory: exportaciones presentes",
+      "result": "conforme"
+    },
+    {
+      "rule": "patron-factory: codificación JPEG real",
+      "result": "conforme"
+    },
+    {
+      "rule": "patron-factory: fuente y HTML coinciden con validación y browser-check",
+      "result": "conforme"
+    },
+    {
+      "rule": "patron-facade: JPG incrustado en docs",
+      "result": "conforme"
+    },
+    {
+      "rule": "patron-facade: exportaciones presentes",
+      "result": "conforme"
+    },
+    {
+      "rule": "patron-facade: codificación JPEG real",
+      "result": "conforme"
+    },
+    {
+      "rule": "patron-facade: fuente y HTML coinciden con validación y browser-check",
+      "result": "conforme"
+    },
+    {
+      "rule": "principio-dip: JPG incrustado en docs",
+      "result": "conforme"
+    },
+    {
+      "rule": "principio-dip: exportaciones presentes",
+      "result": "conforme"
+    },
+    {
+      "rule": "principio-dip: codificación JPEG real",
+      "result": "conforme"
+    },
+    {
+      "rule": "principio-dip: fuente y HTML coinciden con validación y browser-check",
+      "result": "conforme"
+    },
+    {
+      "rule": "solid-modulo-inspecciones: JPG incrustado en docs",
+      "result": "conforme"
+    },
+    {
+      "rule": "solid-modulo-inspecciones: exportaciones presentes",
+      "result": "conforme"
+    },
+    {
+      "rule": "solid-modulo-inspecciones: codificación JPEG real",
+      "result": "conforme"
+    },
+    {
+      "rule": "solid-modulo-inspecciones: fuente y HTML coinciden con validación y browser-check",
+      "result": "conforme"
+    },
+    {
+      "rule": "proceso-fiscalizacion: JPG incrustado en docs",
+      "result": "conforme"
+    },
+    {
+      "rule": "proceso-fiscalizacion: exportaciones presentes",
+      "result": "conforme"
+    },
+    {
+      "rule": "proceso-fiscalizacion: codificación JPEG real",
+      "result": "conforme"
+    },
+    {
+      "rule": "proceso-fiscalizacion: fuente y HTML coinciden con validación y browser-check",
+      "result": "conforme"
+    },
+    {
+      "rule": "estados-expediente: JPG incrustado en docs",
+      "result": "conforme"
+    },
+    {
+      "rule": "estados-expediente: exportaciones presentes",
+      "result": "conforme"
+    },
+    {
+      "rule": "estados-expediente: codificación JPEG real",
+      "result": "conforme"
+    },
+    {
+      "rule": "estados-expediente: fuente y HTML coinciden con validación y browser-check",
+      "result": "conforme"
+    },
+    {
+      "rule": "estados-captura: JPG incrustado en docs",
+      "result": "conforme"
+    },
+    {
+      "rule": "estados-captura: exportaciones presentes",
+      "result": "conforme"
+    },
+    {
+      "rule": "estados-captura: codificación JPEG real",
+      "result": "conforme"
+    },
+    {
+      "rule": "estados-captura: fuente y HTML coinciden con validación y browser-check",
+      "result": "conforme"
+    },
+    {
+      "rule": "estados-emision: JPG incrustado en docs",
+      "result": "conforme"
+    },
+    {
+      "rule": "estados-emision: exportaciones presentes",
+      "result": "conforme"
+    },
+    {
+      "rule": "estados-emision: codificación JPEG real",
+      "result": "conforme"
+    },
+    {
+      "rule": "estados-emision: fuente y HTML coinciden con validación y browser-check",
+      "result": "conforme"
+    },
+    {
+      "rule": "estados-notificacion: JPG incrustado en docs",
+      "result": "conforme"
+    },
+    {
+      "rule": "estados-notificacion: exportaciones presentes",
+      "result": "conforme"
+    },
+    {
+      "rule": "estados-notificacion: codificación JPEG real",
+      "result": "conforme"
+    },
+    {
+      "rule": "estados-notificacion: fuente y HTML coinciden con validación y browser-check",
+      "result": "conforme"
+    },
+    {
+      "rule": "secuencia-registrar-inspeccion: JPG incrustado en docs",
+      "result": "conforme"
+    },
+    {
+      "rule": "secuencia-registrar-inspeccion: exportaciones presentes",
+      "result": "conforme"
+    },
+    {
+      "rule": "secuencia-registrar-inspeccion: codificación JPEG real",
+      "result": "conforme"
+    },
+    {
+      "rule": "secuencia-registrar-inspeccion: fuente y HTML coinciden con validación y browser-check",
+      "result": "conforme"
+    },
+    {
+      "rule": "nivel1-contexto: JPG incrustado en docs",
+      "result": "conforme"
+    },
+    {
+      "rule": "nivel1-contexto: exportaciones presentes",
+      "result": "conforme"
+    },
+    {
+      "rule": "nivel1-contexto: codificación JPEG real",
+      "result": "conforme"
+    },
+    {
+      "rule": "nivel1-contexto: exportaciones publicadas coinciden con Structurizr",
+      "result": "conforme"
+    },
+    {
+      "rule": "nivel2-contenedores: JPG incrustado en docs",
+      "result": "conforme"
+    },
+    {
+      "rule": "nivel2-contenedores: exportaciones presentes",
+      "result": "conforme"
+    },
+    {
+      "rule": "nivel2-contenedores: codificación JPEG real",
+      "result": "conforme"
+    },
+    {
+      "rule": "nivel2-contenedores: exportaciones publicadas coinciden con Structurizr",
+      "result": "conforme"
+    },
+    {
+      "rule": "nivel3-componentes: JPG incrustado en docs",
+      "result": "conforme"
+    },
+    {
+      "rule": "nivel3-componentes: exportaciones presentes",
+      "result": "conforme"
+    },
+    {
+      "rule": "nivel3-componentes: codificación JPEG real",
+      "result": "conforme"
+    },
+    {
+      "rule": "nivel3-componentes: exportaciones publicadas coinciden con Structurizr",
+      "result": "conforme"
+    },
+    {
+      "rule": "nivel4-clases: JPG incrustado en docs",
+      "result": "conforme"
+    },
+    {
+      "rule": "nivel4-clases: exportaciones presentes",
+      "result": "conforme"
+    },
+    {
+      "rule": "nivel4-clases: codificación JPEG real",
+      "result": "conforme"
+    },
+    {
+      "rule": "nivel4-clases: exportaciones publicadas coinciden con Structurizr",
+      "result": "conforme"
+    },
+    {
+      "rule": "nivel4-registro: JPG incrustado en docs",
+      "result": "conforme"
+    },
+    {
+      "rule": "nivel4-registro: exportaciones presentes",
+      "result": "conforme"
+    },
+    {
+      "rule": "nivel4-registro: codificación JPEG real",
+      "result": "conforme"
+    },
+    {
+      "rule": "nivel4-registro: exportaciones publicadas coinciden con Structurizr",
+      "result": "conforme"
+    },
+    {
+      "rule": "nivel4-secuencia: JPG incrustado en docs",
+      "result": "conforme"
+    },
+    {
+      "rule": "nivel4-secuencia: exportaciones presentes",
+      "result": "conforme"
+    },
+    {
+      "rule": "nivel4-secuencia: codificación JPEG real",
+      "result": "conforme"
+    },
+    {
+      "rule": "nivel4-secuencia: exportaciones publicadas coinciden con Structurizr",
+      "result": "conforme"
+    },
+    {
+      "rule": "nivel4-agregado: JPG incrustado en docs",
+      "result": "conforme"
+    },
+    {
+      "rule": "nivel4-agregado: exportaciones presentes",
+      "result": "conforme"
+    },
+    {
+      "rule": "nivel4-agregado: codificación JPEG real",
+      "result": "conforme"
+    },
+    {
+      "rule": "nivel4-agregado: exportaciones publicadas coinciden con Structurizr",
+      "result": "conforme"
+    }
+  ],
+  "artifacts": [
+    {
+      "slug": "arquitectura-alto-nivel",
+      "source": ".archify/sifitur-20261106-082100/arquitectura-alto-nivel/candidate.json",
+      "sourceSha256": "732b4d3aeee4db4a3cdf4f819a174c658bc5d7ce3996b9ea281973a4bc7b8c28",
+      "html": ".archify/sifitur-20261106-082100/arquitectura-alto-nivel/arquitectura-alto-nivel.html",
+      "htmlSha256": "5377432960e43a11b2eddf4ea509526722c9e1d116f3ed0b29af1b1c4a7039ce",
+      "receipt": ".archify\\sifitur-20261106-082100\\arquitectura-alto-nivel\\revision-final\\arquitectura-alto-nivel.finalize-summary.json",
+      "img/arquitectura-alto-nivel.jpg": "737d81a1770a35965d8448853359d19bf537ae7827e838c4d5d30c3dc39cbad8",
+      "img/arquitectura-alto-nivel.png": "3e6803509aaae67b184b5611d4303f8a34d41b5702a9b30a3fff0f6b51f7c768",
+      "img/fuentes-svg/arquitectura-alto-nivel.svg": "ea0be1498a6827b0392691d03898d35745851fda7384ee9fc31ae7308ce03ca5"
+    },
+    {
+      "slug": "arquitectura-limpia-sifitur",
+      "source": ".archify/sifitur-20261106-082100/arquitectura-limpia-sifitur/candidate.json",
+      "sourceSha256": "6d1ff7035418a71904922d10007c5ebb10289d1935c7828e435595c5e99d4982",
+      "html": ".archify/sifitur-20261106-082100/arquitectura-limpia-sifitur/arquitectura-limpia-sifitur.html",
+      "htmlSha256": "462b6740bbbdc365e2989a2dcca0ddbfbd77ce06abb9cb2848c2301b1cdfd89f",
+      "receipt": ".archify\\sifitur-20261106-082100\\arquitectura-limpia-sifitur\\arquitectura-limpia-sifitur.finalize-summary.json",
+      "img/arquitectura-limpia-sifitur.jpg": "8af8016f63ebc57713ad6425e469c0bca73685064a4df8597d32e69f37226fd6",
+      "img/arquitectura-limpia-sifitur.png": "41c4a183157a76e3fff551cb18221adeb004f0c888e353aff89412869bbf8ed2",
+      "img/fuentes-svg/arquitectura-limpia-sifitur.svg": "5ff1a5a67982a113b6b065d13b72262803f5c197b7929a0c08aa834b662fb84d"
+    },
+    {
+      "slug": "arquitectura-monolitica-sifitur",
+      "source": ".archify/sifitur-20261106-082100/arquitectura-monolitica-sifitur/candidate.json",
+      "sourceSha256": "d1729238e0879ac4c1e70f2af821e11e622a6d7a226a36f947c37b385ea1dfe5",
+      "html": ".archify/sifitur-20261106-082100/arquitectura-monolitica-sifitur/arquitectura-monolitica-sifitur.html",
+      "htmlSha256": "a67bd65f5e8eae44688be8295c8e980730ae799750bfe6779bf40884da8da3b6",
+      "receipt": ".archify\\sifitur-20261106-082100\\arquitectura-monolitica-sifitur\\arquitectura-monolitica-sifitur.finalize-summary.json",
+      "img/arquitectura-monolitica-sifitur.jpg": "aa220c40a12b6aade54d0227748f03eaa33829a1f900a233d27fb9c5f5975327",
+      "img/arquitectura-monolitica-sifitur.png": "c0adb5c1106e6ada99e2e4db7a45e0fa471406c7b491c5873f956e1bf743bb19",
+      "img/fuentes-svg/arquitectura-monolitica-sifitur.svg": "139208f0d0ec0eb5dd6d23574a9f93128950653f25e7f670385336ef79f76323"
+    },
+    {
+      "slug": "componentes",
+      "source": ".archify/sifitur-20261106-082100/componentes/candidate.json",
+      "sourceSha256": "b9704a00827e8346a663731790a6b05ba8bddb20c25dbda6c3795fe0907ca7f6",
+      "html": ".archify/sifitur-20261106-082100/componentes/componentes.html",
+      "htmlSha256": "4eaee11441655ae08feec0e4b684681dee96ad7e119c48dc996fb82472097d1d",
+      "receipt": ".archify\\sifitur-20261106-082100\\componentes\\revision-final\\componentes.finalize-summary.json",
+      "img/componentes.jpg": "aabb57229624e0bff1aabf04010b57843b744f205f7f7cc61988c816abf0aee3",
+      "img/componentes.png": "dce7882fe7fc87434a4c2184846608f8960ba6dbf50bef26421bd4124887055e",
+      "img/fuentes-svg/componentes.svg": "e1467928ad4669cd6b6e00268e539e4a02000faa8653a28782d6c90d0be95457"
+    },
+    {
+      "slug": "paquetes-modulo-inspecciones",
+      "source": ".archify/sifitur-20261106-082100/paquetes-modulo-inspecciones/candidate.json",
+      "sourceSha256": "cad6a9b9c393c18e224d581800e861a531ce6feb7412c992b54260df184640bf",
+      "html": ".archify/sifitur-20261106-082100/paquetes-modulo-inspecciones/paquetes-modulo-inspecciones.html",
+      "htmlSha256": "f63ec3be01b08c0c2e6541838eb31451c3e25cb938ec30ecd232900ca5361e5d",
+      "receipt": ".archify\\sifitur-20261106-082100\\paquetes-modulo-inspecciones\\paquetes-modulo-inspecciones.finalize-summary.json",
+      "img/paquetes-modulo-inspecciones.jpg": "ac7273a8c16a8ef441a1857aa7e23bc1b6fa97fd26c5d65949df6205663a5911",
+      "img/paquetes-modulo-inspecciones.png": "0ffa81cfcc4644c66bd802703a74447c67012942551b13354b3e741ebb69a351",
+      "img/fuentes-svg/paquetes-modulo-inspecciones.svg": "7b79d15461f2bfdf256a687b699aa4b7f006ca7c4971996f528c19821f2eafef"
+    },
+    {
+      "slug": "clases-modulo-inspecciones",
+      "source": ".archify/sifitur-20261106-082100/clases-modulo-inspecciones/candidate.json",
+      "sourceSha256": "2830be27aadf0be7e5f42ca500ce313b74b0a684597b3e5f327eaa7b08a09a59",
+      "html": ".archify/sifitur-20261106-082100/clases-modulo-inspecciones/clases-modulo-inspecciones.html",
+      "htmlSha256": "73a4b73977813e8d4d7282b732e541c896d6b04dd5fa29ef527896f71b1df531",
+      "receipt": ".archify\\sifitur-20261106-082100\\clases-modulo-inspecciones\\revision-final\\clases-modulo-inspecciones.finalize-summary.json",
+      "img/clases-modulo-inspecciones.jpg": "c5948e3dbc3bf64b33c659cf6e45b57937ac7baf297b17c27acd16e8c638cd0b",
+      "img/clases-modulo-inspecciones.png": "a73ed6e3916d70b506ded67389511db7f6f8ab982e106c3c1b0748c8a89bd6a8",
+      "img/fuentes-svg/clases-modulo-inspecciones.svg": "f2887249eb004a8630ed965b6816346d52c1871fc880f86b1698d419f66a609c"
+    },
+    {
+      "slug": "patron-adapter",
+      "source": ".archify/sifitur-20261106-082100/patron-adapter/candidate.json",
+      "sourceSha256": "5f8e9961968cb66a705fe74e1fcac47c7070ef26927bac90cb1966cbb4d7a1ea",
+      "html": ".archify/sifitur-20261106-082100/patron-adapter/patron-adapter.html",
+      "htmlSha256": "d35d7201db6878e1c972fa47b38c5b9087b802418817575ec536f737e5ad799e",
+      "receipt": ".archify\\sifitur-20261106-082100\\patron-adapter\\patron-adapter.finalize-summary.json",
+      "img/patron-adapter.jpg": "a57a70568572ee8e6f01e443e5aeba4bfaef355f6d76048ed1fd5f386b026ffd",
+      "img/patron-adapter.png": "7bc770db81b1d3507691a74ee50dec64f4cdff03d79d23952ad809be1d10b646",
+      "img/fuentes-svg/patron-adapter.svg": "c43cb8c618e8740766e564d21a3f3de2228d05834509b2d6cee51a366edc0741"
+    },
+    {
+      "slug": "patron-repository",
+      "source": ".archify/sifitur-20261106-082100/patron-repository/candidate.json",
+      "sourceSha256": "46f11751e4ca4e2b1335b6939ca8d7a18c05575b3ae6afc9b31b604b3ee27e74",
+      "html": ".archify/sifitur-20261106-082100/patron-repository/patron-repository.html",
+      "htmlSha256": "0e6ff8e03a0503681262027f25d2beba3cecdf2489761c67f2347bfdcc90ac8c",
+      "receipt": ".archify\\sifitur-20261106-082100\\patron-repository\\patron-repository.finalize-summary.json",
+      "img/patron-repository.jpg": "f8ae61affc4475eb736e554cdb112ee726aea6856afa20d85b9dc0047831ab39",
+      "img/patron-repository.png": "7f83dc30b05c746d585636c94a9191f1b4fa555e70c1fdff9a9c0a0df74f7aa8",
+      "img/fuentes-svg/patron-repository.svg": "a391ab93b0c04f4e351913a1f6edf59be09d58072f67c287c96840f1d5ef205b"
+    },
+    {
+      "slug": "patron-factory",
+      "source": ".archify/sifitur-20261106-082100/patron-factory/candidate.json",
+      "sourceSha256": "08532a8a2ee0a9777720e69d4d9044e6973d3317ad1462dfa4eda5e4fc70370f",
+      "html": ".archify/sifitur-20261106-082100/patron-factory/patron-factory.html",
+      "htmlSha256": "996a2b286e26a375f4607e890ef0417ad73a3447d4d0c87c6dad441e63ddd8b0",
+      "receipt": ".archify\\sifitur-20261106-082100\\patron-factory\\patron-factory.finalize-summary.json",
+      "img/patron-factory.jpg": "203f1e6025a4ed989122d6c5ab74b73d871dc9dc5ddf7dc36c63e0964bdffb08",
+      "img/patron-factory.png": "3bd43e4001b718d7dd534eb7a9f62c680688df4e11ebae7069d3a2d940202c78",
+      "img/fuentes-svg/patron-factory.svg": "d76de4d1454e24d96a14245f568dfce6af3bda343c93c85a6f03e77feb51d87d"
+    },
+    {
+      "slug": "patron-facade",
+      "source": ".archify/sifitur-20261106-082100/patron-facade/candidate.json",
+      "sourceSha256": "5dc36d21c62dc0f8638ec37e28bea94c443026577bcde2541b4113cb124a2b5c",
+      "html": ".archify/sifitur-20261106-082100/patron-facade/patron-facade.html",
+      "htmlSha256": "bca021d904c63ac123cff231dc0cc869d4b9702ea08d2c15d020bbe8f837f366",
+      "receipt": ".archify\\sifitur-20261106-082100\\patron-facade\\patron-facade.finalize-summary.json",
+      "img/patron-facade.jpg": "120e255bb5c5575d94e86c63febde233c238a42a83794ff53db4a360ded4155b",
+      "img/patron-facade.png": "bef0009374b7fe19661346b41629c6d1c8f07387a8a78f10eb09793721f5c81f",
+      "img/fuentes-svg/patron-facade.svg": "eb84b97fe94a7b90f01a4903833601e05af38d9fb05b492eba00e4220f8f12c9"
+    },
+    {
+      "slug": "principio-dip",
+      "source": ".archify/sifitur-20261106-082100/principio-dip/candidate.json",
+      "sourceSha256": "9848947a40dab35c1dfb59eef5be98c7c4db06cb83b43fabf52d4437fdfdfd92",
+      "html": ".archify/sifitur-20261106-082100/principio-dip/principio-dip.html",
+      "htmlSha256": "3b08337efb3d765ba02d2b7e772c1c5612866bc08c37090ef821c877b688c1a0",
+      "receipt": ".archify\\sifitur-20261106-082100\\principio-dip\\revision-final\\principio-dip.finalize-summary.json",
+      "img/principio-dip.jpg": "4bcb49cddcc0fe94df1edd7512c16e4814211c6dd2a36c733633f7a144b65d52",
+      "img/principio-dip.png": "7184bb5bb0964053f3d3da081f3dbeadca3a0bf5d81e115301910ed46bb5d1e2",
+      "img/fuentes-svg/principio-dip.svg": "ab4c9e9c21341015c40e3de9944e1eb389beb5149abf7b41b449035c292c9f5d"
+    },
+    {
+      "slug": "solid-modulo-inspecciones",
+      "source": ".archify/sifitur-20261106-082100/solid-modulo-inspecciones/candidate.json",
+      "sourceSha256": "162ddd60627b57571de31584a22f9c35ee9efdf073080c32263f55c80c684208",
+      "html": ".archify/sifitur-20261106-082100/solid-modulo-inspecciones/solid-modulo-inspecciones.html",
+      "htmlSha256": "d6f664fe5e33fbc31a791257b0243c2a29432c4bd34d11f2092169162a96155b",
+      "receipt": ".archify\\sifitur-20261106-082100\\solid-modulo-inspecciones\\revision-final\\solid-modulo-inspecciones.finalize-summary.json",
+      "img/solid-modulo-inspecciones.jpg": "a61d7838d5b5969661661099bb79ee2a06a843fb3739a5f06b02040026e094e5",
+      "img/solid-modulo-inspecciones.png": "9b339a0dfb3de362db5a8dce27d9539347256b3257fbdc9780beae897ecd65c3",
+      "img/fuentes-svg/solid-modulo-inspecciones.svg": "353c0dfc73eee2cead2d64c86b9f6e55e5cc3a5e65d61023f9f2ce44cc26f892"
+    },
+    {
+      "slug": "proceso-fiscalizacion",
+      "source": ".archify/sifitur-20261106-082100/proceso-fiscalizacion/candidate.json",
+      "sourceSha256": "d18e6e2fe9c5affdb640011f279b8d4847948ac2f53e7bc49ca7f068dd6f2680",
+      "html": ".archify/sifitur-20261106-082100/proceso-fiscalizacion/proceso-fiscalizacion.html",
+      "htmlSha256": "4d2508a3bc2718615219ae94bd583c0bfe3228d6bd6ce2a3527d9d87560093bf",
+      "receipt": ".archify\\sifitur-20261106-082100\\proceso-fiscalizacion\\proceso-fiscalizacion.finalize-summary.json",
+      "img/proceso-fiscalizacion.jpg": "cbe34bfeeaf73ac6fb905018a8d199f881c566c01339fc4326c7584cb1f1e988",
+      "img/proceso-fiscalizacion.png": "236e8a80a117df95fd748124e56685e3d3632ea15be20c703054fef80a5811c5",
+      "img/fuentes-svg/proceso-fiscalizacion.svg": "a9543cd12df851529238182b25fd3f379465ccb52ac909e763a40d22f1810ee1"
+    },
+    {
+      "slug": "estados-expediente",
+      "source": ".archify/sifitur-20261106-082100/estados-expediente/candidate.json",
+      "sourceSha256": "2755fa87c3f9de049d2f1796262df165e8ac5e8b8fb4fe0653938aaa719d7dda",
+      "html": ".archify/sifitur-20261106-082100/estados-expediente/estados-expediente.html",
+      "htmlSha256": "af931d5a166b611863b789c53512bc2efe987c17c1ba6b96e38d687d7052b4cc",
+      "receipt": ".archify\\sifitur-20261106-082100\\estados-expediente\\revision-final\\estados-expediente.finalize-summary.json",
+      "img/estados-expediente.jpg": "76e21e6cae4d9a8706d1199150bd5a6a027949ba15f7f151a2f3ed322550f55d",
+      "img/estados-expediente.png": "f1c3316405d3dd21c96399a60c01ef138e37f341e0b6132d60b834bfcfc4d3d8",
+      "img/fuentes-svg/estados-expediente.svg": "31428b57fd569b0076784beaa291c1a48f394af435105eb63a26b83834270a7d"
+    },
+    {
+      "slug": "estados-captura",
+      "source": ".archify/sifitur-20261106-082100/estados-captura/candidate.json",
+      "sourceSha256": "2ae1245f1607e988cd8dcf719b7befa37a0044f7c0da3f6a27bb39d72176ac5f",
+      "html": ".archify/sifitur-20261106-082100/estados-captura/estados-captura.html",
+      "htmlSha256": "1237921131915a45f4327e58621768706a206a2fdf39761aa36c25649700eb4f",
+      "receipt": ".archify\\sifitur-20261106-082100\\estados-captura\\review-docs-jpg\\estados-captura.finalize-summary.json",
+      "img/estados-captura.jpg": "fad5ec209b98f835c13bdcdabd54059b49f711d8a30dd4c2d02698cb2e5b3f0c",
+      "img/estados-captura.png": "2f95c05f8da19c1af1ce9cf3a79542ed844d831c09511cee43e7046195d03e8a",
+      "img/fuentes-svg/estados-captura.svg": "cdd042442a29fb3dd44f73265bd6eab664c00db07481572928ab9db11b507e85"
+    },
+    {
+      "slug": "estados-emision",
+      "source": ".archify/sifitur-20261106-082100/estados-emision/candidate.json",
+      "sourceSha256": "97adef0ce0a4fefaf257d7b80fa924dfbeb3a8958403f7a6430e562f22c2251f",
+      "html": ".archify/sifitur-20261106-082100/estados-emision/estados-emision.html",
+      "htmlSha256": "861c3422e9cbce78473e5b91142b0ff716e7b5a0e0104236a9bc4aab065d12dd",
+      "receipt": ".archify\\sifitur-20261106-082100\\estados-emision\\review-3\\estados-emision.finalize-summary.json",
+      "img/estados-emision.jpg": "d58bc644db3f88aa6f5a1ee115a53fb86bb5d7013ac5b8d41ca5fa837f7a3288",
+      "img/estados-emision.png": "3b1c1d29b45b4929821d5af0ecf582e246ed35ea2307673107324a0f70848bc7",
+      "img/fuentes-svg/estados-emision.svg": "aac34a4fe4a3689e5abf97d51d3899305bbc909605fc9c243eaadcd58c1779f8"
+    },
+    {
+      "slug": "estados-notificacion",
+      "source": ".archify/sifitur-20261106-082100/estados-notificacion/candidate.json",
+      "sourceSha256": "18f7b59320c5822a1422e699b0f3c5e331ed3d44474336f63a606b357802fa56",
+      "html": ".archify/sifitur-20261106-082100/estados-notificacion/estados-notificacion.html",
+      "htmlSha256": "80bba6e274ab94266baea7fb3b0f14f33560eb4513b8bfd7638407632af48995",
+      "receipt": ".archify\\sifitur-20261106-082100\\estados-notificacion\\revision-final\\estados-notificacion.finalize-summary.json",
+      "img/estados-notificacion.jpg": "799ae9b4d2d0f22806dcdc1b29a79ffba78ed2a95e665edafa9a3aef33c81ab3",
+      "img/estados-notificacion.png": "394b89226115f120c522c80b3425ddeec792b8373b0960980b5679e845626242",
+      "img/fuentes-svg/estados-notificacion.svg": "7e529b10722b857836f7b59ef4db0e827151579a3709131420065e9b4f89bbd0"
+    },
+    {
+      "slug": "secuencia-registrar-inspeccion",
+      "source": ".archify/sifitur-20261106-082100/secuencia-registrar-inspeccion/candidate.json",
+      "sourceSha256": "68545621535bce4a02f90c6160c4d1964c28000d2f0b44981996c1d1032d237c",
+      "html": ".archify/sifitur-20261106-082100/secuencia-registrar-inspeccion/secuencia-registrar-inspeccion.html",
+      "htmlSha256": "d38fb77c75f117e896d63d1817e11eda9f911f165caffd198d45131b95e6e7f8",
+      "receipt": ".archify\\sifitur-20261106-082100\\secuencia-registrar-inspeccion\\revision-final\\secuencia-registrar-inspeccion.finalize-summary.json",
+      "img/secuencia-registrar-inspeccion.jpg": "be97cf5edb8fdef2f333e1eaf7ef9d9725ee766e3b4fb60031531e38db2b1e80",
+      "img/secuencia-registrar-inspeccion.png": "226eae2f880fbc3cf041cff70c292908d9fb4c01b99949e04a84f115ce729f18",
+      "img/fuentes-svg/secuencia-registrar-inspeccion.svg": "859dcf19e4fca1da3a736a30c9d4ca80fdee5943ec179a3132bfb5b3a4aa1192"
+    },
+    {
+      "slug": "nivel1-contexto",
+      "workspaceSha256": "7969374e641f472a62abd81047f7f54b5de006687521736ec03e94af4648d5db",
+      "img/nivel1-contexto.jpg": "156b738cb56185a5755d85a05165d85c4f79de7644930e03f79599befaa7db3f",
+      "img/nivel1-contexto.png": "7f7b321ffb8c3e9415fe11d6fc5c52e108dcf82dcac78fac51ba4ceb05855fa5",
+      "img/fuentes-svg/nivel1-contexto.svg": "1862698996829a35f4c5b2c9e5027327074ea3bd9a0dde670c8e43997e3211b7"
+    },
+    {
+      "slug": "nivel2-contenedores",
+      "workspaceSha256": "7969374e641f472a62abd81047f7f54b5de006687521736ec03e94af4648d5db",
+      "img/nivel2-contenedores.jpg": "16c30dbcad42fde01c0d079fa3c9e50fd4b3c960f094946b863502635b0806bc",
+      "img/nivel2-contenedores.png": "bdb24ae34121950811e0eac94af6c6092c68c84a6c08df946575698782666d20",
+      "img/fuentes-svg/nivel2-contenedores.svg": "5ca88fd4de842a429b785871ac996b14dc8f3946d04226b589645a8e54b4b6eb"
+    },
+    {
+      "slug": "nivel3-componentes",
+      "workspaceSha256": "7969374e641f472a62abd81047f7f54b5de006687521736ec03e94af4648d5db",
+      "img/nivel3-componentes.jpg": "c135de224bdb783e8ecb4f266ca63d276f0eb0a11ff6be9eebdf0e076e9f7dd4",
+      "img/nivel3-componentes.png": "52ba8e11d918fc77cc358f12d531474773a604882ea7d04d10dd34e7c87b21e0",
+      "img/fuentes-svg/nivel3-componentes.svg": "dac875f5cf3df2c58b9420a83608a8d0b1b5803812ffa8e44c1769af51f7034d"
+    },
+    {
+      "slug": "nivel4-clases",
+      "workspaceSha256": "7969374e641f472a62abd81047f7f54b5de006687521736ec03e94af4648d5db",
+      "img/nivel4-clases.jpg": "cf087dbc03296d375c0bce5a73d4056ad6b639c830248d9ff40b85beeb1191f2",
+      "img/nivel4-clases.png": "58d4e33fe75e99fd1bd1e1fb247f3d98a1900bc56f1876c0cd22eb2656917d23",
+      "img/fuentes-svg/nivel4-clases.svg": "a3851cefce164451a4c37122d7b81e195b03b43c946a964f042edab7f682829f"
+    },
+    {
+      "slug": "nivel4-registro",
+      "workspaceSha256": "7969374e641f472a62abd81047f7f54b5de006687521736ec03e94af4648d5db",
+      "img/nivel4-registro.jpg": "680d77c116a36611cf10f98874a9d578991506ad9fddabd60ed2400c0b1fc50a",
+      "img/nivel4-registro.png": "6037217399d96f26d35fb62daaf07e27bb9e2808cc32650eff784ff20dabd90a",
+      "img/fuentes-svg/nivel4-registro.svg": "126779af11098af3163fea6634f821e71acc18ce6c024cf19f9ed3d6822f9c43"
+    },
+    {
+      "slug": "nivel4-secuencia",
+      "workspaceSha256": "7969374e641f472a62abd81047f7f54b5de006687521736ec03e94af4648d5db",
+      "img/nivel4-secuencia.jpg": "c1d1b9e35699d2842c1fe6bcc5ce3f694ab58337f4956ee0b499994e8a9b0a7e",
+      "img/nivel4-secuencia.png": "41e77a28867f6f21f751bdbb1e6e3a477a17ee214c60d2811c4b1042288f4308",
+      "img/fuentes-svg/nivel4-secuencia.svg": "1ef66dd24375ee21b8f5abc2b045d7722aca31aaecd043e839c9ae5a9d95645f"
+    },
+    {
+      "slug": "nivel4-agregado",
+      "workspaceSha256": "7969374e641f472a62abd81047f7f54b5de006687521736ec03e94af4648d5db",
+      "img/nivel4-agregado.jpg": "91b86067615536d55b7f7f2615cfd0eec93e632134810df699b905b17a9f793a",
+      "img/nivel4-agregado.png": "ccb33c914e1fd8738ce7f9c96b5a4acba72e0cab72129f40adb22c278c8e093b",
+      "img/fuentes-svg/nivel4-agregado.svg": "889e4a4ef0a630aac8d96b38f1cebbe4cc9ea1d2fdb951ddf6fddb86d047eb4c"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,193 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "SIFITUR · Monolito modular en capas",
+    "locale": "es",
+    "output": ".archify/sifitur-20261106-082100/arquitectura-monolitica-sifitur/arquitectura-monolitica-sifitur.html",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/PoolDYer/entregable02-jeanpoolkennerpalominomavila.git",
+      "revision": "ac5bd7eb01bceee1c9230e675846fd9d1d4f79db"
+    }
+  },
+  "components": [
+    {
+      "id": "clients",
+      "type": "frontend",
+      "label": "Canales independientes",
+      "sublabel": "Flutter · React · Next.js",
+      "pos": [
+        40,
+        40
+      ],
+      "size": [
+        230,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/02-arquitectura-software/estilo-arquitectonico.md"
+        }
+      ]
+    },
+    {
+      "id": "presentation",
+      "type": "security",
+      "label": "Presentación REST",
+      "sublabel": "Público / JWT, rol y ámbito",
+      "pos": [
+        430,
+        40
+      ],
+      "size": [
+        230,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/02-arquitectura-software/estilo-arquitectonico.md"
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "backend",
+      "label": "Aplicación y dominio",
+      "sublabel": "Contratos públicos por módulo",
+      "pos": [
+        820,
+        40
+      ],
+      "size": [
+        240,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/02-arquitectura-software/estilo-arquitectonico.md"
+        }
+      ]
+    },
+    {
+      "id": "infra",
+      "type": "cloud",
+      "label": "Infraestructura",
+      "sublabel": "Repositorios y adaptadores",
+      "pos": [
+        820,
+        300
+      ],
+      "size": [
+        240,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/02-arquitectura-software/estilo-arquitectonico.md"
+        }
+      ]
+    },
+    {
+      "id": "stores",
+      "type": "database",
+      "label": "Persistencia",
+      "sublabel": "PostgreSQL · Redis · S3",
+      "pos": [
+        430,
+        300
+      ],
+      "size": [
+        230,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/02-arquitectura-software/estilo-arquitectonico.md"
+        }
+      ]
+    },
+    {
+      "id": "worker",
+      "type": "backend",
+      "label": "Trabajador / RabbitMQ",
+      "sublabel": "Proceso y escalado separados",
+      "pos": [
+        40,
+        300
+      ],
+      "size": [
+        230,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/02-arquitectura-software/estilo-arquitectonico.md"
+        }
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "clients-presentation",
+      "from": "clients",
+      "to": "presentation",
+      "label": "HTTPS / REST",
+      "variant": "default"
+    },
+    {
+      "id": "presentation-application",
+      "from": "presentation",
+      "to": "application",
+      "label": "Invoca",
+      "variant": "default"
+    },
+    {
+      "id": "application-infra",
+      "from": "application",
+      "to": "infra",
+      "label": "Por puerto",
+      "variant": "default"
+    },
+    {
+      "id": "infra-stores",
+      "from": "infra",
+      "to": "stores",
+      "label": "SQL / HTTPS",
+      "variant": "default"
+    },
+    {
+      "id": "worker-stores",
+      "from": "worker",
+      "to": "stores",
+      "label": "Outbox / T2",
+      "variant": "default"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Módulos institucionales",
+      "items": [
+        "Identidad, padrón, riesgo, operativos, inspecciones, subsanaciones, consulta, indicadores y auditoría.",
+        "Se despliegan juntos; llamadas internas en memoria por APIs públicas."
+      ]
+    },
+    {
+      "dot": "cyan",
+      "title": "Propiedad de datos",
+      "items": [
+        "Cada módulo controla sus tablas y repositorios.",
+        "API sin estado; generación de PDF y avisos en trabajador independiente."
+      ]
+    },
+    {
+      "dot": "slate",
+      "title": "Alcance del diseño",
+      "items": [
+        "Arquitectura propuesta; implementación y validación pendientes.",
+        "La presencia de RabbitMQ no convierte los módulos en microservicios."
+      ]
+    }
+  ]
+}

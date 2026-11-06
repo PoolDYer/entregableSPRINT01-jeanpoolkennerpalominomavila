@@ -1,0 +1,188 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-alto-nivel\\candidate.json",
+    "sha256": "de6a6d6bf6cfb99778839da977513590840bf0a5538447cbc35abdc510ee2d06",
+    "bytes": 8817
+  },
+  "artifact": {
+    "path": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-alto-nivel\\arquitectura-alto-nivel.html",
+    "sha256": "0c2679035dc8b6ad5853c7bef634e5485fa5765cc087fda85b46ebb1fae56a7e",
+    "bytes": 869306
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-alto-nivel\\arquitectura-alto-nivel.finalize.json",
+    "summaryReceipt": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-alto-nivel\\arquitectura-alto-nivel.finalize-summary.json",
+    "browserCheckReceipt": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-alto-nivel\\arquitectura-alto-nivel.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-06T18:25:06.732Z",
+    "source": "network",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 3602,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  },
+  "visualReviewRecommendation": {
+    "action": "inspect-route-readability",
+    "signals": {
+      "resolvedCrossovers": 3,
+      "routesOverSuggestedBends": 3
+    },
+    "reason": "Automated gates passed, but crossings or detours still need perceptual review before claiming visual quality.",
+    "affectedRoutes": {
+      "crossings": [
+        {
+          "left": {
+            "id": "primary-replica",
+            "from": "primary",
+            "to": "replica",
+            "label": "Asíncrona",
+            "collectionIndex": 8,
+            "artifactIndex": 9
+          },
+          "right": {
+            "id": "api-s3",
+            "from": "api",
+            "to": "s3",
+            "label": "Originales",
+            "collectionIndex": 12,
+            "artifactIndex": 13
+          },
+          "point": [
+            967,
+            466
+          ]
+        },
+        {
+          "left": {
+            "id": "primary-replica",
+            "from": "primary",
+            "to": "replica",
+            "label": "Asíncrona",
+            "collectionIndex": 8,
+            "artifactIndex": 9
+          },
+          "right": {
+            "id": "worker-redis",
+            "from": "worker",
+            "to": "redis",
+            "label": "Invalidación",
+            "collectionIndex": 14,
+            "artifactIndex": 15
+          },
+          "point": [
+            946,
+            466
+          ]
+        },
+        {
+          "left": {
+            "id": "api-s3",
+            "from": "api",
+            "to": "s3",
+            "label": "Originales",
+            "collectionIndex": 12,
+            "artifactIndex": 13
+          },
+          "right": {
+            "id": "worker-redis",
+            "from": "worker",
+            "to": "redis",
+            "label": "Invalidación",
+            "collectionIndex": 14,
+            "artifactIndex": 15
+          },
+          "point": [
+            946,
+            427
+          ]
+        }
+      ],
+      "detours": [
+        {
+          "relationship": {
+            "id": "api-s3",
+            "from": "api",
+            "to": "s3",
+            "label": "Originales",
+            "collectionIndex": 12,
+            "artifactIndex": 13
+          },
+          "bends": 4,
+          "stretch": 1
+        },
+        {
+          "relationship": {
+            "id": "api-externos",
+            "from": "api",
+            "to": "externos",
+            "label": "HTTPS",
+            "collectionIndex": 13,
+            "artifactIndex": 14
+          },
+          "bends": 3,
+          "stretch": 1.088,
+          "directCorridorBlockers": [
+            {
+              "id": "gateway",
+              "label": "NGINX / WAF",
+              "box": [
+                350,
+                230,
+                180,
+                72
+              ]
+            }
+          ]
+        },
+        {
+          "relationship": {
+            "id": "worker-redis",
+            "from": "worker",
+            "to": "redis",
+            "label": "Invalidación",
+            "collectionIndex": 14,
+            "artifactIndex": 15
+          },
+          "bends": 3,
+          "stretch": 1
+        }
+      ],
+      "truncated": false
+    },
+    "hints": [
+      "primary → replica crosses api → s3: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "primary → replica crosses worker → redis: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "api → s3 crosses worker → redis: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "api → s3 needs 4 bends: move node api or s3 so they share a row or column with matching centers, or sit diagonally with a clear corner.",
+      "worker → redis needs 3 bends: move node worker or redis so they share a row or column with matching centers, or sit diagonally with a clear corner."
+    ],
+    "repair": "Trace these relationships at the desktop viewport. For Architecture, use references/architecture-layout-repair.md: reflow a blocked main path or tangled connected scene, and repair an isolated defect locally only when the surrounding composition is accepted. Preserve all semantic content and user-fixed geometry. Rerun finalize once after the edit."
+  }
+}

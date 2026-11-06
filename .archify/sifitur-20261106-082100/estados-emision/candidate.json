@@ -1,0 +1,88 @@
+{
+  "schema_version": 3,
+  "diagram_type": "lifecycle",
+  "meta": {
+    "title": "SIFITUR · Estados de emisión",
+    "locale": "es",
+    "output": ".archify/sifitur-20261106-082100/estados-emision/estados-emision.html",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/PoolDYer/entregable02-jeanpoolkennerpalominomavila.git",
+      "revision": "ac5bd7eb01bceee1c9230e675846fd9d1d4f79db"
+    }
+  },
+  "mainPath": [
+    "received",
+    "issued",
+    "annulled"
+  ],
+  "states": [
+    {
+      "id": "received",
+      "type": "start",
+      "label": "RECIBIDA",
+      "sublabel": "Emisión pendiente",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    },
+    {
+      "id": "issued",
+      "type": "success",
+      "label": "EMITIDA",
+      "sublabel": "PDF + SHA256 + T2",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    },
+    {
+      "id": "annulled",
+      "type": "neutral",
+      "label": "ANULADA",
+      "sublabel": "Preserva original",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    }
+  ],
+  "transitions": [
+    {
+      "id": "received-issued",
+      "from": "received",
+      "to": "issued",
+      "label": "Custodiar PDF y confirmar T2",
+      "variant": "default"
+    },
+    {
+      "id": "issued-annulled",
+      "from": "issued",
+      "to": "annulled",
+      "label": "Decisión y motivo",
+      "variant": "default"
+    },
+    {
+      "id": "received-received",
+      "from": "received",
+      "to": "received",
+      "label": "Fallo PDF: reintentar",
+      "variant": "default"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "slate",
+      "title": "Alcance del diseño",
+      "items": [
+        "Arquitectura propuesta; implementación y validación pendientes.",
+        "RECIBIDA → RECIBIDA: fallo de generación del PDF o de custodia; reanuda con la misma clave.",
+        "Reintentos acotados; tres intentos llevan a revisión operativa. El error de correo no revierte EMITIDA."
+      ]
+    }
+  ]
+}

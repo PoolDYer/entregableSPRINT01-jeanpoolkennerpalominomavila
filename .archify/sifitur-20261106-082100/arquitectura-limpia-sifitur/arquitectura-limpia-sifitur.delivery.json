@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "f1799251-23ad-4bd0-901e-330bde38ed61",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-limpia-sifitur\\candidate.json",
+  "output": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-limpia-sifitur\\arquitectura-limpia-sifitur.html",
+  "specification": {
+    "sha256": "6d1ff7035418a71904922d10007c5ebb10289d1935c7828e435595c5e99d4982",
+    "bytes": 4251
+  },
+  "artifact": {
+    "sha256": "462b6740bbbdc365e2989a2dcca0ddbfbd77ce06abb9cb2848c2301b1cdfd89f",
+    "bytes": 842769
+  }
+}

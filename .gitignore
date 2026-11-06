@@ -4,3 +4,6 @@ Thumbs.db
 
 # Configuración local de editores
 .vscode/
+
+# Salida de consola local; los recibos JSON de validación sí se conservan.
+.archify/**/*.log

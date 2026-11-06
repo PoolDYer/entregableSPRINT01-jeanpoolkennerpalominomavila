@@ -8,9 +8,9 @@ Mostrar SIFITUR como una caja única: quiénes usan el sistema y con qué servic
 
 ## 2. Diagrama
 
-![Contexto del sistema SIFITUR](../../img/nivel1-contexto.png)
+![Contexto del sistema SIFITUR](../../img/nivel1-contexto.jpg)
 
-Fuente editable: [nivel1-contexto.svg](../../img/fuentes-svg/nivel1-contexto.svg).
+Exportación SVG: [nivel1-contexto.svg](../../img/fuentes-svg/nivel1-contexto.svg).
 
 ## 3. Personas
 
@@ -57,3 +57,15 @@ Siguiente nivel: [Contenedores](Nivel2-DiagramadeContenedores.md).
 Las cinco personas y los cuatro sistemas externos conservan su identidad al navegar por C4. El nivel 2 indica su canal y el nivel 3 el componente que atiende la interacción. En el nivel 3 la pasarela se muestra a través del trabajador, que constituye otro contenedor; sus clases no se ubican dentro de la frontera de la API.
 
 El acceso a SUNAT y MINCETUR se modela como integración prevista. No se presupone que una API pública permita todas las consultas sin acuerdo, credenciales o límites. La publicación del estado institucional es responsabilidad de SIFITUR y no una respuesta automática de un tercero.
+
+## Herramientas y fuentes de diagramas
+
+Estas vistas se gestionan en **Structurizr** desde [workspace.dsl](../../diagrams/structurizr/workspace.dsl). [Abrir el visor C4](../../diagrams/structurizr/site/index.html).
+
+Los niveles 1–3 son vistas nativas del modelo. Structurizr integra el nivel 4 como vistas de imagen vinculadas al componente Inspecciones; las clases y secuencias se mantienen en PlantUML y se renderizan localmente.
+
+| Vista | Fuente | Visor |
+|---|---|---|
+| nivel1-contexto | [Modelo DSL](../../diagrams/structurizr/workspace.dsl) | [Structurizr](../../diagrams/structurizr/site/index.html?diagram=nivel1-contexto) |
+
+[Catálogo y reproducción de diagramas](../../diagrams/README.md).

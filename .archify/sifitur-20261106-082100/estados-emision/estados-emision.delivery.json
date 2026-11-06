@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "53825894-1b0e-48c9-9211-ce48719eef16",
+  "status": "current",
+  "command": "deliver",
+  "type": "lifecycle",
+  "input": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\estados-emision\\candidate.json",
+  "output": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\estados-emision\\estados-emision.html",
+  "specification": {
+    "sha256": "97adef0ce0a4fefaf257d7b80fa924dfbeb3a8958403f7a6430e562f22c2251f",
+    "bytes": 2247
+  },
+  "artifact": {
+    "sha256": "861c3422e9cbce78473e5b91142b0ff716e7b5a0e0104236a9bc4aab065d12dd",
+    "bytes": 831192
+  }
+}

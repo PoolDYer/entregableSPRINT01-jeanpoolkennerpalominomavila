@@ -1,0 +1,447 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "SIFITUR · Arquitectura de alto nivel",
+    "locale": "es",
+    "output": ".archify/sifitur-20261106-082100/arquitectura-alto-nivel/arquitectura-alto-nivel.html",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/PoolDYer/entregable02-jeanpoolkennerpalominomavila.git",
+      "revision": "ac5bd7eb01bceee1c9230e675846fd9d1d4f79db"
+    }
+  },
+  "components": [
+    {
+      "id": "movil",
+      "type": "frontend",
+      "label": "App Flutter",
+      "sublabel": "Inspector · SQLite cifrada",
+      "pos": [
+        40,
+        40
+      ],
+      "size": [
+        180,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/02-arquitectura-software/arquitectura-inicial.md"
+        }
+      ]
+    },
+    {
+      "id": "consola",
+      "type": "frontend",
+      "label": "Consola React",
+      "sublabel": "Coordinador / TI",
+      "pos": [
+        350,
+        40
+      ],
+      "size": [
+        180,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/02-arquitectura-software/arquitectura-inicial.md"
+        }
+      ]
+    },
+    {
+      "id": "portal",
+      "type": "frontend",
+      "label": "Portal React",
+      "sublabel": "Prestador · expediente propio",
+      "pos": [
+        660,
+        40
+      ],
+      "size": [
+        180,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/02-arquitectura-software/arquitectura-inicial.md"
+        }
+      ]
+    },
+    {
+      "id": "publico",
+      "type": "frontend",
+      "label": "Next.js / CDN",
+      "sublabel": "Ciudadano · QR público",
+      "pos": [
+        970,
+        40
+      ],
+      "size": [
+        180,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/02-arquitectura-software/arquitectura-inicial.md"
+        }
+      ]
+    },
+    {
+      "id": "gateway",
+      "type": "security",
+      "label": "NGINX / WAF",
+      "sublabel": "TLS · balanceo redundante",
+      "pos": [
+        350,
+        230
+      ],
+      "size": [
+        180,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/02-arquitectura-software/arquitectura-inicial.md"
+        }
+      ]
+    },
+    {
+      "id": "api",
+      "type": "backend",
+      "label": "API NestJS",
+      "sublabel": "Módulos · JWT, rol y ámbito",
+      "pos": [
+        660,
+        230
+      ],
+      "size": [
+        180,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/02-arquitectura-software/arquitectura-inicial.md"
+        }
+      ]
+    },
+    {
+      "id": "redis",
+      "type": "database",
+      "label": "Redis",
+      "sublabel": "≤60 s; fallo → primaria",
+      "pos": [
+        970,
+        230
+      ],
+      "size": [
+        180,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/02-arquitectura-software/arquitectura-inicial.md"
+        }
+      ]
+    },
+    {
+      "id": "primary",
+      "type": "database",
+      "label": "PostgreSQL",
+      "sublabel": "Datos, auditoría y outbox",
+      "pos": [
+        660,
+        430
+      ],
+      "size": [
+        180,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/02-arquitectura-software/arquitectura-inicial.md"
+        }
+      ]
+    },
+    {
+      "id": "standby",
+      "type": "database",
+      "label": "Standby síncrono",
+      "sublabel": "Promoción con exclusión",
+      "pos": [
+        350,
+        430
+      ],
+      "size": [
+        180,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/02-arquitectura-software/arquitectura-inicial.md"
+        }
+      ]
+    },
+    {
+      "id": "replica",
+      "type": "database",
+      "label": "Réplica analítica",
+      "sublabel": "Lecturas con fecha de corte",
+      "pos": [
+        40,
+        430
+      ],
+      "size": [
+        180,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/02-arquitectura-software/arquitectura-inicial.md"
+        }
+      ]
+    },
+    {
+      "id": "worker",
+      "type": "backend",
+      "label": "Trabajador Node.js",
+      "sublabel": "PDF, proyecciones y avisos",
+      "pos": [
+        660,
+        660
+      ],
+      "size": [
+        180,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/02-arquitectura-software/arquitectura-inicial.md"
+        }
+      ]
+    },
+    {
+      "id": "broker",
+      "type": "messagebus",
+      "label": "RabbitMQ",
+      "sublabel": "Mensajes y colas durables",
+      "pos": [
+        350,
+        660
+      ],
+      "size": [
+        180,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/02-arquitectura-software/arquitectura-inicial.md"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "type": "cloud",
+      "label": "S3 compatible",
+      "sublabel": "Originales, firma y PDF",
+      "pos": [
+        970,
+        430
+      ],
+      "size": [
+        180,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/02-arquitectura-software/arquitectura-inicial.md"
+        }
+      ]
+    },
+    {
+      "id": "externos",
+      "type": "external",
+      "label": "SUNAT / MINCETUR",
+      "sublabel": "OSM / GIS · acceso previsto",
+      "pos": [
+        40,
+        660
+      ],
+      "size": [
+        180,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/02-arquitectura-software/arquitectura-inicial.md"
+        }
+      ]
+    },
+    {
+      "id": "pasarela",
+      "type": "external",
+      "label": "SMS / correo",
+      "sublabel": "Aceptación y entrega",
+      "pos": [
+        660,
+        870
+      ],
+      "size": [
+        180,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/02-arquitectura-software/arquitectura-inicial.md"
+        }
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "api-replica",
+      "from": "api",
+      "to": "replica",
+      "label": "Reportes SQL/TLS",
+      "variant": "default"
+    },
+    {
+      "id": "movil-gateway",
+      "from": "movil",
+      "to": "gateway",
+      "label": "HTTPS",
+      "variant": "default"
+    },
+    {
+      "id": "consola-gateway",
+      "from": "consola",
+      "to": "gateway",
+      "label": "HTTPS",
+      "variant": "default"
+    },
+    {
+      "id": "portal-gateway",
+      "from": "portal",
+      "to": "gateway",
+      "label": "HTTPS",
+      "variant": "default"
+    },
+    {
+      "id": "publico-gateway",
+      "from": "publico",
+      "to": "gateway",
+      "label": "REST sin JWT",
+      "variant": "default"
+    },
+    {
+      "id": "gateway-api",
+      "from": "gateway",
+      "to": "api",
+      "label": "HTTPS",
+      "variant": "default"
+    },
+    {
+      "id": "api-redis",
+      "from": "api",
+      "to": "redis",
+      "label": "RESP/TLS",
+      "variant": "default"
+    },
+    {
+      "id": "api-primary",
+      "from": "api",
+      "to": "primary",
+      "label": "T1 / revalidación",
+      "variant": "default"
+    },
+    {
+      "id": "primary-standby",
+      "from": "primary",
+      "to": "standby",
+      "label": "Síncrona",
+      "variant": "default"
+    },
+    {
+      "id": "primary-replica",
+      "from": "primary",
+      "to": "replica",
+      "label": "Asíncrona",
+      "variant": "default"
+    },
+    {
+      "id": "worker-primary",
+      "from": "worker",
+      "to": "primary",
+      "label": "Outbox / T2",
+      "variant": "default"
+    },
+    {
+      "id": "worker-broker",
+      "from": "worker",
+      "to": "broker",
+      "label": "AMQPS",
+      "variant": "default"
+    },
+    {
+      "id": "worker-s3",
+      "from": "worker",
+      "to": "s3",
+      "label": "PDF / hash",
+      "variant": "default"
+    },
+    {
+      "id": "api-s3",
+      "from": "api",
+      "to": "s3",
+      "label": "Originales",
+      "variant": "default"
+    },
+    {
+      "id": "api-externos",
+      "from": "api",
+      "to": "externos",
+      "label": "HTTPS",
+      "variant": "default"
+    },
+    {
+      "id": "worker-redis",
+      "from": "worker",
+      "to": "redis",
+      "label": "Invalidación",
+      "variant": "default"
+    },
+    {
+      "id": "worker-pasarela",
+      "from": "worker",
+      "to": "pasarela",
+      "label": "HTTPS",
+      "variant": "default"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Continuidad",
+      "items": [
+        "API sin estado en dos dominios de fallo; entrada redundante.",
+        "La réplica no sustituye el standby ni las copias."
+      ]
+    },
+    {
+      "dot": "cyan",
+      "title": "Confirmación durable",
+      "items": [
+        "T1 verifica objetos y confirma datos + auditoría + outbox.",
+        "El publicador del trabajador publica después del commit; la API no publica directamente."
+      ]
+    },
+    {
+      "dot": "slate",
+      "title": "Alcance del diseño",
+      "items": [
+        "Arquitectura propuesta; implementación y validación pendientes."
+      ]
+    }
+  ]
+}

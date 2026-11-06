@@ -1,8 +1,8 @@
 # Componentes arquitectónicos de SIFITUR Huamanga
 
-![Componentes del backend SIFITUR](../../img/componentes.png)
+![Componentes del backend SIFITUR](../../img/componentes.jpg)
 
-Fuente editable: [componentes.svg](../../img/fuentes-svg/componentes.svg).
+Exportación SVG: [componentes.svg](../../img/fuentes-svg/componentes.svg).
 
 | Componente | Responsabilidad | Requisitos |
 |---|---|---|
@@ -33,3 +33,13 @@ Fuente editable: [componentes.svg](../../img/fuentes-svg/componentes.svg).
 | Notificaciones | Tareas, intentos y resultado de entrega. | Notificador procesa solicitudes durables desde el trabajador. |
 
 Las interfaces entre módulos son llamadas en memoria dentro de la API. La emisión de PDF, actualización de proyecciones y entrega externa se ejecutan mediante tareas durables en el trabajador. Una unidad de trabajo comparte la transacción necesaria para datos, auditoría y outbox sin permitir acceso directo a repositorios ajenos.
+
+## Herramientas y fuentes de diagramas
+
+Estos diagramas se elaboran con **Archify**, conforme al contenido de este documento. Cada imagen JPG se guarda en `img/` y se incrusta en su sección correspondiente. El JSON es la fuente editable; JPG, PNG y SVG son exportaciones generadas desde su visor nativo.
+
+| Diagrama | Fuente | Visor |
+|---|---|---|
+| Componentes y propiedad de datos | [JSON Archify](../../.archify/sifitur-20261106-082100/componentes/candidate.json) | [HTML interactivo](../../.archify/sifitur-20261106-082100/componentes/componentes.html) |
+
+[Catálogo y reproducción de diagramas](../../diagrams/README.md).

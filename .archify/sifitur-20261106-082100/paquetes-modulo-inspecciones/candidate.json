@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "SIFITUR · Paquetes del módulo Inspecciones",
+    "locale": "es",
+    "output": ".archify/sifitur-20261106-082100/paquetes-modulo-inspecciones/paquetes-modulo-inspecciones.html",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/PoolDYer/entregable02-jeanpoolkennerpalominomavila.git",
+      "revision": "ac5bd7eb01bceee1c9230e675846fd9d1d4f79db"
+    }
+  },
+  "components": [
+    {
+      "id": "presentation",
+      "type": "frontend",
+      "label": "presentacion/",
+      "sublabel": "inspection.controller.ts",
+      "pos": [
+        40,
+        40
+      ],
+      "size": [
+        230,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "backend",
+      "label": "aplicacion/",
+      "sublabel": "registrar / procesar-acta",
+      "pos": [
+        430,
+        40
+      ],
+      "size": [
+        230,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    },
+    {
+      "id": "domain",
+      "type": "backend",
+      "label": "dominio/",
+      "sublabel": "Entidades, errores y contratos",
+      "pos": [
+        820,
+        40
+      ],
+      "size": [
+        230,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    },
+    {
+      "id": "infra",
+      "type": "cloud",
+      "label": "infraestructura/",
+      "sublabel": "Postgres, S3, PDF y notificador",
+      "pos": [
+        820,
+        290
+      ],
+      "size": [
+        250,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    },
+    {
+      "id": "composition",
+      "type": "backend",
+      "label": "inspecciones.module.ts",
+      "sublabel": "Composición por inyección",
+      "pos": [
+        430,
+        290
+      ],
+      "size": [
+        250,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    },
+    {
+      "id": "exports",
+      "type": "frontend",
+      "label": "index.ts",
+      "sublabel": "API pública para otros módulos",
+      "pos": [
+        40,
+        290
+      ],
+      "size": [
+        230,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "presentation-application",
+      "from": "presentation",
+      "to": "application",
+      "label": "Invoca",
+      "variant": "default"
+    },
+    {
+      "id": "application-domain",
+      "from": "application",
+      "to": "domain",
+      "label": "Importa",
+      "variant": "default"
+    },
+    {
+      "id": "infra-domain",
+      "from": "infra",
+      "to": "domain",
+      "label": "Realiza puertos",
+      "variant": "default"
+    },
+    {
+      "id": "composition-application",
+      "from": "composition",
+      "to": "application",
+      "label": "Inyecta",
+      "variant": "default"
+    },
+    {
+      "id": "composition-infra",
+      "from": "composition",
+      "to": "infra",
+      "label": "Registra",
+      "variant": "default"
+    },
+    {
+      "id": "exports-application",
+      "from": "exports",
+      "to": "application",
+      "label": "Exporta API",
+      "variant": "default"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Archivos del núcleo",
+      "items": [
+        "inspeccion.ts: crear y huella; evidencia.ts: GPS, origen y SHA-256.",
+        "contratos.ts: repositorio, almacén, generador y notificador; errores.ts: conflictos e integridad."
+      ]
+    },
+    {
+      "dot": "cyan",
+      "title": "Frontera pública",
+      "items": [
+        "index.ts no exporta repositorios privados ni SDK.",
+        "La entrada del trabajador utiliza los mismos casos de uso y contratos."
+      ]
+    },
+    {
+      "dot": "slate",
+      "title": "Alcance del diseño",
+      "items": [
+        "Arquitectura propuesta; implementación y validación pendientes."
+      ]
+    }
+  ]
+}

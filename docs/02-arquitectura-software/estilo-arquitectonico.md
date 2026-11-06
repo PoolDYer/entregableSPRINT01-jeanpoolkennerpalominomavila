@@ -2,9 +2,9 @@
 
 SIFITUR Huamanga utiliza un estilo **cliente-servidor multicanal con backend monolítico modular organizado en capas**. El backend Node.js/NestJS se despliega como una aplicación con módulos institucionales; sus instancias son sin estado y se replican detrás del balanceador.
 
-![Arquitectura modular en capas de SIFITUR](../../img/arquitectura-monolitica-sifitur.png)
+![Arquitectura modular en capas de SIFITUR](../../img/arquitectura-monolitica-sifitur.jpg)
 
-Fuente editable: [arquitectura-monolitica-sifitur.svg](../../img/fuentes-svg/arquitectura-monolitica-sifitur.svg).
+Exportación SVG: [arquitectura-monolitica-sifitur.svg](../../img/fuentes-svg/arquitectura-monolitica-sifitur.svg).
 
 ## Organización del sistema
 
@@ -31,3 +31,13 @@ Fuente editable: [arquitectura-monolitica-sifitur.svg](../../img/fuentes-svg/arq
 ## Límites y compensaciones
 
 El monolito modular permite transacciones locales y reduce coordinación operativa, pero sus módulos comparten el ciclo de publicación y un fallo de proceso afecta a la instancia completa. Se mitiga mediante instancias redundantes, contratos de módulo y validación de regresión. El trabajador utiliza el mismo modelo de negocio con entrada de mensajería y escala por separado; la presencia de RabbitMQ no convierte cada módulo en un microservicio.
+
+## Herramientas y fuentes de diagramas
+
+Estos diagramas se elaboran con **Archify**, conforme al contenido de este documento. Cada imagen JPG se guarda en `img/` y se incrusta en su sección correspondiente. El JSON es la fuente editable; JPG, PNG y SVG son exportaciones generadas desde su visor nativo.
+
+| Diagrama | Fuente | Visor |
+|---|---|---|
+| Monolito modular en capas | [JSON Archify](../../.archify/sifitur-20261106-082100/arquitectura-monolitica-sifitur/candidate.json) | [HTML interactivo](../../.archify/sifitur-20261106-082100/arquitectura-monolitica-sifitur/arquitectura-monolitica-sifitur.html) |
+
+[Catálogo y reproducción de diagramas](../../diagrams/README.md).

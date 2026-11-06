@@ -1,0 +1,300 @@
+{
+  "schema_version": 1,
+  "diagram_type": "class",
+  "meta": {
+    "title": "SIFITUR · Inversión de dependencias",
+    "locale": "es",
+    "output": ".archify/sifitur-20261106-082100/principio-dip/principio-dip.html",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/PoolDYer/entregable02-jeanpoolkennerpalominomavila.git",
+      "revision": "ac5bd7eb01bceee1c9230e675846fd9d1d4f79db"
+    }
+  },
+  "layout": {
+    "mode": "grid",
+    "gapX": 100,
+    "gapY": 110,
+    "typeW": 220,
+    "typeMaxW": 300
+  },
+  "types": [
+    {
+      "id": "register",
+      "label": "RegistrarInspeccionCasoUso",
+      "kind": "class",
+      "row": 0,
+      "col": 0,
+      "methods": [],
+      "attributes": [],
+      "sublabel": "",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/principios-de-diseño.md"
+        }
+      ]
+    },
+    {
+      "id": "emit",
+      "label": "ProcesarActaCasoUso",
+      "kind": "class",
+      "row": 1,
+      "col": 1,
+      "methods": [],
+      "attributes": [],
+      "sublabel": "",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/principios-de-diseño.md"
+        }
+      ]
+    },
+    {
+      "id": "notify",
+      "label": "ConsumidorAvisos",
+      "kind": "class",
+      "row": 3,
+      "col": 0,
+      "methods": [],
+      "attributes": [],
+      "sublabel": "",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/principios-de-diseño.md"
+        }
+      ]
+    },
+    {
+      "id": "repo",
+      "label": "RepositorioInspecciones",
+      "kind": "interface",
+      "row": 1,
+      "col": 0,
+      "methods": [
+        {
+          "name": "registrarAtomico",
+          "parameters": "i, huella",
+          "returns": "Registro",
+          "visibility": "public"
+        },
+        {
+          "name": "confirmarActa",
+          "parameters": "id, acta",
+          "returns": "void",
+          "visibility": "public"
+        }
+      ],
+      "attributes": [],
+      "sublabel": "",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/principios-de-diseño.md"
+        }
+      ]
+    },
+    {
+      "id": "store",
+      "label": "AlmacenEvidencias",
+      "kind": "interface",
+      "row": 0,
+      "col": 1,
+      "methods": [
+        {
+          "name": "verificar",
+          "parameters": "id, hash",
+          "returns": "boolean",
+          "visibility": "public"
+        },
+        {
+          "name": "guardarActa",
+          "parameters": "id, bytes",
+          "returns": "Objeto",
+          "visibility": "public"
+        }
+      ],
+      "attributes": [],
+      "sublabel": "",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/principios-de-diseño.md"
+        }
+      ]
+    },
+    {
+      "id": "notice",
+      "label": "Notificador",
+      "kind": "interface",
+      "row": 3,
+      "col": 1,
+      "methods": [
+        {
+          "name": "enviar",
+          "parameters": "tarea",
+          "returns": "ResultadoEnvio",
+          "visibility": "public"
+        }
+      ],
+      "attributes": [],
+      "sublabel": "",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/principios-de-diseño.md"
+        }
+      ]
+    },
+    {
+      "id": "generator",
+      "label": "GeneradorActas",
+      "kind": "interface",
+      "row": 1,
+      "col": 2,
+      "methods": [
+        {
+          "name": "generar",
+          "parameters": "inspeccion",
+          "returns": "Uint8Array",
+          "visibility": "public"
+        }
+      ],
+      "attributes": [],
+      "sublabel": "",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/principios-de-diseño.md"
+        }
+      ]
+    },
+    {
+      "id": "pg",
+      "label": "RepositorioInspeccionesPostgres",
+      "kind": "class",
+      "row": 2,
+      "col": 0,
+      "methods": [],
+      "attributes": [],
+      "sublabel": "",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/principios-de-diseño.md"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "label": "AlmacenEvidenciasS3",
+      "kind": "class",
+      "row": 0,
+      "col": 2,
+      "methods": [],
+      "attributes": [],
+      "sublabel": "",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/principios-de-diseño.md"
+        }
+      ]
+    },
+    {
+      "id": "mail",
+      "label": "NotificadorInstitucional",
+      "kind": "class",
+      "row": 3,
+      "col": 2,
+      "methods": [],
+      "attributes": [],
+      "sublabel": "",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/principios-de-diseño.md"
+        }
+      ]
+    },
+    {
+      "id": "pdf",
+      "label": "GeneradorActasPdf",
+      "kind": "class",
+      "row": 2,
+      "col": 2,
+      "methods": [],
+      "attributes": [],
+      "sublabel": "",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/principios-de-diseño.md"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "id": "register-repo",
+      "from": "register",
+      "to": "repo",
+      "kind": "dependency"
+    },
+    {
+      "id": "register-store",
+      "from": "register",
+      "to": "store",
+      "kind": "dependency"
+    },
+    {
+      "id": "emit-repo",
+      "from": "emit",
+      "to": "repo",
+      "kind": "dependency"
+    },
+    {
+      "id": "emit-store",
+      "from": "emit",
+      "to": "store",
+      "kind": "dependency"
+    },
+    {
+      "id": "emit-generator",
+      "from": "emit",
+      "to": "generator",
+      "kind": "dependency"
+    },
+    {
+      "id": "pdf-generator",
+      "from": "pdf",
+      "to": "generator",
+      "kind": "realization"
+    },
+    {
+      "id": "notify-notice",
+      "from": "notify",
+      "to": "notice",
+      "kind": "dependency"
+    },
+    {
+      "id": "pg-repo",
+      "from": "pg",
+      "to": "repo",
+      "kind": "realization"
+    },
+    {
+      "id": "s3-store",
+      "from": "s3",
+      "to": "store",
+      "kind": "realization"
+    },
+    {
+      "id": "mail-notice",
+      "from": "mail",
+      "to": "notice",
+      "kind": "realization"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "slate",
+      "title": "Alcance del diseño",
+      "items": [
+        "Arquitectura propuesta; implementación y validación pendientes.",
+        "InspeccionesModule conecta los adaptadores; núcleo sin importaciones NestJS, SQL ni SDK."
+      ]
+    }
+  ]
+}

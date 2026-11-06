@@ -19,7 +19,7 @@ SIFITUR Huamanga integra aplicaciones móviles y web para registrar inspecciones
 
 ## Alcance del proceso
 
-![Proceso integral de fiscalización turística](../../img/proceso-fiscalizacion.png)
+![Proceso integral de fiscalización turística](../../img/proceso-fiscalizacion.jpg)
 
 El proceso comprende empadronamiento, evaluación de riesgo, programación de operativos, inspección en campo, seguimiento de subsanaciones y publicación de formalidad. Los expedientes con observaciones mantienen su seguimiento hasta la subsanación o derivación al procedimiento sancionador.
 
@@ -40,3 +40,13 @@ La estimación considera 30,000 visitantes únicos acumulados en 4 a 6 días dur
 El sistema gestiona información y trazabilidad de fiscalización; la resolución de sanciones corresponde al coordinador competente. El expediente registra la derivación y su resultado. La clasificación de riesgo consume antecedentes y denuncias ya registrados; la propuesta no desarrolla un procedimiento independiente de recepción ciudadana de denuncias.
 
 La firma manuscrita capturada y el hash son mecanismos del expediente digital; el diseño no presupone un servicio de firma digital certificada. El acceso a sistemas de terceros y los parámetros institucionales de plazos, riesgo y retención se documentan como condiciones de implementación.
+
+## Herramientas y fuentes de diagramas
+
+Estos diagramas se elaboran con **Archify**, conforme al contenido de este documento. Cada imagen JPG se guarda en `img/` y se incrusta en su sección correspondiente. El JSON es la fuente editable; JPG, PNG y SVG son exportaciones generadas desde su visor nativo.
+
+| Diagrama | Fuente | Visor |
+|---|---|---|
+| Proceso de fiscalización | [JSON Archify](../../.archify/sifitur-20261106-082100/proceso-fiscalizacion/candidate.json) | [HTML interactivo](../../.archify/sifitur-20261106-082100/proceso-fiscalizacion/proceso-fiscalizacion.html) |
+
+[Catálogo y reproducción de diagramas](../../diagrams/README.md).

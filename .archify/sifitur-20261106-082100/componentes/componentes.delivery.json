@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "db694d97-cd57-4ad4-9799-cff7bacf1fa7",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\componentes\\candidate.json",
+  "output": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\componentes\\componentes.html",
+  "specification": {
+    "sha256": "b9704a00827e8346a663731790a6b05ba8bddb20c25dbda6c3795fe0907ca7f6",
+    "bytes": 6540
+  },
+  "artifact": {
+    "sha256": "4eaee11441655ae08feec0e4b684681dee96ad7e119c48dc996fb82472097d1d",
+    "bytes": 851714
+  }
+}

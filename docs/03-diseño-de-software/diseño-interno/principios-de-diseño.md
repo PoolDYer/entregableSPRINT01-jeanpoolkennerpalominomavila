@@ -6,7 +6,7 @@ Organizar el módulo Inspecciones de SIFITUR Huamanga mediante clases con respon
 
 ## SOLID en el módulo Inspecciones
 
-![SOLID aplicado a Inspecciones](../../../img/solid-modulo-inspecciones.png)
+![SOLID aplicado a Inspecciones](../../../img/solid-modulo-inspecciones.jpg)
 
 | Principio | Dónde se aplica | Aplicación al proyecto | Archivos |
 |---|---|---|---|
@@ -18,7 +18,7 @@ Organizar el módulo Inspecciones de SIFITUR Huamanga mediante clases con respon
 
 ## Inversión de dependencias
 
-![DIP en la sincronización](../../../img/principio-dip.png)
+![DIP en la sincronización](../../../img/principio-dip.jpg)
 
 ## Cambios y efecto esperado
 
@@ -34,7 +34,7 @@ Organizar el módulo Inspecciones de SIFITUR Huamanga mediante clases con respon
 
 La verificación del diseño contempla pruebas de dominio y aplicación sin NestJS ni conexión a servicios externos, incluyendo validaciones, reenvíos idempotentes, conflictos, integridad de objetos y recuperación de notificaciones.
 
-Fuentes editables: [SOLID](../../../img/fuentes-svg/solid-modulo-inspecciones.svg) y [DIP](../../../img/fuentes-svg/principio-dip.svg).
+Exportaciones SVG: [SOLID](../../../img/fuentes-svg/solid-modulo-inspecciones.svg) y [DIP](../../../img/fuentes-svg/principio-dip.svg).
 
 ## Criterios de sustitución y dependencia
 
@@ -47,3 +47,14 @@ Fuentes editables: [SOLID](../../../img/fuentes-svg/solid-modulo-inspecciones.sv
 | DIP | Importaciones del dominio y aplicación sin NestJS, SQL, SDK ni clases de infraestructura; solo composición conoce implementaciones. |
 
 Los nombres de archivos de este documento corresponden a la estructura prevista del diseño. La verificación ejecutable se realizará cuando se implemente el sistema.
+
+## Herramientas y fuentes de diagramas
+
+Estos diagramas se elaboran con **Archify**, conforme al contenido de este documento. Cada imagen JPG se guarda en `img/` y se incrusta en su sección correspondiente. El JSON es la fuente editable; JPG, PNG y SVG son exportaciones generadas desde su visor nativo.
+
+| Diagrama | Fuente | Visor |
+|---|---|---|
+| SOLID aplicado a Inspecciones | [JSON Archify](../../../.archify/sifitur-20261106-082100/solid-modulo-inspecciones/candidate.json) | [HTML interactivo](../../../.archify/sifitur-20261106-082100/solid-modulo-inspecciones/solid-modulo-inspecciones.html) |
+| Inversión de dependencias | [JSON Archify](../../../.archify/sifitur-20261106-082100/principio-dip/candidate.json) | [HTML interactivo](../../../.archify/sifitur-20261106-082100/principio-dip/principio-dip.html) |
+
+[Catálogo y reproducción de diagramas](../../../diagrams/README.md).

@@ -1,0 +1,200 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "SIFITUR · SOLID aplicado a Inspecciones",
+    "locale": "es",
+    "output": ".archify/sifitur-20261106-082100/solid-modulo-inspecciones/solid-modulo-inspecciones.html",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/PoolDYer/entregable02-jeanpoolkennerpalominomavila.git",
+      "revision": "ac5bd7eb01bceee1c9230e675846fd9d1d4f79db"
+    }
+  },
+  "components": [
+    {
+      "id": "controller",
+      "type": "backend",
+      "label": "S · Controlador",
+      "sublabel": "Traduce HTTP / DTO",
+      "pos": [
+        40,
+        40
+      ],
+      "size": [
+        220,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/principios-de-diseño.md"
+        }
+      ]
+    },
+    {
+      "id": "usecase",
+      "type": "backend",
+      "label": "S · Caso de uso",
+      "sublabel": "Autoriza y coordina T1",
+      "pos": [
+        430,
+        40
+      ],
+      "size": [
+        220,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/principios-de-diseño.md"
+        }
+      ]
+    },
+    {
+      "id": "entity",
+      "type": "backend",
+      "label": "S · Entidad",
+      "sublabel": "Protege invariantes",
+      "pos": [
+        820,
+        40
+      ],
+      "size": [
+        220,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/principios-de-diseño.md"
+        }
+      ]
+    },
+    {
+      "id": "ports",
+      "type": "backend",
+      "label": "I / D · Contratos",
+      "sublabel": "Repositorio, almacén, PDF, aviso",
+      "pos": [
+        430,
+        280
+      ],
+      "size": [
+        260,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/principios-de-diseño.md"
+        }
+      ]
+    },
+    {
+      "id": "adapters",
+      "type": "cloud",
+      "label": "O / L · Adaptadores",
+      "sublabel": "Postgres, S3 y pasarela",
+      "pos": [
+        820,
+        280
+      ],
+      "size": [
+        220,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/principios-de-diseño.md"
+        }
+      ]
+    },
+    {
+      "id": "composition",
+      "type": "backend",
+      "label": "D · Composición",
+      "sublabel": "InspeccionesModule inyecta",
+      "pos": [
+        430,
+        520
+      ],
+      "size": [
+        250,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/principios-de-diseño.md"
+        }
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "controller-usecase",
+      "from": "controller",
+      "to": "usecase",
+      "label": "Invoca",
+      "variant": "default"
+    },
+    {
+      "id": "usecase-entity",
+      "from": "usecase",
+      "to": "entity",
+      "label": "Valida",
+      "variant": "default"
+    },
+    {
+      "id": "usecase-ports",
+      "from": "usecase",
+      "to": "ports",
+      "label": "Depende",
+      "variant": "default"
+    },
+    {
+      "id": "adapters-ports",
+      "from": "adapters",
+      "to": "ports",
+      "label": "Realiza",
+      "variant": "default"
+    },
+    {
+      "id": "composition-adapters",
+      "from": "composition",
+      "to": "adapters",
+      "label": "Conecta",
+      "variant": "default"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "S / O",
+      "items": [
+        "El formato PDF cambia en el generador, sin renderizado en entidad ni controlador.",
+        "Otro proveedor requiere adaptador y composición, conservando el contrato."
+      ]
+    },
+    {
+      "dot": "cyan",
+      "title": "L / I",
+      "items": [
+        "Repositorios conservan unicidad, atomicidad e idempotencia; un doble no prueba durabilidad real.",
+        "Registrar usa repositorio y almacén; ProcesarActa añade generador; consumidor usa Notificador."
+      ]
+    },
+    {
+      "dot": "cyan",
+      "title": "D",
+      "items": [
+        "Las implementaciones dependen de puertos internos; el núcleo no importa SDK.",
+        "Solo la composición conoce implementaciones concretas."
+      ]
+    },
+    {
+      "dot": "slate",
+      "title": "Alcance del diseño",
+      "items": [
+        "Arquitectura propuesta; implementación y validación pendientes."
+      ]
+    }
+  ]
+}

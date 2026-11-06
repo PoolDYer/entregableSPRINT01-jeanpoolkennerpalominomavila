@@ -10,9 +10,9 @@
 | Capas | Presentación, Aplicación, Dominio e Infraestructura. |
 | Beneficio | Pruebas del núcleo sin framework; adaptadores intercambiables y responsabilidades explícitas. |
 
-![Clean Architecture de SIFITUR Huamanga](../../img/arquitectura-limpia-sifitur.png)
+![Clean Architecture de SIFITUR Huamanga](../../img/arquitectura-limpia-sifitur.jpg)
 
-Fuente editable: [arquitectura-limpia-sifitur.svg](../../img/fuentes-svg/arquitectura-limpia-sifitur.svg).
+Exportación SVG: [arquitectura-limpia-sifitur.svg](../../img/fuentes-svg/arquitectura-limpia-sifitur.svg).
 
 ## Capas y dependencias
 
@@ -40,3 +40,13 @@ El dominio y los casos de uso no importan NestJS, ORM ni SDK de proveedores. Cad
 Ambos enfoques separan negocio e infraestructura mediante puertos y adaptadores. SIFITUR utiliza Clean Architecture porque la documentación distingue explícitamente entidades, coordinación de casos de uso, traducción REST e infraestructura. Los puertos permanecen en el núcleo del módulo; ningún caso de uso instancia SDK de S3, conexiones SQL o clientes HTTP.
 
 Las dependencias de código y el flujo de ejecución son distintos: en ejecución el caso de uso llama a un puerto cuyo objeto concreto es un adaptador; en código, el adaptador depende del contrato interno. La raíz de composición es el único punto que conoce ambos.
+
+## Herramientas y fuentes de diagramas
+
+Estos diagramas se elaboran con **Archify**, conforme al contenido de este documento. Cada imagen JPG se guarda en `img/` y se incrusta en su sección correspondiente. El JSON es la fuente editable; JPG, PNG y SVG son exportaciones generadas desde su visor nativo.
+
+| Diagrama | Fuente | Visor |
+|---|---|---|
+| Clean Architecture | [JSON Archify](../../.archify/sifitur-20261106-082100/arquitectura-limpia-sifitur/candidate.json) | [HTML interactivo](../../.archify/sifitur-20261106-082100/arquitectura-limpia-sifitur/arquitectura-limpia-sifitur.html) |
+
+[Catálogo y reproducción de diagramas](../../diagrams/README.md).

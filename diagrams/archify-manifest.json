@@ -1,0 +1,128 @@
+[
+  {
+    "slug": "arquitectura-alto-nivel",
+    "type": "architecture",
+    "input": ".archify/sifitur-20261106-082100/arquitectura-alto-nivel/candidate.json",
+    "output": ".archify/sifitur-20261106-082100/arquitectura-alto-nivel/arquitectura-alto-nivel.html",
+    "source": "docs/02-arquitectura-software/arquitectura-inicial.md"
+  },
+  {
+    "slug": "arquitectura-limpia-sifitur",
+    "type": "architecture",
+    "input": ".archify/sifitur-20261106-082100/arquitectura-limpia-sifitur/candidate.json",
+    "output": ".archify/sifitur-20261106-082100/arquitectura-limpia-sifitur/arquitectura-limpia-sifitur.html",
+    "source": "docs/02-arquitectura-software/enfoque-arquitectonico.md"
+  },
+  {
+    "slug": "arquitectura-monolitica-sifitur",
+    "type": "architecture",
+    "input": ".archify/sifitur-20261106-082100/arquitectura-monolitica-sifitur/candidate.json",
+    "output": ".archify/sifitur-20261106-082100/arquitectura-monolitica-sifitur/arquitectura-monolitica-sifitur.html",
+    "source": "docs/02-arquitectura-software/estilo-arquitectonico.md"
+  },
+  {
+    "slug": "componentes",
+    "type": "architecture",
+    "input": ".archify/sifitur-20261106-082100/componentes/candidate.json",
+    "output": ".archify/sifitur-20261106-082100/componentes/componentes.html",
+    "source": "docs/02-arquitectura-software/componentes-arquitectonicos.md"
+  },
+  {
+    "slug": "paquetes-modulo-inspecciones",
+    "type": "architecture",
+    "input": ".archify/sifitur-20261106-082100/paquetes-modulo-inspecciones/candidate.json",
+    "output": ".archify/sifitur-20261106-082100/paquetes-modulo-inspecciones/paquetes-modulo-inspecciones.html",
+    "source": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+  },
+  {
+    "slug": "clases-modulo-inspecciones",
+    "type": "class",
+    "input": ".archify/sifitur-20261106-082100/clases-modulo-inspecciones/candidate.json",
+    "output": ".archify/sifitur-20261106-082100/clases-modulo-inspecciones/clases-modulo-inspecciones.html",
+    "source": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+  },
+  {
+    "slug": "patron-adapter",
+    "type": "class",
+    "input": ".archify/sifitur-20261106-082100/patron-adapter/candidate.json",
+    "output": ".archify/sifitur-20261106-082100/patron-adapter/patron-adapter.html",
+    "source": "docs/03-diseño-de-software/diseño-interno/patrones-de-diseño.md"
+  },
+  {
+    "slug": "patron-repository",
+    "type": "class",
+    "input": ".archify/sifitur-20261106-082100/patron-repository/candidate.json",
+    "output": ".archify/sifitur-20261106-082100/patron-repository/patron-repository.html",
+    "source": "docs/03-diseño-de-software/diseño-interno/patrones-de-diseño.md"
+  },
+  {
+    "slug": "patron-factory",
+    "type": "class",
+    "input": ".archify/sifitur-20261106-082100/patron-factory/candidate.json",
+    "output": ".archify/sifitur-20261106-082100/patron-factory/patron-factory.html",
+    "source": "docs/03-diseño-de-software/diseño-interno/patrones-de-diseño.md"
+  },
+  {
+    "slug": "patron-facade",
+    "type": "class",
+    "input": ".archify/sifitur-20261106-082100/patron-facade/candidate.json",
+    "output": ".archify/sifitur-20261106-082100/patron-facade/patron-facade.html",
+    "source": "docs/03-diseño-de-software/diseño-interno/patrones-de-diseño.md"
+  },
+  {
+    "slug": "principio-dip",
+    "type": "class",
+    "input": ".archify/sifitur-20261106-082100/principio-dip/candidate.json",
+    "output": ".archify/sifitur-20261106-082100/principio-dip/principio-dip.html",
+    "source": "docs/03-diseño-de-software/diseño-interno/principios-de-diseño.md"
+  },
+  {
+    "slug": "solid-modulo-inspecciones",
+    "type": "architecture",
+    "input": ".archify/sifitur-20261106-082100/solid-modulo-inspecciones/candidate.json",
+    "output": ".archify/sifitur-20261106-082100/solid-modulo-inspecciones/solid-modulo-inspecciones.html",
+    "source": "docs/03-diseño-de-software/diseño-interno/principios-de-diseño.md"
+  },
+  {
+    "slug": "proceso-fiscalizacion",
+    "type": "workflow",
+    "input": ".archify/sifitur-20261106-082100/proceso-fiscalizacion/candidate.json",
+    "output": ".archify/sifitur-20261106-082100/proceso-fiscalizacion/proceso-fiscalizacion.html",
+    "source": "docs/01-analisis-de-sistema/00-necesidad-del-negocio.md"
+  },
+  {
+    "slug": "estados-expediente",
+    "type": "lifecycle",
+    "input": ".archify/sifitur-20261106-082100/estados-expediente/candidate.json",
+    "output": ".archify/sifitur-20261106-082100/estados-expediente/estados-expediente.html",
+    "source": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+  },
+  {
+    "slug": "estados-captura",
+    "type": "lifecycle",
+    "input": ".archify/sifitur-20261106-082100/estados-captura/candidate.json",
+    "output": ".archify/sifitur-20261106-082100/estados-captura/estados-captura.html",
+    "source": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+  },
+  {
+    "slug": "estados-emision",
+    "type": "lifecycle",
+    "input": ".archify/sifitur-20261106-082100/estados-emision/candidate.json",
+    "output": ".archify/sifitur-20261106-082100/estados-emision/estados-emision.html",
+    "source": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+  },
+  {
+    "slug": "estados-notificacion",
+    "type": "lifecycle",
+    "input": ".archify/sifitur-20261106-082100/estados-notificacion/candidate.json",
+    "output": ".archify/sifitur-20261106-082100/estados-notificacion/estados-notificacion.html",
+    "source": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+  },
+  {
+    "slug": "secuencia-registrar-inspeccion",
+    "type": "sequence",
+    "input": ".archify/sifitur-20261106-082100/secuencia-registrar-inspeccion/candidate.json",
+    "output": ".archify/sifitur-20261106-082100/secuencia-registrar-inspeccion/secuencia-registrar-inspeccion.html",
+    "source": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+  }
+]

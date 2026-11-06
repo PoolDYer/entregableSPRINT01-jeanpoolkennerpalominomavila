@@ -1,0 +1,90 @@
+@startuml
+!pragma layout smetana
+title C4 · Nivel 4 · Clases y contratos de Inspecciones\nSIFITUR Huamanga · Diseño propuesto
+skinparam backgroundColor #FFFFFF
+skinparam classBackgroundColor #EAF2FA
+skinparam classBorderColor #2463A0
+skinparam ArrowColor #45576B
+skinparam classAttributeIconSize 0
+hide empty members
+package "Presentación / API" {
+  class InspectionController {
+    +registrar(dto, actor): RespuestaHTTP
+    +consultar(id, actor): Registro
+  }
+}
+package "Aplicación" {
+  class RegistrarInspeccionCasoUso {
+    -repositorio: RepositorioInspecciones
+    -almacen: AlmacenEvidencias
+    +ejecutar(comando, actor): Registro
+  }
+  class ProcesarActaCasoUso {
+    +ejecutar(eventoId): Resultado
+  }
+}
+package "Dominio / contratos" {
+  class Inspeccion {
+    -operacionId: UUID
+    -evidencias: Evidencia[]
+    -firma: FirmaDigitalizada
+    +{static} crear(datos): Inspeccion
+    +huella(): SHA256
+  }
+  class Evidencia <<objeto de valor>> {
+    -objetoId: UUID
+    -hash: SHA256
+    -gps: Coordenada
+    -origen: CAMARA
+  }
+  class Acta {
+    -objetoId: UUID
+    -hash: SHA256
+    -estado: EMITIDA | ANULADA
+  }
+  interface RepositorioInspecciones {
+    +buscarOperacion(clave): Registro?
+    +registrarAtomico(inspeccion, huella): Registro
+    +confirmarActa(id, acta): void
+  }
+  interface AlmacenEvidencias {
+    +verificar(objetoId, hash): boolean
+    +guardarActa(id, bytes): Objeto
+  }
+  interface GeneradorActas {
+    +generar(inspeccion): Uint8Array
+  }
+  interface Notificador {
+    +enviar(tarea): ResultadoEnvio
+  }
+}
+package "Infraestructura" {
+  class RepositorioInspeccionesPostgres
+  class AlmacenEvidenciasS3
+  class GeneradorActasPdf
+  class NotificadorInstitucional
+}
+class "Consumidor de avisos\n(trabajador)" as Avisos
+InspectionController --> RegistrarInspeccionCasoUso : invoca
+RegistrarInspeccionCasoUso ..> Inspeccion : crea y valida
+Inspeccion "1" *-- "1..*" Evidencia
+Inspeccion "1" --> "0..1" Acta : emisión pendiente / confirmada
+RegistrarInspeccionCasoUso ..> RepositorioInspecciones : T1 / deduplicación
+RegistrarInspeccionCasoUso ..> AlmacenEvidencias : verifica originales
+ProcesarActaCasoUso ..> RepositorioInspecciones : T2 / outbox
+ProcesarActaCasoUso ..> AlmacenEvidencias : custodia PDF y hash
+ProcesarActaCasoUso ..> GeneradorActas : genera PDF
+Avisos ..> Notificador : envía y persiste resultado
+RepositorioInspeccionesPostgres ..|> RepositorioInspecciones
+AlmacenEvidenciasS3 ..|> AlmacenEvidencias
+GeneradorActasPdf ..|> GeneradorActas
+NotificadorInstitucional ..|> Notificador
+note bottom of ProcesarActaCasoUso
+  Se ejecuta en el trabajador; RegistrarInspeccionCasoUso en la API.
+  T1 / T2 son transacciones locales PostgreSQL.
+end note
+legend bottom
+  + público / - privado · Línea discontinua: dependencia
+  Triángulo hueco: realización de interfaz · Firmas simplificadas de diseño
+endlegend
+@enduml

@@ -1,0 +1,215 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "SIFITUR · Proceso de fiscalización",
+    "locale": "es",
+    "output": ".archify/sifitur-20261106-082100/proceso-fiscalizacion/proceso-fiscalizacion.html",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/PoolDYer/entregable02-jeanpoolkennerpalominomavila.git",
+      "revision": "ac5bd7eb01bceee1c9230e675846fd9d1d4f79db"
+    }
+  },
+  "lanes": [
+    {
+      "id": "coordinator",
+      "label": "Coordinador institucional"
+    },
+    {
+      "id": "inspector",
+      "label": "Inspector / sistema"
+    },
+    {
+      "id": "claims",
+      "label": "Prestador y coordinador"
+    },
+    {
+      "id": "public",
+      "label": "Consulta ciudadana"
+    }
+  ],
+  "mainPath": [
+    "register",
+    "risk",
+    "plan",
+    "inspect",
+    "emit",
+    "review",
+    "publish"
+  ],
+  "nodes": [
+    {
+      "id": "register",
+      "lane": "coordinator",
+      "col": 0,
+      "type": "backend",
+      "label": "Empadronar",
+      "sublabel": "RUC y documentos",
+      "sources": [
+        {
+          "path": "docs/01-analisis-de-sistema/00-necesidad-del-negocio.md"
+        }
+      ]
+    },
+    {
+      "id": "risk",
+      "lane": "coordinator",
+      "col": 1,
+      "type": "backend",
+      "label": "Evaluar riesgo",
+      "sublabel": "Política versionada",
+      "sources": [
+        {
+          "path": "docs/01-analisis-de-sistema/00-necesidad-del-negocio.md"
+        }
+      ]
+    },
+    {
+      "id": "plan",
+      "lane": "coordinator",
+      "col": 2,
+      "type": "backend",
+      "label": "Planificar",
+      "sublabel": "Campaña y ruta",
+      "sources": [
+        {
+          "path": "docs/01-analisis-de-sistema/00-necesidad-del-negocio.md"
+        }
+      ]
+    },
+    {
+      "id": "inspect",
+      "lane": "inspector",
+      "col": 2,
+      "type": "frontend",
+      "label": "Inspeccionar",
+      "sublabel": "Offline · firma y GPS",
+      "sources": [
+        {
+          "path": "docs/01-analisis-de-sistema/00-necesidad-del-negocio.md"
+        }
+      ]
+    },
+    {
+      "id": "emit",
+      "lane": "inspector",
+      "col": 3,
+      "type": "backend",
+      "label": "Sincronizar / emitir",
+      "sublabel": "Recepción · PDF y hash",
+      "sources": [
+        {
+          "path": "docs/01-analisis-de-sistema/00-necesidad-del-negocio.md"
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "lane": "claims",
+      "col": 3,
+      "type": "security",
+      "label": "Evaluar descargo",
+      "sublabel": "Plazo y resolución",
+      "sources": [
+        {
+          "path": "docs/01-analisis-de-sistema/00-necesidad-del-negocio.md"
+        }
+      ]
+    },
+    {
+      "id": "sanction",
+      "lane": "claims",
+      "col": 5,
+      "type": "backend",
+      "label": "Derivar procedimiento",
+      "sublabel": "Decisión del coordinador",
+      "sources": [
+        {
+          "path": "docs/01-analisis-de-sistema/00-necesidad-del-negocio.md"
+        }
+      ]
+    },
+    {
+      "id": "publish",
+      "lane": "public",
+      "col": 4,
+      "type": "frontend",
+      "label": "Publicar formalidad",
+      "sublabel": "Estado autorizado · QR",
+      "sources": [
+        {
+          "path": "docs/01-analisis-de-sistema/00-necesidad-del-negocio.md"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "register-risk",
+      "from": "register",
+      "to": "risk",
+      "label": "Valida",
+      "variant": "default"
+    },
+    {
+      "id": "risk-plan",
+      "from": "risk",
+      "to": "plan",
+      "label": "Prioriza",
+      "variant": "default"
+    },
+    {
+      "id": "plan-inspect",
+      "from": "plan",
+      "to": "inspect",
+      "label": "Ruta asignada",
+      "variant": "default"
+    },
+    {
+      "id": "inspect-emit",
+      "from": "inspect",
+      "to": "emit",
+      "label": "Captura válida",
+      "variant": "default"
+    },
+    {
+      "id": "emit-review",
+      "from": "emit",
+      "to": "review",
+      "label": "Observaciones",
+      "variant": "default"
+    },
+    {
+      "id": "review-publish",
+      "from": "review",
+      "to": "publish",
+      "label": "Subsanado y conforme",
+      "variant": "default"
+    },
+    {
+      "id": "emit-publish",
+      "from": "emit",
+      "to": "publish",
+      "label": "Conforme / sin observaciones",
+      "variant": "default"
+    },
+    {
+      "id": "review-sanction",
+      "from": "review",
+      "to": "sanction",
+      "label": "Vence / reincide; autorización",
+      "variant": "default"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "slate",
+      "title": "Alcance del diseño",
+      "items": [
+        "Arquitectura propuesta; implementación y validación pendientes.",
+        "Emitir un acta por sí solo no declara formalidad. Publicación requiere estado autorizado y vigencias conformes."
+      ]
+    }
+  ]
+}

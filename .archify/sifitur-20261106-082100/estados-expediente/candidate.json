@@ -1,0 +1,149 @@
+{
+  "schema_version": 3,
+  "diagram_type": "lifecycle",
+  "meta": {
+    "title": "SIFITUR · Estados de subsanación",
+    "locale": "es",
+    "output": ".archify/sifitur-20261106-082100/estados-expediente/estados-expediente.html",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/PoolDYer/entregable02-jeanpoolkennerpalominomavila.git",
+      "revision": "ac5bd7eb01bceee1c9230e675846fd9d1d4f79db"
+    }
+  },
+  "mainPath": [
+    "pending",
+    "review",
+    "resolved"
+  ],
+  "states": [
+    {
+      "id": "pending",
+      "type": "start",
+      "label": "PENDIENTE",
+      "sublabel": "Observaciones y plazo",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "type": "decision",
+      "label": "EN EVALUACIÓN",
+      "sublabel": "Conserva presentadaEn",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    },
+    {
+      "id": "resolved",
+      "type": "success",
+      "label": "SUBSANADO",
+      "sublabel": "Resolución favorable",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    },
+    {
+      "id": "expired",
+      "type": "waiting",
+      "label": "PLAZO VENCIDO",
+      "sublabel": "Vence sin atención",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    },
+    {
+      "id": "repeat",
+      "type": "waiting",
+      "label": "REINCIDENTE",
+      "sublabel": "Antecedente verificado",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    },
+    {
+      "id": "sanction",
+      "type": "external",
+      "label": "PROCEDIMIENTO SANCIONADOR",
+      "sublabel": "Derivación autorizada",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    }
+  ],
+  "transitions": [
+    {
+      "id": "pending-review",
+      "from": "pending",
+      "to": "review",
+      "label": "Descargo oportuno",
+      "variant": "default"
+    },
+    {
+      "id": "review-resolved",
+      "from": "review",
+      "to": "resolved",
+      "label": "Aprueba",
+      "variant": "default"
+    },
+    {
+      "id": "review-pending",
+      "from": "review",
+      "to": "pending",
+      "label": "Rechazo; plazo vigente",
+      "variant": "default"
+    },
+    {
+      "id": "pending-expired",
+      "from": "pending",
+      "to": "expired",
+      "label": "Vence sin atención",
+      "variant": "default"
+    },
+    {
+      "id": "review-repeat",
+      "from": "review",
+      "to": "repeat",
+      "label": "Antecedente verificado",
+      "variant": "default"
+    },
+    {
+      "id": "expired-sanction",
+      "from": "expired",
+      "to": "sanction",
+      "label": "Coordinador autoriza",
+      "variant": "default"
+    },
+    {
+      "id": "repeat-sanction",
+      "from": "repeat",
+      "to": "sanction",
+      "label": "Coordinador autoriza",
+      "variant": "default"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "slate",
+      "title": "Alcance del diseño",
+      "items": [
+        "Arquitectura propuesta; implementación y validación pendientes.",
+        "Captura, emisión y notificación se documentan en tres vistas separadas enlazadas desde el catálogo.",
+        "La conformidad pública requiere decisión autorizada y revisión de vigencias."
+      ]
+    }
+  ]
+}

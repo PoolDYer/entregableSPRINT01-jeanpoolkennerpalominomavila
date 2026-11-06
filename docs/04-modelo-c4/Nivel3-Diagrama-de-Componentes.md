@@ -8,9 +8,9 @@ Descomponer la API en entradas, servicios de aplicación y adaptadores. Esta vis
 
 ## 2. Diagrama
 
-![Componentes del backend SIFITUR](../../img/nivel3-componentes.png)
+![Componentes del backend SIFITUR](../../img/nivel3-componentes.jpg)
 
-Fuente editable: [nivel3-componentes.svg](../../img/fuentes-svg/nivel3-componentes.svg).
+Exportación SVG: [nivel3-componentes.svg](../../img/fuentes-svg/nivel3-componentes.svg).
 
 ## 3. Componentes
 
@@ -84,3 +84,15 @@ Cada módulo expone su API pública y posee sus tablas. Los módulos colaboran m
 Los componentes del módulo Inspecciones se amplían en el nivel 4. Referencia de notación y alcance: [componentes C4](https://c4model.com/diagrams/component) y [leyenda y relaciones C4](https://c4model.com/diagrams/notation).
 
 Anterior: [Contenedores](Nivel2-DiagramadeContenedores.md). Siguiente: [Código](Nivel4-DiagramadeCodigo.md).
+
+## Herramientas y fuentes de diagramas
+
+Estas vistas se gestionan en **Structurizr** desde [workspace.dsl](../../diagrams/structurizr/workspace.dsl). [Abrir el visor C4](../../diagrams/structurizr/site/index.html).
+
+Los niveles 1–3 son vistas nativas del modelo. Structurizr integra el nivel 4 como vistas de imagen vinculadas al componente Inspecciones; las clases y secuencias se mantienen en PlantUML y se renderizan localmente.
+
+| Vista | Fuente | Visor |
+|---|---|---|
+| nivel3-componentes | [Modelo DSL](../../diagrams/structurizr/workspace.dsl) | [Structurizr](../../diagrams/structurizr/site/index.html?diagram=nivel3-componentes) |
+
+[Catálogo y reproducción de diagramas](../../diagrams/README.md).

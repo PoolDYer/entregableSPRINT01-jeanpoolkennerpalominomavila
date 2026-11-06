@@ -1,0 +1,63 @@
+@startuml
+!pragma layout smetana
+title C4 · Nivel 4 · Agregado de Inspecciones\nSIFITUR Huamanga · Modelo de diseño
+skinparam backgroundColor #FFFFFF
+skinparam classBackgroundColor #EAF2FA
+skinparam classAttributeIconSize 0
+class Inspeccion {
+  -id: UUID
+  -operacionId: UUID
+  -inspectorId: UUID
+  -prestadorId: UUID
+  -correoAdministrado: string
+  -versionRuta: number
+  -ficha: FichaInspeccion
+  -capturadaEn: FechaHora
+  -recibidaEn: FechaHora?
+  +{static} crear(datos): Inspeccion
+  +huella(): SHA256
+}
+class Evidencia <<objeto de valor>> {
+  -objetoId: UUID
+  -hash: SHA256
+  -origen: CAMARA
+  -capturadaEn: FechaHora
+  +validarIntegridad(): void
+}
+class Coordenada <<objeto de valor>> {
+  -latitud: number
+  -longitud: number
+  +esValida(): boolean
+}
+class FirmaDigitalizada <<valor vinculado>> {
+  -objetoId: UUID
+  -hash: SHA256
+  -vinculoInspeccion: UUID
+  +validarVinculo(id): void
+}
+class Acta {
+  -objetoId: UUID
+  -hash: SHA256
+  -emitidaEn: FechaHora
+  -estado: EMITIDA | ANULADA
+  +anular(motivo, actor): Acta
+}
+class Subsanacion <<otro módulo>> {
+  -expedienteId: UUID
+  -plazo: FechaHora
+  -presentadaEn: FechaHora?
+  -estado: EstadoSubsanacion
+  +presentarDescargo(datos): void
+  +evaluar(decision, actor): void
+}
+Inspeccion "1" *-- "1..*" Evidencia
+Inspeccion "1" *-- "1" FirmaDigitalizada
+Evidencia "1" *-- "1" Coordenada
+Inspeccion "1" --> "0..1" Acta : emisión asíncrona
+Inspeccion "1" --> "0..*" Subsanacion : origina seguimiento
+note bottom of Inspeccion
+  Misma operación + misma huella: mismo registro.
+  Otra huella: conflicto; conserva el original.
+  Firma manuscrita y hash no equivalen a firma digital certificada.
+end note
+@enduml

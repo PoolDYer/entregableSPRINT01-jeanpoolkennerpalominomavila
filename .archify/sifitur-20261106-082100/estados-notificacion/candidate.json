@@ -1,0 +1,105 @@
+{
+  "schema_version": 3,
+  "diagram_type": "lifecycle",
+  "meta": {
+    "title": "SIFITUR · Estados de notificación",
+    "locale": "es",
+    "output": ".archify/sifitur-20261106-082100/estados-notificacion/estados-notificacion.html",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/PoolDYer/entregable02-jeanpoolkennerpalominomavila.git",
+      "revision": "ac5bd7eb01bceee1c9230e675846fd9d1d4f79db"
+    }
+  },
+  "mainPath": [
+    "pending",
+    "accepted",
+    "delivered"
+  ],
+  "states": [
+    {
+      "id": "pending",
+      "type": "start",
+      "label": "PENDIENTE",
+      "sublabel": "Evento y destinatario estables",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    },
+    {
+      "id": "accepted",
+      "type": "waiting",
+      "label": "ACEPTADA",
+      "sublabel": "Pasarela acepta envío",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    },
+    {
+      "id": "delivered",
+      "type": "success",
+      "label": "ENTREGADA",
+      "sublabel": "Confirmación verificable",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "type": "decision",
+      "label": "REVISIÓN",
+      "sublabel": "Tres intentos fallidos",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    }
+  ],
+  "transitions": [
+    {
+      "id": "pending-accepted",
+      "from": "pending",
+      "to": "accepted",
+      "label": "Proveedor acepta",
+      "variant": "default"
+    },
+    {
+      "id": "accepted-delivered",
+      "from": "accepted",
+      "to": "delivered",
+      "label": "Confirma entrega",
+      "variant": "default"
+    },
+    {
+      "id": "pending-review",
+      "from": "pending",
+      "to": "review",
+      "label": "Agota tres intentos",
+      "variant": "default"
+    },
+    {
+      "id": "pending-pending",
+      "from": "pending",
+      "to": "pending",
+      "label": "Error: reintentar",
+      "variant": "default"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "slate",
+      "title": "Alcance del diseño",
+      "items": [
+        "Arquitectura propuesta; implementación y validación pendientes.",
+        "Un timeout de envío ambiguo requiere conciliación por identificador externo antes de repetir."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "diagram_type": "sequence",
+  "meta": {
+    "title": "SIFITUR · Sincronización de inspección",
+    "locale": "es",
+    "output": ".archify/sifitur-20261106-082100/secuencia-registrar-inspeccion/secuencia-registrar-inspeccion.html",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/PoolDYer/entregable02-jeanpoolkennerpalominomavila.git",
+      "revision": "ac5bd7eb01bceee1c9230e675846fd9d1d4f79db"
+    }
+  },
+  "participants": [
+    {
+      "id": "mobile",
+      "type": "frontend",
+      "label": "Flutter",
+      "sublabel": "SQLite cifrada",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    },
+    {
+      "id": "controller",
+      "type": "backend",
+      "label": "Controlador",
+      "sublabel": "InspectionController",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    },
+    {
+      "id": "case",
+      "type": "backend",
+      "label": "Registrar",
+      "sublabel": "Caso de uso",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    },
+    {
+      "id": "operations",
+      "type": "security",
+      "label": "Operativos",
+      "sublabel": "Asignación vigente",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    },
+    {
+      "id": "objects",
+      "type": "cloud",
+      "label": "Almacén",
+      "sublabel": "Originales S3",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    },
+    {
+      "id": "db",
+      "type": "database",
+      "label": "Repositorio",
+      "sublabel": "PostgreSQL / T1",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    }
+  ],
+  "messages": [
+    {
+      "id": "paso-1",
+      "from": "mobile",
+      "to": "controller",
+      "label": "POST /api/v1/inspecciones",
+      "variant": "default",
+      "y": 170
+    },
+    {
+      "id": "paso-2",
+      "from": "controller",
+      "to": "case",
+      "label": "ejecutar(cmd, actor)",
+      "variant": "default",
+      "y": 218
+    },
+    {
+      "id": "paso-3",
+      "from": "case",
+      "to": "operations",
+      "label": "Autorizar ruta / versión",
+      "variant": "default",
+      "y": 266
+    },
+    {
+      "id": "paso-4",
+      "from": "operations",
+      "to": "case",
+      "label": "Vigente / 403 / 409",
+      "variant": "return",
+      "y": 314
+    },
+    {
+      "id": "paso-5",
+      "from": "case",
+      "to": "db",
+      "label": "buscarOperacion(clave)",
+      "variant": "default",
+      "y": 362
+    },
+    {
+      "id": "paso-6",
+      "from": "db",
+      "to": "case",
+      "label": "Existente / nueva; comparar huella",
+      "variant": "return",
+      "y": 410,
+      "note": "Existente: misma huella devuelve 200; otra huella devuelve 409. Termina sin T1."
+    },
+    {
+      "id": "paso-7",
+      "from": "case",
+      "to": "objects",
+      "label": "Solo nueva: verificar objetos y hash",
+      "variant": "default",
+      "y": 548
+    },
+    {
+      "id": "paso-8",
+      "from": "objects",
+      "to": "case",
+      "label": "Integridad / error 422",
+      "variant": "return",
+      "y": 596
+    },
+    {
+      "id": "paso-9",
+      "from": "case",
+      "to": "db",
+      "label": "Solo nueva válida: T1 + auditoría + outbox",
+      "variant": "default",
+      "y": 644
+    },
+    {
+      "id": "paso-10",
+      "from": "db",
+      "to": "case",
+      "label": "Commit / conflicto unicidad",
+      "variant": "return",
+      "y": 692
+    },
+    {
+      "id": "paso-11",
+      "from": "case",
+      "to": "controller",
+      "label": "Registro y estado vigente",
+      "variant": "return",
+      "y": 740
+    },
+    {
+      "id": "paso-12",
+      "from": "controller",
+      "to": "mobile",
+      "label": "201 RECIBIDA / 200 vigente",
+      "variant": "return",
+      "y": 788
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Alternativas",
+      "items": [
+        "Operación existente: misma huella devuelve el registro; otra huella produce 409 y no ejecuta T1.",
+        "Solo la operación nueva, autorizada y válida verifica objetos y confirma T1."
+      ]
+    },
+    {
+      "dot": "cyan",
+      "title": "Confirmación",
+      "items": [
+        "Precondición: carga autenticada de originales y firma mediante API, con hash verificado.",
+        "El móvil conserva el borrador ante 401/403/409/422 o falta de red; PDF se emite después en trabajador."
+      ]
+    },
+    {
+      "dot": "slate",
+      "title": "Alcance del diseño",
+      "items": [
+        "Arquitectura propuesta; implementación y validación pendientes."
+      ]
+    }
+  ]
+}

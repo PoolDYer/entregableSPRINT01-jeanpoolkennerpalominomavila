@@ -8,9 +8,9 @@ Descomponer SIFITUR en aplicaciones ejecutables y almacenes de datos, indicando 
 
 ## 2. Diagrama
 
-![Contenedores de SIFITUR](../../img/nivel2-contenedores.png)
+![Contenedores de SIFITUR](../../img/nivel2-contenedores.jpg)
 
-Fuente editable: [nivel2-contenedores.svg](../../img/fuentes-svg/nivel2-contenedores.svg).
+Exportación SVG: [nivel2-contenedores.svg](../../img/fuentes-svg/nivel2-contenedores.svg).
 
 ## 3. Contenedores
 
@@ -75,3 +75,15 @@ Anterior: [Contexto](Nivel1-DiagramadeContextodelSistema.md). Siguiente: [Compon
 | Trabajador | RabbitMQ | Publica con confirmación y consume con acuse posterior a persistencia; AMQPS. |
 
 El diagrama representa responsabilidades lógicas. El standby síncrono, réplicas físicas del broker, instancias API y dominios de fallo se detallan en el [HLD](../02-arquitectura-software/arquitectura-inicial.md); no constituyen nuevos módulos de negocio. SQLite es almacenamiento local embebido y no un servidor al que se conecte el backend.
+
+## Herramientas y fuentes de diagramas
+
+Estas vistas se gestionan en **Structurizr** desde [workspace.dsl](../../diagrams/structurizr/workspace.dsl). [Abrir el visor C4](../../diagrams/structurizr/site/index.html).
+
+Los niveles 1–3 son vistas nativas del modelo. Structurizr integra el nivel 4 como vistas de imagen vinculadas al componente Inspecciones; las clases y secuencias se mantienen en PlantUML y se renderizan localmente.
+
+| Vista | Fuente | Visor |
+|---|---|---|
+| nivel2-contenedores | [Modelo DSL](../../diagrams/structurizr/workspace.dsl) | [Structurizr](../../diagrams/structurizr/site/index.html?diagram=nivel2-contenedores) |
+
+[Catálogo y reproducción de diagramas](../../diagrams/README.md).

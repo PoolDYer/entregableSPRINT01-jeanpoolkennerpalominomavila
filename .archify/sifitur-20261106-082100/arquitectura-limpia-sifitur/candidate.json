@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "SIFITUR · Clean Architecture",
+    "locale": "es",
+    "output": ".archify/sifitur-20261106-082100/arquitectura-limpia-sifitur/arquitectura-limpia-sifitur.html",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/PoolDYer/entregable02-jeanpoolkennerpalominomavila.git",
+      "revision": "ac5bd7eb01bceee1c9230e675846fd9d1d4f79db"
+    }
+  },
+  "components": [
+    {
+      "id": "rest",
+      "type": "frontend",
+      "label": "Presentación REST",
+      "sublabel": "DTO y traducción HTTP",
+      "pos": [
+        40,
+        40
+      ],
+      "size": [
+        200,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/02-arquitectura-software/enfoque-arquitectonico.md"
+        }
+      ]
+    },
+    {
+      "id": "app",
+      "type": "backend",
+      "label": "Aplicación",
+      "sublabel": "Registrar / ProcesarActa",
+      "pos": [
+        420,
+        40
+      ],
+      "size": [
+        210,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/02-arquitectura-software/enfoque-arquitectonico.md"
+        }
+      ]
+    },
+    {
+      "id": "domain",
+      "type": "backend",
+      "label": "Dominio",
+      "sublabel": "Inspeccion, Evidencia y puertos",
+      "pos": [
+        800,
+        40
+      ],
+      "size": [
+        230,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/02-arquitectura-software/enfoque-arquitectonico.md"
+        }
+      ]
+    },
+    {
+      "id": "infra",
+      "type": "cloud",
+      "label": "Infraestructura",
+      "sublabel": "SQL, S3, PDF y correo",
+      "pos": [
+        800,
+        270
+      ],
+      "size": [
+        230,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/02-arquitectura-software/enfoque-arquitectonico.md"
+        }
+      ]
+    },
+    {
+      "id": "composition",
+      "type": "backend",
+      "label": "InspeccionesModule",
+      "sublabel": "Raíz de composición NestJS",
+      "pos": [
+        420,
+        270
+      ],
+      "size": [
+        230,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/02-arquitectura-software/enfoque-arquitectonico.md"
+        }
+      ]
+    },
+    {
+      "id": "resources",
+      "type": "database",
+      "label": "Recursos externos",
+      "sublabel": "PostgreSQL, S3 y pasarela",
+      "pos": [
+        800,
+        500
+      ],
+      "size": [
+        230,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/02-arquitectura-software/enfoque-arquitectonico.md"
+        }
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "rest-app",
+      "from": "rest",
+      "to": "app",
+      "label": "Invoca",
+      "variant": "default"
+    },
+    {
+      "id": "app-domain",
+      "from": "app",
+      "to": "domain",
+      "label": "Importa",
+      "variant": "default"
+    },
+    {
+      "id": "infra-domain",
+      "from": "infra",
+      "to": "domain",
+      "label": "Implementa",
+      "variant": "default"
+    },
+    {
+      "id": "composition-app",
+      "from": "composition",
+      "to": "app",
+      "label": "Inyecta",
+      "variant": "default"
+    },
+    {
+      "id": "composition-infra",
+      "from": "composition",
+      "to": "infra",
+      "label": "Conecta",
+      "variant": "default"
+    },
+    {
+      "id": "infra-resources",
+      "from": "infra",
+      "to": "resources",
+      "label": "SDK / SQL",
+      "variant": "default"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Regla de dependencia",
+      "items": [
+        "Dominio y aplicación no importan framework, ORM ni SDK.",
+        "El flujo de ejecución usa adaptadores detrás de los contratos internos."
+      ]
+    },
+    {
+      "dot": "cyan",
+      "title": "Ejecución",
+      "items": [
+        "RegistrarInspeccionCasoUso se ejecuta en API; ProcesarActaCasoUso en el trabajador.",
+        "Presentación y clientes móviles no deciden por sí solos la autorización institucional."
+      ]
+    },
+    {
+      "dot": "slate",
+      "title": "Alcance del diseño",
+      "items": [
+        "Arquitectura propuesta; implementación y validación pendientes."
+      ]
+    }
+  ]
+}

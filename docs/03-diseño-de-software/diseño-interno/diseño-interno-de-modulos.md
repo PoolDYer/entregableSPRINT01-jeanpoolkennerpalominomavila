@@ -46,17 +46,17 @@ src/modules/inspecciones/
 
 ## 3. Capas y regla de dependencia
 
-![Paquetes del módulo Inspecciones](../../../img/paquetes-modulo-inspecciones.png)
+![Paquetes del módulo Inspecciones](../../../img/paquetes-modulo-inspecciones.jpg)
 
-Fuente editable: [paquetes-modulo-inspecciones.svg](../../../img/fuentes-svg/paquetes-modulo-inspecciones.svg).
+Exportación SVG: [paquetes-modulo-inspecciones.svg](../../../img/fuentes-svg/paquetes-modulo-inspecciones.svg).
 
 Dominio no importa aplicación, presentación ni infraestructura. Aplicación solo utiliza el dominio. Infraestructura implementa sus contratos. Presentación invoca los casos de uso. La raíz de composición conecta las implementaciones concretas.
 
 ## 4. Diagrama de clases
 
-![Clases del módulo Inspecciones](../../../img/clases-modulo-inspecciones.png)
+![Clases del módulo Inspecciones](../../../img/clases-modulo-inspecciones.jpg)
 
-Fuente editable: [clases-modulo-inspecciones.svg](../../../img/fuentes-svg/clases-modulo-inspecciones.svg).
+Exportación SVG: [clases-modulo-inspecciones.svg](../../../img/fuentes-svg/clases-modulo-inspecciones.svg).
 
 ## 5. Reglas de negocio
 
@@ -72,9 +72,9 @@ Fuente editable: [clases-modulo-inspecciones.svg](../../../img/fuentes-svg/clase
 
 ## 6. Flujo: sincronizar inspección
 
-![Secuencia de sincronización y emisión](../../../img/secuencia-registrar-inspeccion.png)
+![Secuencia de sincronización y emisión](../../../img/secuencia-registrar-inspeccion.jpg)
 
-Fuente editable: [secuencia-registrar-inspeccion.svg](../../../img/fuentes-svg/secuencia-registrar-inspeccion.svg).
+Exportación SVG: [secuencia-registrar-inspeccion.svg](../../../img/fuentes-svg/secuencia-registrar-inspeccion.svg).
 
 | Paso | Acción | Capa |
 |---|---|---|
@@ -125,9 +125,9 @@ La unicidad se aplica en base de datos a institución + inspector + operación, 
 
 ## 9. Estados y transacciones
 
-![Estados de inspección y subsanación](../../../img/estados-expediente.png)
+![Estados de inspección y subsanación](../../../img/estados-expediente.jpg)
 
-Fuente editable: [estados-expediente.svg](../../../img/fuentes-svg/estados-expediente.svg).
+Exportación SVG: [estados-expediente.svg](../../../img/fuentes-svg/estados-expediente.svg).
 
 | Agregado | Estados y transición | Condición |
 |---|---|---|
@@ -138,6 +138,18 @@ Fuente editable: [estados-expediente.svg](../../../img/fuentes-svg/estados-exped
 | Subsanación | PENDIENTE → EN EVALUACIÓN → SUBSANADO | Descargo presentado y evaluación favorable del coordinador. Rechazo motivado vuelve a PENDIENTE si sigue dentro del plazo. |
 | Vencimiento | PENDIENTE → PLAZO VENCIDO → PROCEDIMIENTO SANCIONADOR | Vencimiento sin atención y derivación autorizada. Un descargo oportuno EN EVALUACIÓN conserva su fecha de presentación. |
 | Reincidencia | EN EVALUACIÓN → REINCIDENTE → PROCEDIMIENTO SANCIONADOR | Antecedente verificado y resolución del coordinador. |
+
+### Captura móvil
+
+![Estados de captura móvil: BORRADOR, LISTA y RECIBIDA](../../../img/estados-captura.jpg)
+
+### Emisión y anulación del acta
+
+![Estados de emisión: RECIBIDA, EMITIDA y ANULADA](../../../img/estados-emision.jpg)
+
+### Notificación
+
+![Estados de notificación: PENDIENTE, ACEPTADA, ENTREGADA y REVISIÓN](../../../img/estados-notificacion.jpg)
 
 La conformidad se determina con vigencias, observaciones y resoluciones; emitir un acta no acredita automáticamente al establecimiento. Solo un cambio autorizado de formalidad actualiza la ficha pública.
 
@@ -176,3 +188,22 @@ interface Notificador {
 | Infraestructura | `RepositorioInspeccionesPostgres` implementa unicidad y T1/T2; `AlmacenEvidenciasS3` implementa custodia y verificación. |
 | Presentación | `InspectionController` traduce DTO, actor autenticado y errores tipados a HTTP; no ejecuta SQL ni construye SDK. |
 | Composición | `InspeccionesModule` inyecta repositorio, almacén y generador; la entrada del trabajador conecta consumidores con los mismos casos de uso. |
+
+## Herramientas y fuentes de diagramas
+
+Estos diagramas se elaboran con **Archify**, conforme al contenido de este documento. Cada imagen JPG se guarda en `img/` y se incrusta en su sección correspondiente. El JSON es la fuente editable; JPG, PNG y SVG son exportaciones generadas desde su visor nativo.
+
+| Diagrama | Fuente | Visor |
+|---|---|---|
+| Paquetes del módulo Inspecciones | [JSON Archify](../../../.archify/sifitur-20261106-082100/paquetes-modulo-inspecciones/candidate.json) | [HTML interactivo](../../../.archify/sifitur-20261106-082100/paquetes-modulo-inspecciones/paquetes-modulo-inspecciones.html) |
+| Modelo del agregado | [JSON Archify](../../../.archify/sifitur-20261106-082100/clases-modulo-inspecciones/candidate.json) | [HTML interactivo](../../../.archify/sifitur-20261106-082100/clases-modulo-inspecciones/clases-modulo-inspecciones.html) |
+| Sincronización de inspección | [JSON Archify](../../../.archify/sifitur-20261106-082100/secuencia-registrar-inspeccion/candidate.json) | [HTML interactivo](../../../.archify/sifitur-20261106-082100/secuencia-registrar-inspeccion/secuencia-registrar-inspeccion.html) |
+| Estados de subsanación | [JSON Archify](../../../.archify/sifitur-20261106-082100/estados-expediente/candidate.json) | [HTML interactivo](../../../.archify/sifitur-20261106-082100/estados-expediente/estados-expediente.html) |
+| Estados de captura | [JSON Archify](../../../.archify/sifitur-20261106-082100/estados-captura/candidate.json) | [HTML interactivo](../../../.archify/sifitur-20261106-082100/estados-captura/estados-captura.html) |
+| Estados de emisión | [JSON Archify](../../../.archify/sifitur-20261106-082100/estados-emision/candidate.json) | [HTML interactivo](../../../.archify/sifitur-20261106-082100/estados-emision/estados-emision.html) |
+| Estados de notificación | [JSON Archify](../../../.archify/sifitur-20261106-082100/estados-notificacion/candidate.json) | [HTML interactivo](../../../.archify/sifitur-20261106-082100/estados-notificacion/estados-notificacion.html) |
+
+El seguimiento de subsanaciones se complementa con máquinas independientes de captura, emisión y notificación:
+
+
+[Catálogo y reproducción de diagramas](../../../diagrams/README.md).

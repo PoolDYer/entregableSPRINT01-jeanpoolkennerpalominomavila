@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "7ee401d8-d9e4-4182-8ac8-01263b026df3",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-alto-nivel\\candidate.json",
+  "output": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-alto-nivel\\arquitectura-alto-nivel.html",
+  "specification": {
+    "sha256": "732b4d3aeee4db4a3cdf4f819a174c658bc5d7ce3996b9ea281973a4bc7b8c28",
+    "bytes": 8977
+  },
+  "artifact": {
+    "sha256": "5377432960e43a11b2eddf4ea509526722c9e1d116f3ed0b29af1b1c4a7039ce",
+    "bytes": 870830
+  }
+}

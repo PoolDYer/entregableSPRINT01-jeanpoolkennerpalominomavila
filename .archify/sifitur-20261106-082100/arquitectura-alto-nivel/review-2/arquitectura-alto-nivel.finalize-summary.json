@@ -1,0 +1,188 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-alto-nivel\\candidate.json",
+    "sha256": "ec5f4faed762ea026472daf5488ca84334bd472ffa50fb52628fa47499bf3a58",
+    "bytes": 8816
+  },
+  "artifact": {
+    "path": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-alto-nivel\\arquitectura-alto-nivel.html",
+    "sha256": "5954090f513ed6f773c4ed3a128b636050b311cdbc74619a8b3973ab7a5f2c16",
+    "bytes": 869607
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-alto-nivel\\review-2\\arquitectura-alto-nivel.finalize.json",
+    "summaryReceipt": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-alto-nivel\\review-2\\arquitectura-alto-nivel.finalize-summary.json",
+    "browserCheckReceipt": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-alto-nivel\\review-2\\arquitectura-alto-nivel.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-06T18:25:06.732Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 3163,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  },
+  "visualReviewRecommendation": {
+    "action": "inspect-route-readability",
+    "signals": {
+      "resolvedCrossovers": 3,
+      "routesOverSuggestedBends": 3
+    },
+    "reason": "Automated gates passed, but crossings or detours still need perceptual review before claiming visual quality.",
+    "affectedRoutes": {
+      "crossings": [
+        {
+          "left": {
+            "id": "primary-standby",
+            "from": "primary",
+            "to": "standby",
+            "label": "Síncrona",
+            "collectionIndex": 7,
+            "artifactIndex": 8
+          },
+          "right": {
+            "id": "api-externos",
+            "from": "api",
+            "to": "externos",
+            "label": "HTTPS",
+            "collectionIndex": 13,
+            "artifactIndex": 14
+          },
+          "point": [
+            565.8,
+            473
+          ]
+        },
+        {
+          "left": {
+            "id": "primary-replica",
+            "from": "primary",
+            "to": "replica",
+            "label": "Asíncrona",
+            "collectionIndex": 8,
+            "artifactIndex": 9
+          },
+          "right": {
+            "id": "api-externos",
+            "from": "api",
+            "to": "externos",
+            "label": "HTTPS",
+            "collectionIndex": 13,
+            "artifactIndex": 14
+          },
+          "point": [
+            565.8,
+            427
+          ]
+        },
+        {
+          "left": {
+            "id": "api-s3",
+            "from": "api",
+            "to": "s3",
+            "label": "Originales",
+            "collectionIndex": 12,
+            "artifactIndex": 13
+          },
+          "right": {
+            "id": "worker-redis",
+            "from": "worker",
+            "to": "redis",
+            "label": "Invalidación",
+            "collectionIndex": 14,
+            "artifactIndex": 15
+          },
+          "point": [
+            967,
+            459
+          ]
+        }
+      ],
+      "detours": [
+        {
+          "relationship": {
+            "id": "primary-replica",
+            "from": "primary",
+            "to": "replica",
+            "label": "Asíncrona",
+            "collectionIndex": 8,
+            "artifactIndex": 9
+          },
+          "bends": 4,
+          "stretch": 1.143,
+          "directCorridorBlockers": [
+            {
+              "id": "standby",
+              "label": "Standby síncrono",
+              "box": [
+                350,
+                430,
+                180,
+                72
+              ]
+            }
+          ]
+        },
+        {
+          "relationship": {
+            "id": "api-externos",
+            "from": "api",
+            "to": "externos",
+            "label": "HTTPS",
+            "collectionIndex": 13,
+            "artifactIndex": 14
+          },
+          "bends": 4,
+          "stretch": 1
+        },
+        {
+          "relationship": {
+            "id": "worker-redis",
+            "from": "worker",
+            "to": "redis",
+            "label": "Invalidación",
+            "collectionIndex": 14,
+            "artifactIndex": 15
+          },
+          "bends": 4,
+          "stretch": 1
+        }
+      ],
+      "truncated": false
+    },
+    "hints": [
+      "primary → standby crosses api → externos: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "primary → replica crosses api → externos: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "api → s3 crosses worker → redis: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "api → externos needs 4 bends: move node api or externos so they share a row or column with matching centers, or sit diagonally with a clear corner.",
+      "worker → redis needs 4 bends: move node worker or redis so they share a row or column with matching centers, or sit diagonally with a clear corner."
+    ],
+    "repair": "Trace these relationships at the desktop viewport. For Architecture, use references/architecture-layout-repair.md: reflow a blocked main path or tangled connected scene, and repair an isolated defect locally only when the surrounding composition is accepted. Preserve all semantic content and user-fixed geometry. Rerun finalize once after the edit."
+  }
+}

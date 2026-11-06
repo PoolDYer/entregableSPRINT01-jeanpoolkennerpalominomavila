@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "567c2de7-343f-4dec-8f48-f127ffec7b87",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\paquetes-modulo-inspecciones\\candidate.json",
+  "output": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\paquetes-modulo-inspecciones\\paquetes-modulo-inspecciones.html",
+  "specification": {
+    "sha256": "cad6a9b9c393c18e224d581800e861a531ce6feb7412c992b54260df184640bf",
+    "bytes": 4468
+  },
+  "artifact": {
+    "sha256": "f63ec3be01b08c0c2e6541838eb31451c3e25cb938ec30ecd232900ca5361e5d",
+    "bytes": 843127
+  }
+}

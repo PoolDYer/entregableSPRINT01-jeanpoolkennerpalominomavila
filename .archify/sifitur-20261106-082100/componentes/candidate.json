@@ -1,0 +1,304 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "SIFITUR · Componentes y propiedad de datos",
+    "locale": "es",
+    "output": ".archify/sifitur-20261106-082100/componentes/componentes.html",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/PoolDYer/entregable02-jeanpoolkennerpalominomavila.git",
+      "revision": "ac5bd7eb01bceee1c9230e675846fd9d1d4f79db"
+    }
+  },
+  "components": [
+    {
+      "id": "padron",
+      "type": "backend",
+      "label": "Padrón / vigencias",
+      "sublabel": "ProviderService · RF05–06",
+      "pos": [
+        40,
+        40
+      ],
+      "size": [
+        220,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/02-arquitectura-software/componentes-arquitectonicos.md"
+        }
+      ]
+    },
+    {
+      "id": "riesgo",
+      "type": "backend",
+      "label": "Riesgo",
+      "sublabel": "Política versionada · RF07",
+      "pos": [
+        430,
+        40
+      ],
+      "size": [
+        220,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/02-arquitectura-software/componentes-arquitectonicos.md"
+        }
+      ]
+    },
+    {
+      "id": "operativos",
+      "type": "backend",
+      "label": "Operativos",
+      "sublabel": "Asignación y versión · RF08",
+      "pos": [
+        820,
+        40
+      ],
+      "size": [
+        220,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/02-arquitectura-software/componentes-arquitectonicos.md"
+        }
+      ]
+    },
+    {
+      "id": "inspection",
+      "type": "backend",
+      "label": "Inspecciones",
+      "sublabel": "Registro idempotente · RF09–11",
+      "pos": [
+        820,
+        290
+      ],
+      "size": [
+        240,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/02-arquitectura-software/componentes-arquitectonicos.md"
+        }
+      ]
+    },
+    {
+      "id": "claims",
+      "type": "backend",
+      "label": "Subsanaciones",
+      "sublabel": "Plazos y descargos · RF12",
+      "pos": [
+        430,
+        290
+      ],
+      "size": [
+        220,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/02-arquitectura-software/componentes-arquitectonicos.md"
+        }
+      ]
+    },
+    {
+      "id": "query",
+      "type": "backend",
+      "label": "Consulta pública",
+      "sublabel": "Formalidad / QR · RF13",
+      "pos": [
+        40,
+        290
+      ],
+      "size": [
+        220,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/02-arquitectura-software/componentes-arquitectonicos.md"
+        }
+      ]
+    },
+    {
+      "id": "access",
+      "type": "security",
+      "label": "Identidad y acceso",
+      "sublabel": "JWT, RBAC y ámbito · RF01–03/15",
+      "pos": [
+        820,
+        540
+      ],
+      "size": [
+        250,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/02-arquitectura-software/componentes-arquitectonicos.md"
+        }
+      ]
+    },
+    {
+      "id": "audit",
+      "type": "backend",
+      "label": "Auditoría",
+      "sublabel": "Solo anexado en T1 · RF04",
+      "pos": [
+        430,
+        540
+      ],
+      "size": [
+        220,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/02-arquitectura-software/componentes-arquitectonicos.md"
+        }
+      ]
+    },
+    {
+      "id": "metrics",
+      "type": "backend",
+      "label": "Indicadores",
+      "sublabel": "Réplica / fecha de corte · RF14",
+      "pos": [
+        40,
+        540
+      ],
+      "size": [
+        240,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/02-arquitectura-software/componentes-arquitectonicos.md"
+        }
+      ]
+    },
+    {
+      "id": "worker",
+      "type": "backend",
+      "label": "Trabajador asíncrono",
+      "sublabel": "PDF, proyecciones y avisos",
+      "pos": [
+        430,
+        780
+      ],
+      "size": [
+        250,
+        72
+      ],
+      "sources": [
+        {
+          "path": "docs/02-arquitectura-software/componentes-arquitectonicos.md"
+        }
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "padron-riesgo",
+      "from": "padron",
+      "to": "riesgo",
+      "label": "Ficha / vigencias",
+      "variant": "default"
+    },
+    {
+      "id": "riesgo-operativos",
+      "from": "riesgo",
+      "to": "operativos",
+      "label": "Criticidad",
+      "variant": "default"
+    },
+    {
+      "id": "operativos-inspection",
+      "from": "operativos",
+      "to": "inspection",
+      "label": "Valida ruta",
+      "variant": "default"
+    },
+    {
+      "id": "inspection-claims",
+      "from": "inspection",
+      "to": "claims",
+      "label": "Observaciones",
+      "variant": "default"
+    },
+    {
+      "id": "claims-query",
+      "from": "claims",
+      "to": "query",
+      "label": "Estado autorizado",
+      "variant": "default"
+    },
+    {
+      "id": "inspection-access",
+      "from": "inspection",
+      "to": "access",
+      "label": "Autoriza",
+      "variant": "default"
+    },
+    {
+      "id": "inspection-audit",
+      "from": "inspection",
+      "to": "audit",
+      "label": "T1 atómica",
+      "variant": "default"
+    },
+    {
+      "id": "worker-audit",
+      "from": "worker",
+      "to": "audit",
+      "label": "T2 / auditoría",
+      "variant": "default"
+    },
+    {
+      "id": "worker-query",
+      "from": "worker",
+      "to": "query",
+      "label": "Proyección",
+      "variant": "default"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Contratos y datos",
+      "items": [
+        "Cada módulo posee sus tablas; la colaboración no abre repositorios ajenos.",
+        "Indicadores utiliza vistas autorizadas; consulta pública excluye firmas, actas y evidencias."
+      ]
+    },
+    {
+      "dot": "cyan",
+      "title": "Procesamiento durable",
+      "items": [
+        "Unidad de trabajo confirma inspección, auditoría y outbox.",
+        "Worker: QueuePublisher, ProcesarActaCasoUso y consumidor de avisos; S3, RabbitMQ, PostgreSQL y Redis."
+      ]
+    },
+    {
+      "dot": "cyan",
+      "title": "Integraciones",
+      "items": [
+        "API: SUNAT, MINCETUR y cartografía GIS; trabajador: SMS/correo.",
+        "Acceso externo sujeto a habilitación institucional."
+      ]
+    },
+    {
+      "dot": "slate",
+      "title": "Alcance del diseño",
+      "items": [
+        "Arquitectura propuesta; implementación y validación pendientes."
+      ]
+    }
+  ]
+}

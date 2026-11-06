@@ -2,9 +2,9 @@
 
 ## Diagrama de arquitectura
 
-![Arquitectura de alto nivel de SIFITUR Huamanga](../../img/arquitectura-alto-nivel.png)
+![Arquitectura de alto nivel de SIFITUR Huamanga](../../img/arquitectura-alto-nivel.jpg)
 
-Fuente editable: [arquitectura-alto-nivel.svg](../../img/fuentes-svg/arquitectura-alto-nivel.svg).
+Exportación SVG: [arquitectura-alto-nivel.svg](../../img/fuentes-svg/arquitectura-alto-nivel.svg).
 
 ## Descripción
 
@@ -34,3 +34,13 @@ La réplica no sustituye copias de seguridad. La conmutación de la primaria, re
 | Indicadores | Consola → API privada → réplica / proyecciones analíticas. | Muestra fecha de corte; no decide sanciones con datos retrasados. |
 
 El despliegue incorpora standby síncrono para continuidad de la primaria y réplica asíncrona para lecturas. Las capacidades se especifican en [ADR-008](../01-analisis-de-sistema/07-decisiones-arquitectonicas.md#adr-008-recuperación-y-despliegue-redundante). La app conserva la captura sin red si el servidor no puede confirmar de forma durable.
+
+## Herramientas y fuentes de diagramas
+
+Estos diagramas se elaboran con **Archify**, conforme al contenido de este documento. Cada imagen JPG se guarda en `img/` y se incrusta en su sección correspondiente. El JSON es la fuente editable; JPG, PNG y SVG son exportaciones generadas desde su visor nativo.
+
+| Diagrama | Fuente | Visor |
+|---|---|---|
+| Arquitectura de alto nivel | [JSON Archify](../../.archify/sifitur-20261106-082100/arquitectura-alto-nivel/candidate.json) | [HTML interactivo](../../.archify/sifitur-20261106-082100/arquitectura-alto-nivel/arquitectura-alto-nivel.html) |
+
+[Catálogo y reproducción de diagramas](../../diagrams/README.md).

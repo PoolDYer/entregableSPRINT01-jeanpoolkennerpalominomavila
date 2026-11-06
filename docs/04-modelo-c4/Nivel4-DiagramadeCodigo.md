@@ -10,9 +10,9 @@ Esta vista descompone el componente Inspecciones del [nivel 3](Nivel3-Diagrama-d
 
 ## 2. Diagrama de clases
 
-![Clases del módulo Inspecciones](../../img/nivel4-clases.png)
+![Clases del módulo Inspecciones](../../img/nivel4-clases.jpg)
 
-Fuente editable: [nivel4-clases.svg](../../img/fuentes-svg/nivel4-clases.svg).
+Exportación SVG: [nivel4-clases.svg](../../img/fuentes-svg/nivel4-clases.svg).
 
 ### 2.1 Capas
 
@@ -40,23 +40,23 @@ Fuente editable: [nivel4-clases.svg](../../img/fuentes-svg/nivel4-clases.svg).
 
 ### 2.3 Modelo del agregado
 
-![Entidades y cardinalidades del expediente](../../img/clases-modulo-inspecciones.png)
+![Entidades y cardinalidades del expediente](../../img/nivel4-agregado.jpg)
 
-Fuente editable: [modelo del agregado](../../img/fuentes-svg/clases-modulo-inspecciones.svg).
+Exportación SVG: [modelo del agregado](../../img/fuentes-svg/nivel4-agregado.svg).
 
 ### 2.4 Notación
 
-Las clases muestran atributos y operaciones públicas (`+`) o privadas (`-`). `«interface»` identifica un contrato. La asociación usa línea continua con flecha abierta; la dependencia, línea discontinua con flecha abierta; la realización de interfaz, línea discontinua con triángulo hueco. El rombo lleno en Inspeccion indica composición de una o más Evidencia (`1..*`); Acta mantiene una asociación `0..1` mientras su emisión está pendiente. El [diagrama DIP](../../img/principio-dip.png) amplía las dependencias entre núcleo y adaptadores.
+Las clases muestran atributos y operaciones públicas (`+`) o privadas (`-`). `«interface»` identifica un contrato. La asociación usa línea continua con flecha abierta; la dependencia, línea discontinua con flecha abierta; la realización de interfaz, línea discontinua con triángulo hueco. El rombo lleno en Inspeccion indica composición de una o más Evidencia (`1..*`); Acta mantiene una asociación `0..1` mientras su emisión está pendiente. El [diagrama DIP](../../img/principio-dip.jpg) amplía las dependencias entre núcleo y adaptadores.
 
-El azul claro identifica clases del núcleo; el azul oscuro, interfaces; y el azul medio, entradas y adaptadores. Los límites discontinuos agrupan responsabilidades. Cada figura incluye su leyenda UML; el color complementa el tipo declarado dentro de cada elemento.
+Los paquetes UML agrupan presentación, aplicación, dominio e infraestructura. Las interfaces se identifican explícitamente y las relaciones muestran dependencia, realización o composición según corresponda. El tipo y la notación de cada elemento determinan su significado; el color es complementario. Las vistas UML se incorporan a Structurizr como ampliaciones del componente Inspecciones.
 
 ## 3. Diagramas de secuencia
 
 ### 3.1 Registro y sincronización de inspección
 
-![C4 nivel 4: secuencia de registro y sincronización](../../img/secuencia-registrar-inspeccion.png)
+![C4 nivel 4: secuencia de registro y sincronización](../../img/nivel4-registro.jpg)
 
-Fuente editable: [secuencia de registro](../../img/fuentes-svg/secuencia-registrar-inspeccion.svg).
+Exportación SVG: [secuencia de registro](../../img/fuentes-svg/nivel4-registro.svg).
 
 `InspectionController` delega en `RegistrarInspeccionCasoUso`. El caso de uso verifica asignación, operación y evidencias mediante los contratos del núcleo. La transacción T1 conserva inspección, auditoría y evento outbox antes de responder `201 RECIBIDA`; el PDF todavía puede estar pendiente. Un reenvío idéntico obtiene el registro existente con `200`; una huella distinta para la misma operación produce `409`.
 
@@ -64,9 +64,9 @@ Las precondiciones, autorizaciones y alternativas de error se especifican en el 
 
 ### 3.2 Emisión asíncrona del acta y notificación
 
-![C4 nivel 4: secuencia de emisión del acta y notificación](../../img/nivel4-secuencia.png)
+![C4 nivel 4: secuencia de emisión del acta y notificación](../../img/nivel4-secuencia.jpg)
 
-Fuente editable: [nivel4-secuencia.svg](../../img/fuentes-svg/nivel4-secuencia.svg).
+Exportación SVG: [nivel4-secuencia.svg](../../img/fuentes-svg/nivel4-secuencia.svg).
 
 La secuencia desarrolla la emisión asíncrona desde una inspección ya recibida. `ProcesarActa` representa a `ProcesarActaCasoUso`; `Generador PDF` y `S3 / almacén` representan colaboradores accesibles mediante `GeneradorActas` y `AlmacenEvidencias`. `Outbox / BD` resume la persistencia transaccional a través del repositorio. El participante `Notificador` resume el consumidor de avisos y su adaptador de envío.
 
@@ -97,3 +97,18 @@ La emisión no cambia por sí sola el estado de formalidad del establecimiento. 
 Los estados de captura, emisión, notificación y subsanación son independientes y se especifican en [estados y transacciones](../03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md#9-estados-y-transacciones).
 
 Anterior: [Nivel 3 · Componentes](Nivel3-Diagrama-de-Componentes.md).
+
+## Herramientas y fuentes de diagramas
+
+Estas vistas se gestionan en **Structurizr** desde [workspace.dsl](../../diagrams/structurizr/workspace.dsl). [Abrir el visor C4](../../diagrams/structurizr/site/index.html).
+
+Los niveles 1–3 son vistas nativas del modelo. Structurizr integra el nivel 4 como vistas de imagen vinculadas al componente Inspecciones; las clases y secuencias se mantienen en PlantUML y se renderizan localmente.
+
+| Vista | Fuente | Visor |
+|---|---|---|
+| nivel4-clases | [UML editable](../../diagrams/structurizr/nivel4-clases.puml) | [Structurizr](../../diagrams/structurizr/site/index.html?diagram=nivel4-clases) |
+| nivel4-agregado | [UML editable](../../diagrams/structurizr/nivel4-agregado.puml) | [Structurizr](../../diagrams/structurizr/site/index.html?diagram=nivel4-agregado) |
+| nivel4-registro | [UML editable](../../diagrams/structurizr/nivel4-registro.puml) | [Structurizr](../../diagrams/structurizr/site/index.html?diagram=nivel4-registro) |
+| nivel4-secuencia | [UML editable](../../diagrams/structurizr/nivel4-secuencia.puml) | [Structurizr](../../diagrams/structurizr/site/index.html?diagram=nivel4-secuencia) |
+
+[Catálogo y reproducción de diagramas](../../diagrams/README.md).
