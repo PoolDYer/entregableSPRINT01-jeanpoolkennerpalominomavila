@@ -1,0 +1,361 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-monolitica-sifitur\\candidate.json",
+    "sha256": "6de15602ca7d08b573e5f07aac59f295e4bfd6b0d8a617f95cfcb331b3064e00",
+    "bytes": 30945
+  },
+  "artifact": {
+    "path": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-monolitica-sifitur\\arquitectura-monolitica-sifitur.html",
+    "sha256": "8462d35f5e41a0b200e3a1e8e8c8ecfb4fb4b12762ae5d34e9d322167f1bfcdb",
+    "bytes": 969404
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-monolitica-sifitur\\recursos-externos\\review-3\\arquitectura-monolitica-sifitur.finalize.json",
+    "summaryReceipt": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-monolitica-sifitur\\recursos-externos\\review-3\\arquitectura-monolitica-sifitur.finalize-summary.json",
+    "browserCheckReceipt": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-monolitica-sifitur\\recursos-externos\\review-3\\arquitectura-monolitica-sifitur.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-06T18:25:06.732Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 10092,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  },
+  "visualReviewRecommendation": {
+    "action": "inspect-route-readability",
+    "signals": {
+      "resolvedCrossovers": 38,
+      "routesOverSuggestedBends": 10
+    },
+    "reason": "Automated gates passed, but crossings or detours still need perceptual review before claiming visual quality.",
+    "affectedRoutes": {
+      "crossings": [
+        {
+          "left": {
+            "id": "transversales--management_controller",
+            "from": "transversales",
+            "to": "management_controller",
+            "label": "",
+            "collectionIndex": 7,
+            "artifactIndex": 8
+          },
+          "right": {
+            "id": "management_service--sunat",
+            "from": "management_service",
+            "to": "sunat",
+            "label": "HTTPS",
+            "collectionIndex": 41,
+            "artifactIndex": 42
+          },
+          "point": [
+            460,
+            322.5
+          ]
+        },
+        {
+          "left": {
+            "id": "transversales--inspection_controller",
+            "from": "transversales",
+            "to": "inspection_controller",
+            "label": "",
+            "collectionIndex": 10,
+            "artifactIndex": 11
+          },
+          "right": {
+            "id": "management_service--sunat",
+            "from": "management_service",
+            "to": "sunat",
+            "label": "HTTPS",
+            "collectionIndex": 41,
+            "artifactIndex": 42
+          },
+          "point": [
+            730,
+            322.5
+          ]
+        },
+        {
+          "left": {
+            "id": "inspection_controller--inspection_service",
+            "from": "inspection_controller",
+            "to": "inspection_service",
+            "label": "Invoca",
+            "collectionIndex": 11,
+            "artifactIndex": 12
+          },
+          "right": {
+            "id": "management_controller--claims_service",
+            "from": "management_controller",
+            "to": "claims_service",
+            "label": "Delega evaluación",
+            "collectionIndex": 26,
+            "artifactIndex": 27
+          },
+          "point": [
+            612,
+            459
+          ]
+        },
+        {
+          "left": {
+            "id": "inspection_controller--inspection_service",
+            "from": "inspection_controller",
+            "to": "inspection_service",
+            "label": "Invoca",
+            "collectionIndex": 11,
+            "artifactIndex": 12
+          },
+          "right": {
+            "id": "management_service--mincetur",
+            "from": "management_service",
+            "to": "mincetur",
+            "label": "HTTPS",
+            "collectionIndex": 42,
+            "artifactIndex": 43
+          },
+          "point": [
+            612,
+            457.5
+          ]
+        },
+        {
+          "left": {
+            "id": "inspection_service--inspection_repository",
+            "from": "inspection_service",
+            "to": "inspection_repository",
+            "label": "Por contrato",
+            "collectionIndex": 12,
+            "artifactIndex": 13
+          },
+          "right": {
+            "id": "worker--primary",
+            "from": "worker",
+            "to": "primary",
+            "label": "Outbox / T2",
+            "collectionIndex": 35,
+            "artifactIndex": 36
+          },
+          "point": [
+            612,
+            762
+          ]
+        },
+        {
+          "left": {
+            "id": "inspection_service--inspection_repository",
+            "from": "inspection_service",
+            "to": "inspection_repository",
+            "label": "Por contrato",
+            "collectionIndex": 12,
+            "artifactIndex": 13
+          },
+          "right": {
+            "id": "operations_service--gis",
+            "from": "operations_service",
+            "to": "gis",
+            "label": "HTTPS",
+            "collectionIndex": 43,
+            "artifactIndex": 44
+          },
+          "point": [
+            612,
+            725.5
+          ]
+        },
+        {
+          "left": {
+            "id": "transversales--claims_controller",
+            "from": "transversales",
+            "to": "claims_controller",
+            "label": "",
+            "collectionIndex": 13,
+            "artifactIndex": 14
+          },
+          "right": {
+            "id": "management_service--sunat",
+            "from": "management_service",
+            "to": "sunat",
+            "label": "HTTPS",
+            "collectionIndex": 41,
+            "artifactIndex": 42
+          },
+          "point": [
+            744,
+            322.5
+          ]
+        },
+        {
+          "left": {
+            "id": "claims_controller--claims_service",
+            "from": "claims_controller",
+            "to": "claims_service",
+            "label": "Invoca",
+            "collectionIndex": 14,
+            "artifactIndex": 15
+          },
+          "right": {
+            "id": "management_service--mincetur",
+            "from": "management_service",
+            "to": "mincetur",
+            "label": "HTTPS",
+            "collectionIndex": 42,
+            "artifactIndex": 43
+          },
+          "point": [
+            856.05,
+            457.5
+          ]
+        }
+      ],
+      "detours": [
+        {
+          "relationship": {
+            "id": "management_service--operations_service",
+            "from": "management_service",
+            "to": "operations_service",
+            "label": "Coordina",
+            "collectionIndex": 23,
+            "artifactIndex": 24
+          },
+          "bends": 3,
+          "stretch": 1.179,
+          "directCorridorBlockers": [
+            {
+              "id": "risk_service",
+              "label": "RiskAssessmentEngine",
+              "box": [
+                276,
+                600,
+                200,
+                65
+              ]
+            }
+          ]
+        },
+        {
+          "relationship": {
+            "id": "management_controller--claims_service",
+            "from": "management_controller",
+            "to": "claims_service",
+            "label": "Delega evaluación",
+            "collectionIndex": 26,
+            "artifactIndex": 27
+          },
+          "bends": 4,
+          "stretch": 1
+        },
+        {
+          "relationship": {
+            "id": "query_repository--redis",
+            "from": "query_repository",
+            "to": "redis",
+            "label": "RESP / TLS",
+            "collectionIndex": 31,
+            "artifactIndex": 32
+          },
+          "bends": 4,
+          "stretch": 1
+        },
+        {
+          "relationship": {
+            "id": "query_repository--primary",
+            "from": "query_repository",
+            "to": "primary",
+            "label": "Revalida",
+            "collectionIndex": 32,
+            "artifactIndex": 33
+          },
+          "bends": 3,
+          "stretch": 1
+        },
+        {
+          "relationship": {
+            "id": "metrics_repository--replica",
+            "from": "metrics_repository",
+            "to": "replica",
+            "label": "SQL / TLS",
+            "collectionIndex": 33,
+            "artifactIndex": 34
+          },
+          "bends": 5,
+          "stretch": 1.105
+        },
+        {
+          "relationship": {
+            "id": "worker--primary",
+            "from": "worker",
+            "to": "primary",
+            "label": "Outbox / T2",
+            "collectionIndex": 35,
+            "artifactIndex": 36
+          },
+          "bends": 4,
+          "stretch": 1
+        },
+        {
+          "relationship": {
+            "id": "worker--redis",
+            "from": "worker",
+            "to": "redis",
+            "label": "Proyección",
+            "collectionIndex": 36,
+            "artifactIndex": 37
+          },
+          "bends": 3,
+          "stretch": 1
+        },
+        {
+          "relationship": {
+            "id": "worker--objects",
+            "from": "worker",
+            "to": "objects",
+            "label": "PDF / hash",
+            "collectionIndex": 37,
+            "artifactIndex": 38
+          },
+          "bends": 4,
+          "stretch": 1.141
+        }
+      ],
+      "truncated": true
+    },
+    "hints": [
+      "primary has 6 relationships facing its right side, which fits 4 ports: make that side at least 102px, or move some of those neighbours so they face another side of primary.",
+      "transversales → management_controller crosses management_service → sunat: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "transversales → inspection_controller crosses management_service → sunat: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "inspection_controller → inspection_service crosses management_controller → claims_service: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "inspection_controller → inspection_service crosses management_service → mincetur: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "inspection_service → inspection_repository crosses worker → primary: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "inspection_service → inspection_repository crosses operations_service → gis: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "transversales → claims_controller crosses management_service → sunat: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor."
+    ],
+    "repair": "Trace these relationships at the desktop viewport. For Architecture, use references/architecture-layout-repair.md: reflow a blocked main path or tangled connected scene, and repair an isolated defect locally only when the surrounding composition is accepted. Preserve all semantic content and user-fixed geometry. Rerun finalize once after the edit."
+  }
+}

@@ -53,7 +53,7 @@
     },
     {
       "path": "docs\\02-arquitectura-software\\estilo-arquitectonico.md",
-      "sha256": "e57c45d6f7f91e53a049876ea611fd7634916c176d7714b4b853740e658cc68f"
+      "sha256": "80741cc249cefa41f31d674a86bc105729adf86a39a01327c2c8a774d369183b"
     },
     {
       "path": "docs\\03-diseño-de-software\\diseño-interno\\diseño-interno-de-modulos.md",
@@ -101,6 +101,22 @@
     },
     {
       "rule": "Estilo modular: clientes, gateway y recursos fuera de la API",
+      "result": "conforme"
+    },
+    {
+      "rule": "Estilo modular: primaria, réplica, Redis, S3 y cola como nodos separados",
+      "result": "conforme"
+    },
+    {
+      "rule": "Estilo modular: destinos de escritura, réplica, caché y revalidación explícitos",
+      "result": "conforme"
+    },
+    {
+      "rule": "Estilo modular: cuatro sistemas externos con sus responsables",
+      "result": "conforme"
+    },
+    {
+      "rule": "Estilo modular: trabajador independiente accede a sus cinco recursos",
       "result": "conforme"
     },
     {
@@ -794,13 +810,13 @@
     {
       "slug": "arquitectura-monolitica-sifitur",
       "source": ".archify/sifitur-20261106-082100/arquitectura-monolitica-sifitur/candidate.json",
-      "sourceSha256": "2ce75f90d90ceec8d6b633166c649636682d764ed640577c79168854b12da8a8",
+      "sourceSha256": "6de15602ca7d08b573e5f07aac59f295e4bfd6b0d8a617f95cfcb331b3064e00",
       "html": ".archify/sifitur-20261106-082100/arquitectura-monolitica-sifitur/arquitectura-monolitica-sifitur.html",
-      "htmlSha256": "42b48f2d71d348810b6f0c3de47222a24492b47c82f66a7f16eaea7a9c7ba750",
-      "receipt": ".archify\\sifitur-20261106-082100\\arquitectura-monolitica-sifitur\\estilo-detallado\\review-3\\arquitectura-monolitica-sifitur.finalize-summary.json",
-      "img/arquitectura-monolitica-sifitur.jpg": "a4da1e674500177783737c16f5b2165c43cea81904b65c1a43d5aaa08b202e74",
-      "img/arquitectura-monolitica-sifitur.png": "c1e4695c1d12e913c3d42b2ddebbfea0e320ddd57e76ee07527491094887b6b8",
-      "img/fuentes-svg/arquitectura-monolitica-sifitur.svg": "b4aa4d196c9e85a60cd53c2aa2afa0b56642be20caf7f1b8ae3af7857b4970bc"
+      "htmlSha256": "8462d35f5e41a0b200e3a1e8e8c8ecfb4fb4b12762ae5d34e9d322167f1bfcdb",
+      "receipt": ".archify\\sifitur-20261106-082100\\arquitectura-monolitica-sifitur\\recursos-externos\\review-3\\arquitectura-monolitica-sifitur.finalize-summary.json",
+      "img/arquitectura-monolitica-sifitur.jpg": "b603872217d471036728a4ebc4569be19fe773b9b473c3696f39141df84b7c6b",
+      "img/arquitectura-monolitica-sifitur.png": "bd85b424ee6277b5164e634c33b25e074f44cf655fd1cd4d0ff49cce34333a2d",
+      "img/fuentes-svg/arquitectura-monolitica-sifitur.svg": "499c779cd8ef40c16af17a65a5afcb75ff70341b14a6b5b89ec0b324227e811f"
     },
     {
       "slug": "componentes",

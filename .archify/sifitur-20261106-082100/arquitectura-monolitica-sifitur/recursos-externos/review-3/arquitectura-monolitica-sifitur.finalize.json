@@ -1,0 +1,1985 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "startedAt": "2026-11-07T02:15:38.144Z",
+  "specification": {
+    "path": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-monolitica-sifitur\\candidate.json",
+    "sha256": "6de15602ca7d08b573e5f07aac59f295e4bfd6b0d8a617f95cfcb331b3064e00",
+    "bytes": 30945
+  },
+  "artifact": {
+    "path": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-monolitica-sifitur\\arquitectura-monolitica-sifitur.html",
+    "sha256": "8462d35f5e41a0b200e3a1e8e8c8ecfb4fb4b12762ae5d34e9d322167f1bfcdb",
+    "bytes": 969404
+  },
+  "stages": {
+    "validate": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": null,
+      "execution": "embedded-in-deliver",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Users\\TRANP_~1\\AppData\\Local\\Temp\\sifitur-diagram-tools\\archify\\archify\\bin\\archify.mjs",
+        "deliver",
+        "architecture",
+        "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-monolitica-sifitur\\candidate.json",
+        "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-monolitica-sifitur\\arquitectura-monolitica-sifitur.html",
+        "--quality",
+        "showcase",
+        "--repo-root",
+        "C:\\Users\\TRANP_~1\\AppData\\Local\\Temp\\sifitur-enfoque-evidence",
+        "--json"
+      ],
+      "receipt": {
+        "schemaVersion": 1,
+        "ok": true,
+        "command": "validate",
+        "specification": {
+          "sha256": "6de15602ca7d08b573e5f07aac59f295e4bfd6b0d8a617f95cfcb331b3064e00",
+          "bytes": 30945
+        },
+        "validation": {
+          "checksPassed": 9,
+          "checkCount": 9,
+          "compositionProfile": "showcase",
+          "compositionStatus": "pass",
+          "errors": 0,
+          "warnings": 0
+        }
+      }
+    },
+    "deliver": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": 1936,
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Users\\TRANP_~1\\AppData\\Local\\Temp\\sifitur-diagram-tools\\archify\\archify\\bin\\archify.mjs",
+        "deliver",
+        "architecture",
+        "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-monolitica-sifitur\\candidate.json",
+        "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-monolitica-sifitur\\arquitectura-monolitica-sifitur.html",
+        "--quality",
+        "showcase",
+        "--repo-root",
+        "C:\\Users\\TRANP_~1\\AppData\\Local\\Temp\\sifitur-enfoque-evidence",
+        "--json"
+      ],
+      "receipt": {
+        "schemaVersion": 1,
+        "receiptId": "1d20f65d-6458-4652-a7b1-cda45de6f167",
+        "ok": true,
+        "command": "deliver",
+        "type": "architecture",
+        "input": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-monolitica-sifitur\\candidate.json",
+        "output": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-monolitica-sifitur\\arquitectura-monolitica-sifitur.html",
+        "specification": {
+          "sha256": "6de15602ca7d08b573e5f07aac59f295e4bfd6b0d8a617f95cfcb331b3064e00",
+          "bytes": 30945
+        },
+        "artifact": {
+          "sha256": "8462d35f5e41a0b200e3a1e8e8c8ecfb4fb4b12762ae5d34e9d322167f1bfcdb",
+          "bytes": 969404
+        },
+        "validation": {
+          "checksPassed": 9,
+          "checkCount": 9,
+          "compositionProfile": "showcase",
+          "compositionStatus": "pass",
+          "errors": 0,
+          "warnings": 0
+        },
+        "evidence": {
+          "verified": true,
+          "repository": "https://github.com/PoolDYer/entregableSPRINT01-jeanpoolkennerpalominomavila",
+          "revision": "24f075abb36d9154afdfe1d5077113d4204ce7ca",
+          "references": 70
+        },
+        "update": {
+          "status": "unavailable",
+          "installedVersion": null,
+          "availableVersion": null,
+          "releaseNotes": null,
+          "checkedAt": null,
+          "source": null,
+          "noticeRequired": false,
+          "noticeText": null,
+          "reason": "disabled"
+        }
+      }
+    },
+    "check": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": 374,
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Users\\TRANP_~1\\AppData\\Local\\Temp\\sifitur-diagram-tools\\archify\\archify\\bin\\archify.mjs",
+        "check",
+        "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-monolitica-sifitur\\arquitectura-monolitica-sifitur.html",
+        "--require-provenance"
+      ],
+      "receipt": {
+        "ok": true,
+        "file": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-monolitica-sifitur\\arquitectura-monolitica-sifitur.html",
+        "artifact": {
+          "sha256": "8462d35f5e41a0b200e3a1e8e8c8ecfb4fb4b12762ae5d34e9d322167f1bfcdb",
+          "bytes": 969404
+        },
+        "checks": [
+          {
+            "name": "single_svg",
+            "ok": true,
+            "details": [
+              "found 1 <svg> block(s)"
+            ]
+          },
+          {
+            "name": "finite_svg",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "orthogonal_arrows",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "label_route_clearance",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "relationship_crossings",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "relationship_corridors",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "container_border_runs",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "route_rhythm",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "legend_clearance",
+            "ok": true,
+            "details": []
+          }
+        ],
+        "composition": {
+          "schemaVersion": 1,
+          "profile": "showcase",
+          "status": "pass",
+          "summary": {
+            "errors": 0,
+            "warnings": 0
+          },
+          "metrics": {
+            "properCrossings": 0,
+            "resolvedCrossovers": 38,
+            "ambiguousCorridors": 0,
+            "arrowheadCollisions": 0,
+            "containerBorderRuns": 0,
+            "labelRouteClearanceIssues": 0,
+            "labelCanvasOverflowIssues": 0,
+            "minLabelRouteClearance": 4,
+            "desktopReadabilityIssues": 0,
+            "viewportHeightIssues": 0,
+            "minProjectedNodeTextPx": 6.049438202247191,
+            "maxBends": 5,
+            "routesOverSuggestedBends": 10,
+            "maxStretch": 1.179,
+            "routesOverSuggestedStretch": 0,
+            "minSegmentPx": 14.5,
+            "minInteriorSegmentPx": 21.2,
+            "shortSegmentCount": 1,
+            "shortEndpointSegmentCount": 1,
+            "shortInteriorSegmentCount": 0,
+            "microSegmentCount": 0
+          },
+          "suggestedLimits": {
+            "bendsPerRelationship": 2,
+            "stretch": 1.35,
+            "segmentPx": 16,
+            "microSegmentPx": 8
+          },
+          "routeReview": {
+            "crossings": [
+              {
+                "left": {
+                  "id": "transversales--management_controller",
+                  "from": "transversales",
+                  "to": "management_controller",
+                  "label": "",
+                  "collectionIndex": 7,
+                  "artifactIndex": 8
+                },
+                "right": {
+                  "id": "management_service--sunat",
+                  "from": "management_service",
+                  "to": "sunat",
+                  "label": "HTTPS",
+                  "collectionIndex": 41,
+                  "artifactIndex": 42
+                },
+                "point": [
+                  460,
+                  322.5
+                ]
+              },
+              {
+                "left": {
+                  "id": "transversales--inspection_controller",
+                  "from": "transversales",
+                  "to": "inspection_controller",
+                  "label": "",
+                  "collectionIndex": 10,
+                  "artifactIndex": 11
+                },
+                "right": {
+                  "id": "management_service--sunat",
+                  "from": "management_service",
+                  "to": "sunat",
+                  "label": "HTTPS",
+                  "collectionIndex": 41,
+                  "artifactIndex": 42
+                },
+                "point": [
+                  730,
+                  322.5
+                ]
+              },
+              {
+                "left": {
+                  "id": "inspection_controller--inspection_service",
+                  "from": "inspection_controller",
+                  "to": "inspection_service",
+                  "label": "Invoca",
+                  "collectionIndex": 11,
+                  "artifactIndex": 12
+                },
+                "right": {
+                  "id": "management_controller--claims_service",
+                  "from": "management_controller",
+                  "to": "claims_service",
+                  "label": "Delega evaluación",
+                  "collectionIndex": 26,
+                  "artifactIndex": 27
+                },
+                "point": [
+                  612,
+                  459
+                ]
+              },
+              {
+                "left": {
+                  "id": "inspection_controller--inspection_service",
+                  "from": "inspection_controller",
+                  "to": "inspection_service",
+                  "label": "Invoca",
+                  "collectionIndex": 11,
+                  "artifactIndex": 12
+                },
+                "right": {
+                  "id": "management_service--mincetur",
+                  "from": "management_service",
+                  "to": "mincetur",
+                  "label": "HTTPS",
+                  "collectionIndex": 42,
+                  "artifactIndex": 43
+                },
+                "point": [
+                  612,
+                  457.5
+                ]
+              },
+              {
+                "left": {
+                  "id": "inspection_service--inspection_repository",
+                  "from": "inspection_service",
+                  "to": "inspection_repository",
+                  "label": "Por contrato",
+                  "collectionIndex": 12,
+                  "artifactIndex": 13
+                },
+                "right": {
+                  "id": "worker--primary",
+                  "from": "worker",
+                  "to": "primary",
+                  "label": "Outbox / T2",
+                  "collectionIndex": 35,
+                  "artifactIndex": 36
+                },
+                "point": [
+                  612,
+                  762
+                ]
+              },
+              {
+                "left": {
+                  "id": "inspection_service--inspection_repository",
+                  "from": "inspection_service",
+                  "to": "inspection_repository",
+                  "label": "Por contrato",
+                  "collectionIndex": 12,
+                  "artifactIndex": 13
+                },
+                "right": {
+                  "id": "operations_service--gis",
+                  "from": "operations_service",
+                  "to": "gis",
+                  "label": "HTTPS",
+                  "collectionIndex": 43,
+                  "artifactIndex": 44
+                },
+                "point": [
+                  612,
+                  725.5
+                ]
+              },
+              {
+                "left": {
+                  "id": "transversales--claims_controller",
+                  "from": "transversales",
+                  "to": "claims_controller",
+                  "label": "",
+                  "collectionIndex": 13,
+                  "artifactIndex": 14
+                },
+                "right": {
+                  "id": "management_service--sunat",
+                  "from": "management_service",
+                  "to": "sunat",
+                  "label": "HTTPS",
+                  "collectionIndex": 41,
+                  "artifactIndex": 42
+                },
+                "point": [
+                  744,
+                  322.5
+                ]
+              },
+              {
+                "left": {
+                  "id": "claims_controller--claims_service",
+                  "from": "claims_controller",
+                  "to": "claims_service",
+                  "label": "Invoca",
+                  "collectionIndex": 14,
+                  "artifactIndex": 15
+                },
+                "right": {
+                  "id": "management_service--mincetur",
+                  "from": "management_service",
+                  "to": "mincetur",
+                  "label": "HTTPS",
+                  "collectionIndex": 42,
+                  "artifactIndex": 43
+                },
+                "point": [
+                  856.05,
+                  457.5
+                ]
+              },
+              {
+                "left": {
+                  "id": "claims_service--claims_repository",
+                  "from": "claims_service",
+                  "to": "claims_repository",
+                  "label": "Por contrato",
+                  "collectionIndex": 15,
+                  "artifactIndex": 16
+                },
+                "right": {
+                  "id": "worker--primary",
+                  "from": "worker",
+                  "to": "primary",
+                  "label": "Outbox / T2",
+                  "collectionIndex": 35,
+                  "artifactIndex": 36
+                },
+                "point": [
+                  848,
+                  762
+                ]
+              },
+              {
+                "left": {
+                  "id": "claims_service--claims_repository",
+                  "from": "claims_service",
+                  "to": "claims_repository",
+                  "label": "Por contrato",
+                  "collectionIndex": 15,
+                  "artifactIndex": 16
+                },
+                "right": {
+                  "id": "worker--redis",
+                  "from": "worker",
+                  "to": "redis",
+                  "label": "Proyección",
+                  "collectionIndex": 36,
+                  "artifactIndex": 37
+                },
+                "point": [
+                  848,
+                  776
+                ]
+              },
+              {
+                "left": {
+                  "id": "claims_service--claims_repository",
+                  "from": "claims_service",
+                  "to": "claims_repository",
+                  "label": "Por contrato",
+                  "collectionIndex": 15,
+                  "artifactIndex": 16
+                },
+                "right": {
+                  "id": "operations_service--gis",
+                  "from": "operations_service",
+                  "to": "gis",
+                  "label": "HTTPS",
+                  "collectionIndex": 43,
+                  "artifactIndex": 44
+                },
+                "point": [
+                  848,
+                  725.5
+                ]
+              },
+              {
+                "left": {
+                  "id": "transversales--query_controller",
+                  "from": "transversales",
+                  "to": "query_controller",
+                  "label": "",
+                  "collectionIndex": 16,
+                  "artifactIndex": 17
+                },
+                "right": {
+                  "id": "management_service--sunat",
+                  "from": "management_service",
+                  "to": "sunat",
+                  "label": "HTTPS",
+                  "collectionIndex": 41,
+                  "artifactIndex": 42
+                },
+                "point": [
+                  1000,
+                  322.5
+                ]
+              },
+              {
+                "left": {
+                  "id": "query_controller--query_service",
+                  "from": "query_controller",
+                  "to": "query_service",
+                  "label": "Invoca",
+                  "collectionIndex": 17,
+                  "artifactIndex": 18
+                },
+                "right": {
+                  "id": "management_service--mincetur",
+                  "from": "management_service",
+                  "to": "mincetur",
+                  "label": "HTTPS",
+                  "collectionIndex": 42,
+                  "artifactIndex": 43
+                },
+                "point": [
+                  1084,
+                  457.5
+                ]
+              },
+              {
+                "left": {
+                  "id": "query_service--query_repository",
+                  "from": "query_service",
+                  "to": "query_repository",
+                  "label": "Por contrato",
+                  "collectionIndex": 18,
+                  "artifactIndex": 19
+                },
+                "right": {
+                  "id": "worker--primary",
+                  "from": "worker",
+                  "to": "primary",
+                  "label": "Outbox / T2",
+                  "collectionIndex": 35,
+                  "artifactIndex": 36
+                },
+                "point": [
+                  1084,
+                  762
+                ]
+              },
+              {
+                "left": {
+                  "id": "query_service--query_repository",
+                  "from": "query_service",
+                  "to": "query_repository",
+                  "label": "Por contrato",
+                  "collectionIndex": 18,
+                  "artifactIndex": 19
+                },
+                "right": {
+                  "id": "worker--redis",
+                  "from": "worker",
+                  "to": "redis",
+                  "label": "Proyección",
+                  "collectionIndex": 36,
+                  "artifactIndex": 37
+                },
+                "point": [
+                  1084.0000000000002,
+                  776
+                ]
+              },
+              {
+                "left": {
+                  "id": "query_service--query_repository",
+                  "from": "query_service",
+                  "to": "query_repository",
+                  "label": "Por contrato",
+                  "collectionIndex": 18,
+                  "artifactIndex": 19
+                },
+                "right": {
+                  "id": "operations_service--gis",
+                  "from": "operations_service",
+                  "to": "gis",
+                  "label": "HTTPS",
+                  "collectionIndex": 43,
+                  "artifactIndex": 44
+                },
+                "point": [
+                  1084,
+                  725.5
+                ]
+              },
+              {
+                "left": {
+                  "id": "transversales--metrics_controller",
+                  "from": "transversales",
+                  "to": "metrics_controller",
+                  "label": "",
+                  "collectionIndex": 19,
+                  "artifactIndex": 20
+                },
+                "right": {
+                  "id": "management_service--sunat",
+                  "from": "management_service",
+                  "to": "sunat",
+                  "label": "HTTPS",
+                  "collectionIndex": 41,
+                  "artifactIndex": 42
+                },
+                "point": [
+                  1236,
+                  322.5
+                ]
+              },
+              {
+                "left": {
+                  "id": "metrics_controller--metrics_service",
+                  "from": "metrics_controller",
+                  "to": "metrics_service",
+                  "label": "Invoca",
+                  "collectionIndex": 20,
+                  "artifactIndex": 21
+                },
+                "right": {
+                  "id": "management_service--mincetur",
+                  "from": "management_service",
+                  "to": "mincetur",
+                  "label": "HTTPS",
+                  "collectionIndex": 42,
+                  "artifactIndex": 43
+                },
+                "point": [
+                  1320,
+                  457.5
+                ]
+              },
+              {
+                "left": {
+                  "id": "metrics_service--metrics_repository",
+                  "from": "metrics_service",
+                  "to": "metrics_repository",
+                  "label": "Por contrato",
+                  "collectionIndex": 21,
+                  "artifactIndex": 22
+                },
+                "right": {
+                  "id": "worker--primary",
+                  "from": "worker",
+                  "to": "primary",
+                  "label": "Outbox / T2",
+                  "collectionIndex": 35,
+                  "artifactIndex": 36
+                },
+                "point": [
+                  1320,
+                  762
+                ]
+              },
+              {
+                "left": {
+                  "id": "metrics_service--metrics_repository",
+                  "from": "metrics_service",
+                  "to": "metrics_repository",
+                  "label": "Por contrato",
+                  "collectionIndex": 21,
+                  "artifactIndex": 22
+                },
+                "right": {
+                  "id": "worker--redis",
+                  "from": "worker",
+                  "to": "redis",
+                  "label": "Proyección",
+                  "collectionIndex": 36,
+                  "artifactIndex": 37
+                },
+                "point": [
+                  1320.0000000000002,
+                  776
+                ]
+              },
+              {
+                "left": {
+                  "id": "metrics_service--metrics_repository",
+                  "from": "metrics_service",
+                  "to": "metrics_repository",
+                  "label": "Por contrato",
+                  "collectionIndex": 21,
+                  "artifactIndex": 22
+                },
+                "right": {
+                  "id": "operations_service--gis",
+                  "from": "operations_service",
+                  "to": "gis",
+                  "label": "HTTPS",
+                  "collectionIndex": 43,
+                  "artifactIndex": 44
+                },
+                "point": [
+                  1320,
+                  725.5
+                ]
+              },
+              {
+                "left": {
+                  "id": "management_controller--claims_service",
+                  "from": "management_controller",
+                  "to": "claims_service",
+                  "label": "Delega evaluación",
+                  "collectionIndex": 26,
+                  "artifactIndex": 27
+                },
+                "right": {
+                  "id": "management_service--mincetur",
+                  "from": "management_service",
+                  "to": "mincetur",
+                  "label": "HTTPS",
+                  "collectionIndex": 42,
+                  "artifactIndex": 43
+                },
+                "point": [
+                  386.95,
+                  458.25
+                ]
+              },
+              {
+                "left": {
+                  "id": "inspection_repository--primary",
+                  "from": "inspection_repository",
+                  "to": "primary",
+                  "label": "SQL / TLS",
+                  "collectionIndex": 29,
+                  "artifactIndex": 30
+                },
+                "right": {
+                  "id": "worker--primary",
+                  "from": "worker",
+                  "to": "primary",
+                  "label": "Outbox / T2",
+                  "collectionIndex": 35,
+                  "artifactIndex": 36
+                },
+                "point": [
+                  475.6,
+                  936
+                ],
+                "sharedNode": "primary"
+              },
+              {
+                "left": {
+                  "id": "claims_repository--primary",
+                  "from": "claims_repository",
+                  "to": "primary",
+                  "label": "SQL / TLS",
+                  "collectionIndex": 30,
+                  "artifactIndex": 31
+                },
+                "right": {
+                  "id": "query_repository--redis",
+                  "from": "query_repository",
+                  "to": "redis",
+                  "label": "RESP / TLS",
+                  "collectionIndex": 31,
+                  "artifactIndex": 32
+                },
+                "point": [
+                  848,
+                  1009.5
+                ]
+              },
+              {
+                "left": {
+                  "id": "claims_repository--primary",
+                  "from": "claims_repository",
+                  "to": "primary",
+                  "label": "SQL / TLS",
+                  "collectionIndex": 30,
+                  "artifactIndex": 31
+                },
+                "right": {
+                  "id": "query_repository--primary",
+                  "from": "query_repository",
+                  "to": "primary",
+                  "label": "Revalida",
+                  "collectionIndex": 32,
+                  "artifactIndex": 33
+                },
+                "point": [
+                  848,
+                  945
+                ],
+                "sharedNode": "primary"
+              },
+              {
+                "left": {
+                  "id": "claims_repository--primary",
+                  "from": "claims_repository",
+                  "to": "primary",
+                  "label": "SQL / TLS",
+                  "collectionIndex": 30,
+                  "artifactIndex": 31
+                },
+                "right": {
+                  "id": "metrics_repository--replica",
+                  "from": "metrics_repository",
+                  "to": "replica",
+                  "label": "SQL / TLS",
+                  "collectionIndex": 33,
+                  "artifactIndex": 34
+                },
+                "point": [
+                  848,
+                  1048
+                ]
+              },
+              {
+                "left": {
+                  "id": "claims_repository--primary",
+                  "from": "claims_repository",
+                  "to": "primary",
+                  "label": "SQL / TLS",
+                  "collectionIndex": 30,
+                  "artifactIndex": 31
+                },
+                "right": {
+                  "id": "inspection_service--objects",
+                  "from": "inspection_service",
+                  "to": "objects",
+                  "label": "Puerto S3",
+                  "collectionIndex": 40,
+                  "artifactIndex": 41
+                },
+                "point": [
+                  848,
+                  907.5
+                ]
+              },
+              {
+                "left": {
+                  "id": "query_repository--redis",
+                  "from": "query_repository",
+                  "to": "redis",
+                  "label": "RESP / TLS",
+                  "collectionIndex": 31,
+                  "artifactIndex": 32
+                },
+                "right": {
+                  "id": "inspection_service--objects",
+                  "from": "inspection_service",
+                  "to": "objects",
+                  "label": "Puerto S3",
+                  "collectionIndex": 40,
+                  "artifactIndex": 41
+                },
+                "point": [
+                  882,
+                  953
+                ]
+              },
+              {
+                "left": {
+                  "id": "query_repository--primary",
+                  "from": "query_repository",
+                  "to": "primary",
+                  "label": "Revalida",
+                  "collectionIndex": 32,
+                  "artifactIndex": 33
+                },
+                "right": {
+                  "id": "worker--redis",
+                  "from": "worker",
+                  "to": "redis",
+                  "label": "Proyección",
+                  "collectionIndex": 36,
+                  "artifactIndex": 37
+                },
+                "point": [
+                  730,
+                  945
+                ]
+              },
+              {
+                "left": {
+                  "id": "query_repository--primary",
+                  "from": "query_repository",
+                  "to": "primary",
+                  "label": "Revalida",
+                  "collectionIndex": 32,
+                  "artifactIndex": 33
+                },
+                "right": {
+                  "id": "inspection_service--objects",
+                  "from": "inspection_service",
+                  "to": "objects",
+                  "label": "Puerto S3",
+                  "collectionIndex": 40,
+                  "artifactIndex": 41
+                },
+                "point": [
+                  882,
+                  945
+                ]
+              },
+              {
+                "left": {
+                  "id": "metrics_repository--replica",
+                  "from": "metrics_repository",
+                  "to": "replica",
+                  "label": "SQL / TLS",
+                  "collectionIndex": 33,
+                  "artifactIndex": 34
+                },
+                "right": {
+                  "id": "worker--objects",
+                  "from": "worker",
+                  "to": "objects",
+                  "label": "PDF / hash",
+                  "collectionIndex": 37,
+                  "artifactIndex": 38
+                },
+                "point": [
+                  1133,
+                  1002.5
+                ]
+              },
+              {
+                "left": {
+                  "id": "worker--primary",
+                  "from": "worker",
+                  "to": "primary",
+                  "label": "Outbox / T2",
+                  "collectionIndex": 35,
+                  "artifactIndex": 36
+                },
+                "right": {
+                  "id": "worker--objects",
+                  "from": "worker",
+                  "to": "objects",
+                  "label": "PDF / hash",
+                  "collectionIndex": 37,
+                  "artifactIndex": 38
+                },
+                "point": [
+                  1496,
+                  762
+                ],
+                "sharedNode": "worker"
+              },
+              {
+                "left": {
+                  "id": "worker--primary",
+                  "from": "worker",
+                  "to": "primary",
+                  "label": "Outbox / T2",
+                  "collectionIndex": 35,
+                  "artifactIndex": 36
+                },
+                "right": {
+                  "id": "worker--broker",
+                  "from": "worker",
+                  "to": "broker",
+                  "label": "AMQPS",
+                  "collectionIndex": 38,
+                  "artifactIndex": 39
+                },
+                "point": [
+                  1470,
+                  762
+                ],
+                "sharedNode": "worker"
+              },
+              {
+                "left": {
+                  "id": "worker--primary",
+                  "from": "worker",
+                  "to": "primary",
+                  "label": "Outbox / T2",
+                  "collectionIndex": 35,
+                  "artifactIndex": 36
+                },
+                "right": {
+                  "id": "inspection_service--objects",
+                  "from": "inspection_service",
+                  "to": "objects",
+                  "label": "Puerto S3",
+                  "collectionIndex": 40,
+                  "artifactIndex": 41
+                },
+                "point": [
+                  736,
+                  762
+                ]
+              },
+              {
+                "left": {
+                  "id": "worker--redis",
+                  "from": "worker",
+                  "to": "redis",
+                  "label": "Proyección",
+                  "collectionIndex": 36,
+                  "artifactIndex": 37
+                },
+                "right": {
+                  "id": "worker--objects",
+                  "from": "worker",
+                  "to": "objects",
+                  "label": "PDF / hash",
+                  "collectionIndex": 37,
+                  "artifactIndex": 38
+                },
+                "point": [
+                  1495.9999999999998,
+                  776
+                ],
+                "sharedNode": "worker"
+              },
+              {
+                "left": {
+                  "id": "worker--redis",
+                  "from": "worker",
+                  "to": "redis",
+                  "label": "Proyección",
+                  "collectionIndex": 36,
+                  "artifactIndex": 37
+                },
+                "right": {
+                  "id": "worker--broker",
+                  "from": "worker",
+                  "to": "broker",
+                  "label": "AMQPS",
+                  "collectionIndex": 38,
+                  "artifactIndex": 39
+                },
+                "point": [
+                  1470.0000000000002,
+                  776.0000000000001
+                ],
+                "sharedNode": "worker"
+              },
+              {
+                "left": {
+                  "id": "worker--redis",
+                  "from": "worker",
+                  "to": "redis",
+                  "label": "Proyección",
+                  "collectionIndex": 36,
+                  "artifactIndex": 37
+                },
+                "right": {
+                  "id": "inspection_service--objects",
+                  "from": "inspection_service",
+                  "to": "objects",
+                  "label": "Puerto S3",
+                  "collectionIndex": 40,
+                  "artifactIndex": 41
+                },
+                "point": [
+                  736,
+                  827.1538461538462
+                ]
+              },
+              {
+                "left": {
+                  "id": "inspection_service--objects",
+                  "from": "inspection_service",
+                  "to": "objects",
+                  "label": "Puerto S3",
+                  "collectionIndex": 40,
+                  "artifactIndex": 41
+                },
+                "right": {
+                  "id": "operations_service--gis",
+                  "from": "operations_service",
+                  "to": "gis",
+                  "label": "HTTPS",
+                  "collectionIndex": 43,
+                  "artifactIndex": 44
+                },
+                "point": [
+                  736,
+                  725.5
+                ]
+              }
+            ],
+            "crowdedSides": [
+              {
+                "node": "primary",
+                "label": "PostgreSQL primaria",
+                "side": "right",
+                "relationships": 6,
+                "sidePx": 85,
+                "neededPx": 102
+              }
+            ],
+            "detours": [
+              {
+                "relationship": {
+                  "id": "management_service--operations_service",
+                  "from": "management_service",
+                  "to": "operations_service",
+                  "label": "Coordina",
+                  "collectionIndex": 23,
+                  "artifactIndex": 24
+                },
+                "bends": 3,
+                "stretch": 1.179,
+                "directCorridorBlockers": [
+                  {
+                    "id": "risk_service",
+                    "label": "RiskAssessmentEngine",
+                    "box": [
+                      276,
+                      600,
+                      200,
+                      65
+                    ]
+                  }
+                ]
+              },
+              {
+                "relationship": {
+                  "id": "management_controller--claims_service",
+                  "from": "management_controller",
+                  "to": "claims_service",
+                  "label": "Delega evaluación",
+                  "collectionIndex": 26,
+                  "artifactIndex": 27
+                },
+                "bends": 4,
+                "stretch": 1
+              },
+              {
+                "relationship": {
+                  "id": "query_repository--redis",
+                  "from": "query_repository",
+                  "to": "redis",
+                  "label": "RESP / TLS",
+                  "collectionIndex": 31,
+                  "artifactIndex": 32
+                },
+                "bends": 4,
+                "stretch": 1
+              },
+              {
+                "relationship": {
+                  "id": "query_repository--primary",
+                  "from": "query_repository",
+                  "to": "primary",
+                  "label": "Revalida",
+                  "collectionIndex": 32,
+                  "artifactIndex": 33
+                },
+                "bends": 3,
+                "stretch": 1
+              },
+              {
+                "relationship": {
+                  "id": "metrics_repository--replica",
+                  "from": "metrics_repository",
+                  "to": "replica",
+                  "label": "SQL / TLS",
+                  "collectionIndex": 33,
+                  "artifactIndex": 34
+                },
+                "bends": 5,
+                "stretch": 1.105
+              },
+              {
+                "relationship": {
+                  "id": "worker--primary",
+                  "from": "worker",
+                  "to": "primary",
+                  "label": "Outbox / T2",
+                  "collectionIndex": 35,
+                  "artifactIndex": 36
+                },
+                "bends": 4,
+                "stretch": 1
+              },
+              {
+                "relationship": {
+                  "id": "worker--redis",
+                  "from": "worker",
+                  "to": "redis",
+                  "label": "Proyección",
+                  "collectionIndex": 36,
+                  "artifactIndex": 37
+                },
+                "bends": 3,
+                "stretch": 1
+              },
+              {
+                "relationship": {
+                  "id": "worker--objects",
+                  "from": "worker",
+                  "to": "objects",
+                  "label": "PDF / hash",
+                  "collectionIndex": 37,
+                  "artifactIndex": 38
+                },
+                "bends": 4,
+                "stretch": 1.141
+              },
+              {
+                "relationship": {
+                  "id": "inspection_service--objects",
+                  "from": "inspection_service",
+                  "to": "objects",
+                  "label": "Puerto S3",
+                  "collectionIndex": 40,
+                  "artifactIndex": 41
+                },
+                "bends": 4,
+                "stretch": 1
+              },
+              {
+                "relationship": {
+                  "id": "operations_service--gis",
+                  "from": "operations_service",
+                  "to": "gis",
+                  "label": "HTTPS",
+                  "collectionIndex": 43,
+                  "artifactIndex": 44
+                },
+                "bends": 4,
+                "stretch": 1
+              }
+            ]
+          },
+          "leadingSpace": {
+            "measured": true,
+            "emptyTopPx": 40,
+            "emptyTopRatio": 0.035,
+            "occupiedTop": 40,
+            "viewBoxTop": 0,
+            "canvasHeight": 1137,
+            "typicalNodeHeight": 65,
+            "reviewSuggested": false
+          },
+          "desktopReadability": {
+            "budgetBasis": "recognized-declared-wide",
+            "readerContract": "declared-wide-v1",
+            "availableDiagramWidth": 1346,
+            "actualBudgetPx": 1346,
+            "actualReaderWidth": 1376,
+            "desiredReaderWidth": 1698.75,
+            "viewportCap": 1376,
+            "limit": "viewport-cap",
+            "requestedTargetPx": 7.5,
+            "requestedTargetMet": false,
+            "hardFloorPx": 6,
+            "hardFloorMet": true,
+            "minimumOwner": {
+              "kind": "node",
+              "id": "management_repository"
+            },
+            "minimumSourceTextPx": 8,
+            "minimumProjectedTextPx": 6.049438202247191,
+            "semanticTextCount": 113
+          },
+          "issues": []
+        },
+        "provenance": "current",
+        "deliveryReceiptId": "1d20f65d-6458-4652-a7b1-cda45de6f167"
+      }
+    },
+    "browser-check": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": 5836,
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Users\\TRANP_~1\\AppData\\Local\\Temp\\sifitur-diagram-tools\\archify\\archify\\bin\\archify.mjs",
+        "browser-check",
+        "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-monolitica-sifitur\\arquitectura-monolitica-sifitur.html",
+        "--json",
+        "--require-provenance",
+        "--out-dir",
+        "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-monolitica-sifitur\\recursos-externos\\review-3"
+      ],
+      "execution": "in-process",
+      "receipt": {
+        "schemaVersion": 1,
+        "ok": true,
+        "command": "browser-check",
+        "evidenceKind": "automated-browser",
+        "status": "pass",
+        "visualReview": "not-requested",
+        "provenance": "current",
+        "deliveryReceiptId": "1d20f65d-6458-4652-a7b1-cda45de6f167",
+        "artifact": {
+          "path": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-monolitica-sifitur\\arquitectura-monolitica-sifitur.html",
+          "sha256": "8462d35f5e41a0b200e3a1e8e8c8ecfb4fb4b12762ae5d34e9d322167f1bfcdb",
+          "bytes": 969404
+        },
+        "state": {
+          "detail": "read",
+          "motion": "still"
+        },
+        "chrome": {
+          "status": "available",
+          "executable": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+        },
+        "diagnostics": [],
+        "containment": {
+          "status": "pass",
+          "policy": "fit-or-reader-declared-readable-vertical-scroll",
+          "viewports": [
+            {
+              "width": 1440,
+              "height": 900,
+              "theme": "light",
+              "innerWidth": 1440,
+              "innerHeight": 900,
+              "scrollWidth": 1440,
+              "scrollHeight": 1028,
+              "overflowX": false,
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
+              "readerLayout": "adaptive",
+              "readerOverflow": "authored",
+              "readerFit": "intrinsic-height",
+              "ok": true,
+              "readerWidth": 1376,
+              "diagramWidth": 1346,
+              "pageComposition": {
+                "bodyPaddingPx": 12,
+                "headerPx": 78,
+                "diagramChromePx": 78,
+                "svgPx": 860,
+                "cardsPx": 0,
+                "viewBoxHeight": 1137
+              },
+              "viewBoxWidth": 1780,
+              "minimumProjectedNodeTextPx": 6.049438202247191,
+              "minimumProjectedNonEdgeTextPx": 6.049438202247191,
+              "minimumProjectedEdgeTextPx": 6.049438202247191,
+              "minimumProjectedNodeText": "ProviderRepository · OperativoRepository",
+              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "node",
+                "id": "management_repository"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": true,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 54,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            },
+            {
+              "width": 1600,
+              "height": 1000,
+              "theme": "light",
+              "innerWidth": 1600,
+              "innerHeight": 1000,
+              "scrollWidth": 1600,
+              "scrollHeight": 1196,
+              "overflowX": false,
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
+              "readerLayout": "adaptive",
+              "readerOverflow": "authored",
+              "readerFit": "intrinsic-height",
+              "ok": true,
+              "readerWidth": 1536,
+              "diagramWidth": 1506,
+              "pageComposition": {
+                "bodyPaddingPx": 64,
+                "headerPx": 86,
+                "diagramChromePx": 84,
+                "svgPx": 962,
+                "cardsPx": 0,
+                "viewBoxHeight": 1137
+              },
+              "viewBoxWidth": 1780,
+              "minimumProjectedNodeTextPx": 6.7685393258426965,
+              "minimumProjectedNonEdgeTextPx": 6.7685393258426965,
+              "minimumProjectedEdgeTextPx": 6.7685393258426965,
+              "minimumProjectedNodeText": "ProviderRepository · OperativoRepository",
+              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "node",
+                "id": "management_repository"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": true,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 54,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            },
+            {
+              "width": 1920,
+              "height": 1080,
+              "theme": "light",
+              "innerWidth": 1920,
+              "innerHeight": 1080,
+              "scrollWidth": 1920,
+              "scrollHeight": 1300,
+              "overflowX": false,
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
+              "readerLayout": "adaptive",
+              "readerOverflow": "authored",
+              "readerFit": "intrinsic-height",
+              "ok": true,
+              "readerWidth": 1699,
+              "diagramWidth": 1669,
+              "pageComposition": {
+                "bodyPaddingPx": 64,
+                "headerPx": 86,
+                "diagramChromePx": 84,
+                "svgPx": 1066,
+                "cardsPx": 0,
+                "viewBoxHeight": 1137
+              },
+              "viewBoxWidth": 1780,
+              "minimumProjectedNodeTextPx": 7.501123595505618,
+              "minimumProjectedNonEdgeTextPx": 7.501123595505618,
+              "minimumProjectedEdgeTextPx": 7.501123595505618,
+              "minimumProjectedNodeText": "ProviderRepository · OperativoRepository",
+              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "node",
+                "id": "management_repository"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": true,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 54,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            },
+            {
+              "width": 2048,
+              "height": 1320,
+              "theme": "light",
+              "innerWidth": 2048,
+              "innerHeight": 1320,
+              "scrollWidth": 2048,
+              "scrollHeight": 1320,
+              "overflowX": false,
+              "overflowY": false,
+              "verticalScrollAccepted": false,
+              "overflowDisposition": "contained",
+              "readerLayout": "adaptive",
+              "readerOverflow": null,
+              "readerFit": "intrinsic-height",
+              "ok": true,
+              "readerWidth": 1719,
+              "diagramWidth": 1669,
+              "pageComposition": {
+                "bodyPaddingPx": 64,
+                "headerPx": 94,
+                "diagramChromePx": 94,
+                "svgPx": 1066,
+                "cardsPx": 0,
+                "viewBoxHeight": 1137
+              },
+              "viewBoxWidth": 1780,
+              "minimumProjectedNodeTextPx": 7.501123595505618,
+              "minimumProjectedNonEdgeTextPx": 7.501123595505618,
+              "minimumProjectedEdgeTextPx": 7.501123595505618,
+              "minimumProjectedNodeText": "ProviderRepository · OperativoRepository",
+              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "node",
+                "id": "management_repository"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": true,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 44,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            }
+          ]
+        },
+        "themeStates": {
+          "status": "pass",
+          "viewports": [
+            {
+              "width": 1440,
+              "height": 900,
+              "requestedTheme": "light",
+              "resolvedTheme": "light",
+              "ok": true
+            },
+            {
+              "width": 1600,
+              "height": 1000,
+              "requestedTheme": "light",
+              "resolvedTheme": "light",
+              "ok": true
+            },
+            {
+              "width": 1920,
+              "height": 1080,
+              "requestedTheme": "light",
+              "resolvedTheme": "light",
+              "ok": true
+            },
+            {
+              "width": 2048,
+              "height": 1320,
+              "requestedTheme": "light",
+              "resolvedTheme": "light",
+              "ok": true
+            },
+            {
+              "width": 1440,
+              "height": 900,
+              "requestedTheme": "dark",
+              "resolvedTheme": "dark",
+              "ok": true
+            },
+            {
+              "width": 2048,
+              "height": 1320,
+              "requestedTheme": "dark",
+              "resolvedTheme": "dark",
+              "ok": true
+            }
+          ]
+        },
+        "readability": {
+          "status": "pass",
+          "minimumProjectedNodeTextPx": 6,
+          "viewports": [
+            {
+              "width": 1440,
+              "height": 900,
+              "theme": "light",
+              "innerWidth": 1440,
+              "innerHeight": 900,
+              "scrollWidth": 1440,
+              "scrollHeight": 1028,
+              "overflowX": false,
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
+              "readerLayout": "adaptive",
+              "readerOverflow": "authored",
+              "readerFit": "intrinsic-height",
+              "ok": true,
+              "readerWidth": 1376,
+              "diagramWidth": 1346,
+              "pageComposition": {
+                "bodyPaddingPx": 12,
+                "headerPx": 78,
+                "diagramChromePx": 78,
+                "svgPx": 860,
+                "cardsPx": 0,
+                "viewBoxHeight": 1137
+              },
+              "viewBoxWidth": 1780,
+              "minimumProjectedNodeTextPx": 6.049438202247191,
+              "minimumProjectedNonEdgeTextPx": 6.049438202247191,
+              "minimumProjectedEdgeTextPx": 6.049438202247191,
+              "minimumProjectedNodeText": "ProviderRepository · OperativoRepository",
+              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "node",
+                "id": "management_repository"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": true,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 54,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            },
+            {
+              "width": 1600,
+              "height": 1000,
+              "theme": "light",
+              "innerWidth": 1600,
+              "innerHeight": 1000,
+              "scrollWidth": 1600,
+              "scrollHeight": 1196,
+              "overflowX": false,
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
+              "readerLayout": "adaptive",
+              "readerOverflow": "authored",
+              "readerFit": "intrinsic-height",
+              "ok": true,
+              "readerWidth": 1536,
+              "diagramWidth": 1506,
+              "pageComposition": {
+                "bodyPaddingPx": 64,
+                "headerPx": 86,
+                "diagramChromePx": 84,
+                "svgPx": 962,
+                "cardsPx": 0,
+                "viewBoxHeight": 1137
+              },
+              "viewBoxWidth": 1780,
+              "minimumProjectedNodeTextPx": 6.7685393258426965,
+              "minimumProjectedNonEdgeTextPx": 6.7685393258426965,
+              "minimumProjectedEdgeTextPx": 6.7685393258426965,
+              "minimumProjectedNodeText": "ProviderRepository · OperativoRepository",
+              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "node",
+                "id": "management_repository"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": true,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 54,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            },
+            {
+              "width": 1920,
+              "height": 1080,
+              "theme": "light",
+              "innerWidth": 1920,
+              "innerHeight": 1080,
+              "scrollWidth": 1920,
+              "scrollHeight": 1300,
+              "overflowX": false,
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
+              "readerLayout": "adaptive",
+              "readerOverflow": "authored",
+              "readerFit": "intrinsic-height",
+              "ok": true,
+              "readerWidth": 1699,
+              "diagramWidth": 1669,
+              "pageComposition": {
+                "bodyPaddingPx": 64,
+                "headerPx": 86,
+                "diagramChromePx": 84,
+                "svgPx": 1066,
+                "cardsPx": 0,
+                "viewBoxHeight": 1137
+              },
+              "viewBoxWidth": 1780,
+              "minimumProjectedNodeTextPx": 7.501123595505618,
+              "minimumProjectedNonEdgeTextPx": 7.501123595505618,
+              "minimumProjectedEdgeTextPx": 7.501123595505618,
+              "minimumProjectedNodeText": "ProviderRepository · OperativoRepository",
+              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "node",
+                "id": "management_repository"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": true,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 54,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            },
+            {
+              "width": 2048,
+              "height": 1320,
+              "theme": "light",
+              "innerWidth": 2048,
+              "innerHeight": 1320,
+              "scrollWidth": 2048,
+              "scrollHeight": 1320,
+              "overflowX": false,
+              "overflowY": false,
+              "verticalScrollAccepted": false,
+              "overflowDisposition": "contained",
+              "readerLayout": "adaptive",
+              "readerOverflow": null,
+              "readerFit": "intrinsic-height",
+              "ok": true,
+              "readerWidth": 1719,
+              "diagramWidth": 1669,
+              "pageComposition": {
+                "bodyPaddingPx": 64,
+                "headerPx": 94,
+                "diagramChromePx": 94,
+                "svgPx": 1066,
+                "cardsPx": 0,
+                "viewBoxHeight": 1137
+              },
+              "viewBoxWidth": 1780,
+              "minimumProjectedNodeTextPx": 7.501123595505618,
+              "minimumProjectedNonEdgeTextPx": 7.501123595505618,
+              "minimumProjectedEdgeTextPx": 7.501123595505618,
+              "minimumProjectedNodeText": "ProviderRepository · OperativoRepository",
+              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "node",
+                "id": "management_repository"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": true,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 44,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            }
+          ]
+        },
+        "viewerChrome": {
+          "status": "pass",
+          "viewports": [
+            {
+              "width": 1440,
+              "height": 900,
+              "theme": "light",
+              "innerWidth": 1440,
+              "innerHeight": 900,
+              "scrollWidth": 1440,
+              "scrollHeight": 1028,
+              "overflowX": false,
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
+              "readerLayout": "adaptive",
+              "readerOverflow": "authored",
+              "readerFit": "intrinsic-height",
+              "ok": true,
+              "readerWidth": 1376,
+              "diagramWidth": 1346,
+              "pageComposition": {
+                "bodyPaddingPx": 12,
+                "headerPx": 78,
+                "diagramChromePx": 78,
+                "svgPx": 860,
+                "cardsPx": 0,
+                "viewBoxHeight": 1137
+              },
+              "viewBoxWidth": 1780,
+              "minimumProjectedNodeTextPx": 6.049438202247191,
+              "minimumProjectedNonEdgeTextPx": 6.049438202247191,
+              "minimumProjectedEdgeTextPx": 6.049438202247191,
+              "minimumProjectedNodeText": "ProviderRepository · OperativoRepository",
+              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "node",
+                "id": "management_repository"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": true,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 54,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            },
+            {
+              "width": 1600,
+              "height": 1000,
+              "theme": "light",
+              "innerWidth": 1600,
+              "innerHeight": 1000,
+              "scrollWidth": 1600,
+              "scrollHeight": 1196,
+              "overflowX": false,
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
+              "readerLayout": "adaptive",
+              "readerOverflow": "authored",
+              "readerFit": "intrinsic-height",
+              "ok": true,
+              "readerWidth": 1536,
+              "diagramWidth": 1506,
+              "pageComposition": {
+                "bodyPaddingPx": 64,
+                "headerPx": 86,
+                "diagramChromePx": 84,
+                "svgPx": 962,
+                "cardsPx": 0,
+                "viewBoxHeight": 1137
+              },
+              "viewBoxWidth": 1780,
+              "minimumProjectedNodeTextPx": 6.7685393258426965,
+              "minimumProjectedNonEdgeTextPx": 6.7685393258426965,
+              "minimumProjectedEdgeTextPx": 6.7685393258426965,
+              "minimumProjectedNodeText": "ProviderRepository · OperativoRepository",
+              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "node",
+                "id": "management_repository"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": true,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 54,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            },
+            {
+              "width": 1920,
+              "height": 1080,
+              "theme": "light",
+              "innerWidth": 1920,
+              "innerHeight": 1080,
+              "scrollWidth": 1920,
+              "scrollHeight": 1300,
+              "overflowX": false,
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
+              "readerLayout": "adaptive",
+              "readerOverflow": "authored",
+              "readerFit": "intrinsic-height",
+              "ok": true,
+              "readerWidth": 1699,
+              "diagramWidth": 1669,
+              "pageComposition": {
+                "bodyPaddingPx": 64,
+                "headerPx": 86,
+                "diagramChromePx": 84,
+                "svgPx": 1066,
+                "cardsPx": 0,
+                "viewBoxHeight": 1137
+              },
+              "viewBoxWidth": 1780,
+              "minimumProjectedNodeTextPx": 7.501123595505618,
+              "minimumProjectedNonEdgeTextPx": 7.501123595505618,
+              "minimumProjectedEdgeTextPx": 7.501123595505618,
+              "minimumProjectedNodeText": "ProviderRepository · OperativoRepository",
+              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "node",
+                "id": "management_repository"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": true,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 54,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            },
+            {
+              "width": 2048,
+              "height": 1320,
+              "theme": "light",
+              "innerWidth": 2048,
+              "innerHeight": 1320,
+              "scrollWidth": 2048,
+              "scrollHeight": 1320,
+              "overflowX": false,
+              "overflowY": false,
+              "verticalScrollAccepted": false,
+              "overflowDisposition": "contained",
+              "readerLayout": "adaptive",
+              "readerOverflow": null,
+              "readerFit": "intrinsic-height",
+              "ok": true,
+              "readerWidth": 1719,
+              "diagramWidth": 1669,
+              "pageComposition": {
+                "bodyPaddingPx": 64,
+                "headerPx": 94,
+                "diagramChromePx": 94,
+                "svgPx": 1066,
+                "cardsPx": 0,
+                "viewBoxHeight": 1137
+              },
+              "viewBoxWidth": 1780,
+              "minimumProjectedNodeTextPx": 7.501123595505618,
+              "minimumProjectedNonEdgeTextPx": 7.501123595505618,
+              "minimumProjectedEdgeTextPx": 7.501123595505618,
+              "minimumProjectedNodeText": "ProviderRepository · OperativoRepository",
+              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "node",
+                "id": "management_repository"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": true,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 44,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            }
+          ]
+        },
+        "captures": {
+          "status": "not-requested",
+          "screenshots": [],
+          "contactSheet": null
+        },
+        "sidecars": {
+          "directory": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-monolitica-sifitur\\recursos-externos\\review-3",
+          "receipt": "arquitectura-monolitica-sifitur.browser-check.json",
+          "files": []
+        }
+      }
+    }
+  },
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  },
+  "diagnostics": [],
+  "evidence": {
+    "receipt": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-monolitica-sifitur\\recursos-externos\\review-3\\arquitectura-monolitica-sifitur.finalize.json",
+    "summaryReceipt": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-monolitica-sifitur\\recursos-externos\\review-3\\arquitectura-monolitica-sifitur.finalize-summary.json",
+    "browserCheckReceipt": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-monolitica-sifitur\\recursos-externos\\review-3\\arquitectura-monolitica-sifitur.browser-check.json"
+  },
+  "visualReview": "not-requested",
+  "finishedAt": "2026-11-07T02:15:48.236Z",
+  "durationMs": 10092,
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-06T18:25:06.732Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  }
+}

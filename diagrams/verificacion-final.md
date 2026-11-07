@@ -49,3 +49,9 @@ El trabajador, los almacenes y los clientes web quedan fuera de la frontera de l
 El diagrama del monolito modular se amplió de seis bloques generales a 26 elementos y 33 relaciones. Presenta tres clientes web, gateway externo, controles transversales, seis columnas funcionales y las franjas de presentación, aplicación y dominio, e infraestructura y datos. Padrón, Riesgo y Operativos se agrupan visualmente y mantienen servicios separados. La evaluación institucional se delega desde ManagementController a SubsanacionService.
 
 Se verificaron la propiedad de repositorios, la colaboración mediante APIs públicas y la separación del gateway y la persistencia respecto a la API. El Markdown desarrolla módulos, protocolos, leyenda, ejecución del trabajador y coordinación durable. Archify superó validate, deliver, check y browser-check; la exportación JPG se revisó visualmente. El control final registra 170 comprobaciones y 186 enlaces, sin errores.
+
+## Almacenes y servicios externos del estilo arquitectónico
+
+La figura sustituye la barra agregada de persistencia por PostgreSQL primaria, PostgreSQL réplica, Redis, S3 y RabbitMQ. Añade SUNAT, MINCETUR, GIS y pasarela SMS/correo como sistemas externos y muestra el trabajador fuera de la API. Los 35 elementos y las 45 relaciones distinguen escrituras, reportes, revalidación pública, custodia de objetos, replicación y procesamiento durable.
+
+Las conexiones de negocio con terceros representan llamadas mediante los adaptadores documentados; solo el trabajador se conecta a la pasarela y a RabbitMQ. El Markdown identifica cada recurso, su responsable y su protocolo. La exportación JPG se revisó visualmente y Archify superó las cuatro puertas automáticas. El control final registra 174 comprobaciones y 186 enlaces, sin errores.

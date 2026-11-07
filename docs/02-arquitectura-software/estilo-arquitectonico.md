@@ -8,7 +8,7 @@ SIFITUR Huamanga utiliza un estilo **cliente-servidor web con backend monolític
 
 ## Lectura del diagrama
 
-La figura desarrolla la organización interna de la **Backend API Application**. Los clientes web y el gateway se sitúan encima de su límite; los recursos de persistencia quedan debajo. Dentro de la API, las columnas identifican áreas funcionales y las franjas horizontales distinguen presentación, aplicación y dominio, e infraestructura y datos.
+La figura desarrolla la organización interna de la **Backend API Application**. Los clientes web y el gateway se sitúan encima de su límite; los almacenes y la cola quedan debajo. A la derecha se muestran los sistemas externos y el trabajador, fuera del proceso de la API. Dentro de la API, las columnas identifican áreas funcionales y las franjas horizontales distinguen presentación, aplicación y dominio, e infraestructura y datos.
 
 | Franja | Elementos de la figura | Responsabilidad y límite |
 |---|---|---|
@@ -18,7 +18,7 @@ La figura desarrolla la organización interna de la **Backend API Application**.
 | 1. Presentación | Controladores REST de cada área. | Traduce entradas y resultados e invoca el servicio correspondiente; no accede directamente a SQL ni genera el PDF. |
 | 2. Aplicación y dominio | Servicios, casos de uso, riesgo y reglas. | Coordina el comportamiento y la colaboración mediante la API pública de cada módulo. |
 | 3. Infraestructura y datos | Persistencia privada, repositorios y adaptadores. | Implementa los contratos del módulo y encapsula el acceso técnico a sus recursos. |
-| Recursos de persistencia | PostgreSQL primaria y réplica, Redis y S3. | Son recursos fuera de la API, agrupados visualmente en la barra inferior; cada repositorio conserva su destino y protocolo, indicados en su rótulo. |
+| Recursos de persistencia | PostgreSQL primaria y réplica, Redis y S3. | Son nodos individuales fuera de la API; cada repositorio se conecta a su destino con el protocolo indicado. RabbitMQ se representa aparte como cola durable. |
 
 La columna **Padrón / Riesgo / Operativos** agrupa tres módulos para mantener legible la figura. Conservan sus responsabilidades, datos y contratos propios; no se convierten en un solo módulo. Auditoría participa como capacidad transversal y mediante `AuditoriaPort` en la unidad de trabajo.
 
@@ -46,9 +46,10 @@ Los nombres y las responsabilidades se contrastan con los [componentes y propied
 | Por contrato | El servicio solicita persistencia a través de su contrato; no selecciona un motor ni importa un adaptador concreto. |
 | Línea discontinua: Evalúa / Coordina / Valida asignación / Delega evaluación | Colaboración entre áreas mediante la API pública del receptor. No permite utilizar el repositorio privado de otro módulo. |
 | Persiste | Operativos solicita la persistencia de sus datos dentro de la agrupación visual de repositorios de gestión. |
-| Conexiones a la barra inferior | Acceso al recurso correspondiente al rótulo del repositorio: primaria, réplica o Redis. Los originales se custodian en S3 mediante el adaptador documentado. |
+| SQL / TLS, RESP / TLS, Puerto S3 y AMQPS | Acceso específico a primaria o réplica, Redis, objetos y mensajería. Puerto S3 representa la colaboración con EvidenceManager / StorageAdapter. |
+| HTTPS hacia sistemas externos | Las consultas de los módulos pasan por SunatClient, MinceturClient o GisClient. El trabajador utiliza NotificationClient para la pasarela. |
 
-Las flechas describen **colaboración en ejecución**. Las dependencias de código siguen Clean Architecture: aplicación y dominio conocen contratos internos; infraestructura los implementa y la composición conecta las implementaciones. La barra inferior agrupa recursos y no representa un repositorio universal ni una transacción única entre PostgreSQL, Redis y S3.
+Las flechas describen **colaboración en ejecución**. Las dependencias de código siguen Clean Architecture: aplicación y dominio conocen contratos internos; infraestructura los implementa y la composición conecta las implementaciones. Cada almacén tiene un nodo y una responsabilidad propia. No existe un repositorio universal ni una transacción única entre PostgreSQL, Redis, S3 y RabbitMQ.
 
 ## Organización del sistema
 
@@ -70,6 +71,22 @@ Las flechas describen **colaboración en ejecución**. Las dependencias de códi
 5. La consulta pública no requiere JWT; las operaciones privadas verifican identidad, rol y pertenencia del expediente.
 6. La primaria confirma escrituras; caché y réplica atienden lecturas con políticas de actualización explícitas.
 7. Las tareas asíncronas usan outbox, identificador estable, reintentos y consumidores idempotentes.
+
+## Bases de datos, almacenes y servicios externos de la figura
+
+| Elemento visible | Conexiones documentadas | Protocolo / condición |
+|---|---|---|
+| PostgreSQL primaria | Persistencia de identidad, gestión, inspecciones y subsanaciones; revalidación de la consulta pública; outbox y resultados del trabajador. | SQL / TLS; confirma escrituras, auditoría y outbox en transacciones locales T1/T2. |
+| PostgreSQL réplica | Recibe replicación de primaria; IndicadoresRepository consulta lecturas autorizadas. | Replicación PostgreSQL y SQL / TLS; reportes tolerantes al retraso, con fecha de corte. |
+| Redis | CacheRepository consulta la proyección pública; el trabajador actualiza o invalida versiones. | RESP / TLS; antigüedad máxima propuesta de 60 s. |
+| Almacén S3 compatible | Inspecciones verifica originales mediante EvidenceManager / StorageAdapter; el trabajador lee evidencias y conserva PDF y hash. | HTTPS / S3 API; objetos, firma, integridad SHA-256, versionado y retención. |
+| RabbitMQ | El trabajador publica y consume tareas con confirmación y acuse posterior a persistir. | AMQPS / TLS; cola durable, separada de las bases de datos. |
+| SUNAT RUC | ProviderService solicita consulta tributaria mediante SunatClient. | HTTPS; integración prevista, con acceso por confirmar. |
+| MINCETUR | ProviderService solicita consulta sectorial mediante MinceturClient. | HTTPS; integración prevista, con acceso por confirmar. |
+| OpenStreetMap / GIS | OperativoService e IndicadoresService solicitan cartografía mediante GisClient. | HTTPS; cartografía de referencia. |
+| Pasarela SMS / correo | NotificationClient, dentro del trabajador, envía actas y avisos y registra el resultado. | HTTPS; aceptación y entrega verificable se distinguen. |
+
+La flecha de primaria a réplica expresa replicación; la réplica analítica no es una copia de seguridad. El standby síncrono y las réplicas físicas de infraestructura se detallan en el HLD. La figura conserva el alcance lógico de los módulos y sus recursos.
 
 ## Procesos, integraciones y confirmación durable
 

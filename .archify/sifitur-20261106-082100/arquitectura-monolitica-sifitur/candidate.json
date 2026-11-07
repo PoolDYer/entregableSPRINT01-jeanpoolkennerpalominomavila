@@ -8,9 +8,9 @@
     "quality_profile": "showcase",
     "repository": {
       "url": "https://github.com/PoolDYer/entregableSPRINT01-jeanpoolkennerpalominomavila.git",
-      "revision": "68f321a9a82c6585e20f7f895df27fa42c0f0630"
+      "revision": "24f075abb36d9154afdfe1d5077113d4204ce7ca"
     },
-    "subtitle": "Entradas web, módulos institucionales, colaboración y persistencia · vista de la API",
+    "subtitle": "Módulos y capas de la API · bases de datos, servicios externos y trabajador separados",
     "legend": {
       "mode": "auto",
       "entries": {
@@ -27,7 +27,13 @@
           "label": "Gateway / adaptadores"
         },
         "database": {
-          "label": "Recursos de persistencia"
+          "label": "Bases de datos, caché y objetos"
+        },
+        "external": {
+          "label": "Sistemas externos"
+        },
+        "messagebus": {
+          "label": "Mensajería durable"
         }
       }
     }
@@ -44,7 +50,7 @@
         40
       ],
       "size": [
-        500,
+        400,
         60
       ],
       "sources": [
@@ -63,11 +69,11 @@
       "sublabel": "Prestador: expediente propio y descargos",
       "tag": "Acceso autenticado",
       "pos": [
-        620,
+        530,
         40
       ],
       "size": [
-        500,
+        400,
         60
       ],
       "sources": [
@@ -86,11 +92,11 @@
       "sublabel": "Ciudadano: directorio, formalidad y QR",
       "tag": "Consulta pública sin sesión",
       "pos": [
-        1200,
+        1020,
         40
       ],
       "size": [
-        500,
+        400,
         60
       ],
       "sources": [
@@ -113,7 +119,7 @@
         150
       ],
       "size": [
-        1660,
+        1380,
         60
       ],
       "sources": [
@@ -136,7 +142,7 @@
         260
       ],
       "size": [
-        1660,
+        1380,
         60
       ],
       "sources": [
@@ -159,7 +165,7 @@
         370
       ],
       "size": [
-        210,
+        200,
         65
       ],
       "sources": [
@@ -182,7 +188,7 @@
         600
       ],
       "size": [
-        210,
+        200,
         65
       ],
       "sources": [
@@ -202,10 +208,10 @@
       "tag": "SQL / TLS · primaria",
       "pos": [
         40,
-        850
+        830
       ],
       "size": [
-        210,
+        200,
         75
       ],
       "sources": [
@@ -224,11 +230,11 @@
       "sublabel": "Padrón, vigencias y planificación",
       "tag": "PADRÓN / RIESGO / OPERATIVOS",
       "pos": [
-        330,
+        276,
         370
       ],
       "size": [
-        210,
+        200,
         65
       ],
       "sources": [
@@ -245,13 +251,13 @@
       "type": "backend",
       "label": "ProviderService",
       "sublabel": "Ficha y validaciones pendientes",
-      "tag": "API pública del módulo",
+      "tag": "ProviderService · SunatClient / MinceturClient",
       "pos": [
-        330,
+        276,
         500
       ],
       "size": [
-        210,
+        200,
         65
       ],
       "sources": [
@@ -270,11 +276,11 @@
       "sublabel": "ProviderRepository · OperativoRepository",
       "tag": "SQL / TLS · primaria",
       "pos": [
-        330,
-        850
+        276,
+        830
       ],
       "size": [
-        210,
+        200,
         75
       ],
       "sources": [
@@ -293,11 +299,11 @@
       "sublabel": "Operación estable y evidencias",
       "tag": "INSPECCIONES",
       "pos": [
-        620,
+        512,
         370
       ],
       "size": [
-        210,
+        200,
         65
       ],
       "sources": [
@@ -314,13 +320,13 @@
       "type": "backend",
       "label": "InspectionService",
       "sublabel": "RegistrarInspeccionCasoUso",
-      "tag": "API pública del módulo",
+      "tag": "RegistrarInspeccionCasoUso · StorageAdapter",
       "pos": [
-        620,
+        512,
         600
       ],
       "size": [
-        210,
+        200,
         65
       ],
       "sources": [
@@ -339,11 +345,11 @@
       "sublabel": "AuditoriaPort · unidad de trabajo T1",
       "tag": "SQL / TLS · primaria",
       "pos": [
-        620,
-        850
+        512,
+        830
       ],
       "size": [
-        210,
+        200,
         75
       ],
       "sources": [
@@ -362,11 +368,11 @@
       "sublabel": "Expediente propio y descargos",
       "tag": "SUBSANACIONES",
       "pos": [
-        910,
+        748,
         370
       ],
       "size": [
-        210,
+        200,
         65
       ],
       "sources": [
@@ -385,11 +391,11 @@
       "sublabel": "Plazos y evaluación autorizada",
       "tag": "API pública del módulo",
       "pos": [
-        910,
+        748,
         600
       ],
       "size": [
-        210,
+        200,
         65
       ],
       "sources": [
@@ -408,11 +414,11 @@
       "sublabel": "Descargos y resoluciones propios",
       "tag": "SQL / TLS · primaria",
       "pos": [
-        910,
-        850
+        748,
+        830
       ],
       "size": [
-        210,
+        200,
         75
       ],
       "sources": [
@@ -431,11 +437,11 @@
       "sublabel": "Directorio y QR sin JWT",
       "tag": "CONSULTA PÚBLICA",
       "pos": [
-        1200,
+        984,
         370
       ],
       "size": [
-        210,
+        200,
         65
       ],
       "sources": [
@@ -454,11 +460,11 @@
       "sublabel": "Ficha de formalidad versionada",
       "tag": "API pública del módulo",
       "pos": [
-        1200,
+        984,
         600
       ],
       "size": [
-        210,
+        200,
         65
       ],
       "sources": [
@@ -477,11 +483,11 @@
       "sublabel": "ConsultaPublicaRepository",
       "tag": "RESP / TLS · revalida primaria",
       "pos": [
-        1200,
-        850
+        984,
+        830
       ],
       "size": [
-        210,
+        200,
         75
       ],
       "sources": [
@@ -500,11 +506,11 @@
       "sublabel": "Reportes privados autorizados",
       "tag": "INDICADORES",
       "pos": [
-        1490,
+        1220,
         370
       ],
       "size": [
-        210,
+        200,
         65
       ],
       "sources": [
@@ -521,13 +527,13 @@
       "type": "backend",
       "label": "IndicadoresService",
       "sublabel": "Distrito, periodo y fecha de corte",
-      "tag": "API pública del módulo",
+      "tag": "IndicadoresService · GisClient",
       "pos": [
-        1490,
+        1220,
         600
       ],
       "size": [
-        210,
+        200,
         65
       ],
       "sources": [
@@ -546,11 +552,11 @@
       "sublabel": "Proyecciones autorizadas de lectura",
       "tag": "SQL / TLS · réplica",
       "pos": [
-        1490,
-        850
+        1220,
+        830
       ],
       "size": [
-        210,
+        200,
         75
       ],
       "sources": [
@@ -569,11 +575,11 @@
       "sublabel": "Criticidad y política versionada",
       "tag": "Módulo Riesgo · RF07",
       "pos": [
-        330,
+        276,
         600
       ],
       "size": [
-        210,
+        200,
         65
       ],
       "sources": [
@@ -590,13 +596,13 @@
       "type": "backend",
       "label": "OperativoService",
       "sublabel": "Campañas, asignación y versionRuta",
-      "tag": "Módulo Operativos · RF08",
+      "tag": "OperativoService · GisClient",
       "pos": [
-        330,
+        276,
         700
       ],
       "size": [
-        210,
+        200,
         65
       ],
       "sources": [
@@ -609,25 +615,232 @@
       ]
     },
     {
-      "id": "persistence",
+      "id": "primary",
       "type": "database",
-      "label": "Recursos de persistencia fuera de la API · PostgreSQL primaria / réplica · Redis · S3",
-      "sublabel": "Primaria: escrituras, auditoría y outbox · réplica: reportes · Redis: proyección pública ≤ 60 s · S3: originales, firma y PDF",
-      "tag": "S3 vía EvidenceManager / StorageAdapter · PDF y avisos en trabajador separado · tablas y repositorios propios por módulo",
+      "label": "PostgreSQL primaria",
+      "sublabel": "Datos institucionales, auditoría y outbox",
+      "tag": "SQL / TLS · T1 y T2",
       "pos": [
         40,
-        1000
+        960
       ],
       "size": [
-        1660,
-        65
+        220,
+        85
       ],
       "sources": [
         {
-          "path": "docs/04-modelo-c4/Nivel3-Diagrama-de-Componentes.md"
+          "path": "docs/04-modelo-c4/Nivel2-DiagramadeContenedores.md"
         },
         {
-          "path": "docs/02-arquitectura-software/componentes-arquitectonicos.md"
+          "path": "docs/04-modelo-c4/Nivel3-Diagrama-de-Componentes.md"
+        }
+      ]
+    },
+    {
+      "id": "replica",
+      "type": "database",
+      "label": "PostgreSQL réplica",
+      "sublabel": "Lecturas autorizadas con fecha de corte",
+      "tag": "Reportes tolerantes al retraso",
+      "pos": [
+        330,
+        960
+      ],
+      "size": [
+        220,
+        85
+      ],
+      "sources": [
+        {
+          "path": "docs/04-modelo-c4/Nivel2-DiagramadeContenedores.md"
+        },
+        {
+          "path": "docs/04-modelo-c4/Nivel3-Diagrama-de-Componentes.md"
+        }
+      ]
+    },
+    {
+      "id": "redis",
+      "type": "database",
+      "label": "Redis · caché pública",
+      "sublabel": "Proyección autorizada de directorio y QR",
+      "tag": "RESP / TLS · antigüedad ≤ 60 s",
+      "pos": [
+        620,
+        960
+      ],
+      "size": [
+        220,
+        85
+      ],
+      "sources": [
+        {
+          "path": "docs/04-modelo-c4/Nivel2-DiagramadeContenedores.md"
+        },
+        {
+          "path": "docs/04-modelo-c4/Nivel3-Diagrama-de-Componentes.md"
+        }
+      ]
+    },
+    {
+      "id": "objects",
+      "type": "database",
+      "label": "Almacén S3 compatible",
+      "sublabel": "Originales, firma, PDF y SHA-256",
+      "tag": "HTTPS / S3 API · custodia",
+      "pos": [
+        910,
+        960
+      ],
+      "size": [
+        220,
+        85
+      ],
+      "sources": [
+        {
+          "path": "docs/04-modelo-c4/Nivel2-DiagramadeContenedores.md"
+        },
+        {
+          "path": "docs/04-modelo-c4/Nivel3-Diagrama-de-Componentes.md"
+        }
+      ]
+    },
+    {
+      "id": "broker",
+      "type": "messagebus",
+      "label": "RabbitMQ · cola de tareas",
+      "sublabel": "Mensajes persistentes y confirmaciones",
+      "tag": "AMQPS / TLS · acuse tras commit",
+      "pos": [
+        1200,
+        960
+      ],
+      "size": [
+        220,
+        85
+      ],
+      "sources": [
+        {
+          "path": "docs/04-modelo-c4/Nivel2-DiagramadeContenedores.md"
+        },
+        {
+          "path": "docs/04-modelo-c4/Nivel3-Diagrama-de-Componentes.md"
+        }
+      ]
+    },
+    {
+      "id": "worker",
+      "type": "backend",
+      "label": "Trabajador independiente",
+      "sublabel": "Outbox, PDF, proyecciones y avisos",
+      "tag": "Node.js · tareas y avisos idempotentes",
+      "pos": [
+        1520,
+        700
+      ],
+      "size": [
+        220,
+        110
+      ],
+      "sources": [
+        {
+          "path": "docs/04-modelo-c4/Nivel2-DiagramadeContenedores.md"
+        },
+        {
+          "path": "docs/04-modelo-c4/Nivel3-Diagrama-de-Componentes.md"
+        }
+      ]
+    },
+    {
+      "id": "sunat",
+      "type": "external",
+      "label": "SUNAT RUC",
+      "sublabel": "Validación tributaria prevista",
+      "tag": "Acceso por confirmar",
+      "pos": [
+        1520,
+        280
+      ],
+      "size": [
+        210,
+        85
+      ],
+      "sources": [
+        {
+          "path": "docs/04-modelo-c4/Nivel2-DiagramadeContenedores.md"
+        },
+        {
+          "path": "docs/04-modelo-c4/Nivel3-Diagrama-de-Componentes.md"
+        }
+      ]
+    },
+    {
+      "id": "mincetur",
+      "type": "external",
+      "label": "MINCETUR",
+      "sublabel": "Consulta sectorial prevista",
+      "tag": "Acceso por confirmar",
+      "pos": [
+        1520,
+        415
+      ],
+      "size": [
+        210,
+        85
+      ],
+      "sources": [
+        {
+          "path": "docs/04-modelo-c4/Nivel2-DiagramadeContenedores.md"
+        },
+        {
+          "path": "docs/04-modelo-c4/Nivel3-Diagrama-de-Componentes.md"
+        }
+      ]
+    },
+    {
+      "id": "gis",
+      "type": "external",
+      "label": "OpenStreetMap / GIS",
+      "sublabel": "Cartografía de referencia",
+      "tag": "Sistema externo · HTTPS",
+      "pos": [
+        1520,
+        550
+      ],
+      "size": [
+        210,
+        85
+      ],
+      "sources": [
+        {
+          "path": "docs/04-modelo-c4/Nivel2-DiagramadeContenedores.md"
+        },
+        {
+          "path": "docs/04-modelo-c4/Nivel3-Diagrama-de-Componentes.md"
+        }
+      ]
+    },
+    {
+      "id": "pasarela",
+      "type": "external",
+      "label": "Pasarela SMS / correo",
+      "sublabel": "Aceptación y entrega verificable",
+      "tag": "Sistema externo · HTTPS",
+      "pos": [
+        1520,
+        860
+      ],
+      "size": [
+        210,
+        90
+      ],
+      "sources": [
+        {
+          "path": "docs/04-modelo-c4/Nivel2-DiagramadeContenedores.md"
+        },
+        {
+          "path": "docs/04-modelo-c4/Nivel3-Diagrama-de-Componentes.md"
         }
       ]
     }
@@ -682,12 +895,6 @@
       "variant": "default"
     },
     {
-      "id": "identity_repository--persistence",
-      "from": "identity_repository",
-      "to": "persistence",
-      "variant": "default"
-    },
-    {
       "id": "transversales--management_controller",
       "from": "transversales",
       "to": "management_controller",
@@ -705,12 +912,6 @@
       "from": "management_service",
       "to": "management_repository",
       "label": "Por contrato",
-      "variant": "default"
-    },
-    {
-      "id": "management_repository--persistence",
-      "from": "management_repository",
-      "to": "persistence",
       "variant": "default"
     },
     {
@@ -734,12 +935,6 @@
       "variant": "default"
     },
     {
-      "id": "inspection_repository--persistence",
-      "from": "inspection_repository",
-      "to": "persistence",
-      "variant": "default"
-    },
-    {
       "id": "transversales--claims_controller",
       "from": "transversales",
       "to": "claims_controller",
@@ -757,12 +952,6 @@
       "from": "claims_service",
       "to": "claims_repository",
       "label": "Por contrato",
-      "variant": "default"
-    },
-    {
-      "id": "claims_repository--persistence",
-      "from": "claims_repository",
-      "to": "persistence",
       "variant": "default"
     },
     {
@@ -786,12 +975,6 @@
       "variant": "default"
     },
     {
-      "id": "query_repository--persistence",
-      "from": "query_repository",
-      "to": "persistence",
-      "variant": "default"
-    },
-    {
       "id": "transversales--metrics_controller",
       "from": "transversales",
       "to": "metrics_controller",
@@ -809,12 +992,6 @@
       "from": "metrics_service",
       "to": "metrics_repository",
       "label": "Por contrato",
-      "variant": "default"
-    },
-    {
-      "id": "metrics_repository--persistence",
-      "from": "metrics_repository",
-      "to": "persistence",
       "variant": "default"
     },
     {
@@ -851,6 +1028,132 @@
       "to": "claims_service",
       "label": "Delega evaluación",
       "variant": "dashed"
+    },
+    {
+      "id": "identity_repository--primary",
+      "from": "identity_repository",
+      "to": "primary",
+      "label": "SQL / TLS",
+      "variant": "default"
+    },
+    {
+      "id": "management_repository--primary",
+      "from": "management_repository",
+      "to": "primary",
+      "label": "SQL / TLS",
+      "variant": "default"
+    },
+    {
+      "id": "inspection_repository--primary",
+      "from": "inspection_repository",
+      "to": "primary",
+      "label": "SQL / TLS",
+      "variant": "default"
+    },
+    {
+      "id": "claims_repository--primary",
+      "from": "claims_repository",
+      "to": "primary",
+      "label": "SQL / TLS",
+      "variant": "default"
+    },
+    {
+      "id": "query_repository--redis",
+      "from": "query_repository",
+      "to": "redis",
+      "label": "RESP / TLS",
+      "variant": "default"
+    },
+    {
+      "id": "query_repository--primary",
+      "from": "query_repository",
+      "to": "primary",
+      "label": "Revalida",
+      "variant": "default"
+    },
+    {
+      "id": "metrics_repository--replica",
+      "from": "metrics_repository",
+      "to": "replica",
+      "label": "SQL / TLS",
+      "variant": "default"
+    },
+    {
+      "id": "primary--replica",
+      "from": "primary",
+      "to": "replica",
+      "label": "Replica",
+      "variant": "default"
+    },
+    {
+      "id": "worker--primary",
+      "from": "worker",
+      "to": "primary",
+      "label": "Outbox / T2",
+      "variant": "default"
+    },
+    {
+      "id": "worker--redis",
+      "from": "worker",
+      "to": "redis",
+      "label": "Proyección",
+      "variant": "default"
+    },
+    {
+      "id": "worker--objects",
+      "from": "worker",
+      "to": "objects",
+      "label": "PDF / hash",
+      "variant": "default"
+    },
+    {
+      "id": "worker--broker",
+      "from": "worker",
+      "to": "broker",
+      "label": "AMQPS",
+      "variant": "default"
+    },
+    {
+      "id": "worker--pasarela",
+      "from": "worker",
+      "to": "pasarela",
+      "label": "HTTPS",
+      "variant": "default"
+    },
+    {
+      "id": "inspection_service--objects",
+      "from": "inspection_service",
+      "to": "objects",
+      "label": "Puerto S3",
+      "variant": "default"
+    },
+    {
+      "id": "management_service--sunat",
+      "from": "management_service",
+      "to": "sunat",
+      "label": "HTTPS",
+      "variant": "default"
+    },
+    {
+      "id": "management_service--mincetur",
+      "from": "management_service",
+      "to": "mincetur",
+      "label": "HTTPS",
+      "variant": "default"
+    },
+    {
+      "id": "operations_service--gis",
+      "from": "operations_service",
+      "to": "gis",
+      "label": "HTTPS",
+      "variant": "default"
+    },
+    {
+      "id": "metrics_service--gis",
+      "from": "metrics_service",
+      "to": "gis",
+      "label": "HTTPS",
+      "variant": "default"
     }
   ],
   "boundaries": [
@@ -931,7 +1234,7 @@
       "items": [
         "Invoca: controlador a servicio. Por contrato: servicio a su persistencia privada.",
         "Líneas discontinuas: colaboración en memoria a través de la API pública del módulo receptor; nunca acceso a repositorios ajenos.",
-        "Las conexiones a la barra inferior usan los protocolos de cada repositorio: primaria, réplica o Redis. S3 se accede mediante StorageAdapter."
+        "SQL/TLS conecta con primaria o réplica; RESP/TLS con Redis; HTTPS/S3 con objetos; AMQPS con la cola."
       ]
     },
     {
@@ -940,7 +1243,8 @@
       "items": [
         "Los módulos de la API se publican juntos y mantienen propiedad lógica de tablas y repositorios.",
         "Las dependencias internas siguen Clean Architecture; esta vista muestra colaboración en ejecución, no imports de código.",
-        "Datos, auditoría y outbox se confirman juntos. La emisión de PDF y los avisos se ejecutan en el trabajador independiente."
+        "Datos, auditoría y outbox se confirman juntos. La emisión de PDF y los avisos se ejecutan en el trabajador independiente.",
+        "El trabajador contiene QueuePublisher, ProcesarActaCasoUso y NotificationClient."
       ]
     },
     {
@@ -948,7 +1252,7 @@
       "title": "Alcance y límites",
       "items": [
         "La columna de gestión reúne Padrón, Riesgo y Operativos por legibilidad; conservan sus responsabilidades y contratos de módulo.",
-        "Los accesos a SUNAT, MINCETUR y GIS y las conexiones del trabajador se detallan en C4 niveles 2 y 3.",
+        "Las flechas HTTPS de los servicios hacia SUNAT, MINCETUR y GIS se resuelven mediante SunatClient, MinceturClient y GisClient. Puerto S3 se resuelve mediante EvidenceManager / StorageAdapter.",
         "Un proceso por instancia de la API; sus instancias sin estado se replican detrás del balanceador. El trabajador escala por separado."
       ]
     }
