@@ -121,6 +121,17 @@ workspace "SIFITUR Huamanga" "Arquitectura propuesta de fiscalización turístic
             // Distribución manual conservada por scripts/organizar-nivel3-structurizr.mjs.
             title "C4 · Nivel 3 · Componentes del Backend API"
         }
+        component api "componentes" {
+            include *
+            include inspector coordinador admin prestador ciudadano worker broker pasarela
+            title "C4 · Nivel 3 · Componentes arquitectónicos de SIFITUR"
+            description "Personas y canales web; componentes del backend modular; datos e integraciones externas."
+            properties {
+                "structurizr.softwareSystemBoundaries" "false"
+                "structurizr.metadata" "false"
+            }
+            // Distribución manual conservada por scripts/organizar-componentes-structurizr.mjs.
+        }
         image inspection "nivel4-clases" {
             image nivel4-clases.svg
             title "C4 · Nivel 4 · Clases y contratos de Inspecciones"

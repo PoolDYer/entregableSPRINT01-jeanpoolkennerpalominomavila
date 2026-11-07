@@ -21,13 +21,6 @@
     "source": "docs/02-arquitectura-software/estilo-arquitectonico.md"
   },
   {
-    "slug": "componentes",
-    "type": "architecture",
-    "input": ".archify/sifitur-20261106-082100/componentes/candidate.json",
-    "output": ".archify/sifitur-20261106-082100/componentes/componentes.html",
-    "source": "docs/02-arquitectura-software/componentes-arquitectonicos.md"
-  },
-  {
     "slug": "paquetes-modulo-inspecciones",
     "type": "architecture",
     "input": ".archify/sifitur-20261106-082100/paquetes-modulo-inspecciones/candidate.json",

@@ -29,12 +29,14 @@ if ($LASTEXITCODE -ne 0) { throw 'Falló compilación JSON de Structurizr.' }
 if ($LASTEXITCODE -ne 0) { throw 'Falló distribución manual del nivel 2.' }
 & node scripts/organizar-nivel3-structurizr.mjs
 if ($LASTEXITCODE -ne 0) { throw 'Falló distribución manual del nivel 3.' }
+& node scripts/organizar-componentes-structurizr.mjs
+if ($LASTEXITCODE -ne 0) { throw 'Falló distribución C4 de componentes arquitectónicos.' }
 foreach ($format in @('static', 'svg', 'png')) {
     $destination = if ($format -eq 'static') { 'diagrams/structurizr/site' } else { 'diagrams/structurizr/export' }
     & java -jar $StructurizrWar export -w diagrams/structurizr/modelo/workspace.json -f $format -o $destination
     if ($LASTEXITCODE -ne 0) { throw "Falló exportación Structurizr: $format" }
 }
-foreach ($name in @('nivel1-contexto','nivel2-contenedores','nivel3-componentes','nivel4-clases','nivel4-registro','nivel4-secuencia','nivel4-agregado')) {
+foreach ($name in @('nivel1-contexto','nivel2-contenedores','componentes','nivel3-componentes','nivel4-clases','nivel4-registro','nivel4-secuencia','nivel4-agregado')) {
     Copy-Item -LiteralPath "diagrams/structurizr/export/$name.svg" -Destination "img/fuentes-svg/$name.svg"
     Copy-Item -LiteralPath "diagrams/structurizr/export/$name.png" -Destination "img/$name.png"
 }

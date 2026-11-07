@@ -98,7 +98,7 @@ check('Borradores documentados en PostgreSQL',docText.includes('POST /api/v1/ins
 const authoredSources=[...docs,'README.md','diagrams/structurizr/workspace.dsl',...manifest.map(d=>d.input),...walk('diagrams/structurizr').filter(p=>p.endsWith('.puml'))];
 const prohibited=new RegExp(['m[oó]vil','flut'+'ter','sql'+'ite','off'+'line','sin cone'+'xi[oó]n','sin '+'red','desconectad'].join('|'),'i');
 check('Alcance exclusivo web en documentación y fuentes de diagramas',authoredSources.every(p=>!prohibited.test(read(p))));
-const c4=['nivel1-contexto','nivel2-contenedores','nivel3-componentes','nivel4-clases','nivel4-registro','nivel4-secuencia','nivel4-agregado'];
+const c4=['nivel1-contexto','nivel2-contenedores','componentes','nivel3-componentes','nivel4-clases','nivel4-registro','nivel4-secuencia','nivel4-agregado'];
 const artifacts=[];
 for(const slug of [...manifest.map(d=>d.slug),...c4]){
   const jpg=`img/${slug}.jpg`,png=`img/${slug}.png`,svg=`img/fuentes-svg/${slug}.svg`;

@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const manifest=JSON.parse(fs.readFileSync('diagrams/archify-manifest.json','utf8'));
-const c4=['nivel1-contexto','nivel2-contenedores','nivel3-componentes','nivel4-clases','nivel4-registro','nivel4-secuencia','nivel4-agregado'];
+const c4=['nivel1-contexto','nivel2-contenedores','componentes','nivel3-componentes','nivel4-clases','nivel4-registro','nivel4-secuencia','nivel4-agregado'];
 const title=d=>JSON.parse(fs.readFileSync(d.input,'utf8')).meta.title.replace('SIFITUR · ','');
 const rel=(from,to)=>path.relative(path.dirname(from),to).replaceAll('\\','/');
 const mdlink=(label,p)=>`[${label}](${p.replaceAll(' ','%20')})`;
@@ -23,7 +23,7 @@ for(const filename of walk('docs').filter(p=>p.endsWith('.md'))){
   let content=fs.readFileSync(filename,'utf8').replace(/\r\n/g,'\n');
   const sourceHeading=content.match(/^## (?:\d+\. )?Herramientas y fuentes de diagramas$/m)?.[0]??'## Herramientas y fuentes de diagramas';
   content=content.split(/\n## (?:\d+\. )?Herramientas y fuentes de diagramas\n/)[0].trimEnd();
-  const isC4=filename.replaceAll('\\','/').includes('/04-modelo-c4/');
+  const isC4=filename.replaceAll('\\','/').includes('/04-modelo-c4/')||filename.replaceAll('\\','/').endsWith('/componentes-arquitectonicos.md');
   if(isC4){
     content=content.replaceAll('/clases-modulo-inspecciones.','/nivel4-agregado.').replaceAll('/secuencia-registrar-inspeccion.','/nivel4-registro.');
   }

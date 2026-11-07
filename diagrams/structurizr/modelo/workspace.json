@@ -1660,6 +1660,855 @@
           "width": 5800,
           "height": 5100
         }
+      },
+      {
+        "containerId": "15",
+        "description": "Personas y canales web; componentes del backend modular; datos e integraciones externas.",
+        "elements": [
+          {
+            "id": "1",
+            "x": 150,
+            "y": 60
+          },
+          {
+            "id": "2",
+            "x": 1000,
+            "y": 60
+          },
+          {
+            "id": "3",
+            "x": 1850,
+            "y": 60
+          },
+          {
+            "id": "4",
+            "x": 3000,
+            "y": 60
+          },
+          {
+            "id": "5",
+            "x": 4200,
+            "y": 60
+          },
+          {
+            "id": "6",
+            "x": 5100,
+            "y": 1150
+          },
+          {
+            "id": "7",
+            "x": 5100,
+            "y": 1750
+          },
+          {
+            "id": "8",
+            "x": 5100,
+            "y": 2950
+          },
+          {
+            "id": "9",
+            "x": 5100,
+            "y": 4850
+          },
+          {
+            "id": "11",
+            "x": 900,
+            "y": 600
+          },
+          {
+            "id": "12",
+            "x": 2950,
+            "y": 600
+          },
+          {
+            "id": "13",
+            "x": 4200,
+            "y": 600
+          },
+          {
+            "id": "16",
+            "x": 650,
+            "y": 1150
+          },
+          {
+            "id": "17",
+            "x": 1500,
+            "y": 1150
+          },
+          {
+            "id": "18",
+            "x": 3200,
+            "y": 1150
+          },
+          {
+            "id": "19",
+            "x": 2350,
+            "y": 1150
+          },
+          {
+            "id": "20",
+            "x": 650,
+            "y": 1750
+          },
+          {
+            "id": "21",
+            "x": 1500,
+            "y": 1750
+          },
+          {
+            "id": "22",
+            "x": 2350,
+            "y": 1750
+          },
+          {
+            "id": "23",
+            "x": 3200,
+            "y": 1750
+          },
+          {
+            "id": "24",
+            "x": 1500,
+            "y": 2350
+          },
+          {
+            "id": "25",
+            "x": 2350,
+            "y": 2350
+          },
+          {
+            "id": "26",
+            "x": 3200,
+            "y": 2950
+          },
+          {
+            "id": "27",
+            "x": 650,
+            "y": 2950
+          },
+          {
+            "id": "28",
+            "x": 1500,
+            "y": 2950
+          },
+          {
+            "id": "29",
+            "x": 2350,
+            "y": 2950
+          },
+          {
+            "id": "30",
+            "x": 3200,
+            "y": 3550
+          },
+          {
+            "id": "31",
+            "x": 650,
+            "y": 3550
+          },
+          {
+            "id": "32",
+            "x": 4300,
+            "y": 4250
+          },
+          {
+            "id": "33",
+            "x": 1500,
+            "y": 4250
+          },
+          {
+            "id": "34",
+            "x": 2350,
+            "y": 4250
+          },
+          {
+            "id": "35",
+            "x": 4300,
+            "y": 2350
+          },
+          {
+            "id": "36",
+            "x": 4300,
+            "y": 3550
+          },
+          {
+            "id": "37",
+            "x": 4300,
+            "y": 4900
+          }
+        ],
+        "externalContainerBoundariesVisible": false,
+        "key": "componentes",
+        "name": "Component View: SIFITUR Huamanga - Backend API Application",
+        "order": 4,
+        "properties": {
+          "structurizr.softwareSystemBoundaries": "false",
+          "structurizr.metadata": "false"
+        },
+        "relationships": [
+          {
+            "id": "100",
+            "routing": "Direct",
+            "position": 50,
+            "vertices": [
+              {
+                "x": 3500,
+                "y": 3375
+              },
+              {
+                "x": 3000,
+                "y": 3375
+              },
+              {
+                "x": 3000,
+                "y": 4140
+              },
+              {
+                "x": 1725,
+                "y": 4140
+              }
+            ]
+          },
+          {
+            "id": "101",
+            "routing": "Direct",
+            "position": 50,
+            "vertices": [
+              {
+                "x": 950,
+                "y": 3340
+              },
+              {
+                "x": 1300,
+                "y": 3340
+              },
+              {
+                "x": 1300,
+                "y": 4400
+              }
+            ]
+          },
+          {
+            "id": "102",
+            "routing": "Direct",
+            "position": 50,
+            "vertices": [
+              {
+                "x": 2200,
+                "y": 3100
+              },
+              {
+                "x": 2200,
+                "y": 2750
+              },
+              {
+                "x": 4525,
+                "y": 2750
+              }
+            ]
+          },
+          {
+            "id": "103",
+            "routing": "Direct",
+            "position": 50
+          },
+          {
+            "id": "104",
+            "routing": "Direct",
+            "position": 50
+          },
+          {
+            "id": "105",
+            "routing": "Direct",
+            "position": 50
+          },
+          {
+            "id": "106",
+            "routing": "Direct",
+            "position": 85,
+            "vertices": [
+              {
+                "x": 950,
+                "y": 3970
+              },
+              {
+                "x": 4950,
+                "y": 3970
+              },
+              {
+                "x": 4950,
+                "y": 1300
+              }
+            ]
+          },
+          {
+            "id": "107",
+            "routing": "Direct",
+            "position": 80,
+            "vertices": [
+              {
+                "x": 1025,
+                "y": 4020
+              },
+              {
+                "x": 4875,
+                "y": 4020
+              },
+              {
+                "x": 4875,
+                "y": 1900
+              }
+            ]
+          },
+          {
+            "id": "108",
+            "routing": "Direct",
+            "position": 75,
+            "vertices": [
+              {
+                "x": 1100,
+                "y": 4070
+              },
+              {
+                "x": 4800,
+                "y": 4070
+              },
+              {
+                "x": 4800,
+                "y": 3100
+              }
+            ]
+          },
+          {
+            "id": "38",
+            "routing": "Direct",
+            "position": 50,
+            "vertices": [
+              {
+                "x": 375,
+                "y": 520
+              },
+              {
+                "x": 1050,
+                "y": 520
+              }
+            ]
+          },
+          {
+            "id": "40",
+            "routing": "Direct",
+            "position": 50,
+            "vertices": [
+              {
+                "x": 1225,
+                "y": 540
+              },
+              {
+                "x": 1150,
+                "y": 540
+              }
+            ]
+          },
+          {
+            "id": "42",
+            "routing": "Direct",
+            "position": 50,
+            "vertices": [
+              {
+                "x": 2075,
+                "y": 560
+              },
+              {
+                "x": 1250,
+                "y": 560
+              }
+            ]
+          },
+          {
+            "id": "44",
+            "routing": "Direct",
+            "position": 50
+          },
+          {
+            "id": "46",
+            "routing": "Direct",
+            "position": 50
+          },
+          {
+            "id": "62",
+            "routing": "Direct",
+            "position": 50
+          },
+          {
+            "id": "63",
+            "routing": "Direct",
+            "position": 50,
+            "vertices": [
+              {
+                "x": 4525,
+                "y": 4680
+              },
+              {
+                "x": 1725,
+                "y": 4680
+              }
+            ]
+          },
+          {
+            "id": "64",
+            "routing": "Direct",
+            "position": 50
+          },
+          {
+            "id": "65",
+            "routing": "Direct",
+            "position": 50
+          },
+          {
+            "id": "66",
+            "routing": "Direct",
+            "position": 70,
+            "vertices": [
+              {
+                "x": 4900,
+                "y": 4400
+              },
+              {
+                "x": 4900,
+                "y": 2500
+              }
+            ]
+          },
+          {
+            "id": "67",
+            "routing": "Direct",
+            "position": 50,
+            "vertices": [
+              {
+                "x": 4525,
+                "y": 4775
+              },
+              {
+                "x": 5325,
+                "y": 4775
+              }
+            ]
+          },
+          {
+            "id": "69",
+            "routing": "Direct",
+            "position": 50,
+            "vertices": [
+              {
+                "x": 1425,
+                "y": 750
+              },
+              {
+                "x": 1425,
+                "y": 1000
+              },
+              {
+                "x": 3500,
+                "y": 1000
+              }
+            ]
+          },
+          {
+            "id": "71",
+            "routing": "Direct",
+            "position": 50,
+            "vertices": [
+              {
+                "x": 1125,
+                "y": 1000
+              },
+              {
+                "x": 950,
+                "y": 1000
+              }
+            ]
+          },
+          {
+            "id": "72",
+            "routing": "Direct",
+            "position": 50,
+            "vertices": [
+              {
+                "x": 550,
+                "y": 750
+              },
+              {
+                "x": 550,
+                "y": 1900
+              }
+            ]
+          },
+          {
+            "id": "73",
+            "routing": "Direct",
+            "position": 80,
+            "vertices": [
+              {
+                "x": 1125,
+                "y": 1050
+              },
+              {
+                "x": 4050,
+                "y": 1050
+              },
+              {
+                "x": 4050,
+                "y": 1900
+              }
+            ]
+          },
+          {
+            "id": "74",
+            "routing": "Direct",
+            "position": 15,
+            "vertices": [
+              {
+                "x": 1350,
+                "y": 1000
+              },
+              {
+                "x": 1350,
+                "y": 2200
+              },
+              {
+                "x": 2650,
+                "y": 2200
+              }
+            ]
+          },
+          {
+            "id": "75",
+            "routing": "Direct",
+            "position": 50,
+            "vertices": [
+              {
+                "x": 4000,
+                "y": 750
+              },
+              {
+                "x": 4000,
+                "y": 1900
+              }
+            ]
+          },
+          {
+            "id": "77",
+            "routing": "Direct",
+            "position": 30,
+            "vertices": [
+              {
+                "x": 4100,
+                "y": 750
+              },
+              {
+                "x": 4100,
+                "y": 2150
+              },
+              {
+                "x": 1800,
+                "y": 2150
+              }
+            ]
+          },
+          {
+            "id": "79",
+            "routing": "Direct",
+            "position": 50,
+            "vertices": [
+              {
+                "x": 3500,
+                "y": 1540
+              },
+              {
+                "x": 1800,
+                "y": 1540
+              }
+            ]
+          },
+          {
+            "id": "80",
+            "routing": "Direct",
+            "position": 50,
+            "vertices": [
+              {
+                "x": 1350,
+                "y": 1900
+              },
+              {
+                "x": 1350,
+                "y": 1300
+              }
+            ]
+          },
+          {
+            "id": "81",
+            "routing": "Direct",
+            "position": 15,
+            "vertices": [
+              {
+                "x": 3100,
+                "y": 1900
+              },
+              {
+                "x": 3100,
+                "y": 1610
+              },
+              {
+                "x": 1800,
+                "y": 1610
+              }
+            ]
+          },
+          {
+            "id": "82",
+            "routing": "Direct",
+            "position": 20,
+            "vertices": [
+              {
+                "x": 3075,
+                "y": 2500
+              },
+              {
+                "x": 3075,
+                "y": 1680
+              },
+              {
+                "x": 1850,
+                "y": 1680
+              }
+            ]
+          },
+          {
+            "id": "83",
+            "routing": "Direct",
+            "position": 50
+          },
+          {
+            "id": "84",
+            "routing": "Direct",
+            "position": 50
+          },
+          {
+            "id": "85",
+            "routing": "Direct",
+            "position": 10,
+            "vertices": [
+              {
+                "x": 3500,
+                "y": 1620
+              },
+              {
+                "x": 2700,
+                "y": 1620
+              }
+            ]
+          },
+          {
+            "id": "86",
+            "routing": "Direct",
+            "position": 50,
+            "vertices": [
+              {
+                "x": 3100,
+                "y": 1300
+              },
+              {
+                "x": 3100,
+                "y": 3700
+              }
+            ]
+          },
+          {
+            "id": "87",
+            "routing": "Direct",
+            "position": 50,
+            "vertices": [
+              {
+                "x": 3000,
+                "y": 1300
+              },
+              {
+                "x": 3000,
+                "y": 3100
+              }
+            ]
+          },
+          {
+            "id": "88",
+            "routing": "Direct",
+            "position": 50
+          },
+          {
+            "id": "89",
+            "routing": "Direct",
+            "position": 50,
+            "vertices": [
+              {
+                "x": 950,
+                "y": 2170
+              },
+              {
+                "x": 2650,
+                "y": 2170
+              }
+            ]
+          },
+          {
+            "id": "90",
+            "routing": "Direct",
+            "position": 80,
+            "vertices": [
+              {
+                "x": 1000,
+                "y": 2250
+              },
+              {
+                "x": 3500,
+                "y": 2250
+              }
+            ]
+          },
+          {
+            "id": "91",
+            "routing": "Direct",
+            "position": 50,
+            "vertices": [
+              {
+                "x": 1300,
+                "y": 1900
+              },
+              {
+                "x": 1300,
+                "y": 2800
+              },
+              {
+                "x": 950,
+                "y": 2800
+              }
+            ]
+          },
+          {
+            "id": "92",
+            "routing": "Direct",
+            "position": 55,
+            "vertices": [
+              {
+                "x": 3050,
+                "y": 1900
+              },
+              {
+                "x": 3050,
+                "y": 2720
+              },
+              {
+                "x": 950,
+                "y": 2720
+              }
+            ]
+          },
+          {
+            "id": "93",
+            "routing": "Direct",
+            "position": 50,
+            "vertices": [
+              {
+                "x": 3500,
+                "y": 2800
+              },
+              {
+                "x": 950,
+                "y": 2800
+              }
+            ]
+          },
+          {
+            "id": "94",
+            "routing": "Direct",
+            "position": 60,
+            "vertices": [
+              {
+                "x": 1400,
+                "y": 1900
+              },
+              {
+                "x": 1400,
+                "y": 3700
+              }
+            ]
+          },
+          {
+            "id": "95",
+            "routing": "Direct",
+            "position": 50,
+            "vertices": [
+              {
+                "x": 2250,
+                "y": 1900
+              },
+              {
+                "x": 2250,
+                "y": 3380
+              },
+              {
+                "x": 950,
+                "y": 3380
+              }
+            ]
+          },
+          {
+            "id": "96",
+            "routing": "Direct",
+            "position": 50,
+            "vertices": [
+              {
+                "x": 2200,
+                "y": 2500
+              },
+              {
+                "x": 2200,
+                "y": 3450
+              },
+              {
+                "x": 950,
+                "y": 3450
+              }
+            ]
+          },
+          {
+            "id": "97",
+            "routing": "Direct",
+            "position": 50
+          },
+          {
+            "id": "98",
+            "routing": "Direct",
+            "position": 50
+          },
+          {
+            "id": "99",
+            "routing": "Direct",
+            "position": 50,
+            "vertices": [
+              {
+                "x": 570,
+                "y": 1300
+              },
+              {
+                "x": 570,
+                "y": 4400
+              }
+            ]
+          }
+        ],
+        "title": "C4 · Nivel 3 · Componentes arquitectónicos de SIFITUR",
+        "dimensions": {
+          "width": 5800,
+          "height": 5500
+        }
       }
     ],
     "configuration": {
@@ -2146,7 +2995,7 @@
         "elementId": "18",
         "key": "nivel4-clases",
         "name": "C4 · Nivel 4 · Clases y contratos de Inspecciones",
-        "order": 4,
+        "order": 5,
         "title": "C4 · Nivel 4 · Clases y contratos de Inspecciones"
       },
       {
@@ -2155,7 +3004,7 @@
         "elementId": "18",
         "key": "nivel4-registro",
         "name": "C4 · Nivel 4 · Secuencia de registro de inspección",
-        "order": 5,
+        "order": 6,
         "title": "C4 · Nivel 4 · Secuencia de registro de inspección"
       },
       {
@@ -2164,7 +3013,7 @@
         "elementId": "18",
         "key": "nivel4-secuencia",
         "name": "C4 · Nivel 4 · Secuencia de emisión del acta",
-        "order": 6,
+        "order": 7,
         "title": "C4 · Nivel 4 · Secuencia de emisión del acta"
       },
       {
@@ -2173,7 +3022,7 @@
         "elementId": "18",
         "key": "nivel4-agregado",
         "name": "C4 · Nivel 4 · Agregado de Inspecciones",
-        "order": 7,
+        "order": 8,
         "title": "C4 · Nivel 4 · Agregado de Inspecciones"
       }
     ],

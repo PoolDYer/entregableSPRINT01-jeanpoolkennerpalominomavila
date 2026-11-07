@@ -1,8 +1,7 @@
 # Componentes arquitectónicos de SIFITUR Huamanga
 
-![Componentes del backend SIFITUR](../../img/componentes.jpg)
+![Componentes del backend SIFITUR](../../img/diagrama-componentes.png)
 
-Exportación SVG: [componentes.svg](../../img/fuentes-svg/componentes.svg).
 
 | Componente | Responsabilidad | Requisitos |
 |---|---|---|

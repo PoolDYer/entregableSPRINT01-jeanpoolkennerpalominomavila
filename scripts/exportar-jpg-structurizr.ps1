@@ -6,7 +6,7 @@ $jpegEncoder = [System.Drawing.Imaging.ImageCodecInfo]::GetImageEncoders() | Whe
 $encoderParameters = [System.Drawing.Imaging.EncoderParameters]::new(1)
 $encoderParameters.Param[0] = [System.Drawing.Imaging.EncoderParameter]::new([System.Drawing.Imaging.Encoder]::Quality, [long]$Quality)
 try {
-    foreach ($name in @('nivel1-contexto','nivel2-contenedores','nivel3-componentes','nivel4-clases','nivel4-registro','nivel4-secuencia','nivel4-agregado')) {
+    foreach ($name in @('nivel1-contexto','nivel2-contenedores','componentes','nivel3-componentes','nivel4-clases','nivel4-registro','nivel4-secuencia','nivel4-agregado')) {
         $sourcePath = Join-Path $PSScriptRoot "../img/$name.png"
         $targetPath = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot "../img/$name.jpg"))
         $source = [System.Drawing.Image]::FromFile([IO.Path]::GetFullPath($sourcePath))
