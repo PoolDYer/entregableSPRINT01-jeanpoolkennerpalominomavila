@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
-  "receiptId": "3919aaa9-2f1d-4483-9350-bcd47bf0a393",
+  "receiptId": "05bf3c15-6451-47fd-a5f9-92c991c6f925",
   "status": "current",
   "command": "deliver",
   "type": "workflow",
-  "input": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\proceso-fiscalizacion\\candidate.json",
-  "output": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\proceso-fiscalizacion\\proceso-fiscalizacion.html",
+  "input": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\proceso-fiscalizacion\\candidate.json",
+  "output": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\proceso-fiscalizacion\\proceso-fiscalizacion.html",
   "specification": {
-    "sha256": "d18e6e2fe9c5affdb640011f279b8d4847948ac2f53e7bc49ca7f068dd6f2680",
-    "bytes": 4861
+    "sha256": "a6ecb31137a29fd3bc2918f5be02eeeaab7f0cd433d9b4b6a428445fc0626b65",
+    "bytes": 4866
   },
   "artifact": {
-    "sha256": "4d2508a3bc2718615219ae94bd583c0bfe3228d6bd6ce2a3527d9d87560093bf",
-    "bytes": 846867
+    "sha256": "4b6177c94a11a44aa8e6adedc27bcf5a695c5fd9a836f866a834f988e833a330",
+    "bytes": 846929
   }
 }

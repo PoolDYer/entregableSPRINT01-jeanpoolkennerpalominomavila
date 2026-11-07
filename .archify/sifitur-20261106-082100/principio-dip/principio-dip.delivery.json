@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
-  "receiptId": "79b725dc-d81f-45f1-a159-93edd5a9e7c9",
+  "receiptId": "618979c3-1c7e-4e5c-b450-d94e06fe973f",
   "status": "current",
   "command": "deliver",
   "type": "class",
-  "input": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\principio-dip\\candidate.json",
-  "output": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\principio-dip\\principio-dip.html",
+  "input": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\principio-dip\\candidate.json",
+  "output": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\principio-dip\\principio-dip.html",
   "specification": {
-    "sha256": "9848947a40dab35c1dfb59eef5be98c7c4db06cb83b43fabf52d4437fdfdfd92",
-    "bytes": 6612
+    "sha256": "d777e78ff0f0009adf4a9c047183717eac1cf0288153acb2c4464ffee9d2c757",
+    "bytes": 6618
   },
   "artifact": {
-    "sha256": "3b08337efb3d765ba02d2b7e772c1c5612866bc08c37090ef821c877b688c1a0",
-    "bytes": 852929
+    "sha256": "f97a6dc78c5601d32a7f857015e967761a2bb1196591b59a141f6d72d685c567",
+    "bytes": 853013
   }
 }

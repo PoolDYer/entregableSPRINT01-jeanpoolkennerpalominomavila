@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "class",
+  "quality": "showcase",
+  "specification": {
+    "path": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\principio-dip\\candidate.json",
+    "sha256": "d777e78ff0f0009adf4a9c047183717eac1cf0288153acb2c4464ffee9d2c757",
+    "bytes": 6618
+  },
+  "artifact": {
+    "path": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\principio-dip\\principio-dip.html",
+    "sha256": "f97a6dc78c5601d32a7f857015e967761a2bb1196591b59a141f6d72d685c567",
+    "bytes": 853013
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\principio-dip\\web-final\\principio-dip.finalize.json",
+    "summaryReceipt": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\principio-dip\\web-final\\principio-dip.finalize-summary.json",
+    "browserCheckReceipt": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\principio-dip\\web-final\\principio-dip.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-06T18:25:06.732Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 11957,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  }
+}

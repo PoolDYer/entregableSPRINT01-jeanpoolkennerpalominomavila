@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
-  "receiptId": "36b702dd-aaa2-41f7-803e-2039770c892a",
+  "receiptId": "bda9f4a7-c9de-4a37-8d14-1e42def7dd7f",
   "status": "current",
   "command": "deliver",
   "type": "architecture",
-  "input": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-limpia-sifitur\\candidate.json",
-  "output": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-limpia-sifitur\\arquitectura-limpia-sifitur.html",
+  "input": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\arquitectura-limpia-sifitur\\candidate.json",
+  "output": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\arquitectura-limpia-sifitur\\arquitectura-limpia-sifitur.html",
   "specification": {
-    "sha256": "56a2656c096a79332fe9ca0af5ad859235b61e5cc5c0f250db96dd321370d38f",
-    "bytes": 15694
+    "sha256": "19645739fecde24fea5f03b249b61a61e68d76a3e6ee74fd103b1069364b5479",
+    "bytes": 15703
   },
   "artifact": {
-    "sha256": "411247ccde413ec003f636d695f7d0666e1453000c6cdb2efa26546defdf0fd8",
-    "bytes": 897805
+    "sha256": "82810a568d6a64b184b0727cb0e7b9a44c226a41ad3eb61793078ef5cd218484",
+    "bytes": 897916
   }
 }

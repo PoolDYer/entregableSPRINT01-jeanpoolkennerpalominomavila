@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
-  "receiptId": "e23afaad-94e4-45f6-b667-587981e3e464",
+  "receiptId": "584348b8-8451-48db-a252-612eb8c329d8",
   "status": "current",
   "command": "deliver",
   "type": "class",
-  "input": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\patron-adapter\\candidate.json",
-  "output": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\patron-adapter\\patron-adapter.html",
+  "input": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\patron-adapter\\candidate.json",
+  "output": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\patron-adapter\\patron-adapter.html",
   "specification": {
-    "sha256": "5f8e9961968cb66a705fe74e1fcac47c7070ef26927bac90cb1966cbb4d7a1ea",
-    "bytes": 3486
+    "sha256": "2c7e503fc83f231714a683dc0e09e5d6c0e83d4e313022d4f7e4aaf3f6bc0e9c",
+    "bytes": 3492
   },
   "artifact": {
-    "sha256": "d35d7201db6878e1c972fa47b38c5b9087b802418817575ec536f737e5ad799e",
-    "bytes": 839346
+    "sha256": "0cdca1b1daa2c426fc20b135fcef39f828f21645a173ab63be5c81c7fd65680c",
+    "bytes": 839388
   }
 }

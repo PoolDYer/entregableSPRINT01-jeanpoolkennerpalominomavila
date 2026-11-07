@@ -20,14 +20,11 @@ class Inspeccion {
 class Evidencia <<objeto de valor>> {
   -objetoId: UUID
   -hash: SHA256
-  -origen: CAMARA
+  -origen: CARGA_WEB
+  -tipoMime: string
+  -tamanoBytes: number
   -capturadaEn: FechaHora
   +validarIntegridad(): void
-}
-class Coordenada <<objeto de valor>> {
-  -latitud: number
-  -longitud: number
-  +esValida(): boolean
 }
 class FirmaDigitalizada <<valor vinculado>> {
   -objetoId: UUID
@@ -52,7 +49,6 @@ class Subsanacion <<otro módulo>> {
 }
 Inspeccion "1" *-- "1..*" Evidencia
 Inspeccion "1" *-- "1" FirmaDigitalizada
-Evidencia "1" *-- "1" Coordenada
 Inspeccion "1" --> "0..1" Acta : emisión asíncrona
 Inspeccion "1" --> "0..*" Subsanacion : origina seguimiento
 note bottom of Inspeccion

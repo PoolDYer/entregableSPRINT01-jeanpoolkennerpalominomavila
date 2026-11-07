@@ -1,7 +1,7 @@
 workspace "SIFITUR Huamanga" "Arquitectura propuesta de fiscalización turística; RF01–RF15." {
     !impliedRelationships true
     model {
-        inspector = person "Inspector de campo" "Captura inspecciones, fotografías GPS y firmas sin red."
+        inspector = person "Inspector de campo" "Registra inspecciones y adjunta fotografías y firmas mediante la web."
         coordinador = person "Coordinador DIRCETUR / MPH" "Planifica operativos y resuelve expedientes."
         admin = person "Administrador TI" "Gestiona accesos y auditoría técnica."
         prestador = person "Prestador turístico" "Consulta su expediente y presenta descargos."
@@ -11,17 +11,15 @@ workspace "SIFITUR Huamanga" "Arquitectura propuesta de fiscalización turístic
         gis = softwareSystem "OpenStreetMap / GIS" "Cartografía de referencia." "Externo"
         pasarela = softwareSystem "Pasarela SMS / correo" "Aceptación y confirmación de avisos." "Externo"
         sifitur = softwareSystem "SIFITUR Huamanga" "Padrón, riesgo, operativos, inspecciones, subsanaciones y consulta pública." {
-            movil = container "App de inspección" "Captura offline, cámara, GPS y firma digitalizada." "Flutter" "Movil"
-            local = container "Almacén local embebido" "SQLite y archivos cifrados del dispositivo; cola de sincronización." "SQLite cifrada" "Datos"
-            consola = container "Consola institucional" "Padrón, usuarios, rutas, evaluación y métricas privadas." "React SPA" "Web"
+            consola = container "Consola institucional" "Inspecciones, evidencias, padrón, usuarios, rutas, evaluación y métricas privadas." "React SPA" "Web"
             portal = container "Portal del administrado" "Expediente propio y descargos." "React SPA" "Web"
             publico = container "Portal ciudadano" "Directorio y QR con información pública." "Next.js SSR" "Web"
             gateway = container "Gateway / balanceador" "TLS, WAF, límites de tráfico y reparto a instancias saludables." "NGINX + ModSecurity"
             api = container "Backend API Application" "Monolito modular sin estado; JWT, RBAC y ámbito del expediente." "Node.js / NestJS" {
                 identity = component "IdentityController / IdentityService" "Usuarios, roles, sesión y recuperación; RF01, RF02, RF15." "REST / TypeScript"
-                access = component "Auth & RBAC Guard / AccessPolicy" "Comprueba institución, asignación y titularidad; RF01–RF03." "Guard / política"
+                access = component "Auth & RBAC Guard / AccessPolicy" "Comprueba institución, asignación y titularidad; RF01, RF02." "Guard / política"
                 inspection = component "InspectionController / InspectionService" "Autoriza, deduplica y coordina RegistrarInspeccionCasoUso; RF09–RF11." "Aplicación / TypeScript"
-                validation = component "FileValidator / InspectionValidator" "Valida ficha, firma, origen cámara, GPS y metadatos." "Validadores"
+                validation = component "FileValidator / InspectionValidator" "Valida ficha, firma, formato, tamaño e integridad de archivos." "Validadores"
                 providers = component "ManagementController / ProviderService" "Padrón, documentos y vigencias; RF05–RF06." "Aplicación / TypeScript"
                 risk = component "RiskAssessmentEngine" "Criticidad mediante política versionada; RF07." "Dominio"
                 operations = component "OperativoService" "Campañas, polígonos, asignaciones y versiones; RF08." "Aplicación"
@@ -42,13 +40,11 @@ workspace "SIFITUR Huamanga" "Arquitectura propuesta de fiscalización turístic
             objects = container "Custodia de objetos" "Originales, firma y PDF; SHA-256, versionado y retención." "S3 compatible" "Datos"
             broker = container "Cola de tareas" "Mensajes persistentes, confirmación y acuse después del commit." "RabbitMQ" "Cola"
         }
-        inspector -> movil "Captura y sincroniza inspecciones"
+        inspector -> consola "Registra y consulta inspecciones web"
         coordinador -> consola "Gestiona fiscalización"
         admin -> consola "Administra accesos y auditoría"
         prestador -> portal "Presenta descargos propios"
         ciudadano -> publico "Consulta formalidad y QR sin sesión"
-        movil -> local "Conserva borradores, firma y originales" "Acceso local cifrado"
-        movil -> gateway "Sincroniza con JWT vigente" "HTTPS / REST"
         consola -> gateway "Gestiona según rol y ámbito" "HTTPS / REST"
         portal -> gateway "Consulta y presenta descargo propio" "HTTPS / REST"
         publico -> gateway "Consulta solo proyección pública" "HTTPS / REST sin JWT"
@@ -66,7 +62,7 @@ workspace "SIFITUR Huamanga" "Arquitectura propuesta de fiscalización turístic
         worker -> objects "Lee originales y conserva PDF y hash" "HTTPS / S3 API"
         worker -> redis "Actualiza o invalida proyección versionada" "RESP / TLS"
         worker -> pasarela "Envía actas y avisos; registra resultado" "HTTPS"
-        movil -> inspection "Envía operación estable y referencias" "HTTPS / gateway"
+        consola -> inspection "Envía operación estable y referencias" "HTTPS / gateway"
         consola -> identity "Gestiona usuarios según privilegios" "HTTPS / gateway"
         consola -> providers "Mantiene padrón y vigencias" "HTTPS / gateway"
         consola -> claims "Evalúa descargos con motivo" "HTTPS / gateway"
@@ -113,7 +109,6 @@ workspace "SIFITUR Huamanga" "Arquitectura propuesta de fiscalización turístic
         }
         container sifitur "nivel2-contenedores" {
             include *
-            exclude "movil -> api"
             exclude "consola -> api"
             exclude "portal -> api"
             exclude "publico -> api"
@@ -169,9 +164,6 @@ workspace "SIFITUR Huamanga" "Arquitectura propuesta de fiscalización turístic
             }
             element "Web" {
                 shape WebBrowser
-            }
-            element "Movil" {
-                shape MobileDevicePortrait
             }
             relationship "Relationship" {
                 color #45576b

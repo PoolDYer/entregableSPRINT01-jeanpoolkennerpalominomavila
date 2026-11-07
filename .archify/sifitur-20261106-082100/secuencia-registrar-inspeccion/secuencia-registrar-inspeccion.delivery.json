@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
-  "receiptId": "9d1330b5-4a44-401c-8a6f-e246ec76fa6f",
+  "receiptId": "5c2e4c30-2e52-4d54-aab4-0dec93574042",
   "status": "current",
   "command": "deliver",
   "type": "sequence",
-  "input": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\secuencia-registrar-inspeccion\\candidate.json",
-  "output": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\secuencia-registrar-inspeccion\\secuencia-registrar-inspeccion.html",
+  "input": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\secuencia-registrar-inspeccion\\candidate.json",
+  "output": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\secuencia-registrar-inspeccion\\secuencia-registrar-inspeccion.html",
   "specification": {
-    "sha256": "68545621535bce4a02f90c6160c4d1964c28000d2f0b44981996c1d1032d237c",
-    "bytes": 5039
+    "sha256": "ac149a9e4607386a52824d069d3430d88c7a94b3419756cc196c4dfb9bf896f9",
+    "bytes": 5053
   },
   "artifact": {
-    "sha256": "d38fb77c75f117e896d63d1817e11eda9f911f165caffd198d45131b95e6e7f8",
-    "bytes": 841822
+    "sha256": "7ac1ddae671a395e926fc4557e1f508b6b4ffa02e2f91adc4b90b778deea27eb",
+    "bytes": 841878
   }
 }

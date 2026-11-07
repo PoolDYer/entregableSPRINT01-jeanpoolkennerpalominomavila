@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
-  "receiptId": "3093f06f-1075-40b8-a98b-1251c036eec8",
+  "receiptId": "feed2149-a527-46fe-b5c7-460cb5bad10a",
   "status": "current",
   "command": "deliver",
   "type": "lifecycle",
-  "input": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\estados-captura\\candidate.json",
-  "output": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\estados-captura\\estados-captura.html",
+  "input": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\estados-captura\\candidate.json",
+  "output": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\estados-captura\\estados-captura.html",
   "specification": {
-    "sha256": "2ae1245f1607e988cd8dcf719b7befa37a0044f7c0da3f6a27bb39d72176ac5f",
-    "bytes": 2249
+    "sha256": "bf8ac8af2114a3e4adbe8a59d4cc78e1eb056eae0d99900f64169e4d7f5e36d2",
+    "bytes": 2268
   },
   "artifact": {
-    "sha256": "1237921131915a45f4327e58621768706a206a2fdf39761aa36c25649700eb4f",
-    "bytes": 831217
+    "sha256": "dcad2512e4a34ebb66e8ced462537dc2d11d0670de0d1542fb1c100af373d0b5",
+    "bytes": 831272
   }
 }

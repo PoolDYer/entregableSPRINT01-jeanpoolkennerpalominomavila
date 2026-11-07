@@ -1,0 +1,439 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\arquitectura-limpia-sifitur\\candidate.json",
+    "sha256": "19645739fecde24fea5f03b249b61a61e68d76a3e6ee74fd103b1069364b5479",
+    "bytes": 15703
+  },
+  "artifact": {
+    "path": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\arquitectura-limpia-sifitur\\arquitectura-limpia-sifitur.html",
+    "sha256": "82810a568d6a64b184b0727cb0e7b9a44c226a41ad3eb61793078ef5cd218484",
+    "bytes": 897916
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\arquitectura-limpia-sifitur\\web-final\\arquitectura-limpia-sifitur.finalize.json",
+    "summaryReceipt": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\arquitectura-limpia-sifitur\\web-final\\arquitectura-limpia-sifitur.finalize-summary.json",
+    "browserCheckReceipt": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\arquitectura-limpia-sifitur\\web-final\\arquitectura-limpia-sifitur.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-06T18:25:06.732Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 13172,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  },
+  "visualReviewRecommendation": {
+    "action": "inspect-route-readability",
+    "signals": {
+      "resolvedCrossovers": 32,
+      "routesOverSuggestedBends": 9,
+      "routesOverSuggestedStretch": 4
+    },
+    "reason": "Automated gates passed, but crossings or detours still need perceptual review before claiming visual quality.",
+    "affectedRoutes": {
+      "crossings": [
+        {
+          "left": {
+            "id": "worker_entry-emit",
+            "from": "worker_entry",
+            "to": "emit",
+            "label": "Invoca",
+            "collectionIndex": 2,
+            "artifactIndex": 3
+          },
+          "right": {
+            "id": "register-inspection",
+            "from": "register",
+            "to": "inspection",
+            "label": "Crea / valida",
+            "collectionIndex": 3,
+            "artifactIndex": 4
+          },
+          "point": [
+            426,
+            374
+          ]
+        },
+        {
+          "left": {
+            "id": "worker_entry-emit",
+            "from": "worker_entry",
+            "to": "emit",
+            "label": "Invoca",
+            "collectionIndex": 2,
+            "artifactIndex": 3
+          },
+          "right": {
+            "id": "register-repo",
+            "from": "register",
+            "to": "repo",
+            "label": "Usa puerto",
+            "collectionIndex": 4,
+            "artifactIndex": 5
+          },
+          "point": [
+            596.0000000000001,
+            374
+          ]
+        },
+        {
+          "left": {
+            "id": "worker_entry-emit",
+            "from": "worker_entry",
+            "to": "emit",
+            "label": "Invoca",
+            "collectionIndex": 2,
+            "artifactIndex": 3
+          },
+          "right": {
+            "id": "register-store",
+            "from": "register",
+            "to": "store",
+            "label": "Verifica",
+            "collectionIndex": 5,
+            "artifactIndex": 6
+          },
+          "point": [
+            453.99999999999994,
+            374
+          ]
+        },
+        {
+          "left": {
+            "id": "worker_entry-emit",
+            "from": "worker_entry",
+            "to": "emit",
+            "label": "Invoca",
+            "collectionIndex": 2,
+            "artifactIndex": 3
+          },
+          "right": {
+            "id": "composition-register",
+            "from": "composition",
+            "to": "register",
+            "label": "Inyecta",
+            "collectionIndex": 16,
+            "artifactIndex": 17
+          },
+          "point": [
+            557,
+            374.00000000000006
+          ]
+        },
+        {
+          "left": {
+            "id": "register-repo",
+            "from": "register",
+            "to": "repo",
+            "label": "Usa puerto",
+            "collectionIndex": 4,
+            "artifactIndex": 5
+          },
+          "right": {
+            "id": "emit-store",
+            "from": "emit",
+            "to": "store",
+            "label": "Custodia PDF",
+            "collectionIndex": 7,
+            "artifactIndex": 8
+          },
+          "point": [
+            617,
+            544
+          ]
+        },
+        {
+          "left": {
+            "id": "register-repo",
+            "from": "register",
+            "to": "repo",
+            "label": "Usa puerto",
+            "collectionIndex": 4,
+            "artifactIndex": 5
+          },
+          "right": {
+            "id": "emit-pdf_port",
+            "from": "emit",
+            "to": "pdf_port",
+            "label": "Genera",
+            "collectionIndex": 8,
+            "artifactIndex": 9
+          },
+          "point": [
+            596,
+            415.9
+          ]
+        },
+        {
+          "left": {
+            "id": "register-repo",
+            "from": "register",
+            "to": "repo",
+            "label": "Usa puerto",
+            "collectionIndex": 4,
+            "artifactIndex": 5
+          },
+          "right": {
+            "id": "composition-emit",
+            "from": "composition",
+            "to": "emit",
+            "label": "Inyecta",
+            "collectionIndex": 17,
+            "artifactIndex": 18
+          },
+          "point": [
+            596.0000000000001,
+            457.99999999999994
+          ]
+        },
+        {
+          "left": {
+            "id": "register-store",
+            "from": "register",
+            "to": "store",
+            "label": "Verifica",
+            "collectionIndex": 5,
+            "artifactIndex": 6
+          },
+          "right": {
+            "id": "emit-store",
+            "from": "emit",
+            "to": "store",
+            "label": "Custodia PDF",
+            "collectionIndex": 7,
+            "artifactIndex": 8
+          },
+          "point": [
+            617,
+            656
+          ],
+          "sharedNode": "store"
+        }
+      ],
+      "detours": [
+        {
+          "relationship": {
+            "id": "worker_entry-emit",
+            "from": "worker_entry",
+            "to": "emit",
+            "label": "Invoca",
+            "collectionIndex": 2,
+            "artifactIndex": 3
+          },
+          "bends": 3,
+          "stretch": 1
+        },
+        {
+          "relationship": {
+            "id": "register-store",
+            "from": "register",
+            "to": "store",
+            "label": "Verifica",
+            "collectionIndex": 5,
+            "artifactIndex": 6
+          },
+          "bends": 4,
+          "stretch": 1
+        },
+        {
+          "relationship": {
+            "id": "emit-store",
+            "from": "emit",
+            "to": "store",
+            "label": "Custodia PDF",
+            "collectionIndex": 7,
+            "artifactIndex": 8
+          },
+          "bends": 4,
+          "stretch": 1.659,
+          "directCorridorBlockers": [
+            {
+              "id": "repo",
+              "label": "RepositorioInspecciones",
+              "box": [
+                620,
+                500,
+                220,
+                88
+              ]
+            }
+          ]
+        },
+        {
+          "relationship": {
+            "id": "emit-pdf_port",
+            "from": "emit",
+            "to": "pdf_port",
+            "label": "Genera",
+            "collectionIndex": 8,
+            "artifactIndex": 9
+          },
+          "bends": 4,
+          "stretch": 1.46,
+          "directCorridorBlockers": [
+            {
+              "id": "repo",
+              "label": "RepositorioInspecciones",
+              "box": [
+                620,
+                500,
+                220,
+                88
+              ]
+            },
+            {
+              "id": "store",
+              "label": "AlmacenEvidencias",
+              "box": [
+                620,
+                700,
+                220,
+                88
+              ]
+            }
+          ]
+        },
+        {
+          "relationship": {
+            "id": "composition-register",
+            "from": "composition",
+            "to": "register",
+            "label": "Inyecta",
+            "collectionIndex": 16,
+            "artifactIndex": 17
+          },
+          "bends": 3,
+          "stretch": 1.032
+        },
+        {
+          "relationship": {
+            "id": "composition-emit",
+            "from": "composition",
+            "to": "emit",
+            "label": "Inyecta",
+            "collectionIndex": 17,
+            "artifactIndex": 18
+          },
+          "bends": 4,
+          "stretch": 1.131
+        },
+        {
+          "relationship": {
+            "id": "pg-resources",
+            "from": "pg",
+            "to": "resources",
+            "label": "SQL/TLS",
+            "collectionIndex": 22,
+            "artifactIndex": 23
+          },
+          "bends": 4,
+          "stretch": 1.361,
+          "directCorridorBlockers": [
+            {
+              "id": "s3",
+              "label": "AlmacenEvidenciasS3",
+              "box": [
+                930,
+                700,
+                240,
+                88
+              ]
+            },
+            {
+              "id": "pdf_adapter",
+              "label": "GeneradorActasPdf",
+              "box": [
+                930,
+                900,
+                240,
+                88
+              ]
+            },
+            {
+              "id": "mail",
+              "label": "NotificadorInstitucional",
+              "box": [
+                930,
+                1100,
+                240,
+                88
+              ]
+            }
+          ]
+        },
+        {
+          "relationship": {
+            "id": "s3-resources",
+            "from": "s3",
+            "to": "resources",
+            "label": "HTTPS/S3",
+            "collectionIndex": 23,
+            "artifactIndex": 24
+          },
+          "bends": 4,
+          "stretch": 1.433,
+          "directCorridorBlockers": [
+            {
+              "id": "pdf_adapter",
+              "label": "GeneradorActasPdf",
+              "box": [
+                930,
+                900,
+                240,
+                88
+              ]
+            },
+            {
+              "id": "mail",
+              "label": "NotificadorInstitucional",
+              "box": [
+                930,
+                1100,
+                240,
+                88
+              ]
+            }
+          ]
+        }
+      ],
+      "truncated": true
+    },
+    "hints": [
+      "worker_entry → emit crosses register → inspection: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "worker_entry → emit crosses register → repo: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "worker_entry → emit crosses register → store: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "worker_entry → emit crosses composition → register: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "register → repo crosses emit → store: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "register → repo crosses emit → pdf_port: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "register → repo crosses composition → emit: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "register → store and emit → store cross next to store: move node register or emit so the two reach store from different sides (for example one level with it, one directly above or below it)."
+    ],
+    "repair": "Trace these relationships at the desktop viewport. For Architecture, use references/architecture-layout-repair.md: reflow a blocked main path or tangled connected scene, and repair an isolated defect locally only when the surrounding composition is accepted. Preserve all semantic content and user-fixed geometry. Rerun finalize once after the edit."
+  }
+}

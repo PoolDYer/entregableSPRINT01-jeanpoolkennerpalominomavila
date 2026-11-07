@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
-  "receiptId": "a67338cb-b171-44b1-ae01-475636b9ad57",
+  "receiptId": "a7b051e8-7bfb-4400-b4d4-0c8484101dd8",
   "status": "current",
   "command": "deliver",
   "type": "class",
-  "input": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\clases-modulo-inspecciones\\candidate.json",
-  "output": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\clases-modulo-inspecciones\\clases-modulo-inspecciones.html",
+  "input": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\clases-modulo-inspecciones\\candidate.json",
+  "output": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\clases-modulo-inspecciones\\clases-modulo-inspecciones.html",
   "specification": {
-    "sha256": "2830be27aadf0be7e5f42ca500ce313b74b0a684597b3e5f327eaa7b08a09a59",
-    "bytes": 8136
+    "sha256": "8c7427c957eff78818599cb960d3711f1656ce5357c173248c9b424ca68a9ac8",
+    "bytes": 7417
   },
   "artifact": {
-    "sha256": "73a4b73977813e8d4d7282b732e541c896d6b04dd5fa29ef527896f71b1df531",
-    "bytes": 862161
+    "sha256": "105ab21681448b1b379eeafa1c81d7386e4425be62539cd777559363315cb622",
+    "bytes": 858373
   }
 }

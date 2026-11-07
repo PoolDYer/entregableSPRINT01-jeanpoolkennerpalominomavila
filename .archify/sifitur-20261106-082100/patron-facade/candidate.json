@@ -2,13 +2,13 @@
   "schema_version": 1,
   "diagram_type": "class",
   "meta": {
-    "title": "SIFITUR · Fachada de sincronización",
+    "title": "SIFITUR · Fachada de registro web",
     "locale": "es",
     "output": ".archify/sifitur-20261106-082100/patron-facade/patron-facade.html",
     "quality_profile": "showcase",
     "repository": {
-      "url": "https://github.com/PoolDYer/entregable02-jeanpoolkennerpalominomavila.git",
-      "revision": "ac5bd7eb01bceee1c9230e675846fd9d1d4f79db"
+      "url": "https://github.com/PoolDYer/entregableSPRINT01-jeanpoolkennerpalominomavila.git",
+      "revision": "785988a34ad8cf27fbc9fc7ef728283127ed271a"
     }
   },
   "layout": {

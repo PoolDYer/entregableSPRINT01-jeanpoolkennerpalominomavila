@@ -2,21 +2,21 @@
   "schema_version": 1,
   "diagram_type": "sequence",
   "meta": {
-    "title": "SIFITUR · Sincronización de inspección",
+    "title": "SIFITUR · Registro web de inspección",
     "locale": "es",
     "output": ".archify/sifitur-20261106-082100/secuencia-registrar-inspeccion/secuencia-registrar-inspeccion.html",
     "quality_profile": "showcase",
     "repository": {
-      "url": "https://github.com/PoolDYer/entregable02-jeanpoolkennerpalominomavila.git",
-      "revision": "ac5bd7eb01bceee1c9230e675846fd9d1d4f79db"
+      "url": "https://github.com/PoolDYer/entregableSPRINT01-jeanpoolkennerpalominomavila.git",
+      "revision": "785988a34ad8cf27fbc9fc7ef728283127ed271a"
     }
   },
   "participants": [
     {
-      "id": "mobile",
+      "id": "web",
       "type": "frontend",
-      "label": "Flutter",
-      "sublabel": "SQLite cifrada",
+      "label": "Consola React",
+      "sublabel": "Registro web",
       "sources": [
         {
           "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
@@ -82,7 +82,7 @@
   "messages": [
     {
       "id": "paso-1",
-      "from": "mobile",
+      "from": "web",
       "to": "controller",
       "label": "POST /api/v1/inspecciones",
       "variant": "default",
@@ -172,7 +172,7 @@
     {
       "id": "paso-12",
       "from": "controller",
-      "to": "mobile",
+      "to": "web",
       "label": "201 RECIBIDA / 200 vigente",
       "variant": "return",
       "y": 788
@@ -192,7 +192,7 @@
       "title": "Confirmación",
       "items": [
         "Precondición: carga autenticada de originales y firma mediante API, con hash verificado.",
-        "El móvil conserva el borrador ante 401/403/409/422 o falta de red; PDF se emite después en trabajador."
+        "La web muestra errores 401/403/409/422; los borradores confirmados se guardan en PostgreSQL. El trabajador emite el PDF."
       ]
     },
     {

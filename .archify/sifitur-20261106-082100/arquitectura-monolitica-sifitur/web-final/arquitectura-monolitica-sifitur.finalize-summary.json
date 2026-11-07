@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\arquitectura-monolitica-sifitur\\candidate.json",
+    "sha256": "f732437621cf8ab3b79c27726535dfed53447c77136711cb851e96be69f7401e",
+    "bytes": 4301
+  },
+  "artifact": {
+    "path": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\arquitectura-monolitica-sifitur\\arquitectura-monolitica-sifitur.html",
+    "sha256": "37ac03c040bbc045d379c076f8c66e2a7804b470b6a49fe805afac9c13517e84",
+    "bytes": 842620
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\arquitectura-monolitica-sifitur\\web-final\\arquitectura-monolitica-sifitur.finalize.json",
+    "summaryReceipt": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\arquitectura-monolitica-sifitur\\web-final\\arquitectura-monolitica-sifitur.finalize-summary.json",
+    "browserCheckReceipt": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\arquitectura-monolitica-sifitur\\web-final\\arquitectura-monolitica-sifitur.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-06T18:25:06.732Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 10114,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  }
+}

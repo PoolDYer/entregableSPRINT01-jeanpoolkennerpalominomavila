@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "workflow",
+  "quality": "showcase",
+  "specification": {
+    "path": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\proceso-fiscalizacion\\candidate.json",
+    "sha256": "a6ecb31137a29fd3bc2918f5be02eeeaab7f0cd433d9b4b6a428445fc0626b65",
+    "bytes": 4866
+  },
+  "artifact": {
+    "path": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\proceso-fiscalizacion\\proceso-fiscalizacion.html",
+    "sha256": "4b6177c94a11a44aa8e6adedc27bcf5a695c5fd9a836f866a834f988e833a330",
+    "bytes": 846929
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\proceso-fiscalizacion\\web-final\\proceso-fiscalizacion.finalize.json",
+    "summaryReceipt": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\proceso-fiscalizacion\\web-final\\proceso-fiscalizacion.finalize-summary.json",
+    "browserCheckReceipt": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\proceso-fiscalizacion\\web-final\\proceso-fiscalizacion.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-06T18:25:06.732Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 10626,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  }
+}

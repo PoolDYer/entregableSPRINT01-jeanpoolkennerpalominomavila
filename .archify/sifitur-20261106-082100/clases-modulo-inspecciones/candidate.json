@@ -7,8 +7,8 @@
     "output": ".archify/sifitur-20261106-082100/clases-modulo-inspecciones/clases-modulo-inspecciones.html",
     "quality_profile": "showcase",
     "repository": {
-      "url": "https://github.com/PoolDYer/entregable02-jeanpoolkennerpalominomavila.git",
-      "revision": "ac5bd7eb01bceee1c9230e675846fd9d1d4f79db"
+      "url": "https://github.com/PoolDYer/entregableSPRINT01-jeanpoolkennerpalominomavila.git",
+      "revision": "785988a34ad8cf27fbc9fc7ef728283127ed271a"
     }
   },
   "layout": {
@@ -121,17 +121,22 @@
         },
         {
           "name": "origen",
-          "type": "CAMARA",
+          "type": "CARGA_WEB",
           "visibility": "private"
         },
         {
-          "name": "gps",
-          "type": "Coordenada",
-          "visibility": "private"
-        },
-        {
-          "name": "capturadaEn",
+          "name": "recibidaEn",
           "type": "FechaHora",
+          "visibility": "private"
+        },
+        {
+          "name": "tipoMime",
+          "type": "string",
+          "visibility": "private"
+        },
+        {
+          "name": "tamanoBytes",
+          "type": "number",
           "visibility": "private"
         }
       ],
@@ -229,39 +234,6 @@
       ]
     },
     {
-      "id": "gps",
-      "label": "Coordenada",
-      "kind": "record",
-      "row": 2,
-      "col": 0,
-      "methods": [
-        {
-          "name": "esValida",
-          "parameters": "",
-          "returns": "boolean",
-          "visibility": "public"
-        }
-      ],
-      "attributes": [
-        {
-          "name": "latitud",
-          "type": "number",
-          "visibility": "private"
-        },
-        {
-          "name": "longitud",
-          "type": "number",
-          "visibility": "private"
-        }
-      ],
-      "sublabel": "",
-      "sources": [
-        {
-          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
-        }
-      ]
-    },
-    {
       "id": "claims",
       "label": "Subsanacion",
       "kind": "class",
@@ -332,13 +304,6 @@
       "to": "acta",
       "kind": "association",
       "label": "1 a 0..1"
-    },
-    {
-      "id": "evidence-gps",
-      "from": "evidence",
-      "to": "gps",
-      "kind": "composition",
-      "label": "1 a 1"
     },
     {
       "id": "inspection-claims",

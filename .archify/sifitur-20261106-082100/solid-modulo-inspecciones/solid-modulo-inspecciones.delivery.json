@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
-  "receiptId": "03724649-e5da-4a3e-a66b-164c17d45db1",
+  "receiptId": "e3d2a07a-271b-4d5b-914c-8d08ad700dd4",
   "status": "current",
   "command": "deliver",
   "type": "architecture",
-  "input": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\solid-modulo-inspecciones\\candidate.json",
-  "output": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\solid-modulo-inspecciones\\solid-modulo-inspecciones.html",
+  "input": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\solid-modulo-inspecciones\\candidate.json",
+  "output": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\solid-modulo-inspecciones\\solid-modulo-inspecciones.html",
   "specification": {
-    "sha256": "162ddd60627b57571de31584a22f9c35ee9efdf073080c32263f55c80c684208",
-    "bytes": 4488
+    "sha256": "e8920058648f739fad19b9fb316b34025240a4a702aebdc5db1f9d2eb3efaea2",
+    "bytes": 4494
   },
   "artifact": {
-    "sha256": "d6f664fe5e33fbc31a791257b0243c2a29432c4bd34d11f2092169162a96155b",
-    "bytes": 841458
+    "sha256": "b4f39df76b1d1d4eaa3a9796aaa1fbe3e327d574b132b9dd379b28254dc13dd3",
+    "bytes": 841512
   }
 }

@@ -1317,17 +1317,17 @@ been cleared for every commercial, promotional, or redistributive use.</metadata
         </g>
 
         <!-- Components -->
-        <g id="node-client" data-node-id="client" data-node-label="Inspector / Flutter" tabindex="0" role="button" aria-label="Enfocar Inspector / Flutter, SQLite cifrada · operación estable, Componente de arquitectura" aria-pressed="false" data-node-kind="external" data-node-sublabel="SQLite cifrada · operación estable" data-node-tag="Captura offline" data-node-context="Componente de arquitectura">
-          <title>Inspector / Flutter · SQLite cifrada · operación estable · Componente de arquitectura · Captura offline</title>
+        <g id="node-client" data-node-id="client" data-node-label="Inspector / React" tabindex="0" role="button" aria-label="Enfocar Inspector / React, Consola web · operación estable, Componente de arquitectura" aria-pressed="false" data-node-kind="external" data-node-sublabel="Consola web · operación estable" data-node-tag="Registro web" data-node-context="Componente de arquitectura">
+          <title>Inspector / React · Consola web · operación estable · Componente de arquitectura · Registro web</title>
           <rect x="40" y="40" width="210" height="82" rx="8" class="c-mask"/>
           <rect x="40" y="40" width="210" height="82" rx="8" class="c-external" data-animate="node" style="--step: 0; --flow-node-name: archify-relay-node-0;" stroke-width="1.5"/>
           <g aria-hidden="true" data-semantic-sigil="external" class="semantic-sigil s-external" transform="translate(46 46) scale(0.6875)">
             <rect x="2.5" y="5" width="8.5" height="8" rx="1.5"/>
             <path d="M8 2.5h5.5V8M13.5 2.5 7.5 8.5"/>
           </g>
-          <text data-node-label="" x="145" y="79" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Inspector / Flutter</text>
-        <text x="145" y="95" class="t-muted" font-size="9" text-anchor="middle">SQLite cifrada · operación estable</text>
-        <text x="145" y="114" class="t-external" font-size="7" text-anchor="middle">Captura offline</text>
+          <text data-node-label="" x="145" y="79" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Inspector / React</text>
+        <text x="145" y="95" class="t-muted" font-size="9" text-anchor="middle">Consola web · operación estable</text>
+        <text x="145" y="114" class="t-external" font-size="7" text-anchor="middle">Registro web</text>
         </g>
 
         <g id="node-controller" data-node-id="controller" data-node-label="InspectionController" tabindex="0" role="button" aria-label="Enfocar InspectionController, DTO, actor validado y errores HTTP, PRESENTACIÓN / ENTRADAS" aria-pressed="false" data-node-kind="backend" data-node-sublabel="DTO, actor validado y errores HTTP" data-node-tag="presentacion/" data-node-context="PRESENTACIÓN / ENTRADAS">
@@ -1402,15 +1402,15 @@ been cleared for every commercial, promotional, or redistributive use.</metadata
         <text x="440" y="580" class="t-backend" font-size="7" text-anchor="middle">crear() · huella()</text>
         </g>
 
-        <g id="node-evidence" data-node-id="evidence" data-node-label="Evidencia" tabindex="0" role="button" aria-label="Enfocar Evidencia, Origen cámara, GPS y SHA-256, DOMINIO · entidades, reglas y puertos" aria-pressed="false" data-node-kind="backend" data-node-sublabel="Origen cámara, GPS y SHA-256" data-node-tag="Original verificable" data-node-context="DOMINIO · entidades, reglas y puertos">
-          <title>Evidencia · Origen cámara, GPS y SHA-256 · DOMINIO · entidades, reglas y puertos · Original verificable</title>
+        <g id="node-evidence" data-node-id="evidence" data-node-label="Evidencia" tabindex="0" role="button" aria-label="Enfocar Evidencia, Formato, tamaño y SHA-256, DOMINIO · entidades, reglas y puertos" aria-pressed="false" data-node-kind="backend" data-node-sublabel="Formato, tamaño y SHA-256" data-node-tag="Original verificable" data-node-context="DOMINIO · entidades, reglas y puertos">
+          <title>Evidencia · Formato, tamaño y SHA-256 · DOMINIO · entidades, reglas y puertos · Original verificable</title>
           <rect x="330" y="700" width="220" height="88" rx="8" class="c-mask"/>
           <rect x="330" y="700" width="220" height="88" rx="8" class="c-backend" data-animate="node" style="--step: 11; --flow-node-name: archify-relay-node-17;" stroke-width="1.5"/>
           <g aria-hidden="true" data-semantic-sigil="backend" class="semantic-sigil s-backend" transform="translate(336 706) scale(0.6875)">
             <path d="M6 3 3 8l3 5M10 3l3 5-3 5"/>
           </g>
           <text data-node-label="" x="440" y="742" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Evidencia</text>
-        <text x="440" y="758" class="t-muted" font-size="9" text-anchor="middle">Origen cámara, GPS y SHA-256</text>
+        <text x="440" y="758" class="t-muted" font-size="9" text-anchor="middle">Formato, tamaño y SHA-256</text>
         <text x="440" y="780" class="t-backend" font-size="7" text-anchor="middle">Original verificable</text>
         </g>
 

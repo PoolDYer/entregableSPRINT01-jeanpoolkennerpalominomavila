@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
-  "receiptId": "34f406a1-fc62-410c-a860-17977688f5d2",
+  "receiptId": "19b9dc40-efc7-4e4d-9b1c-909b674a03ca",
   "status": "current",
   "command": "deliver",
   "type": "architecture",
-  "input": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-monolitica-sifitur\\candidate.json",
-  "output": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\arquitectura-monolitica-sifitur\\arquitectura-monolitica-sifitur.html",
+  "input": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\arquitectura-monolitica-sifitur\\candidate.json",
+  "output": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\arquitectura-monolitica-sifitur\\arquitectura-monolitica-sifitur.html",
   "specification": {
-    "sha256": "d1729238e0879ac4c1e70f2af821e11e622a6d7a226a36f947c37b385ea1dfe5",
-    "bytes": 4306
+    "sha256": "f732437621cf8ab3b79c27726535dfed53447c77136711cb851e96be69f7401e",
+    "bytes": 4301
   },
   "artifact": {
-    "sha256": "a67bd65f5e8eae44688be8295c8e980730ae799750bfe6779bf40884da8da3b6",
-    "bytes": 842610
+    "sha256": "37ac03c040bbc045d379c076f8c66e2a7804b470b6a49fe805afac9c13517e84",
+    "bytes": 842620
   }
 }

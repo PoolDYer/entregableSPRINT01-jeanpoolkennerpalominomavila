@@ -202,11 +202,11 @@ Estos diagramas se elaboran con **Archify**, conforme al contenido de este docum
 | Modelo del agregado | [JSON Archify](../../../.archify/sifitur-20261106-082100/clases-modulo-inspecciones/candidate.json) | [HTML interactivo](../../../.archify/sifitur-20261106-082100/clases-modulo-inspecciones/clases-modulo-inspecciones.html) |
 | Registro web de inspección | [JSON Archify](../../../.archify/sifitur-20261106-082100/secuencia-registrar-inspeccion/candidate.json) | [HTML interactivo](../../../.archify/sifitur-20261106-082100/secuencia-registrar-inspeccion/secuencia-registrar-inspeccion.html) |
 | Estados de subsanación | [JSON Archify](../../../.archify/sifitur-20261106-082100/estados-expediente/candidate.json) | [HTML interactivo](../../../.archify/sifitur-20261106-082100/estados-expediente/estados-expediente.html) |
-| Estados de captura | [JSON Archify](../../../.archify/sifitur-20261106-082100/estados-captura/candidate.json) | [HTML interactivo](../../../.archify/sifitur-20261106-082100/estados-captura/estados-captura.html) |
+| Estados de registro web | [JSON Archify](../../../.archify/sifitur-20261106-082100/estados-captura/candidate.json) | [HTML interactivo](../../../.archify/sifitur-20261106-082100/estados-captura/estados-captura.html) |
 | Estados de emisión | [JSON Archify](../../../.archify/sifitur-20261106-082100/estados-emision/candidate.json) | [HTML interactivo](../../../.archify/sifitur-20261106-082100/estados-emision/estados-emision.html) |
 | Estados de notificación | [JSON Archify](../../../.archify/sifitur-20261106-082100/estados-notificacion/candidate.json) | [HTML interactivo](../../../.archify/sifitur-20261106-082100/estados-notificacion/estados-notificacion.html) |
 
-El seguimiento de subsanaciones se complementa con máquinas independientes de registro, emisión y notificación:
+El seguimiento de subsanaciones se complementa con máquinas independientes de captura, emisión y notificación:
 
 
 [Catálogo y reproducción de diagramas](../../../diagrams/README.md).

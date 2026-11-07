@@ -6,7 +6,7 @@
 
 | Alcance | Herramienta | Fuente editable |
 |---|---|---|
-| Arquitectura, componentes generales, proceso, paquetes, patrones, SOLID, agregado, sincronización y estados | Archify | `candidate.json` de cada vista, indexado en [archify-manifest.json](archify-manifest.json). |
+| Arquitectura, componentes generales, proceso, paquetes, patrones, SOLID, agregado, registro web y estados | Archify | `candidate.json` de cada vista, indexado en [archify-manifest.json](archify-manifest.json). |
 | C4 nivel 1: contexto | Structurizr | [workspace.dsl](structurizr/workspace.dsl), vista `nivel1-contexto`. |
 | C4 nivel 2: contenedores | Structurizr | Mismo modelo, vista `nivel2-contenedores`. |
 | C4 nivel 3: componentes | Structurizr | Mismo modelo, vista `nivel3-componentes`. |
@@ -16,7 +16,7 @@ Structurizr no modela clases UML de forma nativa. Se usa su mecanismo oficial de
 
 Las fuentes y visores Archify se conservan en `.archify/sifitur-20261106-082100/`. El catálogo enlaza cada JSON y HTML. Las referencias documentales de los candidatos corresponden a la revisión Git que sirvió de base; describen una arquitectura propuesta, sin atribuir una implementación a este repositorio.
 
-Los Markdown de `docs/` del [repositorio de referencia](https://github.com/PoolDYer/entregableSPRINT01-jeanpoolkennerpalominomavila/tree/main/docs) son la fuente de verdad del contenido. Los diagramas deben respetar sus nombres, responsabilidades, relaciones, condiciones, estados y alcance; los cambios de herramienta no justifican alterar las reglas documentadas. La revisión contrastada es `ac5bd7eb01bceee1c9230e675846fd9d1d4f79db`.
+Los Markdown de `docs/` del [repositorio de referencia](https://github.com/PoolDYer/entregableSPRINT01-jeanpoolkennerpalominomavila/tree/main/docs) son la fuente de verdad del contenido. Los diagramas deben respetar sus nombres, responsabilidades, relaciones, condiciones, estados y alcance; los cambios de herramienta no justifican alterar las reglas documentadas. El alcance vigente es exclusivamente web: consola institucional React para inspector, coordinador y TI; portal del administrado React y portal ciudadano Next.js. Las fuentes se actualizan conjuntamente con sus exportaciones.
 
 Cada diagrama se guarda como **JPG en `img/`** y se incrusta mediante una ruta relativa en el Markdown correspondiente. PNG y SVG se conservan como exportaciones adicionales. Archify descarga JPEG desde su menú nativo; para Structurizr se convierte su PNG exportado a JPEG, con fondo blanco y sin cambiar las dimensiones.
 

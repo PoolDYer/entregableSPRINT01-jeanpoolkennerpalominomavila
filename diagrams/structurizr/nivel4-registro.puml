@@ -1,37 +1,37 @@
 @startuml
-title C4 · Nivel 4 · Registro y sincronización de inspección\nSIFITUR Huamanga · RF03, RF04, RF09–RF11
+title C4 · Nivel 4 · Registro web de inspección\nSIFITUR Huamanga · RF04, RF09–RF11
 skinparam backgroundColor #FFFFFF
 skinparam sequenceArrowColor #2463A0
-participant "Flutter / SQLite" as Movil
+participant "Consola web / React" as Web
 participant InspectionController as Controller
 participant RegistrarInspeccionCasoUso as Caso
 participant OperativoService as Operativo
 participant AlmacenEvidencias as Objetos
 database "Repositorio / PostgreSQL" as DB
-note over Movil,Objetos
+note over Web,Objetos
   Precondición: carga autenticada de originales y firma mediante API;
-  S3 confirma objeto y hash. El móvil conserva su copia hasta el acuse durable.
+  S3 confirma objeto y hash. El servidor conserva los borradores confirmados en PostgreSQL.
 end note
-Movil -> Controller: POST /api/v1/inspecciones\noperacionId, versionRuta, ficha y referencias
+Web -> Controller: POST /api/v1/inspecciones\noperacionId, versionRuta, ficha y referencias
 Controller -> Caso: ejecutar(comando, actor validado)
 Caso -> Operativo: comprobar inspector, asignación y versión
 Operativo --> Caso: autorización vigente / 403 / 409
 break acceso denegado o versión de ruta en conflicto
   Caso --> Controller: error de autorización o versión
-  Controller --> Movil: 403 / 409; conservar borrador
+  Controller --> Web: 403 / 409; conservar borrador
 end
 Caso -> DB: buscarOperacion(institución + inspector + operación)
 DB --> Caso: registro + huella / inexistente
 alt operación existente
   Caso --> Controller: mismo registro si huella idéntica; conflicto si difiere
-  Controller --> Movil: 200 idéntica / 409 contenido diferente
+  Controller --> Web: 200 idéntica / 409 contenido diferente
 else operación nueva y autorizada
-  Caso -> Caso: Inspeccion.crear; validar ficha, GPS y firma
+  Caso -> Caso: Inspeccion.crear; validar ficha, archivo y firma
   Caso -> Objetos: verificar(objetoId, SHA256)
   Objetos --> Caso: originales íntegros / error de integridad
   break evidencia ausente o alterada
     Caso --> Controller: IntegridadError
-    Controller --> Movil: 422; no confirma inspección
+    Controller --> Web: 422; no confirma inspección
   end
   critical T1 · Transacción local PostgreSQL
     Caso -> DB: registrarAtomico(inspección, huella)\ndatos + auditoría + InspeccionRecibida en outbox
@@ -39,15 +39,15 @@ else operación nueva y autorizada
   end
   alt conflicto de unicidad con huella diferente
     Caso --> Controller: conflicto; sin sobrescritura
-    Controller --> Movil: 409; conservar borrador
+    Controller --> Web: 409; conservar borrador
   else registro nuevo o carrera idéntica
     Caso --> Controller: inspeccionId, estado vigente, versión, recibidaEn
-    Controller --> Movil: 201 nueva RECIBIDA / 200 repetición idéntica
+    Controller --> Web: 201 nueva RECIBIDA / 200 repetición idéntica
   end
 end
-note over Movil,DB
+note over Web,DB
   401/403: renovar sesión o resolver acceso; 422: datos/evidencias inválidos.
-  409: conservar borrador y resolver conflicto. Error o sin red: reintentar misma operación.
+  409: conservar borrador y resolver conflicto. Fallo HTTP: consultar el resultado antes de reenviar la misma operación.
   Unicidad en BD resuelve carreras concurrentes; no sobrescribir inspecciones recibidas.
 end note
 @enduml

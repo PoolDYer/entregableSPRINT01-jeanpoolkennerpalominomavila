@@ -2,13 +2,13 @@
   "schema_version": 3,
   "diagram_type": "lifecycle",
   "meta": {
-    "title": "SIFITUR · Estados de captura",
+    "title": "SIFITUR · Estados de registro web",
     "locale": "es",
     "output": ".archify/sifitur-20261106-082100/estados-captura/estados-captura.html",
     "quality_profile": "showcase",
     "repository": {
-      "url": "https://github.com/PoolDYer/entregable02-jeanpoolkennerpalominomavila.git",
-      "revision": "ac5bd7eb01bceee1c9230e675846fd9d1d4f79db"
+      "url": "https://github.com/PoolDYer/entregableSPRINT01-jeanpoolkennerpalominomavila.git",
+      "revision": "785988a34ad8cf27fbc9fc7ef728283127ed271a"
     }
   },
   "mainPath": [
@@ -21,7 +21,7 @@
       "id": "draft",
       "type": "start",
       "label": "BORRADOR",
-      "sublabel": "Cifrado local",
+      "sublabel": "Borrador en PostgreSQL",
       "sources": [
         {
           "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
@@ -32,7 +32,7 @@
       "id": "ready",
       "type": "waiting",
       "label": "LISTA",
-      "sublabel": "Ficha, firma y GPS válidos",
+      "sublabel": "Ficha, archivos y firma válidos",
       "sources": [
         {
           "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
@@ -81,7 +81,7 @@
       "items": [
         "Arquitectura propuesta; implementación y validación pendientes.",
         "409 conserva LISTA y añade una incidencia para revisión; 401/403/422 no confirman recepción ni borran el borrador.",
-        "Sin red o fallo técnico conserva LISTA y la misma operación; no borra el original hasta el acuse durable."
+        "El servidor conserva los borradores guardados; la web confirma recepción solo tras el acuse durable."
       ]
     }
   ]

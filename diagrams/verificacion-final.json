@@ -5,83 +5,83 @@
   "docs": [
     {
       "path": "docs\\01-analisis-de-sistema\\00-necesidad-del-negocio.md",
-      "sha256": "c3ed4fe6b90fe2f35d23b2d38bbafb4d1b8c58f1dcc36c8ae625fa87908616d1"
+      "sha256": "8a508a598c9051874d5617f7eab619b7b3751f6ef7c728668e6e2b734c7c9cdd"
     },
     {
       "path": "docs\\01-analisis-de-sistema\\01-actores.md",
-      "sha256": "fe6c5dc7353ab4035a503660e5e6e4420cf20a317d64d011fa3f95795ae81d0a"
+      "sha256": "92ac09ceae6db418bab1b65d08fffefde6f1ab7383135e2043a69468e4d30df5"
     },
     {
       "path": "docs\\01-analisis-de-sistema\\02-historias-del-usuario.md",
-      "sha256": "bc0bdf6d2c7b059bb4af81a0f1d137c7ad9dae0f1bb21589b5ef1e7215d603a0"
+      "sha256": "209c693959950afb6aff92678aad1d113a5195c91487fcb86084634d145622e8"
     },
     {
       "path": "docs\\01-analisis-de-sistema\\03-requisitos-funcionales.md",
-      "sha256": "727d9411747ac5aa71538d29f56775b28a4103dda3e42dc3478a1001b9b41c8a"
+      "sha256": "e54ebadcb01cbf9f4cefc43e92b3a2782678a1d08660f63348d409b45977fcd4"
     },
     {
       "path": "docs\\01-analisis-de-sistema\\04-atributos-de-calidad.md",
-      "sha256": "74913f914f73d01e9204f353f002118d61d46a4a757db9dfea0d82b6ff408389"
+      "sha256": "1cbd5b9252f4af62fa2612f167d95e3ab2ae00166aa2763ec807f02a9dcc8128"
     },
     {
       "path": "docs\\01-analisis-de-sistema\\05-restricciones.md",
-      "sha256": "5f03a677630f46a7168c6d1c9dd683dac20d74060d4109aafa1e115664524df4"
+      "sha256": "5c2c84b1bdff7dcd29c2c92dd426b658e8c752aac24e210482a8f7c49df5e4f0"
     },
     {
       "path": "docs\\01-analisis-de-sistema\\06-driver-arquitectonicos.md",
-      "sha256": "af9c95780e2cd73dfd0e1d1e6fe15ab1f63dfa3e2a4eef89a15e80a30d995503"
+      "sha256": "ff8474d1b5bdb8c1aa7878f363a70fcfd92ad7313bc78a4282163947d3c13e9b"
     },
     {
       "path": "docs\\01-analisis-de-sistema\\07-decisiones-arquitectonicas.md",
-      "sha256": "285f7d394be8154622b03ed47a5ed330c1be62b9b8be0bcf0b37a3996d5eed2b"
+      "sha256": "854167789e27d25d832c21d389f2abbdc272c9c87c73778d5a47cb0248bfa993"
     },
     {
       "path": "docs\\01-analisis-de-sistema\\08-escenarios-atributos-calidad.md",
-      "sha256": "6c1aa1bd23ac0ceeb985375de14fffaf5cf5d07e06e3dde7d2c2bc60688b3b98"
+      "sha256": "413441f00cb5a78c625c7475b19aa9948e2619523d86ed1cd732c69fac066dfa"
     },
     {
       "path": "docs\\02-arquitectura-software\\arquitectura-inicial.md",
-      "sha256": "9821c0519da73deb389d0a043878c8a8ba7c0da9e8e8bf112d147ce053b771b7"
+      "sha256": "91ea7bda79be59f37d239a85c071e22497ee7d62757f14b2e7e0ec65ccc029ed"
     },
     {
       "path": "docs\\02-arquitectura-software\\componentes-arquitectonicos.md",
-      "sha256": "7337734a43eb1a862a3e9f3ea64eaa1b2c6ef8145887e58b57d1e9a1a3248982"
+      "sha256": "8f0b37e285820e9030b11c3df631b34f6cf30d6cdd4fdcdc227da62017efb207"
     },
     {
       "path": "docs\\02-arquitectura-software\\enfoque-arquitectonico.md",
-      "sha256": "f8493ef419a5fbe9fe0d7f1faa2c681cf334993b3e62799d602ef74335c4f141"
+      "sha256": "dba8d3ea3231f20dd46642f32f9cf4a1f7a4c6eb587d1795ed8f216fd5950e83"
     },
     {
       "path": "docs\\02-arquitectura-software\\estilo-arquitectonico.md",
-      "sha256": "a1585521512a8f93b6c68d74ee61bc6e32f916811d8b1dab3becfafd3df53ebd"
+      "sha256": "5206138d0498832a4e15af42f928c5982485d6c1040593a5a51ae3829448eb91"
     },
     {
       "path": "docs\\03-diseño-de-software\\diseño-interno\\diseño-interno-de-modulos.md",
-      "sha256": "7ecd97dbe90a2740f1c54344e2b59f324408c458e303a28fec4ad6d1e547b747"
+      "sha256": "020c9167257d140935a04affa59fbe5821524ced72713161a91bb7539bee333f"
     },
     {
       "path": "docs\\03-diseño-de-software\\diseño-interno\\patrones-de-diseño.md",
-      "sha256": "d52fd32a679d4d70dea9f53d3823ca1e93c01068134a34dd5e567e7abad132a8"
+      "sha256": "243fbab13f0c849308d8525805673bb64a31a027c30c7db72d4b0f602db4e4ac"
     },
     {
       "path": "docs\\03-diseño-de-software\\diseño-interno\\principios-de-diseño.md",
-      "sha256": "1d51bacc8485f9188e3cbcb8612d21d49436cc35be41833125f889f53f5a0fc5"
+      "sha256": "3beedfc81f113f0778ef670eee491a6a235aa9ab381157b8e6509eeea97d2070"
     },
     {
       "path": "docs\\04-modelo-c4\\Nivel1-DiagramadeContextodelSistema.md",
-      "sha256": "35bdf8a0d1ac6e1076bd3d8825bff8bb24e963342173f6d4b0358762a76bdfdb"
+      "sha256": "600eae9707b4211e2117e487b787f40d4a708f42e6cc2ccd1d458be4413503cc"
     },
     {
       "path": "docs\\04-modelo-c4\\Nivel2-DiagramadeContenedores.md",
-      "sha256": "bc214b336c49add8ba61e369f1e8137b2d4611da4497e0b4f6ff6471477bf989"
+      "sha256": "ef7df2a223682616bc3cab171b93379e9164a0680a2c6a802d65f3ef325303d0"
     },
     {
       "path": "docs\\04-modelo-c4\\Nivel3-Diagrama-de-Componentes.md",
-      "sha256": "3e462d6d973f98df058f434784c6962d22ddad9d5190b84314315fc863058fe9"
+      "sha256": "6a5f5165dea4d278fa1d75e6dd7e1f4fe3b82c7c1fd6950e1a5bf28903a707a6"
     },
     {
       "path": "docs\\04-modelo-c4\\Nivel4-DiagramadeCodigo.md",
-      "sha256": "7b9fc437c7ef4bcbfa8056584169987061a068a1a3e16a85908a9bf59b56b3b8"
+      "sha256": "8343e1ddd18a5f28eba624a474bc3ddfe88e2efe6e4aff5f89c4b56e7e258f3a"
     }
   ],
   "diagramCount": 25,
@@ -116,7 +116,7 @@
       "result": "conforme"
     },
     {
-      "rule": "C4 N2: trece contenedores lógicos documentados",
+      "rule": "C4 N2: once contenedores lógicos web documentados",
       "result": "conforme"
     },
     {
@@ -152,11 +152,11 @@
       "result": "conforme"
     },
     {
-      "rule": "Captura: solo BORRADOR, LISTA y RECIBIDA",
+      "rule": "Registro web: solo BORRADOR, LISTA y RECIBIDA",
       "result": "conforme"
     },
     {
-      "rule": "Conflicto de captura conserva LISTA",
+      "rule": "Conflicto de registro web conserva LISTA",
       "result": "conforme"
     },
     {
@@ -188,15 +188,31 @@
       "result": "conforme"
     },
     {
-      "rule": "Sincronización: T1 e integridad condicionadas a operación nueva",
+      "rule": "Registro web: T1 e integridad condicionadas a operación nueva",
       "result": "conforme"
     },
     {
-      "rule": "Sincronización: reenvío idéntico 200 y conflicto 409 terminan sin T1",
+      "rule": "Registro web: reenvío idéntico 200 y conflicto 409 terminan sin T1",
       "result": "conforme"
     },
     {
       "rule": "Emisión UML: acuse posterior al commit y fallo de correo no revierte EMITIDA",
+      "result": "conforme"
+    },
+    {
+      "rule": "Inspector utiliza la consola institucional web",
+      "result": "conforme"
+    },
+    {
+      "rule": "Registro web mantiene formato e integridad de evidencias",
+      "result": "conforme"
+    },
+    {
+      "rule": "Borradores documentados en PostgreSQL",
+      "result": "conforme"
+    },
+    {
+      "rule": "Alcance exclusivo web en documentación y fuentes de diagramas",
       "result": "conforme"
     },
     {
@@ -205,6 +221,10 @@
     },
     {
       "rule": "arquitectura-alto-nivel: exportaciones presentes",
+      "result": "conforme"
+    },
+    {
+      "rule": "arquitectura-alto-nivel: etiquetas de la figura coherentes con el alcance web",
       "result": "conforme"
     },
     {
@@ -224,6 +244,10 @@
       "result": "conforme"
     },
     {
+      "rule": "arquitectura-limpia-sifitur: etiquetas de la figura coherentes con el alcance web",
+      "result": "conforme"
+    },
+    {
       "rule": "arquitectura-limpia-sifitur: codificación JPEG real",
       "result": "conforme"
     },
@@ -237,6 +261,10 @@
     },
     {
       "rule": "arquitectura-monolitica-sifitur: exportaciones presentes",
+      "result": "conforme"
+    },
+    {
+      "rule": "arquitectura-monolitica-sifitur: etiquetas de la figura coherentes con el alcance web",
       "result": "conforme"
     },
     {
@@ -256,6 +284,10 @@
       "result": "conforme"
     },
     {
+      "rule": "componentes: etiquetas de la figura coherentes con el alcance web",
+      "result": "conforme"
+    },
+    {
       "rule": "componentes: codificación JPEG real",
       "result": "conforme"
     },
@@ -269,6 +301,10 @@
     },
     {
       "rule": "paquetes-modulo-inspecciones: exportaciones presentes",
+      "result": "conforme"
+    },
+    {
+      "rule": "paquetes-modulo-inspecciones: etiquetas de la figura coherentes con el alcance web",
       "result": "conforme"
     },
     {
@@ -288,6 +324,10 @@
       "result": "conforme"
     },
     {
+      "rule": "clases-modulo-inspecciones: etiquetas de la figura coherentes con el alcance web",
+      "result": "conforme"
+    },
+    {
       "rule": "clases-modulo-inspecciones: codificación JPEG real",
       "result": "conforme"
     },
@@ -301,6 +341,10 @@
     },
     {
       "rule": "patron-adapter: exportaciones presentes",
+      "result": "conforme"
+    },
+    {
+      "rule": "patron-adapter: etiquetas de la figura coherentes con el alcance web",
       "result": "conforme"
     },
     {
@@ -320,6 +364,10 @@
       "result": "conforme"
     },
     {
+      "rule": "patron-repository: etiquetas de la figura coherentes con el alcance web",
+      "result": "conforme"
+    },
+    {
       "rule": "patron-repository: codificación JPEG real",
       "result": "conforme"
     },
@@ -333,6 +381,10 @@
     },
     {
       "rule": "patron-factory: exportaciones presentes",
+      "result": "conforme"
+    },
+    {
+      "rule": "patron-factory: etiquetas de la figura coherentes con el alcance web",
       "result": "conforme"
     },
     {
@@ -352,6 +404,10 @@
       "result": "conforme"
     },
     {
+      "rule": "patron-facade: etiquetas de la figura coherentes con el alcance web",
+      "result": "conforme"
+    },
+    {
       "rule": "patron-facade: codificación JPEG real",
       "result": "conforme"
     },
@@ -365,6 +421,10 @@
     },
     {
       "rule": "principio-dip: exportaciones presentes",
+      "result": "conforme"
+    },
+    {
+      "rule": "principio-dip: etiquetas de la figura coherentes con el alcance web",
       "result": "conforme"
     },
     {
@@ -384,6 +444,10 @@
       "result": "conforme"
     },
     {
+      "rule": "solid-modulo-inspecciones: etiquetas de la figura coherentes con el alcance web",
+      "result": "conforme"
+    },
+    {
       "rule": "solid-modulo-inspecciones: codificación JPEG real",
       "result": "conforme"
     },
@@ -397,6 +461,10 @@
     },
     {
       "rule": "proceso-fiscalizacion: exportaciones presentes",
+      "result": "conforme"
+    },
+    {
+      "rule": "proceso-fiscalizacion: etiquetas de la figura coherentes con el alcance web",
       "result": "conforme"
     },
     {
@@ -416,6 +484,10 @@
       "result": "conforme"
     },
     {
+      "rule": "estados-expediente: etiquetas de la figura coherentes con el alcance web",
+      "result": "conforme"
+    },
+    {
       "rule": "estados-expediente: codificación JPEG real",
       "result": "conforme"
     },
@@ -429,6 +501,10 @@
     },
     {
       "rule": "estados-captura: exportaciones presentes",
+      "result": "conforme"
+    },
+    {
+      "rule": "estados-captura: etiquetas de la figura coherentes con el alcance web",
       "result": "conforme"
     },
     {
@@ -448,6 +524,10 @@
       "result": "conforme"
     },
     {
+      "rule": "estados-emision: etiquetas de la figura coherentes con el alcance web",
+      "result": "conforme"
+    },
+    {
       "rule": "estados-emision: codificación JPEG real",
       "result": "conforme"
     },
@@ -461,6 +541,10 @@
     },
     {
       "rule": "estados-notificacion: exportaciones presentes",
+      "result": "conforme"
+    },
+    {
+      "rule": "estados-notificacion: etiquetas de la figura coherentes con el alcance web",
       "result": "conforme"
     },
     {
@@ -480,6 +564,10 @@
       "result": "conforme"
     },
     {
+      "rule": "secuencia-registrar-inspeccion: etiquetas de la figura coherentes con el alcance web",
+      "result": "conforme"
+    },
+    {
       "rule": "secuencia-registrar-inspeccion: codificación JPEG real",
       "result": "conforme"
     },
@@ -493,6 +581,10 @@
     },
     {
       "rule": "nivel1-contexto: exportaciones presentes",
+      "result": "conforme"
+    },
+    {
+      "rule": "nivel1-contexto: etiquetas de la figura coherentes con el alcance web",
       "result": "conforme"
     },
     {
@@ -512,6 +604,10 @@
       "result": "conforme"
     },
     {
+      "rule": "nivel2-contenedores: etiquetas de la figura coherentes con el alcance web",
+      "result": "conforme"
+    },
+    {
       "rule": "nivel2-contenedores: codificación JPEG real",
       "result": "conforme"
     },
@@ -525,6 +621,10 @@
     },
     {
       "rule": "nivel3-componentes: exportaciones presentes",
+      "result": "conforme"
+    },
+    {
+      "rule": "nivel3-componentes: etiquetas de la figura coherentes con el alcance web",
       "result": "conforme"
     },
     {
@@ -544,6 +644,10 @@
       "result": "conforme"
     },
     {
+      "rule": "nivel4-clases: etiquetas de la figura coherentes con el alcance web",
+      "result": "conforme"
+    },
+    {
       "rule": "nivel4-clases: codificación JPEG real",
       "result": "conforme"
     },
@@ -557,6 +661,10 @@
     },
     {
       "rule": "nivel4-registro: exportaciones presentes",
+      "result": "conforme"
+    },
+    {
+      "rule": "nivel4-registro: etiquetas de la figura coherentes con el alcance web",
       "result": "conforme"
     },
     {
@@ -576,6 +684,10 @@
       "result": "conforme"
     },
     {
+      "rule": "nivel4-secuencia: etiquetas de la figura coherentes con el alcance web",
+      "result": "conforme"
+    },
+    {
       "rule": "nivel4-secuencia: codificación JPEG real",
       "result": "conforme"
     },
@@ -592,6 +704,10 @@
       "result": "conforme"
     },
     {
+      "rule": "nivel4-agregado: etiquetas de la figura coherentes con el alcance web",
+      "result": "conforme"
+    },
+    {
       "rule": "nivel4-agregado: codificación JPEG real",
       "result": "conforme"
     },
@@ -604,43 +720,43 @@
     {
       "slug": "arquitectura-alto-nivel",
       "source": ".archify/sifitur-20261106-082100/arquitectura-alto-nivel/candidate.json",
-      "sourceSha256": "732b4d3aeee4db4a3cdf4f819a174c658bc5d7ce3996b9ea281973a4bc7b8c28",
+      "sourceSha256": "73ac35c34d1d5239fd49b02317dc4974b06291e0a49d8d4913eb79dc76df3c46",
       "html": ".archify/sifitur-20261106-082100/arquitectura-alto-nivel/arquitectura-alto-nivel.html",
-      "htmlSha256": "5377432960e43a11b2eddf4ea509526722c9e1d116f3ed0b29af1b1c4a7039ce",
-      "receipt": ".archify\\sifitur-20261106-082100\\arquitectura-alto-nivel\\revision-final\\arquitectura-alto-nivel.finalize-summary.json",
-      "img/arquitectura-alto-nivel.jpg": "737d81a1770a35965d8448853359d19bf537ae7827e838c4d5d30c3dc39cbad8",
-      "img/arquitectura-alto-nivel.png": "3e6803509aaae67b184b5611d4303f8a34d41b5702a9b30a3fff0f6b51f7c768",
-      "img/fuentes-svg/arquitectura-alto-nivel.svg": "ea0be1498a6827b0392691d03898d35745851fda7384ee9fc31ae7308ce03ca5"
+      "htmlSha256": "b5dd884da41bd7d7234157d1dc81cc048a1cbb316ce61b265d082d48babbea7d",
+      "receipt": ".archify\\sifitur-20261106-082100\\arquitectura-alto-nivel\\web-final\\arquitectura-alto-nivel.finalize-summary.json",
+      "img/arquitectura-alto-nivel.jpg": "91c5eefef10920e520221b5a18355c66a1a6112dd775374e1ebdc78058d3782b",
+      "img/arquitectura-alto-nivel.png": "e7293b59d1ba9de85ad35433274c89c4a360ebf5a759e8ed7a8c78f8686be803",
+      "img/fuentes-svg/arquitectura-alto-nivel.svg": "47460b057c88b2036d2066b0efbce02ac0b71787c280c6f9c7dc465ed772d530"
     },
     {
       "slug": "arquitectura-limpia-sifitur",
       "source": ".archify/sifitur-20261106-082100/arquitectura-limpia-sifitur/candidate.json",
-      "sourceSha256": "56a2656c096a79332fe9ca0af5ad859235b61e5cc5c0f250db96dd321370d38f",
+      "sourceSha256": "19645739fecde24fea5f03b249b61a61e68d76a3e6ee74fd103b1069364b5479",
       "html": ".archify/sifitur-20261106-082100/arquitectura-limpia-sifitur/arquitectura-limpia-sifitur.html",
-      "htmlSha256": "411247ccde413ec003f636d695f7d0666e1453000c6cdb2efa26546defdf0fd8",
-      "receipt": ".archify\\sifitur-20261106-082100\\arquitectura-limpia-sifitur\\ampliacion-final\\arquitectura-limpia-sifitur.finalize-summary.json",
-      "img/arquitectura-limpia-sifitur.jpg": "ef6e6aeb9489503ca19b32f1fd0ff2e34244d7cd12f0bf52e4d9897608d928fc",
-      "img/arquitectura-limpia-sifitur.png": "7930cbd5b7bab75665f20b87d97630ba73706ca4abbbf9c1411e97a9c2c0a175",
-      "img/fuentes-svg/arquitectura-limpia-sifitur.svg": "cfb98a72e05eb0ff9c7acb641b5108b209c10fa5ef3261e4b3a9bec02bd22f21"
+      "htmlSha256": "82810a568d6a64b184b0727cb0e7b9a44c226a41ad3eb61793078ef5cd218484",
+      "receipt": ".archify\\sifitur-20261106-082100\\arquitectura-limpia-sifitur\\web-final\\arquitectura-limpia-sifitur.finalize-summary.json",
+      "img/arquitectura-limpia-sifitur.jpg": "548abe28a3e89c6c81458c8756ff3fcd902653a2a0c15a9c4ddba93d462f56df",
+      "img/arquitectura-limpia-sifitur.png": "a82eaa182308596c817ec5431ed7874a983e023da5db2a09fceb93d5418d2cc2",
+      "img/fuentes-svg/arquitectura-limpia-sifitur.svg": "0b176ff9278646d69c887ce15944185cb00d001c5da627425eb27af09856f579"
     },
     {
       "slug": "arquitectura-monolitica-sifitur",
       "source": ".archify/sifitur-20261106-082100/arquitectura-monolitica-sifitur/candidate.json",
-      "sourceSha256": "d1729238e0879ac4c1e70f2af821e11e622a6d7a226a36f947c37b385ea1dfe5",
+      "sourceSha256": "f732437621cf8ab3b79c27726535dfed53447c77136711cb851e96be69f7401e",
       "html": ".archify/sifitur-20261106-082100/arquitectura-monolitica-sifitur/arquitectura-monolitica-sifitur.html",
-      "htmlSha256": "a67bd65f5e8eae44688be8295c8e980730ae799750bfe6779bf40884da8da3b6",
-      "receipt": ".archify\\sifitur-20261106-082100\\arquitectura-monolitica-sifitur\\arquitectura-monolitica-sifitur.finalize-summary.json",
-      "img/arquitectura-monolitica-sifitur.jpg": "aa220c40a12b6aade54d0227748f03eaa33829a1f900a233d27fb9c5f5975327",
-      "img/arquitectura-monolitica-sifitur.png": "c0adb5c1106e6ada99e2e4db7a45e0fa471406c7b491c5873f956e1bf743bb19",
-      "img/fuentes-svg/arquitectura-monolitica-sifitur.svg": "139208f0d0ec0eb5dd6d23574a9f93128950653f25e7f670385336ef79f76323"
+      "htmlSha256": "37ac03c040bbc045d379c076f8c66e2a7804b470b6a49fe805afac9c13517e84",
+      "receipt": ".archify\\sifitur-20261106-082100\\arquitectura-monolitica-sifitur\\web-final\\arquitectura-monolitica-sifitur.finalize-summary.json",
+      "img/arquitectura-monolitica-sifitur.jpg": "8dfe0d9cbbc0cb6729820b4238ed85c4c830ba43cdf3cff2817a5e0f5bb282fe",
+      "img/arquitectura-monolitica-sifitur.png": "76bf56b462095b1d317058bfe906ef6d5fa2904892d308f6784c5f8dff250982",
+      "img/fuentes-svg/arquitectura-monolitica-sifitur.svg": "b119db994d9c514aff630525e9fb35258ff5aec53ec31a0052f9dc5237df4455"
     },
     {
       "slug": "componentes",
       "source": ".archify/sifitur-20261106-082100/componentes/candidate.json",
-      "sourceSha256": "b9704a00827e8346a663731790a6b05ba8bddb20c25dbda6c3795fe0907ca7f6",
+      "sourceSha256": "24ebd4d5352cb19e92d25498a293ddd944e571825f9f3e998cfabc7e17587207",
       "html": ".archify/sifitur-20261106-082100/componentes/componentes.html",
-      "htmlSha256": "4eaee11441655ae08feec0e4b684681dee96ad7e119c48dc996fb82472097d1d",
-      "receipt": ".archify\\sifitur-20261106-082100\\componentes\\revision-final\\componentes.finalize-summary.json",
+      "htmlSha256": "45e622fc2f2a36ba0c6e8bd75bc8f1c43deecde00346637c018121d0952832aa",
+      "receipt": ".archify\\sifitur-20261106-082100\\componentes\\web-final\\componentes.finalize-summary.json",
       "img/componentes.jpg": "aabb57229624e0bff1aabf04010b57843b744f205f7f7cc61988c816abf0aee3",
       "img/componentes.png": "dce7882fe7fc87434a4c2184846608f8960ba6dbf50bef26421bd4124887055e",
       "img/fuentes-svg/componentes.svg": "e1467928ad4669cd6b6e00268e539e4a02000faa8653a28782d6c90d0be95457"
@@ -648,10 +764,10 @@
     {
       "slug": "paquetes-modulo-inspecciones",
       "source": ".archify/sifitur-20261106-082100/paquetes-modulo-inspecciones/candidate.json",
-      "sourceSha256": "cad6a9b9c393c18e224d581800e861a531ce6feb7412c992b54260df184640bf",
+      "sourceSha256": "c4b87679a6963b511aaa646a0aacb830ea8b859c7e0a9f58d0d5398e1d52c845",
       "html": ".archify/sifitur-20261106-082100/paquetes-modulo-inspecciones/paquetes-modulo-inspecciones.html",
-      "htmlSha256": "f63ec3be01b08c0c2e6541838eb31451c3e25cb938ec30ecd232900ca5361e5d",
-      "receipt": ".archify\\sifitur-20261106-082100\\paquetes-modulo-inspecciones\\paquetes-modulo-inspecciones.finalize-summary.json",
+      "htmlSha256": "67ca9c234f867a247201924095f72b890a302fa41b7deec7fa90789343e6adaf",
+      "receipt": ".archify\\sifitur-20261106-082100\\paquetes-modulo-inspecciones\\web-final\\paquetes-modulo-inspecciones.finalize-summary.json",
       "img/paquetes-modulo-inspecciones.jpg": "ac7273a8c16a8ef441a1857aa7e23bc1b6fa97fd26c5d65949df6205663a5911",
       "img/paquetes-modulo-inspecciones.png": "0ffa81cfcc4644c66bd802703a74447c67012942551b13354b3e741ebb69a351",
       "img/fuentes-svg/paquetes-modulo-inspecciones.svg": "7b79d15461f2bfdf256a687b699aa4b7f006ca7c4971996f528c19821f2eafef"
@@ -659,21 +775,21 @@
     {
       "slug": "clases-modulo-inspecciones",
       "source": ".archify/sifitur-20261106-082100/clases-modulo-inspecciones/candidate.json",
-      "sourceSha256": "2830be27aadf0be7e5f42ca500ce313b74b0a684597b3e5f327eaa7b08a09a59",
+      "sourceSha256": "8c7427c957eff78818599cb960d3711f1656ce5357c173248c9b424ca68a9ac8",
       "html": ".archify/sifitur-20261106-082100/clases-modulo-inspecciones/clases-modulo-inspecciones.html",
-      "htmlSha256": "73a4b73977813e8d4d7282b732e541c896d6b04dd5fa29ef527896f71b1df531",
-      "receipt": ".archify\\sifitur-20261106-082100\\clases-modulo-inspecciones\\revision-final\\clases-modulo-inspecciones.finalize-summary.json",
-      "img/clases-modulo-inspecciones.jpg": "c5948e3dbc3bf64b33c659cf6e45b57937ac7baf297b17c27acd16e8c638cd0b",
-      "img/clases-modulo-inspecciones.png": "a73ed6e3916d70b506ded67389511db7f6f8ab982e106c3c1b0748c8a89bd6a8",
-      "img/fuentes-svg/clases-modulo-inspecciones.svg": "f2887249eb004a8630ed965b6816346d52c1871fc880f86b1698d419f66a609c"
+      "htmlSha256": "105ab21681448b1b379eeafa1c81d7386e4425be62539cd777559363315cb622",
+      "receipt": ".archify\\sifitur-20261106-082100\\clases-modulo-inspecciones\\web-final\\clases-modulo-inspecciones.finalize-summary.json",
+      "img/clases-modulo-inspecciones.jpg": "8e91bc76a2d31be9463cee410bb4ca09178ce073df60be9d6852df85167d44d1",
+      "img/clases-modulo-inspecciones.png": "37d6dda8b96ae1704bfa0ec3743ed9608ab06ae8063d8cb0e32edbdec002aaba",
+      "img/fuentes-svg/clases-modulo-inspecciones.svg": "8c9c9c5e7e7dd065462d13dfdfc0e3da9fd68304ddf24aab412e0b82e7b54690"
     },
     {
       "slug": "patron-adapter",
       "source": ".archify/sifitur-20261106-082100/patron-adapter/candidate.json",
-      "sourceSha256": "5f8e9961968cb66a705fe74e1fcac47c7070ef26927bac90cb1966cbb4d7a1ea",
+      "sourceSha256": "2c7e503fc83f231714a683dc0e09e5d6c0e83d4e313022d4f7e4aaf3f6bc0e9c",
       "html": ".archify/sifitur-20261106-082100/patron-adapter/patron-adapter.html",
-      "htmlSha256": "d35d7201db6878e1c972fa47b38c5b9087b802418817575ec536f737e5ad799e",
-      "receipt": ".archify\\sifitur-20261106-082100\\patron-adapter\\patron-adapter.finalize-summary.json",
+      "htmlSha256": "0cdca1b1daa2c426fc20b135fcef39f828f21645a173ab63be5c81c7fd65680c",
+      "receipt": ".archify\\sifitur-20261106-082100\\patron-adapter\\web-final\\patron-adapter.finalize-summary.json",
       "img/patron-adapter.jpg": "a57a70568572ee8e6f01e443e5aeba4bfaef355f6d76048ed1fd5f386b026ffd",
       "img/patron-adapter.png": "7bc770db81b1d3507691a74ee50dec64f4cdff03d79d23952ad809be1d10b646",
       "img/fuentes-svg/patron-adapter.svg": "c43cb8c618e8740766e564d21a3f3de2228d05834509b2d6cee51a366edc0741"
@@ -681,10 +797,10 @@
     {
       "slug": "patron-repository",
       "source": ".archify/sifitur-20261106-082100/patron-repository/candidate.json",
-      "sourceSha256": "46f11751e4ca4e2b1335b6939ca8d7a18c05575b3ae6afc9b31b604b3ee27e74",
+      "sourceSha256": "4750e49e59546cbfdd0ff230cdffbfd335e8fa683bdbf9ebe2c0d762d908a258",
       "html": ".archify/sifitur-20261106-082100/patron-repository/patron-repository.html",
-      "htmlSha256": "0e6ff8e03a0503681262027f25d2beba3cecdf2489761c67f2347bfdcc90ac8c",
-      "receipt": ".archify\\sifitur-20261106-082100\\patron-repository\\patron-repository.finalize-summary.json",
+      "htmlSha256": "17cb961e8878cca60fc3aac7ce8a3e9ac6d18c6811d41ad2c74dd30d2cf2d11f",
+      "receipt": ".archify\\sifitur-20261106-082100\\patron-repository\\web-final\\patron-repository.finalize-summary.json",
       "img/patron-repository.jpg": "f8ae61affc4475eb736e554cdb112ee726aea6856afa20d85b9dc0047831ab39",
       "img/patron-repository.png": "7f83dc30b05c746d585636c94a9191f1b4fa555e70c1fdff9a9c0a0df74f7aa8",
       "img/fuentes-svg/patron-repository.svg": "a391ab93b0c04f4e351913a1f6edf59be09d58072f67c287c96840f1d5ef205b"
@@ -692,32 +808,32 @@
     {
       "slug": "patron-factory",
       "source": ".archify/sifitur-20261106-082100/patron-factory/candidate.json",
-      "sourceSha256": "08532a8a2ee0a9777720e69d4d9044e6973d3317ad1462dfa4eda5e4fc70370f",
+      "sourceSha256": "4d013282aab78ab78c7f90768d222858674712e66f81b41e4761d5de6b183261",
       "html": ".archify/sifitur-20261106-082100/patron-factory/patron-factory.html",
-      "htmlSha256": "996a2b286e26a375f4607e890ef0417ad73a3447d4d0c87c6dad441e63ddd8b0",
-      "receipt": ".archify\\sifitur-20261106-082100\\patron-factory\\patron-factory.finalize-summary.json",
-      "img/patron-factory.jpg": "203f1e6025a4ed989122d6c5ab74b73d871dc9dc5ddf7dc36c63e0964bdffb08",
-      "img/patron-factory.png": "3bd43e4001b718d7dd534eb7a9f62c680688df4e11ebae7069d3a2d940202c78",
-      "img/fuentes-svg/patron-factory.svg": "d76de4d1454e24d96a14245f568dfce6af3bda343c93c85a6f03e77feb51d87d"
+      "htmlSha256": "7bc5b5a6b03f1ff1178410bf874d403545a3d5ff59bd391bf49682272e3ac679",
+      "receipt": ".archify\\sifitur-20261106-082100\\patron-factory\\web-final\\patron-factory.finalize-summary.json",
+      "img/patron-factory.jpg": "2099a9a59b68e660e39ce85aa35047b8d5ea66bfdb4b1d0b7bb4b2b6aacca438",
+      "img/patron-factory.png": "d0ec33acac4271be73dcc3a4b5e4c6df07aa77ded61cc452573d604cf4521a7d",
+      "img/fuentes-svg/patron-factory.svg": "e6faaa4f4b98d60fae23761e91fad6fea8ae30a7f1a00beebb38aacda7fa05da"
     },
     {
       "slug": "patron-facade",
       "source": ".archify/sifitur-20261106-082100/patron-facade/candidate.json",
-      "sourceSha256": "5dc36d21c62dc0f8638ec37e28bea94c443026577bcde2541b4113cb124a2b5c",
+      "sourceSha256": "6f7dfd44a2f2a63c0c95edc06c6dd660fac3e1b328416264770426912ea0351c",
       "html": ".archify/sifitur-20261106-082100/patron-facade/patron-facade.html",
-      "htmlSha256": "bca021d904c63ac123cff231dc0cc869d4b9702ea08d2c15d020bbe8f837f366",
-      "receipt": ".archify\\sifitur-20261106-082100\\patron-facade\\patron-facade.finalize-summary.json",
-      "img/patron-facade.jpg": "120e255bb5c5575d94e86c63febde233c238a42a83794ff53db4a360ded4155b",
-      "img/patron-facade.png": "bef0009374b7fe19661346b41629c6d1c8f07387a8a78f10eb09793721f5c81f",
-      "img/fuentes-svg/patron-facade.svg": "eb84b97fe94a7b90f01a4903833601e05af38d9fb05b492eba00e4220f8f12c9"
+      "htmlSha256": "5646ce5b3ff8ca482820cacc6adc4e6ed415bcdfe1b88104b5e23ebe4b3f25f5",
+      "receipt": ".archify\\sifitur-20261106-082100\\patron-facade\\web-final\\patron-facade.finalize-summary.json",
+      "img/patron-facade.jpg": "c7b4bc4cbc5fd556ee05e117c1905d50bf791204c005bb4825e70d3e31d7a8a0",
+      "img/patron-facade.png": "3fc188efd9fea1a8ba456ce98d071b62ce4d52fc03936ba1019b7367be9b3cc7",
+      "img/fuentes-svg/patron-facade.svg": "5b194d12c9a410ccea7d938df89275d7c29b82a761249b85cedfc0e3701fdabc"
     },
     {
       "slug": "principio-dip",
       "source": ".archify/sifitur-20261106-082100/principio-dip/candidate.json",
-      "sourceSha256": "9848947a40dab35c1dfb59eef5be98c7c4db06cb83b43fabf52d4437fdfdfd92",
+      "sourceSha256": "d777e78ff0f0009adf4a9c047183717eac1cf0288153acb2c4464ffee9d2c757",
       "html": ".archify/sifitur-20261106-082100/principio-dip/principio-dip.html",
-      "htmlSha256": "3b08337efb3d765ba02d2b7e772c1c5612866bc08c37090ef821c877b688c1a0",
-      "receipt": ".archify\\sifitur-20261106-082100\\principio-dip\\revision-final\\principio-dip.finalize-summary.json",
+      "htmlSha256": "f97a6dc78c5601d32a7f857015e967761a2bb1196591b59a141f6d72d685c567",
+      "receipt": ".archify\\sifitur-20261106-082100\\principio-dip\\web-final\\principio-dip.finalize-summary.json",
       "img/principio-dip.jpg": "4bcb49cddcc0fe94df1edd7512c16e4814211c6dd2a36c733633f7a144b65d52",
       "img/principio-dip.png": "7184bb5bb0964053f3d3da081f3dbeadca3a0bf5d81e115301910ed46bb5d1e2",
       "img/fuentes-svg/principio-dip.svg": "ab4c9e9c21341015c40e3de9944e1eb389beb5149abf7b41b449035c292c9f5d"
@@ -725,10 +841,10 @@
     {
       "slug": "solid-modulo-inspecciones",
       "source": ".archify/sifitur-20261106-082100/solid-modulo-inspecciones/candidate.json",
-      "sourceSha256": "162ddd60627b57571de31584a22f9c35ee9efdf073080c32263f55c80c684208",
+      "sourceSha256": "e8920058648f739fad19b9fb316b34025240a4a702aebdc5db1f9d2eb3efaea2",
       "html": ".archify/sifitur-20261106-082100/solid-modulo-inspecciones/solid-modulo-inspecciones.html",
-      "htmlSha256": "d6f664fe5e33fbc31a791257b0243c2a29432c4bd34d11f2092169162a96155b",
-      "receipt": ".archify\\sifitur-20261106-082100\\solid-modulo-inspecciones\\revision-final\\solid-modulo-inspecciones.finalize-summary.json",
+      "htmlSha256": "b4f39df76b1d1d4eaa3a9796aaa1fbe3e327d574b132b9dd379b28254dc13dd3",
+      "receipt": ".archify\\sifitur-20261106-082100\\solid-modulo-inspecciones\\web-final\\solid-modulo-inspecciones.finalize-summary.json",
       "img/solid-modulo-inspecciones.jpg": "a61d7838d5b5969661661099bb79ee2a06a843fb3739a5f06b02040026e094e5",
       "img/solid-modulo-inspecciones.png": "9b339a0dfb3de362db5a8dce27d9539347256b3257fbdc9780beae897ecd65c3",
       "img/fuentes-svg/solid-modulo-inspecciones.svg": "353c0dfc73eee2cead2d64c86b9f6e55e5cc3a5e65d61023f9f2ce44cc26f892"
@@ -736,21 +852,21 @@
     {
       "slug": "proceso-fiscalizacion",
       "source": ".archify/sifitur-20261106-082100/proceso-fiscalizacion/candidate.json",
-      "sourceSha256": "d18e6e2fe9c5affdb640011f279b8d4847948ac2f53e7bc49ca7f068dd6f2680",
+      "sourceSha256": "a6ecb31137a29fd3bc2918f5be02eeeaab7f0cd433d9b4b6a428445fc0626b65",
       "html": ".archify/sifitur-20261106-082100/proceso-fiscalizacion/proceso-fiscalizacion.html",
-      "htmlSha256": "4d2508a3bc2718615219ae94bd583c0bfe3228d6bd6ce2a3527d9d87560093bf",
-      "receipt": ".archify\\sifitur-20261106-082100\\proceso-fiscalizacion\\proceso-fiscalizacion.finalize-summary.json",
-      "img/proceso-fiscalizacion.jpg": "cbe34bfeeaf73ac6fb905018a8d199f881c566c01339fc4326c7584cb1f1e988",
-      "img/proceso-fiscalizacion.png": "236e8a80a117df95fd748124e56685e3d3632ea15be20c703054fef80a5811c5",
-      "img/fuentes-svg/proceso-fiscalizacion.svg": "a9543cd12df851529238182b25fd3f379465ccb52ac909e763a40d22f1810ee1"
+      "htmlSha256": "4b6177c94a11a44aa8e6adedc27bcf5a695c5fd9a836f866a834f988e833a330",
+      "receipt": ".archify\\sifitur-20261106-082100\\proceso-fiscalizacion\\web-final\\proceso-fiscalizacion.finalize-summary.json",
+      "img/proceso-fiscalizacion.jpg": "8673e2b7d339c26a6427b176f82b0c4549faf8e149e213a033e1777bd7968695",
+      "img/proceso-fiscalizacion.png": "8d0b17a864dd58090d208463df24df856eda13afec62cc42b8c4682dfdac2e8d",
+      "img/fuentes-svg/proceso-fiscalizacion.svg": "901158ed1399c61dcacffb8b105e7ba9e29fc12614876e0fd6ade2241826edfd"
     },
     {
       "slug": "estados-expediente",
       "source": ".archify/sifitur-20261106-082100/estados-expediente/candidate.json",
-      "sourceSha256": "2755fa87c3f9de049d2f1796262df165e8ac5e8b8fb4fe0653938aaa719d7dda",
+      "sourceSha256": "94418930c2acaea752f29e97c8564155d266f1e9b837c6744f8733968345afb1",
       "html": ".archify/sifitur-20261106-082100/estados-expediente/estados-expediente.html",
-      "htmlSha256": "af931d5a166b611863b789c53512bc2efe987c17c1ba6b96e38d687d7052b4cc",
-      "receipt": ".archify\\sifitur-20261106-082100\\estados-expediente\\revision-final\\estados-expediente.finalize-summary.json",
+      "htmlSha256": "684dfd0be883ab9428417d2f57883bfd1e4d4ee46de810cccf4bf7b91cf9fbcd",
+      "receipt": ".archify\\sifitur-20261106-082100\\estados-expediente\\web-final\\estados-expediente.finalize-summary.json",
       "img/estados-expediente.jpg": "76e21e6cae4d9a8706d1199150bd5a6a027949ba15f7f151a2f3ed322550f55d",
       "img/estados-expediente.png": "f1c3316405d3dd21c96399a60c01ef138e37f341e0b6132d60b834bfcfc4d3d8",
       "img/fuentes-svg/estados-expediente.svg": "31428b57fd569b0076784beaa291c1a48f394af435105eb63a26b83834270a7d"
@@ -758,21 +874,21 @@
     {
       "slug": "estados-captura",
       "source": ".archify/sifitur-20261106-082100/estados-captura/candidate.json",
-      "sourceSha256": "2ae1245f1607e988cd8dcf719b7befa37a0044f7c0da3f6a27bb39d72176ac5f",
+      "sourceSha256": "bf8ac8af2114a3e4adbe8a59d4cc78e1eb056eae0d99900f64169e4d7f5e36d2",
       "html": ".archify/sifitur-20261106-082100/estados-captura/estados-captura.html",
-      "htmlSha256": "1237921131915a45f4327e58621768706a206a2fdf39761aa36c25649700eb4f",
-      "receipt": ".archify\\sifitur-20261106-082100\\estados-captura\\review-docs-jpg\\estados-captura.finalize-summary.json",
-      "img/estados-captura.jpg": "fad5ec209b98f835c13bdcdabd54059b49f711d8a30dd4c2d02698cb2e5b3f0c",
-      "img/estados-captura.png": "2f95c05f8da19c1af1ce9cf3a79542ed844d831c09511cee43e7046195d03e8a",
-      "img/fuentes-svg/estados-captura.svg": "cdd042442a29fb3dd44f73265bd6eab664c00db07481572928ab9db11b507e85"
+      "htmlSha256": "dcad2512e4a34ebb66e8ced462537dc2d11d0670de0d1542fb1c100af373d0b5",
+      "receipt": ".archify\\sifitur-20261106-082100\\estados-captura\\web-final\\estados-captura.finalize-summary.json",
+      "img/estados-captura.jpg": "010f30e19d36fea739ac1cdc2daa53d3a9f972a7096d741229629805c29a9efb",
+      "img/estados-captura.png": "c923cb1b94889d7756e4b346381897a2f6e05b27f12bbd4a2ed51987d16db5e1",
+      "img/fuentes-svg/estados-captura.svg": "ef34430b605e425ff9e62551d9c58b3f1f2f55fe64ac389cef54ff38581a3028"
     },
     {
       "slug": "estados-emision",
       "source": ".archify/sifitur-20261106-082100/estados-emision/candidate.json",
-      "sourceSha256": "97adef0ce0a4fefaf257d7b80fa924dfbeb3a8958403f7a6430e562f22c2251f",
+      "sourceSha256": "6868b502d082f60465084a3e5cd0121e695e7161e0fae7cb896f6d822e1d1bf6",
       "html": ".archify/sifitur-20261106-082100/estados-emision/estados-emision.html",
-      "htmlSha256": "861c3422e9cbce78473e5b91142b0ff716e7b5a0e0104236a9bc4aab065d12dd",
-      "receipt": ".archify\\sifitur-20261106-082100\\estados-emision\\review-3\\estados-emision.finalize-summary.json",
+      "htmlSha256": "f9f0d8672c8c4a80088953f0d760e7648ee713bc4d889dd70d161409ac73bb96",
+      "receipt": ".archify\\sifitur-20261106-082100\\estados-emision\\web-final\\estados-emision.finalize-summary.json",
       "img/estados-emision.jpg": "d58bc644db3f88aa6f5a1ee115a53fb86bb5d7013ac5b8d41ca5fa837f7a3288",
       "img/estados-emision.png": "3b1c1d29b45b4929821d5af0ecf582e246ed35ea2307673107324a0f70848bc7",
       "img/fuentes-svg/estados-emision.svg": "aac34a4fe4a3689e5abf97d51d3899305bbc909605fc9c243eaadcd58c1779f8"
@@ -780,10 +896,10 @@
     {
       "slug": "estados-notificacion",
       "source": ".archify/sifitur-20261106-082100/estados-notificacion/candidate.json",
-      "sourceSha256": "18f7b59320c5822a1422e699b0f3c5e331ed3d44474336f63a606b357802fa56",
+      "sourceSha256": "74481a85c3d12b06fe31bbee7e1967fd4624e734b8044e7fa52fa1c64f2b6ef5",
       "html": ".archify/sifitur-20261106-082100/estados-notificacion/estados-notificacion.html",
-      "htmlSha256": "80bba6e274ab94266baea7fb3b0f14f33560eb4513b8bfd7638407632af48995",
-      "receipt": ".archify\\sifitur-20261106-082100\\estados-notificacion\\revision-final\\estados-notificacion.finalize-summary.json",
+      "htmlSha256": "5dfbe2ce5fe1baf0d384b28cebe53d6cb530c08685ba129a07d4f4c26f63cc0a",
+      "receipt": ".archify\\sifitur-20261106-082100\\estados-notificacion\\web-final\\estados-notificacion.finalize-summary.json",
       "img/estados-notificacion.jpg": "799ae9b4d2d0f22806dcdc1b29a79ffba78ed2a95e665edafa9a3aef33c81ab3",
       "img/estados-notificacion.png": "394b89226115f120c522c80b3425ddeec792b8373b0960980b5679e845626242",
       "img/fuentes-svg/estados-notificacion.svg": "7e529b10722b857836f7b59ef4db0e827151579a3709131420065e9b4f89bbd0"
@@ -791,62 +907,62 @@
     {
       "slug": "secuencia-registrar-inspeccion",
       "source": ".archify/sifitur-20261106-082100/secuencia-registrar-inspeccion/candidate.json",
-      "sourceSha256": "68545621535bce4a02f90c6160c4d1964c28000d2f0b44981996c1d1032d237c",
+      "sourceSha256": "ac149a9e4607386a52824d069d3430d88c7a94b3419756cc196c4dfb9bf896f9",
       "html": ".archify/sifitur-20261106-082100/secuencia-registrar-inspeccion/secuencia-registrar-inspeccion.html",
-      "htmlSha256": "d38fb77c75f117e896d63d1817e11eda9f911f165caffd198d45131b95e6e7f8",
-      "receipt": ".archify\\sifitur-20261106-082100\\secuencia-registrar-inspeccion\\revision-final\\secuencia-registrar-inspeccion.finalize-summary.json",
-      "img/secuencia-registrar-inspeccion.jpg": "be97cf5edb8fdef2f333e1eaf7ef9d9725ee766e3b4fb60031531e38db2b1e80",
-      "img/secuencia-registrar-inspeccion.png": "226eae2f880fbc3cf041cff70c292908d9fb4c01b99949e04a84f115ce729f18",
-      "img/fuentes-svg/secuencia-registrar-inspeccion.svg": "859dcf19e4fca1da3a736a30c9d4ca80fdee5943ec179a3132bfb5b3a4aa1192"
+      "htmlSha256": "7ac1ddae671a395e926fc4557e1f508b6b4ffa02e2f91adc4b90b778deea27eb",
+      "receipt": ".archify\\sifitur-20261106-082100\\secuencia-registrar-inspeccion\\web-final\\secuencia-registrar-inspeccion.finalize-summary.json",
+      "img/secuencia-registrar-inspeccion.jpg": "88d22cc11d739b51ad18e956dc7e8ca54c2914f8ecec4c026d3de075d5ccd29d",
+      "img/secuencia-registrar-inspeccion.png": "241f22be8eefbf242f445fb462ada0094eedec9659a28000c16bb04872a7f791",
+      "img/fuentes-svg/secuencia-registrar-inspeccion.svg": "e3da0f1e80dfa70e62244966a33ac38de975d2af11bafd378192ae93a6428a71"
     },
     {
       "slug": "nivel1-contexto",
-      "workspaceSha256": "7969374e641f472a62abd81047f7f54b5de006687521736ec03e94af4648d5db",
-      "img/nivel1-contexto.jpg": "156b738cb56185a5755d85a05165d85c4f79de7644930e03f79599befaa7db3f",
-      "img/nivel1-contexto.png": "7f7b321ffb8c3e9415fe11d6fc5c52e108dcf82dcac78fac51ba4ceb05855fa5",
-      "img/fuentes-svg/nivel1-contexto.svg": "1862698996829a35f4c5b2c9e5027327074ea3bd9a0dde670c8e43997e3211b7"
+      "workspaceSha256": "49dd54e7df9cb8f19b740f6e2b81243c30b04ea03790a2bae0158e5e25e75c0f",
+      "img/nivel1-contexto.jpg": "4510ffd128354da7830c81080358a517a97a25a5c0bf300d66d2907f0ce2c2ee",
+      "img/nivel1-contexto.png": "11db7ee7e2c1aaa325ec619e225326d1cc3b5a13cb39f6a30d8d5f696fbf87d1",
+      "img/fuentes-svg/nivel1-contexto.svg": "42620ae8693e63413666dfa817b801aabb0cc2bf79f4905dc7fbb9c6956cb519"
     },
     {
       "slug": "nivel2-contenedores",
-      "workspaceSha256": "7969374e641f472a62abd81047f7f54b5de006687521736ec03e94af4648d5db",
-      "img/nivel2-contenedores.jpg": "16c30dbcad42fde01c0d079fa3c9e50fd4b3c960f094946b863502635b0806bc",
-      "img/nivel2-contenedores.png": "bdb24ae34121950811e0eac94af6c6092c68c84a6c08df946575698782666d20",
-      "img/fuentes-svg/nivel2-contenedores.svg": "5ca88fd4de842a429b785871ac996b14dc8f3946d04226b589645a8e54b4b6eb"
+      "workspaceSha256": "49dd54e7df9cb8f19b740f6e2b81243c30b04ea03790a2bae0158e5e25e75c0f",
+      "img/nivel2-contenedores.jpg": "00a3a24c3abcc70684badf804a8d241b61f955c2c100e7e06cdf923ccadd2ecb",
+      "img/nivel2-contenedores.png": "cfbab9f5f7e4fe2911e6699a5932690b13d626123e17f36391392cd4a13e8d00",
+      "img/fuentes-svg/nivel2-contenedores.svg": "3b8cd754995ac7d2cb54f101d243ce9653702d8d3bc80d17718b4b26aae7e7c2"
     },
     {
       "slug": "nivel3-componentes",
-      "workspaceSha256": "7969374e641f472a62abd81047f7f54b5de006687521736ec03e94af4648d5db",
-      "img/nivel3-componentes.jpg": "c135de224bdb783e8ecb4f266ca63d276f0eb0a11ff6be9eebdf0e076e9f7dd4",
-      "img/nivel3-componentes.png": "52ba8e11d918fc77cc358f12d531474773a604882ea7d04d10dd34e7c87b21e0",
-      "img/fuentes-svg/nivel3-componentes.svg": "dac875f5cf3df2c58b9420a83608a8d0b1b5803812ffa8e44c1769af51f7034d"
+      "workspaceSha256": "49dd54e7df9cb8f19b740f6e2b81243c30b04ea03790a2bae0158e5e25e75c0f",
+      "img/nivel3-componentes.jpg": "8e074cc4a6313380e1301aaa34d011006caaab4680f99dee6dcf913f2832ae05",
+      "img/nivel3-componentes.png": "9915aa51c88914ad5a063a55e59778b0aa84b4e2bfac0adf7315cd2a929aad56",
+      "img/fuentes-svg/nivel3-componentes.svg": "4abbf3485515823712757968fdd64286299d75cfe827427dc627a703e183c168"
     },
     {
       "slug": "nivel4-clases",
-      "workspaceSha256": "7969374e641f472a62abd81047f7f54b5de006687521736ec03e94af4648d5db",
-      "img/nivel4-clases.jpg": "cf087dbc03296d375c0bce5a73d4056ad6b639c830248d9ff40b85beeb1191f2",
-      "img/nivel4-clases.png": "58d4e33fe75e99fd1bd1e1fb247f3d98a1900bc56f1876c0cd22eb2656917d23",
-      "img/fuentes-svg/nivel4-clases.svg": "a3851cefce164451a4c37122d7b81e195b03b43c946a964f042edab7f682829f"
+      "workspaceSha256": "49dd54e7df9cb8f19b740f6e2b81243c30b04ea03790a2bae0158e5e25e75c0f",
+      "img/nivel4-clases.jpg": "5f1a6092f63d4a6f00a7fe3a677bb8b151ed58ba0a21cf13b86df0c6ac9e2258",
+      "img/nivel4-clases.png": "2fcc7bb4a7f14f14dee772faba251324f510e726fb7bcbc7dd41ca3e8cd6be8e",
+      "img/fuentes-svg/nivel4-clases.svg": "fc9809a9c21d7f6925063586a2ffc1fe7af52a7eb3f4c7a3bdf2db384fabc5e4"
     },
     {
       "slug": "nivel4-registro",
-      "workspaceSha256": "7969374e641f472a62abd81047f7f54b5de006687521736ec03e94af4648d5db",
-      "img/nivel4-registro.jpg": "680d77c116a36611cf10f98874a9d578991506ad9fddabd60ed2400c0b1fc50a",
-      "img/nivel4-registro.png": "6037217399d96f26d35fb62daaf07e27bb9e2808cc32650eff784ff20dabd90a",
-      "img/fuentes-svg/nivel4-registro.svg": "126779af11098af3163fea6634f821e71acc18ce6c024cf19f9ed3d6822f9c43"
+      "workspaceSha256": "49dd54e7df9cb8f19b740f6e2b81243c30b04ea03790a2bae0158e5e25e75c0f",
+      "img/nivel4-registro.jpg": "827490cbc9a8d89c64486004c8c6622e479f9f211d1567e437b6e0388601bc53",
+      "img/nivel4-registro.png": "9c17502ef714de1f360c76dade40a96b46e4207734410418e2c5bc57f8cd985b",
+      "img/fuentes-svg/nivel4-registro.svg": "b52b2b9ceb1a75edcb0b7b86fe617fa16e1384a51cac2d46982ad4248b6cae49"
     },
     {
       "slug": "nivel4-secuencia",
-      "workspaceSha256": "7969374e641f472a62abd81047f7f54b5de006687521736ec03e94af4648d5db",
-      "img/nivel4-secuencia.jpg": "c1d1b9e35699d2842c1fe6bcc5ce3f694ab58337f4956ee0b499994e8a9b0a7e",
-      "img/nivel4-secuencia.png": "41e77a28867f6f21f751bdbb1e6e3a477a17ee214c60d2811c4b1042288f4308",
-      "img/fuentes-svg/nivel4-secuencia.svg": "1ef66dd24375ee21b8f5abc2b045d7722aca31aaecd043e839c9ae5a9d95645f"
+      "workspaceSha256": "49dd54e7df9cb8f19b740f6e2b81243c30b04ea03790a2bae0158e5e25e75c0f",
+      "img/nivel4-secuencia.jpg": "8656c51b601adc6a9716fcab41915ac78305326dd90b7d4272b2480509caf968",
+      "img/nivel4-secuencia.png": "e62ebd6acee98316e234bd4b0cae565c913dac7195f3f4144520785cb939a575",
+      "img/fuentes-svg/nivel4-secuencia.svg": "51f55a84d4a0e830559b4471f0c3fdcbbf9c58e819255d012e5a04fcf51b9d4d"
     },
     {
       "slug": "nivel4-agregado",
-      "workspaceSha256": "7969374e641f472a62abd81047f7f54b5de006687521736ec03e94af4648d5db",
-      "img/nivel4-agregado.jpg": "91b86067615536d55b7f7f2615cfd0eec93e632134810df699b905b17a9f793a",
-      "img/nivel4-agregado.png": "ccb33c914e1fd8738ce7f9c96b5a4acba72e0cab72129f40adb22c278c8e093b",
-      "img/fuentes-svg/nivel4-agregado.svg": "889e4a4ef0a630aac8d96b38f1cebbe4cc9ea1d2fdb951ddf6fddb86d047eb4c"
+      "workspaceSha256": "49dd54e7df9cb8f19b740f6e2b81243c30b04ea03790a2bae0158e5e25e75c0f",
+      "img/nivel4-agregado.jpg": "9ff17392cb4e1facdc44ff562ca429c1c64c132ca7c41094a233b7431dcdbb93",
+      "img/nivel4-agregado.png": "bbb5958ab880f66456e5249ec368c413ab60322a81c8e8924c8f858339f5ea7b",
+      "img/fuentes-svg/nivel4-agregado.svg": "e8b90edf4ea81b218ecd15a56fbce107b4abf2b9e2e66cbf22407cf8c5d4de28"
     }
   ],
   "errors": []

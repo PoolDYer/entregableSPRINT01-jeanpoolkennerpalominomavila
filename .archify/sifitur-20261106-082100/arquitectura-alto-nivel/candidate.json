@@ -7,35 +7,16 @@
     "output": ".archify/sifitur-20261106-082100/arquitectura-alto-nivel/arquitectura-alto-nivel.html",
     "quality_profile": "showcase",
     "repository": {
-      "url": "https://github.com/PoolDYer/entregable02-jeanpoolkennerpalominomavila.git",
-      "revision": "ac5bd7eb01bceee1c9230e675846fd9d1d4f79db"
+      "url": "https://github.com/PoolDYer/entregableSPRINT01-jeanpoolkennerpalominomavila.git",
+      "revision": "785988a34ad8cf27fbc9fc7ef728283127ed271a"
     }
   },
   "components": [
     {
-      "id": "movil",
-      "type": "frontend",
-      "label": "App Flutter",
-      "sublabel": "Inspector · SQLite cifrada",
-      "pos": [
-        40,
-        40
-      ],
-      "size": [
-        180,
-        72
-      ],
-      "sources": [
-        {
-          "path": "docs/02-arquitectura-software/arquitectura-inicial.md"
-        }
-      ]
-    },
-    {
       "id": "consola",
       "type": "frontend",
       "label": "Consola React",
-      "sublabel": "Coordinador / TI",
+      "sublabel": "Inspector / Coordinador / TI",
       "pos": [
         350,
         40
@@ -304,13 +285,6 @@
       "from": "api",
       "to": "replica",
       "label": "Reportes SQL/TLS",
-      "variant": "default"
-    },
-    {
-      "id": "movil-gateway",
-      "from": "movil",
-      "to": "gateway",
-      "label": "HTTPS",
       "variant": "default"
     },
     {

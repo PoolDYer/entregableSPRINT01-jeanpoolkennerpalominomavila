@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
-  "receiptId": "db694d97-cd57-4ad4-9799-cff7bacf1fa7",
+  "receiptId": "4e6260d3-724f-40cf-98c3-ef5a30a4e335",
   "status": "current",
   "command": "deliver",
   "type": "architecture",
-  "input": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\componentes\\candidate.json",
-  "output": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\componentes\\componentes.html",
+  "input": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\componentes\\candidate.json",
+  "output": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\componentes\\componentes.html",
   "specification": {
-    "sha256": "b9704a00827e8346a663731790a6b05ba8bddb20c25dbda6c3795fe0907ca7f6",
-    "bytes": 6540
+    "sha256": "24ebd4d5352cb19e92d25498a293ddd944e571825f9f3e998cfabc7e17587207",
+    "bytes": 6546
   },
   "artifact": {
-    "sha256": "4eaee11441655ae08feec0e4b684681dee96ad7e119c48dc996fb82472097d1d",
-    "bytes": 851714
+    "sha256": "45e622fc2f2a36ba0c6e8bd75bc8f1c43deecde00346637c018121d0952832aa",
+    "bytes": 851792
   }
 }

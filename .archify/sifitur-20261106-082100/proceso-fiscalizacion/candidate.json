@@ -7,8 +7,8 @@
     "output": ".archify/sifitur-20261106-082100/proceso-fiscalizacion/proceso-fiscalizacion.html",
     "quality_profile": "showcase",
     "repository": {
-      "url": "https://github.com/PoolDYer/entregable02-jeanpoolkennerpalominomavila.git",
-      "revision": "ac5bd7eb01bceee1c9230e675846fd9d1d4f79db"
+      "url": "https://github.com/PoolDYer/entregableSPRINT01-jeanpoolkennerpalominomavila.git",
+      "revision": "785988a34ad8cf27fbc9fc7ef728283127ed271a"
     }
   },
   "lanes": [
@@ -84,7 +84,7 @@
       "col": 2,
       "type": "frontend",
       "label": "Inspeccionar",
-      "sublabel": "Offline · firma y GPS",
+      "sublabel": "Web · archivos y firma",
       "sources": [
         {
           "path": "docs/01-analisis-de-sistema/00-necesidad-del-negocio.md"
@@ -96,7 +96,7 @@
       "lane": "inspector",
       "col": 3,
       "type": "backend",
-      "label": "Sincronizar / emitir",
+      "label": "Registrar / emitir",
       "sublabel": "Recepción · PDF y hash",
       "sources": [
         {

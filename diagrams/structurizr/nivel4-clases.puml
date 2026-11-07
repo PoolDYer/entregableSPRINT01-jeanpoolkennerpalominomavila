@@ -34,8 +34,9 @@ package "Dominio / contratos" {
   class Evidencia <<objeto de valor>> {
     -objetoId: UUID
     -hash: SHA256
-    -gps: Coordenada
-    -origen: CAMARA
+    -tipoMime: string
+    -tamanoBytes: number
+    -origen: CARGA_WEB
   }
   class Acta {
     -objetoId: UUID

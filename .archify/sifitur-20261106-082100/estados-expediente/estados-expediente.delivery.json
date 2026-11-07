@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
-  "receiptId": "19242e7f-ceda-4fb3-9f73-de31b95c5df9",
+  "receiptId": "e3d7f213-427b-48f8-bc5e-b89749afee7a",
   "status": "current",
   "command": "deliver",
   "type": "lifecycle",
-  "input": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\estados-expediente\\candidate.json",
-  "output": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\estados-expediente\\estados-expediente.html",
+  "input": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\estados-expediente\\candidate.json",
+  "output": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\estados-expediente\\estados-expediente.html",
   "specification": {
-    "sha256": "2755fa87c3f9de049d2f1796262df165e8ac5e8b8fb4fe0653938aaa719d7dda",
-    "bytes": 3704
+    "sha256": "94418930c2acaea752f29e97c8564155d266f1e9b837c6744f8733968345afb1",
+    "bytes": 3710
   },
   "artifact": {
-    "sha256": "af931d5a166b611863b789c53512bc2efe987c17c1ba6b96e38d687d7052b4cc",
-    "bytes": 841053
+    "sha256": "684dfd0be883ab9428417d2f57883bfd1e4d4ee46de810cccf4bf7b91cf9fbcd",
+    "bytes": 841107
   }
 }

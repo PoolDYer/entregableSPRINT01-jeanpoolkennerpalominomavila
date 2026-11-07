@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg viewBox="0 0 596 526" role="img" lang="es" aria-labelledby="archify-diagram-title archify-diagram-description" data-animation="trace" data-preset="classic" data-quality-profile="showcase" data-class-ui="" data-reader-fit="intrinsic-height" data-reader-min-text="7.5" style="--flow-cycle: 4.070s; width: 596px; height: 526px; min-width: 0px;" width="596" height="526" xmlns="http://www.w3.org/2000/svg" data-theme="light"><style>
+<svg viewBox="0 0 596 546" role="img" lang="es" aria-labelledby="archify-diagram-title archify-diagram-description" data-animation="trace" data-preset="classic" data-quality-profile="showcase" data-class-ui="" data-reader-fit="intrinsic-height" data-reader-min-text="7.5" style="--flow-cycle: 4.106s; width: 596px; height: 546px; min-width: 0px;" width="596" height="546" xmlns="http://www.w3.org/2000/svg" data-theme="light"><style>
 /*
 JetBrains Mono variable WOFF2 subsets from Google Fonts service revision v24.
 These fixed bytes are shared by the viewer and its SVG/raster exports.
@@ -399,64 +399,64 @@ svg[data-preset="editorial"] { --flow-halo-peak: 0.07; --flow-glow-peak: 0.28; -
 }
 @keyframes archify-relay-ripple {
   0% { r: 2px; opacity: var(--flow-peak, 0.6); }
-  18.428%, 100% { r: 20px; opacity: 0; }
+  18.268%, 100% { r: 20px; opacity: 0; }
 }
 @keyframes archify-relay-comet-0 {
   0% { stroke-dashoffset: calc(var(--flow-len, 0px) + var(--flow-shift, 0px)); opacity: 0; animation-timing-function: cubic-bezier(0.45, 0.05, 0.35, 1); }
-  2.064% { opacity: var(--flow-peak, 0.9); }
-  10.32% { stroke-dashoffset: var(--flow-shift, 0px); opacity: var(--flow-peak, 0.9); }
-  14.251%, 100% { stroke-dashoffset: var(--flow-shift, 0px); opacity: 0; }
+  2.046% { opacity: var(--flow-peak, 0.9); }
+  10.23% { stroke-dashoffset: var(--flow-shift, 0px); opacity: var(--flow-peak, 0.9); }
+  14.127%, 100% { stroke-dashoffset: var(--flow-shift, 0px); opacity: 0; }
 }
 @keyframes archify-relay-wake-0 {
-  0%, 3.096% { opacity: 0; }
-  10.32% { opacity: var(--flow-peak, 0.3); }
-  32.433%, 100% { stroke-dashoffset: 0px; opacity: 0; }
+  0%, 3.069% { opacity: 0; }
+  10.23% { opacity: var(--flow-peak, 0.3); }
+  32.151%, 100% { stroke-dashoffset: 0px; opacity: 0; }
 }
 @keyframes archify-relay-comet-1 {
   0% { stroke-dashoffset: calc(var(--flow-len, 0px) + var(--flow-shift, 0px)); opacity: 0; animation-timing-function: cubic-bezier(0.45, 0.05, 0.35, 1); }
-  2.545% { opacity: var(--flow-peak, 0.9); }
-  12.724% { stroke-dashoffset: var(--flow-shift, 0px); opacity: var(--flow-peak, 0.9); }
-  16.655%, 100% { stroke-dashoffset: var(--flow-shift, 0px); opacity: 0; }
+  2.523% { opacity: var(--flow-peak, 0.9); }
+  12.613% { stroke-dashoffset: var(--flow-shift, 0px); opacity: var(--flow-peak, 0.9); }
+  16.51%, 100% { stroke-dashoffset: var(--flow-shift, 0px); opacity: 0; }
 }
 @keyframes archify-relay-wake-1 {
   0% { stroke-dashoffset: var(--flow-len, 0px); opacity: var(--flow-peak, 0.3); animation-timing-function: cubic-bezier(0.45, 0.05, 0.35, 1); }
-  12.724% { stroke-dashoffset: 0px; opacity: var(--flow-peak, 0.3); }
-  34.838%, 100% { stroke-dashoffset: 0px; opacity: 0; }
+  12.613% { stroke-dashoffset: 0px; opacity: var(--flow-peak, 0.3); }
+  34.535%, 100% { stroke-dashoffset: 0px; opacity: 0; }
 }
 @keyframes archify-relay-comet-2 {
   0% { stroke-dashoffset: calc(var(--flow-len, 0px) + var(--flow-shift, 0px)); opacity: 0; animation-timing-function: cubic-bezier(0.45, 0.05, 0.35, 1); }
-  2.948% { opacity: var(--flow-peak, 0.9); }
-  30.711% { stroke-dashoffset: var(--flow-shift, 0px); opacity: var(--flow-peak, 0.9); }
-  34.642%, 100% { stroke-dashoffset: var(--flow-shift, 0px); opacity: 0; }
+  2.923% { opacity: var(--flow-peak, 0.9); }
+  31.314% { stroke-dashoffset: var(--flow-shift, 0px); opacity: var(--flow-peak, 0.9); }
+  35.211%, 100% { stroke-dashoffset: var(--flow-shift, 0px); opacity: 0; }
 }
 @keyframes archify-relay-wake-2 {
-  0%, 9.213% { opacity: 0; }
-  30.711% { opacity: var(--flow-peak, 0.3); }
-  52.824%, 100% { stroke-dashoffset: 0px; opacity: 0; }
+  0%, 9.394% { opacity: 0; }
+  31.314% { opacity: var(--flow-peak, 0.3); }
+  53.235%, 100% { stroke-dashoffset: 0px; opacity: 0; }
 }
 @keyframes archify-relay-node-0 {
   0%, 100% { filter: var(--ambient-node-base-filter, none); }
   0% { filter: var(--ambient-node-base-filter, none); }
-  2.948%, 10.32% { filter: var(--ambient-node-base-filter,) drop-shadow(0 0 10px var(--arrow-emphasis)); }
-  29.485% { filter: var(--ambient-node-base-filter, none); }
+  2.923%, 10.23% { filter: var(--ambient-node-base-filter,) drop-shadow(0 0 10px var(--arrow-emphasis)); }
+  29.228% { filter: var(--ambient-node-base-filter, none); }
 }
 @keyframes archify-relay-node-1 {
   0%, 100% { filter: var(--ambient-node-base-filter, none); }
-  10.32% { filter: var(--ambient-node-base-filter, none); }
-  13.268%, 20.639% { filter: var(--ambient-node-base-filter,) drop-shadow(0 0 10px var(--arrow-emphasis)); }
-  39.804% { filter: var(--ambient-node-base-filter, none); }
+  10.23% { filter: var(--ambient-node-base-filter, none); }
+  13.153%, 20.46% { filter: var(--ambient-node-base-filter,) drop-shadow(0 0 10px var(--arrow-emphasis)); }
+  39.458% { filter: var(--ambient-node-base-filter, none); }
 }
 @keyframes archify-relay-node-2 {
   0%, 100% { filter: var(--ambient-node-base-filter, none); }
-  25.501% { filter: var(--ambient-node-base-filter, none); }
-  28.449%, 35.82% { filter: var(--ambient-node-base-filter,) drop-shadow(0 0 10px var(--arrow-emphasis)); }
-  54.986% { filter: var(--ambient-node-base-filter, none); }
+  25.279% { filter: var(--ambient-node-base-filter, none); }
+  28.202%, 35.509% { filter: var(--ambient-node-base-filter,) drop-shadow(0 0 10px var(--arrow-emphasis)); }
+  54.507% { filter: var(--ambient-node-base-filter, none); }
 }
 @keyframes archify-relay-node-3 {
   0%, 100% { filter: var(--ambient-node-base-filter, none); }
-  43.488% { filter: var(--ambient-node-base-filter, none); }
-  46.436%, 53.807% { filter: var(--ambient-node-base-filter,) drop-shadow(0 0 10px var(--arrow-emphasis)); }
-  72.972% { filter: var(--ambient-node-base-filter, none); }
+  43.979% { filter: var(--ambient-node-base-filter, none); }
+  46.902%, 54.209% { filter: var(--ambient-node-base-filter,) drop-shadow(0 0 10px var(--arrow-emphasis)); }
+  73.207% { filter: var(--ambient-node-base-filter, none); }
 }
 svg[data-class-ui] .cl-zebra { fill: color-mix(in srgb, var(--cl-hue) 6%, transparent); }
 svg[data-class-ui] .cl-param { fill: color-mix(in srgb, var(--text) 72%, var(--text-muted)); }
@@ -494,7 +494,7 @@ svg[data-class-ui]:has([data-legend-semantic-kind="realization"]:is(:hover, :foc
 svg[data-class-ui]:has([data-legend-semantic-kind="composition"]:is(:hover, :focus-within)) [data-class-relationship]:not([data-class-relationship="composition"]) { opacity: 0.15; }
 svg[data-class-ui]:has([data-legend-semantic-kind="aggregation"]:is(:hover, :focus-within)) [data-class-relationship]:not([data-class-relationship="aggregation"]) { opacity: 0.15; }
 :root, svg { --bg: #f4f5f7; --grid: #e9edf2; --canvas-dot: #e2e7ec; --text: #111827; --text-muted: #5b6474; --text-dim: #9aa3b2; --text-faint: #6b7280; --panel: #ffffff; --panel-border: #e5e7eb; --lane-fill: rgba(248, 250, 252, 0.65); --lane-stroke: #cbd5e1; --arrow: #64748b; --arrow-emphasis: #059669; --mask: #ffffff; --frontend-fill: rgba(34, 211, 238, 0.15); --frontend-stroke: #0891b2; --backend-fill: rgba(52, 211, 153, 0.18); --backend-stroke: #059669; --database-fill: rgba(167, 139, 250, 0.2); --database-stroke: #7c3aed; --cloud-fill: rgba(251, 191, 36, 0.18); --cloud-stroke: #d97706; --security-fill: rgba(251, 113, 133, 0.15); --security-stroke: #e11d48; --messagebus-fill: rgba(251, 146, 60, 0.15); --messagebus-stroke: #ea580c; --external-fill: rgba(148, 163, 184, 0.18); --external-stroke: #64748b; --toolbar-bg: rgba(255, 255, 255, 0.92); --toolbar-border: #cbd5e1; --toolbar-text: #334155; --toolbar-hover: #ffffff; --toolbar-menu-bg: #ffffff; --flow-cycle: ; --flow-halo-peak: ; --flow-glow-peak: ; --flow-tail-peak: ; --flow-head-peak: ; --flow-wake-peak: ; --flow-ripple-peak: ; --flow-peak: ; --cl-hue: ; }
-</style><rect x="0" y="0" width="596" height="526" fill="#f4f5f7"/><metadata id="archify-software-notices">NOTICE
+</style><rect x="0" y="0" width="596" height="546" fill="#f4f5f7"/><metadata id="archify-software-notices">NOTICE
 Archify
 Copyright (c) 2026 tt-a1i (Archify)
 Copyright (c) 2025 Cocoon AI
@@ -901,7 +901,7 @@ been cleared for every commercial, promotional, or redistributive use.</metadata
         <!-- Relationships (before types for correct z-order) -->
         <path data-edge-from="command" data-edge-to="inspection" data-edge-label="crear(datos)" data-edge-key="0" data-edge-id="command-inspection" data-class-relationship="dependency" data-composition-points="252,104;352,104" d="M 252 104 L 352 104" class="a-default cl-relationship cl-dashed" data-animate="edge" style="--step: 0;" stroke-width="1.5" marker-end="url(#cl-open)"/>
         <path data-edge-from="inspection" data-edge-to="evidence" data-edge-label="1..*" data-edge-key="1" data-edge-id="inspection-evidence" data-class-relationship="composition" data-composition-points="462,159;462,304" d="M 462 159 L 462 304" class="a-default cl-relationship" data-animate="edge" style="--step: 1;" stroke-width="1.5" marker-start="url(#cl-diamond-filled)"/>
-        <path data-edge-from="inspection" data-edge-to="error" data-edge-label="Rechaza inválidos" data-edge-key="2" data-edge-id="inspection-error" data-class-relationship="dependency" data-composition-points="352,130;302,130;302,386;252,386" d="M 352 130 L 310 130 Q 302 130 302 138 L 302 378 Q 302 386 294 386 L 252 386" class="a-default cl-relationship cl-dashed" data-animate="edge" style="--step: 2;" stroke-width="1.5" marker-end="url(#cl-open)"/>
+        <path data-edge-from="inspection" data-edge-to="error" data-edge-label="Rechaza inválidos" data-edge-key="2" data-edge-id="inspection-error" data-class-relationship="dependency" data-composition-points="352,130;302,130;302,396;252,396" d="M 352 130 L 310 130 Q 302 130 302 138 L 302 388 Q 302 396 294 396 L 252 396" class="a-default cl-relationship cl-dashed" data-animate="edge" style="--step: 2;" stroke-width="1.5" marker-end="url(#cl-open)"/>
 
         <!-- Types -->
         <g id="node-command" data-node-id="command" data-node-label="DatosInspeccion" tabindex="0" role="button" aria-label="Enfocar DatosInspeccion, Registro" aria-pressed="false" data-node-kind="record" data-node-context="Registro" data-class-kind="record" class="cl-hue-database">
@@ -947,8 +947,8 @@ been cleared for every commercial, promotional, or redistributive use.</metadata
 
         <g id="node-evidence" data-node-id="evidence" data-node-label="Evidencia" tabindex="0" role="button" aria-label="Enfocar Evidencia, Registro" aria-pressed="false" data-node-kind="record" data-node-context="Registro" data-class-kind="record" class="cl-hue-database">
           <title>Evidencia · Registro</title>
-          <rect x="352" y="304" width="220" height="164" rx="8" class="c-mask"/>
-          <rect x="352" y="304" width="220" height="164" rx="8" class="c-database cl-type" data-animate="node" style="--step: 1; --flow-node-name: archify-relay-node-2;" stroke-width="1.2"/>
+          <rect x="352" y="304" width="220" height="184" rx="8" class="c-mask"/>
+          <rect x="352" y="304" width="220" height="184" rx="8" class="c-database cl-type" data-animate="node" style="--step: 1; --flow-node-name: archify-relay-node-2;" stroke-width="1.2"/>
           <path class="cl-header c-database" stroke="none" d="M 360 304 H 564 A 8 8 0 0 1 572 312 V 348 H 352 V 312 A 8 8 0 0 1 360 304 Z"/>
           <path class="cl-cap" d="M 364 305.4 H 560" stroke-width="2.6" stroke-linecap="round" fill="none"/>
           <g aria-hidden="true" class="cl-badge">
@@ -959,29 +959,30 @@ been cleared for every commercial, promotional, or redistributive use.</metadata
           <text data-node-label="" x="462" y="338" class="t-primary" font-size="13.5" font-weight="700" text-anchor="middle">Evidencia</text>
           <g data-class-compartment="attributes">
             <line x1="352" y1="348" x2="572" y2="348" class="cl-rule" stroke-width="1"/>
-            <rect x="364" y="357.5" width="14" height="14" rx="4" class="cl-vis-chip cl-vis-private"/><text x="371" y="368" class="t-muted cl-vis cl-vis-private" font-size="11" text-anchor="middle">-</text><text data-class-member="attributes" x="384" y="368" class="t-primary cl-member" font-size="11">origen</text><text x="560" y="368" class="t-muted cl-member cl-type-ref" font-size="11" text-anchor="end">CAMARA</text>
-            <rect x="356" y="374" width="212" height="18" rx="4" class="cl-zebra"/><rect x="364" y="377.5" width="14" height="14" rx="4" class="cl-vis-chip cl-vis-private"/><text x="371" y="388" class="t-muted cl-vis cl-vis-private" font-size="11" text-anchor="middle">-</text><text data-class-member="attributes" x="384" y="388" class="t-primary cl-member" font-size="11">gps</text><text x="560" y="388" class="t-muted cl-member cl-type-ref" font-size="11" text-anchor="end">Coordenada</text>
-            <rect x="364" y="397.5" width="14" height="14" rx="4" class="cl-vis-chip cl-vis-private"/><text x="371" y="408" class="t-muted cl-vis cl-vis-private" font-size="11" text-anchor="middle">-</text><text data-class-member="attributes" x="384" y="408" class="t-primary cl-member" font-size="11">hash</text><text x="560" y="408" class="t-muted cl-member cl-type-ref" font-size="11" text-anchor="end">SHA256</text>
+            <rect x="364" y="357.5" width="14" height="14" rx="4" class="cl-vis-chip cl-vis-private"/><text x="371" y="368" class="t-muted cl-vis cl-vis-private" font-size="11" text-anchor="middle">-</text><text data-class-member="attributes" x="384" y="368" class="t-primary cl-member" font-size="11">origen</text><text x="560" y="368" class="t-muted cl-member cl-type-ref" font-size="11" text-anchor="end">CARGA_WEB</text>
+            <rect x="356" y="374" width="212" height="18" rx="4" class="cl-zebra"/><rect x="364" y="377.5" width="14" height="14" rx="4" class="cl-vis-chip cl-vis-private"/><text x="371" y="388" class="t-muted cl-vis cl-vis-private" font-size="11" text-anchor="middle">-</text><text data-class-member="attributes" x="384" y="388" class="t-primary cl-member" font-size="11">hash</text><text x="560" y="388" class="t-muted cl-member cl-type-ref" font-size="11" text-anchor="end">SHA256</text>
+            <rect x="364" y="397.5" width="14" height="14" rx="4" class="cl-vis-chip cl-vis-private"/><text x="371" y="408" class="t-muted cl-vis cl-vis-private" font-size="11" text-anchor="middle">-</text><text data-class-member="attributes" x="384" y="408" class="t-primary cl-member" font-size="11">tipoMime</text><text x="560" y="408" class="t-muted cl-member cl-type-ref" font-size="11" text-anchor="end">string</text>
+            <rect x="356" y="414" width="212" height="18" rx="4" class="cl-zebra"/><rect x="364" y="417.5" width="14" height="14" rx="4" class="cl-vis-chip cl-vis-private"/><text x="371" y="428" class="t-muted cl-vis cl-vis-private" font-size="11" text-anchor="middle">-</text><text data-class-member="attributes" x="384" y="428" class="t-primary cl-member" font-size="11">tamanoBytes</text><text x="560" y="428" class="t-muted cl-member cl-type-ref" font-size="11" text-anchor="end">number</text>
           </g>
           <g data-class-compartment="methods">
-            <line x1="352" y1="418" x2="572" y2="418" class="cl-rule" stroke-width="1"/>
-            <rect x="356" y="424" width="212" height="18" rx="4" class="cl-zebra"/><rect x="364" y="427.5" width="14" height="14" rx="4" class="cl-vis-chip cl-vis-public"/><text x="371" y="438" class="t-muted cl-vis cl-vis-public" font-size="11" text-anchor="middle">+</text><text data-class-member="methods" x="384" y="438" class="t-primary cl-member" font-size="11" style="text-decoration: underline">crear<tspan class="t-muted cl-punct">(</tspan><tspan class="cl-param">datos</tspan><tspan class="t-muted cl-punct">)</tspan></text><text x="560" y="438" class="t-muted cl-member cl-type-ref" font-size="11" text-anchor="end" style="text-decoration: underline">Evidencia</text>
-            <rect x="364" y="447.5" width="14" height="14" rx="4" class="cl-vis-chip cl-vis-public"/><text x="371" y="458" class="t-muted cl-vis cl-vis-public" font-size="11" text-anchor="middle">+</text><text data-class-member="methods" x="384" y="458" class="t-primary cl-member" font-size="11">validarIntegridad<tspan class="t-muted cl-punct">(</tspan><tspan class="t-muted cl-punct">)</tspan></text><text x="560" y="458" class="t-muted cl-member cl-type-ref" font-size="11" text-anchor="end">void</text>
+            <line x1="352" y1="438" x2="572" y2="438" class="cl-rule" stroke-width="1"/>
+            <rect x="364" y="447.5" width="14" height="14" rx="4" class="cl-vis-chip cl-vis-public"/><text x="371" y="458" class="t-muted cl-vis cl-vis-public" font-size="11" text-anchor="middle">+</text><text data-class-member="methods" x="384" y="458" class="t-primary cl-member" font-size="11" style="text-decoration: underline">crear<tspan class="t-muted cl-punct">(</tspan><tspan class="cl-param">datos</tspan><tspan class="t-muted cl-punct">)</tspan></text><text x="560" y="458" class="t-muted cl-member cl-type-ref" font-size="11" text-anchor="end" style="text-decoration: underline">Evidencia</text>
+            <rect x="356" y="464" width="212" height="18" rx="4" class="cl-zebra"/><rect x="364" y="467.5" width="14" height="14" rx="4" class="cl-vis-chip cl-vis-public"/><text x="371" y="478" class="t-muted cl-vis cl-vis-public" font-size="11" text-anchor="middle">+</text><text data-class-member="methods" x="384" y="478" class="t-primary cl-member" font-size="11">validarIntegridad<tspan class="t-muted cl-punct">(</tspan><tspan class="t-muted cl-punct">)</tspan></text><text x="560" y="478" class="t-muted cl-member cl-type-ref" font-size="11" text-anchor="end">void</text>
           </g>
         </g>
 
         <g id="node-error" data-node-id="error" data-node-label="ErrorDominio" tabindex="0" role="button" aria-label="Enfocar ErrorDominio, Invariante inválida → 422, Clase" aria-pressed="false" data-node-kind="class" data-node-sublabel="Invariante inválida → 422" data-node-context="Clase" data-class-kind="class" class="cl-hue-backend">
           <title>ErrorDominio · Invariante inválida → 422 · Clase</title>
-          <rect x="32" y="369" width="220" height="34" rx="8" class="c-mask"/>
-          <rect x="32" y="369" width="220" height="34" rx="8" class="c-backend cl-type" data-animate="node" style="--step: 2; --flow-node-name: archify-relay-node-3;" stroke-width="1.2"/>
-          <path class="cl-header c-backend" stroke="none" d="M 40 369 H 244 A 8 8 0 0 1 252 377 V 403 H 32 V 377 A 8 8 0 0 1 40 369 Z"/>
-          <path class="cl-cap" d="M 44 370.4 H 240" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+          <rect x="32" y="379" width="220" height="34" rx="8" class="c-mask"/>
+          <rect x="32" y="379" width="220" height="34" rx="8" class="c-backend cl-type" data-animate="node" style="--step: 2; --flow-node-name: archify-relay-node-3;" stroke-width="1.2"/>
+          <path class="cl-header c-backend" stroke="none" d="M 40 379 H 244 A 8 8 0 0 1 252 387 V 413 H 32 V 387 A 8 8 0 0 1 40 379 Z"/>
+          <path class="cl-cap" d="M 44 380.4 H 240" stroke-width="2.6" stroke-linecap="round" fill="none"/>
           <g aria-hidden="true" class="cl-badge">
-            <rect x="44" y="378" width="16" height="16" rx="4.8" class="cl-badge-chip"/>
-            <text x="52" y="389.5" class="t-backend cl-badge-letter" font-size="10" font-weight="800" text-anchor="middle">C</text>
+            <rect x="44" y="388" width="16" height="16" rx="4.8" class="cl-badge-chip"/>
+            <text x="52" y="399.5" class="t-backend cl-badge-letter" font-size="10" font-weight="800" text-anchor="middle">C</text>
           </g>
 
-          <text data-node-label="" x="142" y="391" class="t-primary" font-size="13.5" font-weight="700" text-anchor="middle">ErrorDominio</text>
+          <text data-node-label="" x="142" y="401" class="t-primary" font-size="13.5" font-weight="700" text-anchor="middle">ErrorDominio</text>
 
         </g>
 
@@ -995,20 +996,20 @@ been cleared for every commercial, promotional, or redistributive use.</metadata
           <text x="484.78" y="235.5" class="t-muted" font-size="9.5" text-anchor="middle">1..*</text>
         </g>
         <g data-edge-from="inspection" data-edge-to="error" data-edge-label="Rechaza inválidos" data-edge-key="2" data-edge-id="inspection-error" data-class-relationship="dependency">
-          <rect x="308" y="252" width="110.13" height="14" rx="7" class="c-mask cl-label-box"/>
-          <text x="363.065" y="262" class="t-muted" font-size="9.5" text-anchor="middle">Rechaza inválidos</text>
+          <rect x="308" y="257" width="110.13" height="14" rx="7" class="c-mask cl-label-box"/>
+          <text x="363.065" y="267" class="t-muted" font-size="9.5" text-anchor="middle">Rechaza inválidos</text>
         </g>
 
         <!-- Legend -->
         <g data-legend="" style="">
-          <text x="24" y="490" class="t-primary" font-size="12" font-weight="650">Leyenda</text>
-          <g data-legend-semantic-kind="dependency" data-legend-x="24" data-legend-baseline="510" data-legend-width="117">
-            <rect class="cl-legend-hit" tabindex="0" role="img" aria-label="Depende de" x="18" y="495" width="129" height="22" rx="11"/><path d="M 26 506 L 56 506" class="a-default cl-relationship cl-dashed" stroke-width="1.5" marker-end="url(#cl-open)"/>
-            <text x="66" y="510" class="t-muted" font-size="12" font-weight="500">Depende de</text>
+          <text x="24" y="510" class="t-primary" font-size="12" font-weight="650">Leyenda</text>
+          <g data-legend-semantic-kind="dependency" data-legend-x="24" data-legend-baseline="530" data-legend-width="117">
+            <rect class="cl-legend-hit" tabindex="0" role="img" aria-label="Depende de" x="18" y="515" width="129" height="22" rx="11"/><path d="M 26 526 L 56 526" class="a-default cl-relationship cl-dashed" stroke-width="1.5" marker-end="url(#cl-open)"/>
+            <text x="66" y="530" class="t-muted" font-size="12" font-weight="500">Depende de</text>
           </g>
-          <g data-legend-semantic-kind="composition" data-legend-x="163" data-legend-baseline="510" data-legend-width="124">
-            <rect class="cl-legend-hit" tabindex="0" role="img" aria-label="Composición" x="157" y="495" width="136" height="22" rx="11"/><path d="M 165 506 L 195 506" class="a-default cl-relationship" stroke-width="1.5" marker-start="url(#cl-diamond-filled)"/>
-            <text x="205" y="510" class="t-muted" font-size="12" font-weight="500">Composición</text>
+          <g data-legend-semantic-kind="composition" data-legend-x="163" data-legend-baseline="530" data-legend-width="124">
+            <rect class="cl-legend-hit" tabindex="0" role="img" aria-label="Composición" x="157" y="515" width="136" height="22" rx="11"/><path d="M 165 526 L 195 526" class="a-default cl-relationship" stroke-width="1.5" marker-start="url(#cl-diamond-filled)"/>
+            <text x="205" y="530" class="t-muted" font-size="12" font-weight="500">Composición</text>
           </g>
         </g>
       </svg>

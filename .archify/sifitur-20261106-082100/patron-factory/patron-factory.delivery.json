@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
-  "receiptId": "2cf63029-5f5f-4855-978f-7fc56b732908",
+  "receiptId": "ce4d97b7-cabe-41b8-af96-03666220dfb2",
   "status": "current",
   "command": "deliver",
   "type": "class",
-  "input": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\patron-factory\\candidate.json",
-  "output": "C:\\Users\\tranp_3bhil36\\Desktop\\lab arquitectura de software\\entregable02-jeanpoolkennerpalominomavila\\.archify\\sifitur-20261106-082100\\patron-factory\\patron-factory.html",
+  "input": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\patron-factory\\candidate.json",
+  "output": "C:\\Users\\tranp_3bhil36\\Documents\\Codex\\2026-11-06\\listo-ahora-quiero-que-crees-los-2\\work\\repo\\.archify\\sifitur-20261106-082100\\patron-factory\\patron-factory.html",
   "specification": {
-    "sha256": "08532a8a2ee0a9777720e69d4d9044e6973d3317ad1462dfa4eda5e4fc70370f",
-    "bytes": 4352
+    "sha256": "4d013282aab78ab78c7f90768d222858674712e66f81b41e4761d5de6b183261",
+    "bytes": 4493
   },
   "artifact": {
-    "sha256": "996a2b286e26a375f4607e890ef0417ad73a3447d4d0c87c6dad441e63ddd8b0",
-    "bytes": 843236
+    "sha256": "7bc5b5a6b03f1ff1178410bf874d403545a3d5ff59bd391bf49682272e3ac679",
+    "bytes": 843839
   }
 }
