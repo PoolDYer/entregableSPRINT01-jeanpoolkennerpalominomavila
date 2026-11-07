@@ -70,7 +70,6 @@
 | Verificación | Pruebas por rol, pertenencia y token; inspeccionar respuestas y configuración de cifrado. |
 | Estado | Objetivo de diseño; verificación en el entorno de despliegue. |
 
-
 ## EQ-07. Auditoría: trazabilidad de cambios
 
 | Elemento | Descripción |
@@ -113,6 +112,34 @@
 | Verificación | Comparar cambios, revisar importaciones y ejecutar pruebas con ambos adaptadores. |
 | Estado | Objetivo de diseño; verificación en el entorno de despliegue. |
 
+## EQ-10. Consistencia de formalidad pública
+
+| Elemento | Descripción |
+|---|---|
+| Atributo de calidad | AC01, AC05; RF13; ADR-003 |
+| Fuente | Coordinador que modifica la formalidad de un establecimiento. |
+| Estímulo | Se confirma una revocación mientras ciudadanos consultan el QR. |
+| Artefacto | Proyección pública, outbox, Redis y PublicQueryService. |
+| Entorno | Carga objetivo; publicación demorada o Redis fuera de servicio. |
+| Respuesta esperada | Actualiza o invalida la ficha; si expira y no puede revalidarse, informa que la verificación está temporalmente no disponible. |
+| Medida | Antigüedad máxima propuesta: 60 segundos desde generación de la proyección; cero respuestas que acrediten formalidad con una proyección vencida en el ensayo. |
+| Verificación | Revocar, retrasar eventos, desconectar Redis y consultar cada segundo; revisar versión y fecha de la respuesta. |
+| Estado | Parámetro de diseño sujeto a aceptación institucional y prueba. |
+
+## EQ-11. Aislamiento de una integración externa
+
+| Elemento | Descripción |
+|---|---|
+| Atributo de calidad | AC02, AC09; RC06; ADR-004 |
+| Fuente | SUNAT, MINCETUR o pasarela no disponible. |
+| Estímulo | Timeout o respuesta temporal de error. |
+| Artefacto | Adaptadores, tareas de validación y notificación. |
+| Entorno | Inspecciones y consulta pública siguen operativas. |
+| Respuesta esperada | Marca consulta pendiente; conserva expediente; difiere reintentos sin bloquear el hilo de recepción. |
+| Medida | Parámetros propuestos: timeout de 3 segundos por consulta externa; máximo 3 intentos por tarea antes de cola de revisión; cero expedientes declarados conformes solo por fallo del proveedor. |
+| Verificación | Simular timeout, error y recuperación; comprobar independencia de recepción, tareas pendientes y ausencia de duplicados de expediente. |
+| Estado | Parámetros de diseño; cuotas y contrato del proveedor por confirmar. |
+
 ## Resumen de escenarios
 
 | Código | Atributo | Decisiones relacionadas |
@@ -141,31 +168,3 @@ Los escenarios describen aceptación futura; la revisión documental no equivale
 | Disponibilidad | Sondas cada minuto sobre QR y recepción de inspección; una interrupción cuenta desde la primera sonda fallida hasta recuperación. Incluye mantenimiento que impida esas operaciones. |
 | Ventanas | 99.5 % anual equivale a 43.8 horas en 365 días. 99.9 % equivale a 1.44 minutos de caída por día de festividad; para 6 días, 8.64 minutos. Corrige la equivalencia de 43 minutos/año incluida en el Word. |
 | Costos | Costo mensual = cómputo + bases/replicación + caché + broker + GB de objetos + solicitudes + transferencia + respaldo/monitoreo. DIRCETUR/MPH debe aprobar presupuesto y retención antes del dimensionamiento definitivo. |
-
-## EQ-10. Consistencia de formalidad pública
-
-| Elemento | Descripción |
-|---|---|
-| Atributo de calidad | AC01, AC05; RF13; ADR-003 |
-| Fuente | Coordinador que modifica la formalidad de un establecimiento. |
-| Estímulo | Se confirma una revocación mientras ciudadanos consultan el QR. |
-| Artefacto | Proyección pública, outbox, Redis y PublicQueryService. |
-| Entorno | Carga objetivo; publicación demorada o Redis fuera de servicio. |
-| Respuesta esperada | Actualiza o invalida la ficha; si expira y no puede revalidarse, informa que la verificación está temporalmente no disponible. |
-| Medida | Antigüedad máxima propuesta: 60 segundos desde generación de la proyección; cero respuestas que acrediten formalidad con una proyección vencida en el ensayo. |
-| Verificación | Revocar, retrasar eventos, desconectar Redis y consultar cada segundo; revisar versión y fecha de la respuesta. |
-| Estado | Parámetro de diseño sujeto a aceptación institucional y prueba. |
-
-## EQ-11. Aislamiento de una integración externa
-
-| Elemento | Descripción |
-|---|---|
-| Atributo de calidad | AC02, AC09; RC06; ADR-004 |
-| Fuente | SUNAT, MINCETUR o pasarela no disponible. |
-| Estímulo | Timeout o respuesta temporal de error. |
-| Artefacto | Adaptadores, tareas de validación y notificación. |
-| Entorno | Inspecciones y consulta pública siguen operativas. |
-| Respuesta esperada | Marca consulta pendiente; conserva expediente; difiere reintentos sin bloquear el hilo de recepción. |
-| Medida | Parámetros propuestos: timeout de 3 segundos por consulta externa; máximo 3 intentos por tarea antes de cola de revisión; cero expedientes declarados conformes solo por fallo del proveedor. |
-| Verificación | Simular timeout, error y recuperación; comprobar independencia de recepción, tareas pendientes y ausencia de duplicados de expediente. |
-| Estado | Parámetros de diseño; cuotas y contrato del proveedor por confirmar. |
