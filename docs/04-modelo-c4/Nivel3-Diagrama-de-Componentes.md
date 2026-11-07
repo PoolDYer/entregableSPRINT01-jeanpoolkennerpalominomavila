@@ -12,6 +12,23 @@ Descomponer la API en entradas, servicios de aplicación y adaptadores. Esta vis
 
 Exportación SVG: [nivel3-componentes.svg](../../img/fuentes-svg/nivel3-componentes.svg).
 
+### Lectura y organización de la vista
+
+La figura mantiene los dieciséis grupos de componentes del backend y los ordena por responsabilidades:
+
+| Zona | Contenido y lectura |
+|---|---|
+| Izquierda, fuera de la API | Consola institucional, portal del administrado y portal ciudadano. Sus relaciones representan solicitudes HTTPS a través del gateway, como indican los rótulos; no son accesos directos a repositorios. |
+| Primera columna de la API | Entradas y servicios de identidad, inspecciones, padrón, descargos, consulta pública e indicadores, ordenados de arriba abajo. |
+| Columna central de la API | Guardas y políticas de acceso, validadores, evaluación de riesgo y coordinación de operativos. |
+| Columna derecha de la API | Repositorios y adaptadores de inspección, evidencias, gestión, consulta pública e indicadores; clientes de integraciones en la parte inferior. |
+| Derecha, fuera de la API | PostgreSQL primaria, objetos, trabajador, Redis, réplica y cola. El trabajador conserva conexiones propias con los recursos. |
+| Borde exterior derecho | Pasarela SMS/correo, SUNAT, MINCETUR y GIS, fuera del sistema SIFITUR. |
+
+Se conservan los 29 elementos y las 43 relaciones de la vista. La posición del trabajador no lo convierte en un componente de la API. Los recorridos largos utilizan carriles separados y los nombres de los componentes disponen de mayor ancho.
+
+El [workspace JSON de Structurizr](../../diagrams/structurizr/modelo/workspace.json) conserva las posiciones y los vértices. El [script de distribución del nivel 3](../../scripts/organizar-nivel3-structurizr.mjs) reproduce la organización al regenerar las exportaciones.
+
 ## 3. Componentes
 
 | Componente / módulo | Responsabilidad | Requisitos |

@@ -27,6 +27,8 @@ if ($LASTEXITCODE -ne 0) { throw 'Modelo Structurizr inválido.' }
 if ($LASTEXITCODE -ne 0) { throw 'Falló compilación JSON de Structurizr.' }
 & node scripts/organizar-nivel2-structurizr.mjs
 if ($LASTEXITCODE -ne 0) { throw 'Falló distribución manual del nivel 2.' }
+& node scripts/organizar-nivel3-structurizr.mjs
+if ($LASTEXITCODE -ne 0) { throw 'Falló distribución manual del nivel 3.' }
 foreach ($format in @('static', 'svg', 'png')) {
     $destination = if ($format -eq 'static') { 'diagrams/structurizr/site' } else { 'diagrams/structurizr/export' }
     & java -jar $StructurizrWar export -w diagrams/structurizr/modelo/workspace.json -f $format -o $destination

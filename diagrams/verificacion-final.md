@@ -37,3 +37,9 @@ El Markdown amplía la lectura de la figura, las rutas de implementación previs
 Se sustituyó la distribución automática por posiciones y recorridos manuales nativos de Structurizr. Actores y portales se sitúan a la izquierda; gateway, API y trabajador, al centro; almacenes y cola, a la derecha; los cuatro sistemas externos quedan alineados fuera del límite de SIFITUR. Se separó la conexión del trabajador a la primaria de la flecha de replicación.
 
 Se comparó el modelo JSON con la revisión anterior: se conservan todos los elementos semánticos y las 22 relaciones visibles. La regeneración aplica el script de distribución antes de exportar el sitio y las imágenes desde el JSON compilado. Las exportaciones PNG y JPG se revisaron visualmente. El control final del repositorio registra 162 comprobaciones y 176 enlaces, sin errores.
+
+## Nivel 3 de componentes organizado
+
+La vista se organiza en entradas y servicios por fila funcional, coordinación de acceso y negocio en la columna central, y repositorios y adaptadores a la derecha. Los componentes disponen de mayor ancho para los nombres completos. Se conservan los dieciséis grupos de componentes, los 29 elementos visibles y las 43 relaciones; el modelo semántico y la distribución del nivel 2 se compararon con la revisión anterior y permanecen iguales.
+
+El trabajador, los almacenes y los clientes web quedan fuera de la frontera de la API; los cuatro sistemas externos quedan fuera del límite de SIFITUR. La regeneración aplica las distribuciones de niveles 2 y 3 antes de exportar desde el JSON de Structurizr. La revisión visual comprueba nombres, etiquetas y recorridos; el verificador comprueba posiciones, cajas y fronteras. El control final registra 166 comprobaciones y 179 enlaces, sin errores.

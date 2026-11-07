@@ -118,7 +118,7 @@ workspace "SIFITUR Huamanga" "Arquitectura propuesta de fiscalización turístic
         component api "nivel3-componentes" {
             include *
             include worker broker pasarela
-            autoLayout tb 240 110
+            // Distribución manual conservada por scripts/organizar-nivel3-structurizr.mjs.
             title "C4 · Nivel 3 · Componentes del Backend API"
         }
         image inspection "nivel4-clases" {
@@ -159,6 +159,7 @@ workspace "SIFITUR Huamanga" "Arquitectura propuesta de fiscalización turístic
                 background #815ca3
             }
             element "Component" {
+                width 600
                 shape Component
                 background #437ba8
             }
