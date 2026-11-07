@@ -21,16 +21,17 @@ fs.writeFileSync('diagrams/index.html',`<!doctype html>
 function walk(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(dir,e.name)):[path.join(dir,e.name)]);}
 for(const filename of walk('docs').filter(p=>p.endsWith('.md'))){
   let content=fs.readFileSync(filename,'utf8').replace(/\r\n/g,'\n');
-  content=content.split('\n## Herramientas y fuentes de diagramas\n')[0].trimEnd();
+  const sourceHeading=content.match(/^## (?:\d+\. )?Herramientas y fuentes de diagramas$/m)?.[0]??'## Herramientas y fuentes de diagramas';
+  content=content.split(/\n## (?:\d+\. )?Herramientas y fuentes de diagramas\n/)[0].trimEnd();
   const isC4=filename.replaceAll('\\','/').includes('/04-modelo-c4/');
   if(isC4){
     content=content.replaceAll('/clases-modulo-inspecciones.','/nivel4-agregado.').replaceAll('/secuencia-registrar-inspeccion.','/nivel4-registro.');
   }
-  content=content.replace(/(\]\([^)]*\/img\/[^/()]+)\.png(\))/g,'$1.jpg$2');
+  content=content.replace(/(!\[[^\]]*\]\([^)]*\/img\/[^/()]+)\.png(\))/g,'$1.jpg$2');
   const images=[...new Set([...content.matchAll(/!\[[^\]]*\]\([^)]*\/([^/()]+)\.(?:jpg|png)\)/g)].map(m=>m[1]))];
   if(!images.length)continue;
   content=content.replaceAll('Fuente editable:','Exportación SVG:').replaceAll('Fuentes editables:','Exportaciones SVG:').replaceAll('## Fuentes editables','## Exportaciones SVG');
-  let section='\n\n## Herramientas y fuentes de diagramas\n\n';
+  let section='\n\n'+sourceHeading+'\n\n';
   if(isC4){
     section+=`Estas vistas se gestionan en **Structurizr** desde ${mdlink('workspace.dsl',rel(filename,'diagrams/structurizr/workspace.dsl'))}. ${mdlink('Abrir el visor C4',rel(filename,'diagrams/structurizr/site/index.html'))}.\n\n`;
     section+='Los niveles 1–3 son vistas nativas del modelo. Structurizr integra el nivel 4 como vistas de imagen vinculadas al componente Inspecciones; las clases y secuencias se mantienen en PlantUML y se renderizan localmente.\n\n';

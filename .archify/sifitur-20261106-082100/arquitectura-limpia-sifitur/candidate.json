@@ -8,14 +8,14 @@
     "quality_profile": "showcase",
     "repository": {
       "url": "https://github.com/PoolDYer/entregableSPRINT01-jeanpoolkennerpalominomavila.git",
-      "revision": "785988a34ad8cf27fbc9fc7ef728283127ed271a"
+      "revision": "c558118c227877aebfb22afbebe3cffebb2ff392"
     },
-    "subtitle": "Presentación, casos de uso, entidades, puertos, adaptadores y composición · API y trabajador",
+    "subtitle": "Módulo Inspecciones · NestJS / TypeScript · capas, contratos, adaptadores y composición",
     "legend": {
       "mode": "auto",
       "entries": {
         "backend": {
-          "label": "Entradas, núcleo y composición"
+          "label": "Aplicación, dominio y composición"
         },
         "cloud": {
           "label": "Adaptadores de infraestructura"
@@ -24,7 +24,10 @@
           "label": "Invariantes del dominio"
         },
         "external": {
-          "label": "Cliente / recursos externos"
+          "label": "Cliente / recursos técnicos"
+        },
+        "frontend": {
+          "label": "Presentación / entradas"
         }
       }
     }
@@ -37,10 +40,10 @@
       "sublabel": "Consola web · operación estable",
       "pos": [
         40,
-        40
+        100
       ],
       "size": [
-        210,
+        220,
         82
       ],
       "tag": "Registro web",
@@ -52,16 +55,16 @@
     },
     {
       "id": "controller",
-      "type": "backend",
+      "type": "frontend",
       "label": "InspectionController",
       "sublabel": "DTO, actor validado y errores HTTP",
       "pos": [
         40,
-        260
+        340
       ],
       "size": [
-        210,
-        90
+        220,
+        82
       ],
       "tag": "presentacion/",
       "sources": [
@@ -72,16 +75,16 @@
     },
     {
       "id": "worker_entry",
-      "type": "backend",
+      "type": "frontend",
       "label": "Entrada del trabajador",
       "sublabel": "Consume tarea de emisión durable",
       "pos": [
         40,
-        540
+        480
       ],
       "size": [
-        210,
-        90
+        220,
+        82
       ],
       "tag": "RabbitMQ / reintentos",
       "sources": [
@@ -92,16 +95,16 @@
     },
     {
       "id": "notices",
-      "type": "backend",
+      "type": "frontend",
       "label": "Consumidor de avisos",
       "sublabel": "Evento y destinatario deduplicados",
       "pos": [
         40,
-        980
+        760
       ],
       "size": [
-        210,
-        90
+        220,
+        82
       ],
       "tag": "Otro consumidor",
       "sources": [
@@ -116,11 +119,11 @@
       "label": "RegistrarInspeccionCasoUso",
       "sublabel": "Autoriza, deduplica y confirma T1",
       "pos": [
-        330,
-        260
+        370,
+        100
       ],
       "size": [
-        220,
+        240,
         90
       ],
       "tag": "aplicacion/ · API",
@@ -136,11 +139,11 @@
       "label": "ProcesarActaCasoUso",
       "sublabel": "Genera, custodia y confirma T2",
       "pos": [
-        620,
-        260
+        700,
+        100
       ],
       "size": [
-        220,
+        240,
         90
       ],
       "tag": "aplicacion/ · trabajador",
@@ -156,12 +159,12 @@
       "label": "Inspeccion",
       "sublabel": "Operación, ficha, evidencias y firma",
       "pos": [
-        330,
-        500
+        370,
+        340
       ],
       "size": [
-        220,
-        88
+        240,
+        82
       ],
       "tag": "crear() · huella()",
       "sources": [
@@ -176,12 +179,12 @@
       "label": "Evidencia",
       "sublabel": "Formato, tamaño y SHA-256",
       "pos": [
-        330,
-        700
+        370,
+        480
       ],
       "size": [
-        220,
-        88
+        240,
+        82
       ],
       "tag": "Original verificable",
       "sources": [
@@ -196,12 +199,12 @@
       "label": "Acta",
       "sublabel": "Referencia PDF, hash y estado",
       "pos": [
-        330,
-        900
+        370,
+        620
       ],
       "size": [
-        220,
-        88
+        240,
+        82
       ],
       "tag": "EMITIDA / ANULADA",
       "sources": [
@@ -216,12 +219,12 @@
       "label": "Invariantes del dominio",
       "sublabel": "Sin NestJS, ORM, SDK ni red",
       "pos": [
-        330,
-        1100
+        370,
+        760
       ],
       "size": [
-        220,
-        88
+        240,
+        82
       ],
       "tag": "RN-01 a RN-03",
       "sources": [
@@ -236,12 +239,12 @@
       "label": "RepositorioInspecciones",
       "sublabel": "buscarOperacion / registrarAtomico",
       "pos": [
-        620,
-        500
+        700,
+        340
       ],
       "size": [
-        220,
-        88
+        240,
+        82
       ],
       "tag": "«interface» · confirmarActa",
       "sources": [
@@ -256,12 +259,12 @@
       "label": "AlmacenEvidencias",
       "sublabel": "verificar / guardarActa",
       "pos": [
-        620,
-        700
+        700,
+        480
       ],
       "size": [
-        220,
-        88
+        240,
+        82
       ],
       "tag": "«interface» · objetos y hash",
       "sources": [
@@ -276,12 +279,12 @@
       "label": "GeneradorActas",
       "sublabel": "generar(inspeccion): Uint8Array",
       "pos": [
-        620,
-        900
+        700,
+        620
       ],
       "size": [
-        220,
-        88
+        240,
+        82
       ],
       "tag": "«interface» · bytes PDF",
       "sources": [
@@ -296,12 +299,12 @@
       "label": "Notificador",
       "sublabel": "enviar(tarea): ResultadoEnvio",
       "pos": [
-        620,
-        1100
+        700,
+        760
       ],
       "size": [
-        220,
-        88
+        240,
+        82
       ],
       "tag": "«interface» · aviso institucional",
       "sources": [
@@ -316,12 +319,12 @@
       "label": "RepositorioInspeccionesPostgres",
       "sublabel": "PostgreSQL: datos + auditoría + outbox",
       "pos": [
-        930,
-        500
+        1080,
+        340
       ],
       "size": [
-        240,
-        88
+        280,
+        82
       ],
       "tag": "infraestructura/ · T1 / T2",
       "sources": [
@@ -336,12 +339,12 @@
       "label": "AlmacenEvidenciasS3",
       "sublabel": "S3: originales, firma y acta PDF",
       "pos": [
-        930,
-        700
+        1080,
+        480
       ],
       "size": [
-        240,
-        88
+        280,
+        82
       ],
       "tag": "infraestructura/ · SHA-256",
       "sources": [
@@ -356,12 +359,12 @@
       "label": "GeneradorActasPdf",
       "sublabel": "Biblioteca PDF; produce bytes",
       "pos": [
-        930,
-        900
+        1080,
+        620
       ],
       "size": [
-        240,
-        88
+        280,
+        82
       ],
       "tag": "infraestructura/",
       "sources": [
@@ -376,12 +379,12 @@
       "label": "NotificadorInstitucional",
       "sublabel": "Pasarela SMS / correo; resultado",
       "pos": [
-        930,
-        1100
+        1080,
+        760
       ],
       "size": [
-        240,
-        88
+        280,
+        82
       ],
       "tag": "infraestructura/",
       "sources": [
@@ -394,16 +397,16 @@
       "id": "composition",
       "type": "backend",
       "label": "InspeccionesModule · raíz de composición",
-      "sublabel": "Conecta contratos y adaptadores e inyecta casos de uso",
+      "sublabel": "RepositorioInspecciones → Postgres · AlmacenEvidencias → S3 · GeneradorActas → PDF · Notificador → pasarela",
       "pos": [
-        330,
-        1370
+        370,
+        960
       ],
       "size": [
-        510,
-        90
+        990,
+        82
       ],
-      "tag": "inspecciones.module.ts · NestJS",
+      "tag": "inspecciones.module.ts · registra adaptadores e inyecta dependencias",
       "sources": [
         {
           "path": "docs/03-diseño-de-software/diseño-interno/principios-de-diseño.md"
@@ -411,19 +414,79 @@
       ]
     },
     {
-      "id": "resources",
+      "id": "postgres_resource",
       "type": "external",
-      "label": "Servicios / bibliotecas",
-      "sublabel": "PostgreSQL · S3 · PDF · SMS/correo",
+      "label": "PostgreSQL",
+      "sublabel": "Inspección + auditoría + outbox",
+      "tag": "Transacciones T1 / T2",
       "pos": [
-        930,
-        1370
+        1510,
+        340
       ],
       "size": [
-        240,
-        90
+        210,
+        82
       ],
-      "tag": "Fuera del núcleo",
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    },
+    {
+      "id": "s3_resource",
+      "type": "external",
+      "label": "Almacén S3",
+      "sublabel": "Originales, firma y PDF",
+      "tag": "Objeto y hash persistidos",
+      "pos": [
+        1510,
+        480
+      ],
+      "size": [
+        210,
+        82
+      ],
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    },
+    {
+      "id": "pdf_resource",
+      "type": "external",
+      "label": "Biblioteca PDF",
+      "sublabel": "Generación de bytes",
+      "tag": "Dependencia técnica local",
+      "pos": [
+        1510,
+        620
+      ],
+      "size": [
+        210,
+        82
+      ],
+      "sources": [
+        {
+          "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
+        }
+      ]
+    },
+    {
+      "id": "gateway_resource",
+      "type": "external",
+      "label": "Pasarela SMS / correo",
+      "sublabel": "Aceptación o entrega verificable",
+      "tag": "Proveedor institucional",
+      "pos": [
+        1510,
+        760
+      ],
+      "size": [
+        210,
+        82
+      ],
       "sources": [
         {
           "path": "docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md"
@@ -521,28 +584,36 @@
       "from": "pg",
       "to": "repo",
       "label": "Realiza",
-      "variant": "dashed"
+      "variant": "dashed",
+      "fromSide": "left",
+      "toSide": "right"
     },
     {
       "id": "s3-store",
       "from": "s3",
       "to": "store",
       "label": "Realiza",
-      "variant": "dashed"
+      "variant": "dashed",
+      "fromSide": "left",
+      "toSide": "right"
     },
     {
       "id": "pdf_adapter-pdf_port",
       "from": "pdf_adapter",
       "to": "pdf_port",
       "label": "Realiza",
-      "variant": "dashed"
+      "variant": "dashed",
+      "fromSide": "left",
+      "toSide": "right"
     },
     {
       "id": "mail-notice_port",
       "from": "mail",
       "to": "notice_port",
       "label": "Realiza",
-      "variant": "dashed"
+      "variant": "dashed",
+      "fromSide": "left",
+      "toSide": "right"
     },
     {
       "id": "composition-register",
@@ -559,58 +630,30 @@
       "variant": "default"
     },
     {
-      "id": "composition-pg",
-      "from": "composition",
-      "to": "pg",
-      "label": "Registra",
-      "variant": "default"
-    },
-    {
-      "id": "composition-s3",
-      "from": "composition",
-      "to": "s3",
-      "label": "Registra",
-      "variant": "default"
-    },
-    {
-      "id": "composition-pdf_adapter",
-      "from": "composition",
-      "to": "pdf_adapter",
-      "label": "Registra",
-      "variant": "default"
-    },
-    {
-      "id": "composition-mail",
-      "from": "composition",
-      "to": "mail",
-      "label": "Registra",
-      "variant": "default"
-    },
-    {
-      "id": "pg-resources",
+      "id": "pg-postgres_resource",
       "from": "pg",
-      "to": "resources",
+      "to": "postgres_resource",
       "label": "SQL/TLS",
       "variant": "default"
     },
     {
-      "id": "s3-resources",
+      "id": "s3-s3_resource",
       "from": "s3",
-      "to": "resources",
+      "to": "s3_resource",
       "label": "HTTPS/S3",
       "variant": "default"
     },
     {
-      "id": "pdf_adapter-resources",
+      "id": "pdf_adapter-pdf_resource",
       "from": "pdf_adapter",
-      "to": "resources",
+      "to": "pdf_resource",
       "label": "Biblioteca",
       "variant": "default"
     },
     {
-      "id": "mail-resources",
+      "id": "mail-gateway_resource",
       "from": "mail",
-      "to": "resources",
+      "to": "gateway_resource",
       "label": "HTTPS",
       "variant": "default"
     }
@@ -621,7 +664,8 @@
       "title": "Lectura de las flechas",
       "items": [
         "Invoca / usa: colaboración en ejecución; la aplicación conoce el contrato, no el adaptador.",
-        "Realiza: implementación del puerto por infraestructura; dependencia de código hacia el núcleo."
+        "Realiza: implementación del puerto por infraestructura; dependencia de código hacia el núcleo.",
+        "SQL/TLS, HTTPS/S3 y HTTPS conectan cada adaptador con su recurso. Biblioteca PDF es una dependencia local."
       ]
     },
     {
@@ -629,7 +673,8 @@
       "title": "Reglas de dependencia",
       "items": [
         "Dominio depende de sí mismo y biblioteca estándar; aplicación depende de dominio.",
-        "Presentación transforma HTTP/DTO; infraestructura implementa contratos; composición conoce implementaciones."
+        "Presentación transforma HTTP/DTO; infraestructura implementa contratos; composición conoce implementaciones.",
+        "La raíz registra los cuatro adaptadores e inyecta los casos de uso; las flechas de inyección no representan una petición de negocio."
       ]
     },
     {
@@ -652,26 +697,24 @@
   "boundaries": [
     {
       "kind": "region",
-      "label": "PRESENTACIÓN / ENTRADAS",
-      "wraps": [
-        "controller",
-        "worker_entry",
-        "notices"
-      ],
-      "pad": 22
-    },
-    {
-      "kind": "region",
-      "label": "APLICACIÓN · casos de uso",
+      "label": "APLICACIÓN · aplicacion/ · coordina casos de uso; depende del dominio",
       "wraps": [
         "register",
-        "emit"
+        "emit",
+        "inspection",
+        "evidence",
+        "acta",
+        "rules",
+        "repo",
+        "store",
+        "pdf_port",
+        "notice_port"
       ],
-      "pad": 22
+      "pad": 40
     },
     {
       "kind": "region",
-      "label": "DOMINIO · entidades, reglas y puertos",
+      "label": "DOMINIO · dominio/ · modelos y reglas (izquierda) / contratos (derecha)",
       "wraps": [
         "inspection",
         "evidence",
@@ -682,18 +725,28 @@
         "pdf_port",
         "notice_port"
       ],
-      "pad": 22
+      "pad": 20
     },
     {
       "kind": "region",
-      "label": "INFRAESTRUCTURA · adaptadores",
+      "label": "PRESENTACIÓN / ENTRADAS",
+      "wraps": [
+        "controller",
+        "worker_entry",
+        "notices"
+      ],
+      "pad": 20
+    },
+    {
+      "kind": "region",
+      "label": "INFRAESTRUCTURA · infraestructura/ · implementa puertos",
       "wraps": [
         "pg",
         "s3",
         "pdf_adapter",
         "mail"
       ],
-      "pad": 22
+      "pad": 20
     }
   ]
 }

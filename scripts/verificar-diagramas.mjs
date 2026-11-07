@@ -7,6 +7,8 @@ import crypto from 'node:crypto';
 const walk=dir=>fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(dir,e.name)):[path.join(dir,e.name)]);
 const read=p=>fs.readFileSync(p,'utf8');
 const hash=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+// Git puede materializar CRLF en Windows; los recibos originales usan LF.
+const receiptMatches=(file,expected)=>hash(file)===expected||crypto.createHash('sha256').update(read(file).replaceAll('\r\n','\n')).digest('hex')===expected;
 const manifest=JSON.parse(read('diagrams/archify-manifest.json'));
 const docs=walk('docs').filter(p=>p.endsWith('.md'));
 const docText=docs.map(p=>read(p)).join('\n');
@@ -15,7 +17,10 @@ const rules=[];
 function check(rule,condition){rules.push({rule,result:condition?'conforme':'error'});if(!condition)errors.push(rule);}
 const specs=new Map(manifest.map(d=>[d.slug,JSON.parse(read(d.input))]));
 const clean=specs.get('arquitectura-limpia-sifitur');
-check('Enfoque ampliado: cuatro capas con elementos concretos',clean.boundaries.length===4&&clean.components.length===20);
+const layerMembers={presentacion:['controller','worker_entry','notices'],aplicacion:['register','emit'],dominio:['inspection','evidence','acta','rules','repo','store','pdf_port','notice_port'],infraestructura:['pg','s3','pdf_adapter','mail']};
+check('Enfoque organizado: cuatro capas con sus responsabilidades documentadas',clean.boundaries.length===4&&Object.values(layerMembers).every(ids=>clean.boundaries.some(b=>ids.every(id=>b.wraps.includes(id)))));
+check('Enfoque organizado: dominio contenido en el marco de aplicación',clean.boundaries.some(b=>[...layerMembers.aplicacion,...layerMembers.dominio].every(id=>b.wraps.includes(id))));
+check('Enfoque organizado: cada adaptador realiza su puerto y accede a su recurso', [['pg','repo','postgres_resource'],['s3','store','s3_resource'],['pdf_adapter','pdf_port','pdf_resource'],['mail','notice_port','gateway_resource']].every(([adapter,port,resource])=>clean.connections.some(r=>r.from===adapter&&r.to===port&&r.label==='Realiza')&&clean.connections.some(r=>r.from===adapter&&r.to===resource)&&[adapter,port,resource].every(id=>clean.components.find(c=>c.id===id)?.pos[1]===clean.components.find(c=>c.id===port)?.pos[1])));
 check('Enfoque ampliado: cuatro puertos y cuatro realizaciones', ['repo','store','pdf_port','notice_port'].every(id=>clean.connections.some(r=>r.to===id&&r.label==='Realiza'&&r.variant==='dashed')));
 check('Enfoque ampliado: casos de uso sin dependencia de adaptadores concretos',clean.connections.filter(r=>['register','emit'].includes(r.from)).every(r=>['inspection','repo','store','pdf_port'].includes(r.to)));
 check('Enfoque ampliado: invariantes del dominio limitadas a RN-01 a RN-03',clean.components.find(c=>c.id==='rules').tag==='RN-01 a RN-03');
@@ -78,7 +83,7 @@ for(const slug of [...manifest.map(d=>d.slug),...c4]){
   const d=manifest.find(d=>d.slug===slug);
   if(d){
     const receipts=walk(path.dirname(d.input)).filter(p=>p.endsWith('.finalize-summary.json')).map(p=>({path:p,value:JSON.parse(read(p))}));
-    const receipt=receipts.find(({value:r})=>r.status==='pass'&&r.specification.sha256===hash(d.input)&&r.artifact.sha256===hash(d.output)&&Object.values(r.gates).every(g=>g==='pass'));
+    const receipt=receipts.find(({value:r})=>r.status==='pass'&&receiptMatches(d.input,r.specification.sha256)&&receiptMatches(d.output,r.artifact.sha256)&&Object.values(r.gates).every(g=>g==='pass'));
     check(`${slug}: fuente y HTML coinciden con validación y browser-check`,!!receipt);
     artifacts.push({slug,source:d.input,sourceSha256:hash(d.input),html:d.output,htmlSha256:hash(d.output),receipt:receipt?.path,...Object.fromEntries(paths.map(p=>[p,hash(p)]))});
   }else{

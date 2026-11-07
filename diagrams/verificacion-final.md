@@ -25,3 +25,9 @@ Cada vista conserva fuente editable, visor HTML y exportaciones JPG, PNG y SVG. 
 El verificador comprueba relaciones, fronteras, estados, idempotencia, confirmaciones T1/T2, referencias de archivos, correspondencia de exportaciones y hashes de fuentes y visores. También comprueba enlaces relativos y el alcance exclusivo web de las fuentes documentales.
 
 La revisión visual comprueba legibilidad, ausencia de nodos retirados, entradas web, ubicación de etiquetas y coherencia con las responsabilidades de cada vista.
+
+## Enfoque arquitectónico organizado
+
+La vista Clean Architecture del módulo Inspecciones se organiza con presentación a la izquierda, aplicación sobre el dominio, modelos y contratos en columnas, cuatro adaptadores alineados con sus recursos técnicos y raíz de composición al pie. Sus 23 elementos conservan la separación entre la API y el trabajador. Las realizaciones apuntan desde los adaptadores hacia los puertos internos.
+
+El Markdown amplía la lectura de la figura, las rutas de implementación previstas, la matriz de inyección y la diferencia entre ejecución y dependencia de código. Se revisaron visualmente las exportaciones y se superaron las cuatro puertas de Archify: validate, deliver, check y browser-check. La verificación del repositorio registró 159 comprobaciones y 173 enlaces, sin errores.

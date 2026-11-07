@@ -1,6 +1,6 @@
 # Enfoque arquitectónico
 
-## Clean Architecture de SIFITUR Huamanga
+## 1. Clean Architecture de SIFITUR Huamanga
 
 | Elemento | Descripción aplicada al proyecto |
 |---|---|
@@ -12,9 +12,11 @@
 
 ![Clean Architecture de SIFITUR Huamanga](../../img/arquitectura-limpia-sifitur.jpg)
 
-Exportación SVG: [arquitectura-limpia-sifitur.svg](../../img/fuentes-svg/arquitectura-limpia-sifitur.svg).
+**Lectura visual:** presentación a la izquierda; casos de uso en la parte superior del núcleo; modelos y reglas en la columna izquierda del dominio; contratos en su columna derecha; adaptadores y recursos técnicos alineados por responsabilidad; raíz de composición en la parte inferior. El marco de aplicación contiene el dominio para expresar que los casos de uso se construyen sobre él, sin transferirle responsabilidades de infraestructura.
 
-## Alcance y lectura del diagrama
+**Archivos de la figura:** [JPG](../../img/arquitectura-limpia-sifitur.jpg) · [PNG](../../img/arquitectura-limpia-sifitur.png) · [SVG ampliable](../../img/fuentes-svg/arquitectura-limpia-sifitur.svg).
+
+## 2. Alcance y lectura del diagrama
 
 La vista desarrolla **Clean Architecture dentro del módulo Inspecciones**, que es el módulo de referencia de la documentación. Detalla entradas, casos de uso, entidades, contratos y adaptadores; muestra además la raíz de composición y las dependencias técnicas. El resto de los módulos conserva su API pública y la propiedad de sus datos.
 
@@ -33,7 +35,20 @@ La consola institucional React permite al inspector registrar fichas y adjuntar 
 
 La llamada en ejecución y la dependencia de código son conceptos distintos: `RegistrarInspeccionCasoUso` invoca un objeto que implementa `AlmacenEvidencias`, mientras que `AlmacenEvidenciasS3` depende del contrato interno que realiza. El caso de uso no importa el SDK de S3.
 
-## Capas y dependencias
+### 2.1. Organización equivalente a la referencia
+
+| Zona de la figura | Elementos de SIFITUR | Lectura arquitectónica |
+|---|---|---|
+| Cliente externo | Inspector / consola institucional React. | Utiliza el navegador y accede al backend por HTTPS y gateway. React pertenece al cliente web; no es el framework del dominio backend. |
+| Presentación / entradas | `InspectionController`, entrada del trabajador y consumidor de avisos. | Adapta HTTP o eventos al procesamiento del módulo. API y trabajador conservan procesos distintos. |
+| Aplicación | `RegistrarInspeccionCasoUso` y `ProcesarActaCasoUso`. | Coordina el registro y la emisión utilizando entidades y contratos. |
+| Modelos y reglas | `Inspeccion`, `Evidencia`, `Acta` e invariantes RN-01 a RN-03. | Conserva el comportamiento del negocio, sin importar NestJS ni bibliotecas de persistencia. |
+| Contratos / puertos | `RepositorioInspecciones`, `AlmacenEvidencias`, `GeneradorActas` y `Notificador`. | Declara las operaciones requeridas sin seleccionar el proveedor. |
+| Infraestructura | Adaptadores Postgres, S3, PDF y notificador institucional. | Implementa los puertos y encapsula sus dependencias técnicas. |
+| Recursos técnicos | PostgreSQL, S3, biblioteca PDF y pasarela SMS/correo. | Permanecen fuera del núcleo. La biblioteca PDF es local; no representa otro servicio desplegado. |
+| Raíz de composición | `InspeccionesModule`. | Registra los cuatro adaptadores y entrega las implementaciones a los consumidores. |
+
+## 3. Capas y dependencias
 
 | Capa | Contenido | Dependencias |
 |---|---|---|
@@ -45,7 +60,34 @@ La llamada en ejecución y la dependencia de código son conceptos distintos: `R
 
 El dominio y los casos de uso no importan NestJS, ORM ni SDK de proveedores. Cada módulo expone una API pública; los demás módulos no acceden a sus repositorios internos. La presentación web consulta y guarda borradores en PostgreSQL mediante REST; el backend revalida las reglas y permisos antes de confirmar los cambios.
 
-## Presentación y entradas
+### 3.1. Estructura de carpetas prevista
+
+La organización corresponde al [diseño interno del módulo](../03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md). Son rutas de implementación previstas; el repositorio documenta el diseño.
+
+```text
+src/modules/inspecciones/
+├── dominio/
+│   ├── inspeccion.ts             # Inspeccion e invariantes de construcción
+│   ├── evidencia.ts              # Validación de evidencia
+│   ├── contratos.ts              # Puertos del núcleo
+│   └── errores.ts                # Errores del dominio
+├── aplicacion/
+│   ├── registrar-inspeccion.caso-uso.ts
+│   └── procesar-acta.caso-uso.ts
+├── presentacion/
+│   └── inspection.controller.ts
+├── infraestructura/
+│   ├── repositorio-postgres.ts
+│   ├── almacen-s3.ts
+│   ├── generador-actas-pdf.ts
+│   └── notificador-institucional.ts
+├── inspecciones.module.ts        # Raíz de composición
+└── index.ts                      # API pública del módulo
+```
+
+El árbol reproduce los archivos previstos; no introduce archivos separados para `Acta` o `FirmaDigitalizada` que el diseño interno todavía no especifica. Las entradas del trabajador se describen por su responsabilidad, sin atribuirles una ruta de implementación no definida.
+
+## 4. Presentación y entradas
 
 | Elemento | Ubicación prevista | Responsabilidad y límite |
 |---|---|---|
@@ -54,7 +96,7 @@ El dominio y los casos de uso no importan NestJS, ORM ni SDK de proveedores. Cad
 | Consumidor de avisos | Trabajador, separado del consumidor de emisión. | Deduplica evento y destinatario; solicita el envío mediante `Notificador` y registra aceptación o entrega verificable. |
 | Cliente React | Consola institucional web. | Consulta rutas y guarda borradores en el servidor; registra inspecciones con operación estable, sesión y permisos vigentes. La autorización institucional se decide en el servidor. |
 
-## Aplicación: casos de uso
+## 5. Aplicación: casos de uso
 
 | Caso de uso | Entrada y colaboradores | Resultado |
 |---|---|---|
@@ -63,7 +105,7 @@ El dominio y los casos de uso no importan NestJS, ORM ni SDK de proveedores. Cad
 
 La coordinación del caso de uso pertenece a aplicación. La pertenencia del expediente, la asignación vigente y las invariantes se comprueban mediante sus responsables. Aplicación no instancia conexiones SQL, clientes HTTP ni SDK de proveedores.
 
-## Dominio: entidades, valores y reglas
+## 6. Dominio: entidades, valores y reglas
 
 | Elemento | Datos y comportamiento documentados |
 |---|---|
@@ -75,7 +117,7 @@ La coordinación del caso de uso pertenece a aplicación. La pertenencia del exp
 
 RN-04 a RN-07 también forman parte del comportamiento del módulo, pero requieren coordinación con aplicación y sus puertos: idempotencia, verificación real de objetos, emisión durable y conservación del acta aunque falle el aviso. No se atribuye al objeto de dominio la responsabilidad de consultar S3, confirmar una transacción o enviar correo.
 
-## Contratos del núcleo y adaptadores
+## 7. Contratos del núcleo y adaptadores
 
 | Puerto interno | Operaciones de diseño | Adaptador y recurso técnico |
 |---|---|---|
@@ -88,7 +130,7 @@ Las firmas resumen los contratos previstos del [diseño interno](../03-diseño-d
 
 Los clientes de SUNAT, MINCETUR y GIS siguen la misma regla de puertos y adaptadores en los módulos responsables del padrón, operativos e indicadores. La [vista de componentes](../04-modelo-c4/Nivel3-Diagrama-de-Componentes.md) amplía esas integraciones; no se incorporan al agregado Inspecciones como responsabilidades propias.
 
-## Raíz de composición
+## 8. Raíz de composición
 
 `inspecciones.module.ts`, representado por `InspeccionesModule`, registra los adaptadores concretos y conecta cada implementación con el contrato requerido. Es el punto del módulo que conoce simultáneamente las clases de infraestructura y los casos de uso.
 
@@ -96,7 +138,18 @@ La entrada HTTP conecta `InspectionController` con `RegistrarInspeccionCasoUso`.
 
 Cambiar PostgreSQL, el proveedor de objetos, la biblioteca PDF o la pasarela requiere modificar el adaptador afectado y su composición. Las reglas de fiscalización y los casos de uso conservan los contratos internos. Los dobles de prueba pueden sustituir implementaciones al validar el núcleo; la durabilidad del motor real se verifica por separado.
 
-## Reglas de dependencia
+### 8.1. Matriz de inyección de dependencias
+
+| Consumidor | Contrato requerido | Implementación registrada | Recurso encapsulado |
+|---|---|---|---|
+| `RegistrarInspeccionCasoUso` y `ProcesarActaCasoUso` | `RepositorioInspecciones` | `RepositorioInspeccionesPostgres` | PostgreSQL: datos, auditoría y outbox en T1/T2. |
+| `RegistrarInspeccionCasoUso` y `ProcesarActaCasoUso` | `AlmacenEvidencias` | `AlmacenEvidenciasS3` | Verificación de objetos y custodia de originales, firma y PDF. |
+| `ProcesarActaCasoUso` | `GeneradorActas` | `GeneradorActasPdf` | Biblioteca de generación del PDF. |
+| Consumidor de avisos del trabajador | `Notificador` | `NotificadorInstitucional` | Pasarela institucional SMS/correo y resultado verificable. |
+
+La raíz conoce las implementaciones de esta tabla. Los consumidores reciben los contratos; no seleccionan el motor de datos ni el proveedor durante la ejecución del caso de uso. El caso de uso de emisión confirma la tarea posterior de notificación; el consumidor de avisos realiza el envío.
+
+## 9. Reglas de dependencia
 
 1. Dominio utiliza sus entidades, valores, reglas y contratos, junto con la biblioteca estándar.
 2. Aplicación depende del dominio y coordina sus puertos; no depende de adaptadores concretos.
@@ -105,7 +158,19 @@ Cambiar PostgreSQL, el proveedor de objetos, la biblioteca PDF o la pasarela req
 5. Composición registra implementaciones e inyecta las dependencias; no concentra las reglas del expediente.
 6. Cada módulo mantiene sus tablas y repositorios; la colaboración se realiza mediante su API pública.
 
-## Flujo de registro web
+### 9.1. Dependencia de código y llamada en ejecución
+
+| Ejemplo | En ejecución | En el código |
+|---|---|---|
+| Registro de inspección | El controlador invoca `RegistrarInspeccionCasoUso`. | Presentación depende de aplicación. |
+| Persistencia | El caso de uso llama al objeto recibido como `RepositorioInspecciones`. | Aplicación conoce el contrato del dominio; el adaptador Postgres también depende de ese contrato. |
+| Generación del acta | `ProcesarActaCasoUso` obtiene bytes mediante `GeneradorActas`. | La biblioteca PDF solo es importada por el adaptador. |
+| Aviso al administrado | El consumidor utiliza `Notificador` para solicitar el envío. | El cliente de la pasarela permanece en infraestructura. |
+| Cambio de proveedor | La composición entrega otra implementación compatible. | El cambio se limita al adaptador y su registro, siempre que se conserve el contrato y sus garantías. |
+
+La flecha discontinua **Realiza** apunta del adaptador hacia la interfaz interna. No significa que el dominio invoque directamente PostgreSQL, S3 o la pasarela. Las flechas **Inyecta** describen el armado de dependencias y no el orden del flujo de fiscalización.
+
+## 10. Flujo de registro web
 
 1. La consola web guarda la ficha como borrador en el servidor y adjunta firma digitalizada y evidencias con un identificador de operación estable.
 2. Con sesión vigente, la consola web envía el registro y las referencias de los archivos que el servidor confirmó.
@@ -128,7 +193,7 @@ Cambiar PostgreSQL, el proveedor de objetos, la biblioteca PDF o la pasarela req
 
 T1 y T2 son transacciones locales de PostgreSQL. S3 y RabbitMQ se coordinan mediante outbox, estados, confirmaciones y consumidores idempotentes; no existe una transacción ACID única entre los tres recursos. El navegador muestra confirmación únicamente después del acuse durable; no se garantiza recuperar datos que nunca llegaron al servidor. Emitir el acta tampoco declara por sí solo la formalidad pública del establecimiento.
 
-## Trazabilidad del enfoque
+## 11. Trazabilidad del enfoque
 
 | Requisitos / atributo | Responsabilidad que desarrolla la arquitectura |
 |---|---|
@@ -139,13 +204,13 @@ T1 y T2 son transacciones locales de PostgreSQL. S3 y RabbitMQ se coordinan medi
 
 La estructura corresponde a un diseño de implementación previsto. La validación ejecutable de estas garantías se realiza cuando existan los componentes desplegados; el presente documento y su figura permiten revisar responsabilidades y dependencias antes de implementarlos.
 
-## Elección frente a arquitectura hexagonal
+## 12. Elección frente a arquitectura hexagonal
 
 Ambos enfoques separan negocio e infraestructura mediante puertos y adaptadores. SIFITUR utiliza Clean Architecture porque la documentación distingue explícitamente entidades, coordinación de casos de uso, traducción REST e infraestructura. Los puertos permanecen en el núcleo del módulo; ningún caso de uso instancia SDK de S3, conexiones SQL o clientes HTTP.
 
 Las dependencias de código y el flujo de ejecución son distintos: en ejecución el caso de uso llama a un puerto cuyo objeto concreto es un adaptador; en código, el adaptador depende del contrato interno. La raíz de composición es el único punto que conoce ambos.
 
-## Herramientas y fuentes de diagramas
+## 13. Herramientas y fuentes de diagramas
 
 Estos diagramas se elaboran con **Archify**, conforme al contenido de este documento. Cada imagen JPG se guarda en `img/` y se incrusta en su sección correspondiente. El JSON es la fuente editable; JPG, PNG y SVG son exportaciones generadas desde su visor nativo.
 
