@@ -31,3 +31,9 @@ La revisión visual comprueba legibilidad, ausencia de nodos retirados, entradas
 La vista Clean Architecture del módulo Inspecciones se organiza con presentación a la izquierda, aplicación sobre el dominio, modelos y contratos en columnas, cuatro adaptadores alineados con sus recursos técnicos y raíz de composición al pie. Sus 23 elementos conservan la separación entre la API y el trabajador. Las realizaciones apuntan desde los adaptadores hacia los puertos internos.
 
 El Markdown amplía la lectura de la figura, las rutas de implementación previstas, la matriz de inyección y la diferencia entre ejecución y dependencia de código. Se revisaron visualmente las exportaciones y se superaron las cuatro puertas de Archify: validate, deliver, check y browser-check. La verificación del repositorio registró 159 comprobaciones y 173 enlaces, sin errores.
+
+## Nivel 2 de contenedores organizado
+
+Se sustituyó la distribución automática por posiciones y recorridos manuales nativos de Structurizr. Actores y portales se sitúan a la izquierda; gateway, API y trabajador, al centro; almacenes y cola, a la derecha; los cuatro sistemas externos quedan alineados fuera del límite de SIFITUR. Se separó la conexión del trabajador a la primaria de la flecha de replicación.
+
+Se comparó el modelo JSON con la revisión anterior: se conservan todos los elementos semánticos y las 22 relaciones visibles. La regeneración aplica el script de distribución antes de exportar el sitio y las imágenes desde el JSON compilado. Las exportaciones PNG y JPG se revisaron visualmente. El control final del repositorio registra 162 comprobaciones y 176 enlaces, sin errores.

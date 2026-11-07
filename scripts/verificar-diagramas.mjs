@@ -42,6 +42,11 @@ check('La API no publica directamente en RabbitMQ',!hasRelation('api','broker'))
 check('Trabajador conectado a primaria, broker, objetos, Redis y pasarela',['primary','broker','objects','redis','pasarela'].every(id=>hasRelation('worker',id)));
 const containerView=native.views.containerViews.find(v=>v.key==='nivel2-contenedores');
 const visibleRelations=new Set(containerView.relationships.map(r=>r.id));
+check('C4 N2: distribución manual con veinte elementos posicionados',!containerView.automaticLayout&&containerView.elements.length===20&&containerView.elements.every(e=>e.x>0&&e.y>0));
+const positioned=containerView.elements.map(e=>({...e,person:native.model.people.some(p=>p.id===e.id)}));
+check('C4 N2: cajas sin superposición',positioned.every((a,i)=>positioned.slice(i+1).every(b=>a.x+450<=b.x||b.x+450<=a.x||a.y+(a.person?400:300)<=b.y||b.y+(b.person?400:300)<=a.y)));
+const rightmostContainer=Math.max(...system.containers.map(c=>containerView.elements.find(e=>e.id===c.id).x+450));
+check('C4 N2: cuatro sistemas externos alineados fuera del límite derecho',native.model.softwareSystems.filter(s=>s.id!==system.id).every(s=>containerView.elements.find(e=>e.id===s.id).x>rightmostContainer));
 check('Clientes de N2 pasan por gateway; enlaces inferidos directos a API excluidos',['consola','portal','publico'].every(id=>hasRelation(id,'gateway')&&!relationships.some(r=>r.sourceId===byIdentifier(id).id&&r.destinationId===byIdentifier('api').id&&visibleRelations.has(r.id))));
 check('Consulta pública sin JWT y a través de su proyección',/sin JWT/.test(byIdentifier('query').description)&&hasRelation('query','cache'));
 check('Revalidación de formalidad desde primaria y lectura de indicadores desde réplica',hasRelation('cache','primary')&&hasRelation('reports','replica'));

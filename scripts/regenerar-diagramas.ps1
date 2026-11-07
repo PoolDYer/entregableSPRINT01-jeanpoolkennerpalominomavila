@@ -23,9 +23,13 @@ $umlFiles = Get-ChildItem -LiteralPath diagrams/structurizr -Filter '*.puml' | S
 if ($LASTEXITCODE -ne 0) { throw 'Falló PlantUML.' }
 & java -jar $StructurizrWar validate -w diagrams/structurizr/workspace.dsl
 if ($LASTEXITCODE -ne 0) { throw 'Modelo Structurizr inválido.' }
-foreach ($format in @('static', 'svg', 'png', 'json')) {
-    $destination = if ($format -eq 'static') { 'diagrams/structurizr/site' } elseif ($format -eq 'json') { 'diagrams/structurizr/modelo' } else { 'diagrams/structurizr/export' }
-    & java -jar $StructurizrWar export -w diagrams/structurizr/workspace.dsl -f $format -o $destination
+& java -jar $StructurizrWar export -w diagrams/structurizr/workspace.dsl -f json -o diagrams/structurizr/modelo
+if ($LASTEXITCODE -ne 0) { throw 'Falló compilación JSON de Structurizr.' }
+& node scripts/organizar-nivel2-structurizr.mjs
+if ($LASTEXITCODE -ne 0) { throw 'Falló distribución manual del nivel 2.' }
+foreach ($format in @('static', 'svg', 'png')) {
+    $destination = if ($format -eq 'static') { 'diagrams/structurizr/site' } else { 'diagrams/structurizr/export' }
+    & java -jar $StructurizrWar export -w diagrams/structurizr/modelo/workspace.json -f $format -o $destination
     if ($LASTEXITCODE -ne 0) { throw "Falló exportación Structurizr: $format" }
 }
 foreach ($name in @('nivel1-contexto','nivel2-contenedores','nivel3-componentes','nivel4-clases','nivel4-registro','nivel4-secuencia','nivel4-agregado')) {

@@ -26,6 +26,7 @@ El agregado y la secuencia de registro tienen dos representaciones: Archify en e
 
 1. Para un diagrama general, editar su `candidate.json` enlazado desde el catálogo. Conservar responsabilidades, reglas, protocolos y referencias de origen.
 2. Para contexto, contenedores o componentes C4, editar `structurizr/workspace.dsl`. Los identificadores del modelo son compartidos y las claves de vista son estables.
+   El nivel 2 conserva una [distribución manual](https://docs.structurizr.com/ui/diagrams/manual-layout) en el JSON compilado, aplicada por [organizar-nivel2-structurizr.mjs](../scripts/organizar-nivel2-structurizr.mjs). La regeneración compila el DSL, aplica posiciones y recorridos y exporta desde ese JSON para conservar el orden.
 3. Para nivel 4, editar el `.puml` correspondiente. No editar a mano las exportaciones SVG/PNG.
 4. Regenerar y revisar las figuras afectadas. Los recibos Archify distinguen validación automática de inspección visual.
 

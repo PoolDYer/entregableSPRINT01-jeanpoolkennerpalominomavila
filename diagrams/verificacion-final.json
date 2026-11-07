@@ -73,7 +73,7 @@
     },
     {
       "path": "docs\\04-modelo-c4\\Nivel2-DiagramadeContenedores.md",
-      "sha256": "ef7df2a223682616bc3cab171b93379e9164a0680a2c6a802d65f3ef325303d0"
+      "sha256": "46acc384494cb3b3cd42d5b7bfafc8d646b973e3d8b9ec28624e319576e66d20"
     },
     {
       "path": "docs\\04-modelo-c4\\Nivel3-Diagrama-de-Componentes.md",
@@ -85,7 +85,7 @@
     }
   ],
   "diagramCount": 25,
-  "checkedLinks": 173,
+  "checkedLinks": 176,
   "rules": [
     {
       "rule": "Enfoque organizado: cuatro capas con sus responsabilidades documentadas",
@@ -141,6 +141,18 @@
     },
     {
       "rule": "Trabajador conectado a primaria, broker, objetos, Redis y pasarela",
+      "result": "conforme"
+    },
+    {
+      "rule": "C4 N2: distribución manual con veinte elementos posicionados",
+      "result": "conforme"
+    },
+    {
+      "rule": "C4 N2: cajas sin superposición",
+      "result": "conforme"
+    },
+    {
+      "rule": "C4 N2: cuatro sistemas externos alineados fuera del límite derecho",
       "result": "conforme"
     },
     {
@@ -925,49 +937,49 @@
     },
     {
       "slug": "nivel1-contexto",
-      "workspaceSha256": "49dd54e7df9cb8f19b740f6e2b81243c30b04ea03790a2bae0158e5e25e75c0f",
+      "workspaceSha256": "c232d7b45e66e2a7ef4a6a45b22b07bb76acb85a578834e3c6a031b3dd44dc4a",
       "img/nivel1-contexto.jpg": "4510ffd128354da7830c81080358a517a97a25a5c0bf300d66d2907f0ce2c2ee",
       "img/nivel1-contexto.png": "11db7ee7e2c1aaa325ec619e225326d1cc3b5a13cb39f6a30d8d5f696fbf87d1",
       "img/fuentes-svg/nivel1-contexto.svg": "42620ae8693e63413666dfa817b801aabb0cc2bf79f4905dc7fbb9c6956cb519"
     },
     {
       "slug": "nivel2-contenedores",
-      "workspaceSha256": "49dd54e7df9cb8f19b740f6e2b81243c30b04ea03790a2bae0158e5e25e75c0f",
-      "img/nivel2-contenedores.jpg": "00a3a24c3abcc70684badf804a8d241b61f955c2c100e7e06cdf923ccadd2ecb",
-      "img/nivel2-contenedores.png": "cfbab9f5f7e4fe2911e6699a5932690b13d626123e17f36391392cd4a13e8d00",
-      "img/fuentes-svg/nivel2-contenedores.svg": "3b8cd754995ac7d2cb54f101d243ce9653702d8d3bc80d17718b4b26aae7e7c2"
+      "workspaceSha256": "c232d7b45e66e2a7ef4a6a45b22b07bb76acb85a578834e3c6a031b3dd44dc4a",
+      "img/nivel2-contenedores.jpg": "1fe796227b585684737e1ee5cd4b1fcc535fa771437e9da04c7e28c8a9e9d653",
+      "img/nivel2-contenedores.png": "48590688f7201a97eae09e63dba7d06027c10d4fd5d06c3b18aea41ae7eb465d",
+      "img/fuentes-svg/nivel2-contenedores.svg": "72354c66456d7b7af6fa5a7d6a3c1aff8daf22c587b80ee99cf89e5008d00882"
     },
     {
       "slug": "nivel3-componentes",
-      "workspaceSha256": "49dd54e7df9cb8f19b740f6e2b81243c30b04ea03790a2bae0158e5e25e75c0f",
+      "workspaceSha256": "c232d7b45e66e2a7ef4a6a45b22b07bb76acb85a578834e3c6a031b3dd44dc4a",
       "img/nivel3-componentes.jpg": "8e074cc4a6313380e1301aaa34d011006caaab4680f99dee6dcf913f2832ae05",
       "img/nivel3-componentes.png": "9915aa51c88914ad5a063a55e59778b0aa84b4e2bfac0adf7315cd2a929aad56",
       "img/fuentes-svg/nivel3-componentes.svg": "4abbf3485515823712757968fdd64286299d75cfe827427dc627a703e183c168"
     },
     {
       "slug": "nivel4-clases",
-      "workspaceSha256": "49dd54e7df9cb8f19b740f6e2b81243c30b04ea03790a2bae0158e5e25e75c0f",
+      "workspaceSha256": "c232d7b45e66e2a7ef4a6a45b22b07bb76acb85a578834e3c6a031b3dd44dc4a",
       "img/nivel4-clases.jpg": "5f1a6092f63d4a6f00a7fe3a677bb8b151ed58ba0a21cf13b86df0c6ac9e2258",
       "img/nivel4-clases.png": "2fcc7bb4a7f14f14dee772faba251324f510e726fb7bcbc7dd41ca3e8cd6be8e",
       "img/fuentes-svg/nivel4-clases.svg": "fc9809a9c21d7f6925063586a2ffc1fe7af52a7eb3f4c7a3bdf2db384fabc5e4"
     },
     {
       "slug": "nivel4-registro",
-      "workspaceSha256": "49dd54e7df9cb8f19b740f6e2b81243c30b04ea03790a2bae0158e5e25e75c0f",
+      "workspaceSha256": "c232d7b45e66e2a7ef4a6a45b22b07bb76acb85a578834e3c6a031b3dd44dc4a",
       "img/nivel4-registro.jpg": "827490cbc9a8d89c64486004c8c6622e479f9f211d1567e437b6e0388601bc53",
       "img/nivel4-registro.png": "9c17502ef714de1f360c76dade40a96b46e4207734410418e2c5bc57f8cd985b",
       "img/fuentes-svg/nivel4-registro.svg": "b52b2b9ceb1a75edcb0b7b86fe617fa16e1384a51cac2d46982ad4248b6cae49"
     },
     {
       "slug": "nivel4-secuencia",
-      "workspaceSha256": "49dd54e7df9cb8f19b740f6e2b81243c30b04ea03790a2bae0158e5e25e75c0f",
+      "workspaceSha256": "c232d7b45e66e2a7ef4a6a45b22b07bb76acb85a578834e3c6a031b3dd44dc4a",
       "img/nivel4-secuencia.jpg": "8656c51b601adc6a9716fcab41915ac78305326dd90b7d4272b2480509caf968",
       "img/nivel4-secuencia.png": "e62ebd6acee98316e234bd4b0cae565c913dac7195f3f4144520785cb939a575",
       "img/fuentes-svg/nivel4-secuencia.svg": "51f55a84d4a0e830559b4471f0c3fdcbbf9c58e819255d012e5a04fcf51b9d4d"
     },
     {
       "slug": "nivel4-agregado",
-      "workspaceSha256": "49dd54e7df9cb8f19b740f6e2b81243c30b04ea03790a2bae0158e5e25e75c0f",
+      "workspaceSha256": "c232d7b45e66e2a7ef4a6a45b22b07bb76acb85a578834e3c6a031b3dd44dc4a",
       "img/nivel4-agregado.jpg": "9ff17392cb4e1facdc44ff562ca429c1c64c132ca7c41094a233b7431dcdbb93",
       "img/nivel4-agregado.png": "bbb5958ab880f66456e5249ec368c413ab60322a81c8e8924c8f858339f5ea7b",
       "img/fuentes-svg/nivel4-agregado.svg": "e8b90edf4ea81b218ecd15a56fbce107b4abf2b9e2e66cbf22407cf8c5d4de28"

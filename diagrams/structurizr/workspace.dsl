@@ -112,7 +112,7 @@ workspace "SIFITUR Huamanga" "Arquitectura propuesta de fiscalización turístic
             exclude "consola -> api"
             exclude "portal -> api"
             exclude "publico -> api"
-            autoLayout tb 220 130
+            // Distribución manual conservada por scripts/organizar-nivel2-structurizr.mjs.
             title "C4 · Nivel 2 · Contenedores de SIFITUR Huamanga"
         }
         component api "nivel3-componentes" {

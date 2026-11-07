@@ -12,6 +12,18 @@ Descomponer SIFITUR en aplicaciones ejecutables y almacenes de datos, indicando 
 
 Exportación SVG: [nivel2-contenedores.svg](../../img/fuentes-svg/nivel2-contenedores.svg).
 
+### Lectura y organización de la vista
+
+La figura se recorre de izquierda a derecha:
+
+1. **Actores:** inspector, coordinador y administrador TI utilizan la consola institucional; prestador y ciudadano acceden a sus respectivos portales.
+2. **Aplicaciones web y entrada:** los tres clientes se comunican con el gateway, que filtra y distribuye las solicitudes al backend.
+3. **Procesamiento:** la API y el trabajador son contenedores separados; el trabajador conserva sus conexiones con los recursos que necesita.
+4. **Persistencia y mensajería:** primaria y réplica se alinean en la fila superior; objetos y caché, en la intermedia; la cola se ubica junto al trabajador.
+5. **Sistemas externos:** SUNAT, MINCETUR, GIS y la pasarela permanecen fuera del límite de SIFITUR, en el borde derecho.
+
+Las posiciones y los recorridos se conservan en el [workspace JSON de Structurizr](../../diagrams/structurizr/modelo/workspace.json). El [script de distribución](../../scripts/organizar-nivel2-structurizr.mjs) aplica el mismo orden al regenerar. Se mantienen los once contenedores, cinco actores, cuatro sistemas externos y las 22 relaciones de esta vista. Las posiciones no implican nuevos procesos ni conexiones adicionales.
+
 ## 3. Contenedores
 
 | Contenedor | Tecnología | Responsabilidad | Datos |
