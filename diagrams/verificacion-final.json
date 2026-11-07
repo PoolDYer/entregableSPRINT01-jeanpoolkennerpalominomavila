@@ -33,7 +33,7 @@
     },
     {
       "path": "docs\\01-analisis-de-sistema\\07-decisiones-arquitectonicas.md",
-      "sha256": "854167789e27d25d832c21d389f2abbdc272c9c87c73778d5a47cb0248bfa993"
+      "sha256": "25b4e2237ac5767f89d229f13d7a360eed71bf59bb3afa27d6334fec64e66c74"
     },
     {
       "path": "docs\\01-analisis-de-sistema\\08-escenarios-atributos-calidad.md",
@@ -41,7 +41,7 @@
     },
     {
       "path": "docs\\02-arquitectura-software\\arquitectura-inicial.md",
-      "sha256": "91ea7bda79be59f37d239a85c071e22497ee7d62757f14b2e7e0ec65ccc029ed"
+      "sha256": "d7f97b5be5e52a46de447c358ff3af54489d48190995af6e95df0dbea637bb0e"
     },
     {
       "path": "docs\\02-arquitectura-software\\componentes-arquitectonicos.md",
@@ -85,7 +85,7 @@
     }
   ],
   "diagramCount": 25,
-  "checkedLinks": 173,
+  "checkedLinks": 170,
   "rules": [
     {
       "rule": "Enfoque ampliado: cuatro capas con elementos concretos",

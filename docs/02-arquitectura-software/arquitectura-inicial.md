@@ -33,7 +33,7 @@ La réplica no sustituye copias de seguridad. La conmutación de la primaria, re
 | Notificación | Acta emitida → outbox → consumidor de notificación → pasarela. | Fallo de envío no revierte emisión; resultado y reintentos persistidos. |
 | Indicadores | Consola → API privada → réplica / proyecciones analíticas. | Muestra fecha de corte; no decide sanciones con datos retrasados. |
 
-El despliegue incorpora standby síncrono para continuidad de la primaria y réplica asíncrona para lecturas. Las capacidades se especifican en [ADR-008](../01-analisis-de-sistema/07-decisiones-arquitectonicas.md#adr-008-recuperación-y-despliegue-redundante). La consola web informa si el servidor no puede confirmar de forma durable; únicamente los borradores ya guardados en PostgreSQL pueden recuperarse.
+El despliegue incorpora standby síncrono para continuidad de la primaria y réplica asíncrona para lecturas. La decisión se resume en ADR-008 del [catálogo de decisiones arquitectónicas](../01-analisis-de-sistema/07-decisiones-arquitectonicas.md). La consola web informa si el servidor no puede confirmar de forma durable; únicamente los borradores ya guardados en PostgreSQL pueden recuperarse.
 
 ## Herramientas y fuentes de diagramas
 
