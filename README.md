@@ -6,7 +6,7 @@ Jean Pool Kenner Palomino Mavila
 
 ## Descripción
 
-Sistema Integral de Fiscalización de Hospedajes y Servicios Turísticos en Huamanga. Integra empadronamiento, control documental, planificación de operativos, inspección móvil offline, custodia de evidencias, emisión de actas, seguimiento de subsanaciones y consulta pública de formalidad mediante QR.
+Sistema Integral de Fiscalización de Hospedajes y Servicios Turísticos en Huamanga. Integra empadronamiento, control documental, planificación de operativos, registro web de inspecciones, custodia de evidencias, emisión de actas, seguimiento de subsanaciones y consulta pública de formalidad mediante QR.
 
 ## Caso de estudio
 
@@ -46,7 +46,7 @@ img/
 
 ## Arquitectura
 
-Backend monolítico modular Node.js/NestJS con Clean Architecture. App Flutter con SQLite cifrada, consola y portal del administrado React, portal público Next.js, PostgreSQL primaria y réplica, Redis, S3 y RabbitMQ. Las integraciones externas son SUNAT, MINCETUR, OpenStreetMap y pasarela SMS/correo.
+Backend monolítico modular Node.js/NestJS con Clean Architecture. Consola institucional y portal del administrado React, portal público Next.js, PostgreSQL primaria y réplica, Redis, S3 y RabbitMQ. El inspector, el coordinador y TI utilizan la consola institucional desde el navegador; los borradores se guardan en PostgreSQL y las operaciones requieren conexión con el servidor. Las integraciones externas son SUNAT, MINCETUR, OpenStreetMap y pasarela SMS/correo.
 
 ![Contexto de SIFITUR Huamanga](img/nivel1-contexto.jpg)
 
@@ -56,6 +56,6 @@ La documentación especifica la arquitectura propuesta de SIFITUR Huamanga. Los 
 
 Los diagramas generales se elaboran con **Archify** y los cuatro niveles C4 se gestionan con **Structurizr**, conforme al contenido de los Markdown de `docs/`. Cada diagrama se guarda como JPG en `img/` y se incrusta en su Markdown correspondiente. Las fuentes editables son JSON Archify, el modelo Structurizr DSL y las fuentes UML del nivel 4 incorporadas como vistas de imagen. PNG y [SVG](img/fuentes-svg/) se conservan como exportaciones adicionales. El [catálogo de diagramas](diagrams/index.html) reúne visores y fuentes; la [guía de reproducción](diagrams/README.md) explica cómo editarlos y regenerarlos.
 
-El proceso se desarrolla en el análisis; C4 permite navegar de personas y sistemas a contenedores, componentes y clases; el diseño interno detalla sincronización, emisión y estados del expediente.
+El proceso se desarrolla en el análisis; C4 permite navegar de personas y sistemas a contenedores, componentes y clases; el diseño interno detalla registro web, emisión y estados del expediente.
 
-Base documental: Propuesta SIFITUR Huamanga; GUIA-004-ASF, laboratorio IS-488; estructura del [repositorio modelo](https://github.com/devlizbethjaico/Marketplace-arquitSoft-02). El alcance de esta entrega comprende documentación y diagramas.
+Base documental: alcance web de SIFITUR Huamanga actualizado por solicitud del autor; GUIA-004-ASF, laboratorio IS-488; estructura del [repositorio modelo](https://github.com/devlizbethjaico/Marketplace-arquitSoft-02). El alcance de esta entrega comprende documentación y diagramas.

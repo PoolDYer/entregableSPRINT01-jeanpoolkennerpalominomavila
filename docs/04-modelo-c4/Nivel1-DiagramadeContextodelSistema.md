@@ -16,7 +16,7 @@ Exportación SVG: [nivel1-contexto.svg](../../img/fuentes-svg/nivel1-contexto.sv
 
 | Persona | Acción en el sistema |
 |---|---|
-| Inspector de campo | Inspecciona, registra firmas y fotografías y sincroniza actas. |
+| Inspector de campo | Registra inspecciones, adjunta firmas y fotografías y consulta actas mediante la web. |
 | Coordinador DIRCETUR/MPH | Mantiene padrón, programa operativos y evalúa descargos. |
 | Administrador TI | Administra usuarios, permisos, auditoría y configuración. |
 | Prestador turístico | Consulta su expediente y presenta subsanaciones. |

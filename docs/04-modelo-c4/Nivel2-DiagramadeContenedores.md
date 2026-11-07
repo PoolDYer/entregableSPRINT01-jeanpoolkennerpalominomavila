@@ -16,9 +16,7 @@ Exportación SVG: [nivel2-contenedores.svg](../../img/fuentes-svg/nivel2-contene
 
 | Contenedor | Tecnología | Responsabilidad | Datos |
 |---|---|---|---|
-| App móvil | Flutter | Captura offline de inspecciones, firmas y fotografías. | Borradores y referencias locales. |
-| Almacén local móvil | SQLite cifrada, embebida en Flutter | Retención segura y cola de sincronización. | Actas y evidencias pendientes. |
-| Consola administrativa | React SPA | Padrón, usuarios, operativos, riesgo y evaluación. | Estado de interfaz. |
+| Consola institucional | React SPA | Inspecciones, borradores, evidencias, padrón, usuarios, operativos, riesgo y evaluación. | Estado de interfaz. |
 | Portal del administrado | React SPA | Expediente y descargos propios. | Estado de interfaz. |
 | Portal ciudadano | Next.js SSR | Directorio y resolución QR pública. | Proyecciones autorizadas. |
 | API Gateway / balanceador | NGINX + ModSecurity | TLS, filtrado y reparto de carga. | Configuración perimetral. |
@@ -34,7 +32,7 @@ Exportación SVG: [nivel2-contenedores.svg](../../img/fuentes-svg/nivel2-contene
 
 | Origen | Destino | Uso | Protocolo |
 |---|---|---|---|
-| Inspector | App móvil | Captura y sincronización. | Interacción local |
+| Inspector | Consola institucional | Registro de inspecciones, carga de evidencias y consulta de rutas. | HTTPS |
 | Coordinador / TI | Consola | Gestión institucional. | HTTPS |
 | Prestador | Portal del administrado | Consulta y descargos. | HTTPS |
 | Ciudadano | Portal ciudadano | Verificación de formalidad. | HTTPS |
@@ -56,7 +54,7 @@ Exportación SVG: [nivel2-contenedores.svg](../../img/fuentes-svg/nivel2-contene
 | Caché de proyección pública | Optimizar el patrón de 95 % lecturas; invalidar cuando cambia formalidad. |
 | Objetos separados del cómputo | Preservar evidencias al sustituir una instancia de aplicación. |
 | Outbox y trabajador | Evitar pérdida de tareas entre confirmación del expediente y publicación en la cola. |
-| Sincronización por operación única | Evitar duplicados al reenviar desde un dispositivo sin conexión. |
+| Registro por operación única | Evitar duplicados al repetir una solicitud web. |
 
 ## 6. Seguridad entre contenedores
 
@@ -68,13 +66,13 @@ Anterior: [Contexto](Nivel1-DiagramadeContextodelSistema.md). Siguiente: [Compon
 
 | Origen | Destino | Interacción |
 |---|---|---|
-| App Flutter | SQLite y archivos locales cifrados | Conserva ficha, firma, metadatos y originales; almacenamiento embebido en el dispositivo. |
+| Consola institucional React | API REST y PostgreSQL | Guarda fichas y borradores en el servidor; adjunta archivos mediante la API autenticada. |
 | Trabajador | PostgreSQL primaria | Lee outbox, confirma emisión y registra resultados de tareas; SQL sobre TLS. |
 | Trabajador | Redis | Invalida o reemplaza proyecciones públicas versionadas; RESP sobre TLS. |
 | Trabajador | S3 | Lee originales autorizados y guarda PDF y hash; HTTPS/S3 API. |
 | Trabajador | RabbitMQ | Publica con confirmación y consume con acuse posterior a persistencia; AMQPS. |
 
-El diagrama representa responsabilidades lógicas. El standby síncrono, réplicas físicas del broker, instancias API y dominios de fallo se detallan en el [HLD](../02-arquitectura-software/arquitectura-inicial.md); no constituyen nuevos módulos de negocio. SQLite es almacenamiento local embebido y no un servidor al que se conecte el backend.
+El diagrama representa responsabilidades lógicas. El standby síncrono, réplicas físicas del broker, instancias API y dominios de fallo se detallan en el [HLD](../02-arquitectura-software/arquitectura-inicial.md); no constituyen nuevos módulos de negocio. La persistencia de borradores y expedientes es centralizada; el navegador requiere conexión con el servidor.
 
 ## Herramientas y fuentes de diagramas
 

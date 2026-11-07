@@ -49,7 +49,7 @@
 | Atributo de calidad | AC04 |
 | Fuente | Inspector y fallo de almacenamiento |
 | Estímulo | Se interrumpe el procesamiento tras recibir una fotografía o acta. |
-| Artefacto | S3, referencias PostgreSQL y cola local móvil. |
+| Artefacto | S3, referencias PostgreSQL, outbox y trabajador. |
 | Entorno | Reintentos después de fallos; objetos versionados y copias configuradas. |
 | Respuesta esperada | Recupera el procesamiento sin perder originales ni confirmar evidencias inexistentes. |
 | Medida | Cero objetos confirmados perdidos en los ensayos; 100 % de hashes coincidentes. La durabilidad de 99.999999999 % anual es el objetivo del servicio S3 contratado. |
@@ -70,19 +70,6 @@
 | Verificación | Pruebas por rol, pertenencia y token; inspeccionar respuestas y configuración de cifrado. |
 | Estado | Objetivo de diseño; verificación en el entorno de despliegue. |
 
-## EQ-06. Resiliencia: inspección desconectada
-
-| Elemento | Descripción |
-|---|---|
-| Atributo de calidad | AC06 |
-| Fuente | Inspector de campo |
-| Estímulo | Pierde señal al diligenciar un acta y luego restablece conexión. |
-| Artefacto | App Flutter, SQLite cifrada y sincronización del backend. |
-| Entorno | Sesión local habilitada; móvil sin red durante la captura. |
-| Respuesta esperada | Conserva fichas, firma y fotos; al reconectar revalida permisos y sincroniza por operación única. |
-| Medida | 100 % de registros de la prueba recuperados; cero actas duplicadas después de tres reenvíos por operación; conflicto explícito si cambia el contenido. |
-| Verificación | Desconectar red, reiniciar la app, capturar, reconectar y repetir el envío. |
-| Estado | Objetivo de diseño; verificación en el entorno de despliegue. |
 
 ## EQ-07. Auditoría: trazabilidad de cambios
 
@@ -135,7 +122,6 @@
 | EQ-03 | AC03 | ADR-001, ADR-003 |
 | EQ-04 | AC04 | ADR-006 |
 | EQ-05 | AC05 | ADR-007 |
-| EQ-06 | AC06 | ADR-005 |
 | EQ-07 | AC07 | ADR-007 |
 | EQ-08 | AC08 | ADR-001, ADR-003 |
 | EQ-09 | AC09 | ADR-002, ADR-004 |

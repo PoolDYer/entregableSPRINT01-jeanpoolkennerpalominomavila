@@ -17,8 +17,8 @@ Exportación SVG: [nivel3-componentes.svg](../../img/fuentes-svg/nivel3-componen
 | Componente / módulo | Responsabilidad | Requisitos |
 |---|---|---|
 | IdentityController / IdentityService | Inicio y recuperación de sesión; gestión de usuarios y roles. | RF01, RF02, RF15 |
-| Auth & RBAC Guard / AccessPolicy | Validar identidad, institución, asignación y titularidad. | RF01, RF02, RF03 |
-| InspectionController / InspectionService | Recibir captura, consultar operación y coordinar RegistrarInspeccionCasoUso. | RF03, RF09–RF11 |
+| Auth & RBAC Guard / AccessPolicy | Validar identidad, institución, asignación y titularidad. | RF01, RF02 |
+| InspectionController / InspectionService | Recibir captura, consultar operación y coordinar RegistrarInspeccionCasoUso. | RF09–RF11 |
 | FileValidator / InspectionValidator | Validar formato, metadatos y consistencia del comando. | RF09, RF10 |
 | ManagementController / ProviderService | Gestionar padrón, documentos, vigencias y validaciones pendientes. | RF05, RF06 |
 | RiskAssessmentEngine | Aplicar política versionada a vigencias, aforo, antecedentes y denuncias registradas. | RF07 |
@@ -71,7 +71,7 @@ Cada módulo expone su API pública y posee sus tablas. Los módulos colaboran m
 
 | Elemento de contexto | Contenedor de acceso | Componente de entrada / integración |
 |---|---|---|
-| Inspector | App Flutter | InspectionController |
+| Inspector | Consola institucional React | InspectionController |
 | Coordinador | Consola React | ManagementController / IndicadoresController |
 | Administrador TI | Consola React | IdentityController / consulta autorizada de auditoría |
 | Prestador | Portal del administrado React | AdministradoController |

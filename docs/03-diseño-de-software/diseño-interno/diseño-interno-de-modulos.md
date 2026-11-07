@@ -4,7 +4,7 @@
 
 ## 1. Propósito
 
-Definir las clases, contratos, reglas y colaboración interna para registrar una inspección sincronizada y emitir su acta PDF. El módulo responde a RF03, RF04 y RF09–RF11.
+Definir las clases, contratos, reglas y colaboración interna para registrar una inspección desde la web y emitir su acta PDF. El módulo responde a RF04 y RF09–RF11.
 
 ## 2. Estructura de carpetas prevista
 
@@ -34,7 +34,7 @@ src/modules/inspecciones/
 | Archivo / clase | Capa | Responsabilidad |
 |---|---|---|
 | Inspeccion | Dominio | Validar identidad de captura, operación, prestador, firma y evidencias. |
-| Evidencia | Dominio | Validar origen cámara, GPS y hash del archivo original. |
+| Evidencia | Dominio | Validar formato, tamaño y hash del archivo original adjunto. |
 | RepositorioInspecciones | Dominio | Registrar operación única, consulta y tareas de emisión/notificación. |
 | AlmacenEvidencias | Dominio | Verificar objetos y conservar el acta emitida. |
 | GeneradorActas | Dominio | Solicitar bytes del acta PDF sin conocer la biblioteca. |
@@ -63,22 +63,22 @@ Exportación SVG: [clases-modulo-inspecciones.svg](../../../img/fuentes-svg/clas
 | ID | Regla | Entidad / caso de uso |
 |---|---|---|
 | RN-01 | Una inspección identifica operación, inspector, prestador y correo del administrado. | Inspeccion |
-| RN-02 | La captura incluye al menos una evidencia de cámara con coordenadas válidas y hash SHA-256. | Evidencia |
+| RN-02 | El registro incluye al menos una fotografía adjunta con formato y tamaño válidos y hash SHA-256. | Evidencia |
 | RN-03 | La firma manuscrita digitalizada debe estar vinculada a la inspección. | Inspeccion |
 | RN-04 | Un reenvío idéntico conserva el mismo registro; reutilizar operación con otro contenido genera conflicto. | RegistrarInspeccionCasoUso y repositorio |
 | RN-05 | La confirmación de recepción exige comprobar los objetos referenciados. | RegistrarInspeccionCasoUso |
 | RN-06 | La emisión conserva PDF y hash antes de confirmar el estado emitida. | ProcesarActaCasoUso |
 | RN-07 | Fallar al notificar no revierte un acta emitida; se mantiene la tarea pendiente para reintento. | ProcesarActaCasoUso |
 
-## 6. Flujo: sincronizar inspección
+## 6. Flujo: registrar inspección
 
-![Secuencia de sincronización y emisión](../../../img/secuencia-registrar-inspeccion.jpg)
+![Secuencia de registro web y emisión](../../../img/secuencia-registrar-inspeccion.jpg)
 
 Exportación SVG: [secuencia-registrar-inspeccion.svg](../../../img/fuentes-svg/secuencia-registrar-inspeccion.svg).
 
 | Paso | Acción | Capa |
 |---|---|---|
-| 1 | Enviar operación estable y referencias de evidencias desde la app. | Presentación móvil |
+| 1 | Enviar operación estable y referencias de evidencias desde la consola web. | Presentación web |
 | 2 | Obtener actor autorizado y validar entrada REST. | Presentación backend |
 | 3 | Consultar duplicados y comparar huella del comando. | Aplicación |
 | 4 | Validar entidades y comprobar hashes de objetos. | Aplicación / dominio |
@@ -108,17 +108,20 @@ return repositorio.registrarAtomico(inspeccion, inspeccion.huella());
 
 La implementación institucional del repositorio registra inspección, auditoría y outbox en una transacción PostgreSQL. La persistencia S3 y la entrega RabbitMQ se coordinan por estados y reintentos; no comparten una transacción ACID con PostgreSQL.
 
-## 8. Contrato de sincronización
+## 8. Contrato de registro web
 
 | Operación | Entrada / respuesta | Regla |
 |---|---|---|
-| `POST /api/v1/evidencias` | Archivo original + metadatos; devuelve `objetoId`, hash verificado y estado. | JWT, inspector asignado, origen cámara y GPS. El backend transmite a S3 y comprueba integridad antes de confirmar. |
+| `POST /api/v1/inspecciones/borradores` | Ficha parcial, `operacionId` y `versionRuta`; devuelve identificador y versión. | Guarda el borrador en PostgreSQL con usuario, institución y asignación vigentes. No confirma recepción final ni emite acta. |
+| `PATCH /api/v1/inspecciones/borradores/{id}` | Campos modificados y versión esperada. | Actualiza solo el borrador propio; conflicto de versión devuelve `409` sin sobrescribir. |
+| `GET /api/v1/inspecciones/borradores/{id}` | Identificador del borrador. | Recupera únicamente datos previamente guardados en el servidor y autorizados para el inspector. |
+| `POST /api/v1/evidencias` | Archivo original + metadatos; devuelve `objetoId`, hash verificado y estado. | JWT, inspector asignado, formato y tamaño válidos. El backend transmite a S3 y comprueba integridad antes de confirmar. |
 | `POST /api/v1/inspecciones` | `operacionId`, `versionRuta`, `prestadorId`, ficha, firma y referencias de evidencia. | Inspector se obtiene de la sesión validada; el correo se obtiene del padrón, nunca de un destino arbitrario del cliente. |
 | Registro nuevo | `201`: `inspeccionId`, `estado=RECIBIDA`, `version`, `recibidaEn`. | Acredita recepción durable; emisión del PDF continúa de forma asíncrona. |
 | Repetición idéntica | `200`: mismo identificador y estado vigente. | La huella del contenido excluye tiempos de transporte y conserva referencias estables. |
 | Conflicto | `409`: código de conflicto y versión vigente. | Misma operación con contenido diferente o ruta reasignada; no sobrescribe. |
-| Datos inválidos | `422`: código y campos observados. | Falta de objeto, hash incorrecto, GPS o firma ausentes; no confirma inspección. |
-| Sesión / acceso | `401` / `403`. | Renueva credencial o verifica asignación; no borra el borrador local. |
+| Datos inválidos | `422`: código y campos observados. | Falta de objeto, hash incorrecto, formato inválido o firma ausente; no confirma inspección. |
+| Sesión / acceso | `401` / `403`. | Renueva credencial o verifica asignación; no modifica el borrador guardado en el servidor. |
 | `GET /api/v1/inspecciones/{id}` | Estado, referencia autorizada al acta y versión. | Verifica rol y ámbito; acceso a objetos mediante descarga autorizada de duración limitada. |
 
 La unicidad se aplica en base de datos a institución + inspector + operación, además de la comprobación de aplicación. Evidencia ya recibida pero aún no vinculada conserva estado pendiente; una conciliación elimina huérfanos únicamente conforme a la política de retención, nunca por un timeout aislado.
@@ -131,7 +134,7 @@ Exportación SVG: [estados-expediente.svg](../../../img/fuentes-svg/estados-expe
 
 | Agregado | Estados y transición | Condición |
 |---|---|---|
-| Captura móvil | BORRADOR → LISTA → RECIBIDA | Completa validación; servidor confirma datos y objetos. Un conflicto conserva LISTA y añade incidencia para revisión. |
+| Registro web | BORRADOR → LISTA → RECIBIDA | BORRADOR y LISTA se conservan en PostgreSQL. Completa validación; la confirmación final del servidor conserva datos y objetos. Un conflicto conserva LISTA y añade incidencia para revisión. |
 | Emisión | RECIBIDA → EMITIDA; error → reintento en RECIBIDA | PDF persistido y hash confirmado; el evento ActaEmitida se registra en la misma transacción del cambio. |
 | Acta | EMITIDA → ANULADA | Decisión autorizada, motivo y evento de auditoría; original preservado. |
 | Notificación | PENDIENTE → ACEPTADA → ENTREGADA | ACEPTADA significa aceptación del proveedor; ENTREGADA requiere confirmación. Error transitorio conserva tarea; agotamiento pasa a REVISIÓN. |
@@ -139,9 +142,9 @@ Exportación SVG: [estados-expediente.svg](../../../img/fuentes-svg/estados-expe
 | Vencimiento | PENDIENTE → PLAZO VENCIDO → PROCEDIMIENTO SANCIONADOR | Vencimiento sin atención y derivación autorizada. Un descargo oportuno EN EVALUACIÓN conserva su fecha de presentación. |
 | Reincidencia | EN EVALUACIÓN → REINCIDENTE → PROCEDIMIENTO SANCIONADOR | Antecedente verificado y resolución del coordinador. |
 
-### Captura móvil
+### Registro web de inspección
 
-![Estados de captura móvil: BORRADOR, LISTA y RECIBIDA](../../../img/estados-captura.jpg)
+![Estados de registro web: BORRADOR, LISTA y RECIBIDA](../../../img/estados-captura.jpg)
 
 ### Emisión y anulación del acta
 
@@ -197,13 +200,13 @@ Estos diagramas se elaboran con **Archify**, conforme al contenido de este docum
 |---|---|---|
 | Paquetes del módulo Inspecciones | [JSON Archify](../../../.archify/sifitur-20261106-082100/paquetes-modulo-inspecciones/candidate.json) | [HTML interactivo](../../../.archify/sifitur-20261106-082100/paquetes-modulo-inspecciones/paquetes-modulo-inspecciones.html) |
 | Modelo del agregado | [JSON Archify](../../../.archify/sifitur-20261106-082100/clases-modulo-inspecciones/candidate.json) | [HTML interactivo](../../../.archify/sifitur-20261106-082100/clases-modulo-inspecciones/clases-modulo-inspecciones.html) |
-| Sincronización de inspección | [JSON Archify](../../../.archify/sifitur-20261106-082100/secuencia-registrar-inspeccion/candidate.json) | [HTML interactivo](../../../.archify/sifitur-20261106-082100/secuencia-registrar-inspeccion/secuencia-registrar-inspeccion.html) |
+| Registro web de inspección | [JSON Archify](../../../.archify/sifitur-20261106-082100/secuencia-registrar-inspeccion/candidate.json) | [HTML interactivo](../../../.archify/sifitur-20261106-082100/secuencia-registrar-inspeccion/secuencia-registrar-inspeccion.html) |
 | Estados de subsanación | [JSON Archify](../../../.archify/sifitur-20261106-082100/estados-expediente/candidate.json) | [HTML interactivo](../../../.archify/sifitur-20261106-082100/estados-expediente/estados-expediente.html) |
 | Estados de captura | [JSON Archify](../../../.archify/sifitur-20261106-082100/estados-captura/candidate.json) | [HTML interactivo](../../../.archify/sifitur-20261106-082100/estados-captura/estados-captura.html) |
 | Estados de emisión | [JSON Archify](../../../.archify/sifitur-20261106-082100/estados-emision/candidate.json) | [HTML interactivo](../../../.archify/sifitur-20261106-082100/estados-emision/estados-emision.html) |
 | Estados de notificación | [JSON Archify](../../../.archify/sifitur-20261106-082100/estados-notificacion/candidate.json) | [HTML interactivo](../../../.archify/sifitur-20261106-082100/estados-notificacion/estados-notificacion.html) |
 
-El seguimiento de subsanaciones se complementa con máquinas independientes de captura, emisión y notificación:
+El seguimiento de subsanaciones se complementa con máquinas independientes de registro, emisión y notificación:
 
 
 [Catálogo y reproducción de diagramas](../../../diagrams/README.md).

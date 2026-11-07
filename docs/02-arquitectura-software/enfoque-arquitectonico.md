@@ -20,7 +20,7 @@ La vista desarrolla **Clean Architecture dentro del módulo Inspecciones**, que 
 
 La aplicación institucional utiliza Node.js/NestJS y TypeScript. La entrada HTTP se ejecuta en la API; la recepción de eventos, la emisión del PDF y el consumidor de avisos se ejecutan en el trabajador. Ambos procesos reutilizan el diseño del módulo, sus reglas y sus contratos. El diagrama reúne estas responsabilidades de diseño; sus marcos de capas no representan un único proceso de ejecución.
 
-Flutter y su almacenamiento SQLite cifrado pertenecen al dispositivo del inspector. La comunicación HTTPS con `InspectionController` pasa por el gateway y los controles de acceso del backend. El perímetro completo, balanceador y almacenes se desarrollan en la [arquitectura inicial](arquitectura-inicial.md) y en el [nivel C4 de contenedores](../04-modelo-c4/Nivel2-DiagramadeContenedores.md).
+La consola institucional React permite al inspector registrar fichas y adjuntar evidencias mediante el navegador. La comunicación HTTPS con `InspectionController` pasa por el gateway y los controles de acceso del backend. El perímetro completo, balanceador y almacenes se desarrollan en la [arquitectura inicial](arquitectura-inicial.md) y en el [nivel C4 de contenedores](../04-modelo-c4/Nivel2-DiagramadeContenedores.md).
 
 | Rótulo de la relación | Interpretación |
 |---|---|
@@ -43,7 +43,7 @@ La llamada en ejecución y la dependencia de código son conceptos distintos: `R
 | Infraestructura | Repositorios, objetos, generación de PDF y clientes institucionales. | Contratos del dominio y bibliotecas técnicas. |
 | Composición | Módulos NestJS que seleccionan implementaciones. | Todas las capas para conectarlas. |
 
-El dominio y los casos de uso no importan NestJS, ORM ni SDK de proveedores. Cada módulo expone una API pública; los demás módulos no acceden a sus repositorios internos. La presentación móvil conserva borradores en SQLite cifrada y sincroniza por REST; el backend revalida las reglas y permisos antes de confirmar los cambios.
+El dominio y los casos de uso no importan NestJS, ORM ni SDK de proveedores. Cada módulo expone una API pública; los demás módulos no acceden a sus repositorios internos. La presentación web consulta y guarda borradores en PostgreSQL mediante REST; el backend revalida las reglas y permisos antes de confirmar los cambios.
 
 ## Presentación y entradas
 
@@ -52,7 +52,7 @@ El dominio y los casos de uso no importan NestJS, ORM ni SDK de proveedores. Cad
 | `InspectionController` | `presentacion/inspection.controller.ts`, en la API. | Traduce DTO y actor validado, invoca el caso de uso y convierte resultados o errores a HTTP. No ejecuta SQL ni genera PDF. |
 | Entrada del trabajador | Consumidor de la tarea de emisión. | Recibe el evento durable y conecta su procesamiento con `ProcesarActaCasoUso`. El resultado se persiste antes del acuse al broker. |
 | Consumidor de avisos | Trabajador, separado del consumidor de emisión. | Deduplica evento y destinatario; solicita el envío mediante `Notificador` y registra aceptación o entrega verificable. |
-| Cliente Flutter | Aplicación móvil y almacenamiento local cifrado. | Conserva la captura y su operación estable; sincroniza con sesión y permisos revalidados. La autorización institucional se decide en el servidor. |
+| Cliente React | Consola institucional web. | Consulta rutas y guarda borradores en el servidor; registra inspecciones con operación estable, sesión y permisos vigentes. La autorización institucional se decide en el servidor. |
 
 ## Aplicación: casos de uso
 
@@ -68,10 +68,10 @@ La coordinación del caso de uso pertenece a aplicación. La pertenencia del exp
 | Elemento | Datos y comportamiento documentados |
 |---|---|
 | `Inspeccion` | Identifica operación, inspector, prestador, ficha, versión de ruta, evidencias y firma; distingue captura y recepción. `crear()` centraliza la construcción válida y `huella()` identifica el contenido estable. |
-| `Evidencia` | Referencia al original, origen cámara, GPS, fecha de captura y hash SHA-256. Una imagen sin coordenadas válidas no completa una evidencia inspectiva. |
+| `Evidencia` | Referencia al archivo original adjunto, nombre, tipo MIME, tamaño, fecha de recepción y hash SHA-256. El backend valida formato, tamaño e integridad antes de vincularlo. |
 | `FirmaDigitalizada` | Referencia y hash de la firma manuscrita, vinculada a la inspección. No representa por sí misma una firma digital certificada. |
 | `Acta` | Referencia al PDF, hash, fecha y estado de emisión. Su anulación requiere decisión autorizada y conserva el original y la trazabilidad. |
-| Invariantes de construcción | RN-01: identidad de captura; RN-02: al menos una evidencia válida de cámara; RN-03: firma vinculada. Se validan sin framework ni acceso a red. |
+| Invariantes de construcción | RN-01: identidad de captura; RN-02: al menos una evidencia fotográfica válida; RN-03: firma vinculada. Se validan sin framework ni servicios externos. |
 
 RN-04 a RN-07 también forman parte del comportamiento del módulo, pero requieren coordinación con aplicación y sus puertos: idempotencia, verificación real de objetos, emisión durable y conservación del acta aunque falle el aviso. No se atribuye al objeto de dominio la responsabilidad de consultar S3, confirmar una transacción o enviar correo.
 
@@ -105,10 +105,10 @@ Cambiar PostgreSQL, el proveedor de objetos, la biblioteca PDF o la pasarela req
 5. Composición registra implementaciones e inyecta las dependencias; no concentra las reglas del expediente.
 6. Cada módulo mantiene sus tablas y repositorios; la colaboración se realiza mediante su API pública.
 
-## Flujo de sincronización
+## Flujo de registro web
 
-1. Flutter conserva ficha, firma y evidencias con un identificador de operación estable.
-2. Al recuperar red se verifica la sesión y se envía el registro y sus referencias de evidencia.
+1. La consola web guarda la ficha como borrador en el servidor y adjunta firma digitalizada y evidencias con un identificador de operación estable.
+2. Con sesión vigente, la consola web envía el registro y las referencias de los archivos que el servidor confirmó.
 3. El caso de uso comprueba autorización, idempotencia e integridad de los objetos recibidos.
 4. El repositorio confirma inspección, auditoría y tarea outbox en una transacción institucional.
 5. El trabajador genera y conserva el PDF, confirma el acta y registra la tarea de notificación.
@@ -121,18 +121,18 @@ Cambiar PostgreSQL, el proveedor de objetos, la biblioteca PDF o la pasarela req
 | Inspección nueva válida | Verifica los objetos; T1 confirma inspección, auditoría y outbox en PostgreSQL; responde `201 RECIBIDA`, con PDF pendiente. |
 | Reenvío idéntico | Devuelve el mismo identificador y estado vigente con `200`; no crea otra inspección ni repite T1. |
 | Operación reutilizada con otro contenido o versión incompatible | Devuelve `409`; conserva el borrador y no sobrescribe la inspección confirmada. |
-| Evidencia, GPS o firma inválidos | Rechaza la confirmación; las alternativas de entrada se traducen a `422` según el contrato REST. |
-| Credencial o permiso inválidos | Devuelve `401` o `403`; el móvil conserva el borrador. La sesión retenida offline no sustituye la autorización remota vigente. |
+| Evidencia, formato o firma inválidos | Rechaza la confirmación; las alternativas de entrada se traducen a `422` según el contrato REST. |
+| Credencial o permiso inválidos | Devuelve `401` o `403`; no modifica el expediente y requiere autenticar o corregir el permiso. Los borradores previamente guardados permanecen en PostgreSQL. |
 | Fallo del PDF o almacenamiento | Reanuda la emisión pendiente con identificadores estables; no confirma EMITIDA sin PDF y hash persistidos. |
 | Fallo del correo | Conserva EMITIDA y la tarea de aviso; aplica reintentos acotados y revisión operativa. ACEPTADA no equivale a ENTREGADA. |
 
-T1 y T2 son transacciones locales de PostgreSQL. S3 y RabbitMQ se coordinan mediante outbox, estados, confirmaciones y consumidores idempotentes; no existe una transacción ACID única entre los tres recursos. El móvil conserva su copia hasta recibir confirmación durable. Emitir el acta tampoco declara por sí solo la formalidad pública del establecimiento.
+T1 y T2 son transacciones locales de PostgreSQL. S3 y RabbitMQ se coordinan mediante outbox, estados, confirmaciones y consumidores idempotentes; no existe una transacción ACID única entre los tres recursos. El navegador muestra confirmación únicamente después del acuse durable; no se garantiza recuperar datos que nunca llegaron al servidor. Emitir el acta tampoco declara por sí solo la formalidad pública del establecimiento.
 
 ## Trazabilidad del enfoque
 
 | Requisitos / atributo | Responsabilidad que desarrolla la arquitectura |
 |---|---|
-| RF03 y RF09 | Captura cifrada offline, operación estable y sincronización idempotente. |
+| RF09 | Registro web, borradores en PostgreSQL, operación estable e idempotencia. |
 | RF04 | Auditoría confirmada junto con la mutación sensible. |
 | RF10 y RF11 | Custodia de originales, hash, firma vinculada, generación de PDF y notificación recuperable. |
 | AC09 y ADR-002 / ADR-004 | Independencia del núcleo, contratos de módulo y sustitución de adaptadores. |

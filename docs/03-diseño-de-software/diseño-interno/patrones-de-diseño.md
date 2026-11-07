@@ -17,7 +17,7 @@ Definir los patrones seleccionados para implementar el backend de SIFITUR Huaman
 | Adapter | Evidencias → S3; padrón → SUNAT/MINCETUR; notificaciones → SMS/correo. | Formatos y mecanismos distintos de los proveedores. | Contratos internos y clientes de infraestructura. |
 | Repository | Inspecciones, padrón y subsanaciones → PostgreSQL. | Evitar dependencia del negocio de SQL u ORM. | Repositorios PostgreSQL por módulo; dobles de prueba en memoria durante validación. |
 | Fábrica estática | Creación de Inspeccion y Evidencia. | Evitar entidades incompletas o inválidas. | Inspeccion.crear(datos) y validación de Evidencia. |
-| Facade | Entrada de sincronización de inspecciones. | Coordinar validación, evidencia y persistencia con una operación de aplicación. | RegistrarInspeccionCasoUso. |
+| Facade | Entrada de registro web de inspecciones. | Coordinar validación, evidencia y persistencia con una operación de aplicación. | RegistrarInspeccionCasoUso. |
 
 ## Diagramas de patrones
 
@@ -29,7 +29,7 @@ Definir los patrones seleccionados para implementar el backend de SIFITUR Huaman
 
 ![Factory de inspecciones](../../../img/patron-factory.jpg)
 
-### Facade: sincronización
+### Facade: registro web
 
 ![Facade del flujo de inspección](../../../img/patron-facade.jpg)
 
@@ -61,7 +61,7 @@ Estos diagramas se elaboran con **Archify**, conforme al contenido de este docum
 |---|---|---|
 | Adapter de custodia | [JSON Archify](../../../.archify/sifitur-20261106-082100/patron-adapter/candidate.json) | [HTML interactivo](../../../.archify/sifitur-20261106-082100/patron-adapter/patron-adapter.html) |
 | Fábrica estática de Inspeccion | [JSON Archify](../../../.archify/sifitur-20261106-082100/patron-factory/candidate.json) | [HTML interactivo](../../../.archify/sifitur-20261106-082100/patron-factory/patron-factory.html) |
-| Fachada de sincronización | [JSON Archify](../../../.archify/sifitur-20261106-082100/patron-facade/candidate.json) | [HTML interactivo](../../../.archify/sifitur-20261106-082100/patron-facade/patron-facade.html) |
+| Fachada de registro web | [JSON Archify](../../../.archify/sifitur-20261106-082100/patron-facade/candidate.json) | [HTML interactivo](../../../.archify/sifitur-20261106-082100/patron-facade/patron-facade.html) |
 | Repository idempotente | [JSON Archify](../../../.archify/sifitur-20261106-082100/patron-repository/candidate.json) | [HTML interactivo](../../../.archify/sifitur-20261106-082100/patron-repository/patron-repository.html) |
 
 [Catálogo y reproducción de diagramas](../../../diagrams/README.md).

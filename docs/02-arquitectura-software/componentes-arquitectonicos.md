@@ -6,11 +6,11 @@ Exportación SVG: [componentes.svg](../../img/fuentes-svg/componentes.svg).
 
 | Componente | Responsabilidad | Requisitos |
 |---|---|---|
-| Identidad y acceso | Usuarios, recuperación de credenciales, JWT y RBAC. | RF01, RF02, RF03, RF15 |
+| Identidad y acceso | Usuarios, recuperación de credenciales, JWT y RBAC. | RF01, RF02, RF15 |
 | Padrón y vigencias | Prestadores, documentos y alertas de vencimiento. | RF05, RF06 |
 | Riesgo | Clasificación de criticidad según reglas versionadas. | RF07 |
 | Operativos | Campañas, polígonos y asignación de rutas. | RF08 |
-| Inspecciones y evidencias | Captura, sincronización, fotos y actas firmadas. | RF09, RF10, RF11 |
+| Inspecciones y evidencias | Registro web, borradores en el servidor, fotos adjuntas y actas firmadas. | RF09, RF10, RF11 |
 | Subsanaciones | Descargos, plazos y evaluación de observaciones. | RF12 |
 | Consulta pública | Directorio y QR con datos autorizados. | RF13 |
 | Indicadores | Mapas, métricas territoriales y exportaciones privadas. | RF14 |

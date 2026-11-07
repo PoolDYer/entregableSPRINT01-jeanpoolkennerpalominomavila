@@ -18,7 +18,7 @@ Organizar el módulo Inspecciones de SIFITUR Huamanga mediante clases con respon
 
 ## Inversión de dependencias
 
-![DIP en la sincronización](../../../img/principio-dip.jpg)
+![DIP en la registro web](../../../img/principio-dip.jpg)
 
 ## Cambios y efecto esperado
 

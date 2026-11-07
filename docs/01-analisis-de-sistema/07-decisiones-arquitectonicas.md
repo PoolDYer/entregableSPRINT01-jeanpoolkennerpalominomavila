@@ -5,10 +5,9 @@
 | ID | Decisión | Driver relacionado | Justificación | Resultado previsto |
 |---|---|---|---|---|
 | ADR-001 | Backend como monolito modular con instancias sin estado. | DA03, DA08. | Mantener una unidad de despliegue del negocio y permitir replicar su ejecución sin administrar microservicios desde el inicio. | Módulos de identidad, padrón, operativos, fiscalización, subsanaciones, riesgo, consulta y auditoría. |
-| ADR-002 | Clean Architecture por módulo. | DA02, DA05, DA06, DA07. | Aislar reglas de fiscalización de frameworks, persistencia y proveedores. | Dominio, aplicación, presentación e infraestructura con dependencias hacia el interior. |
+| ADR-002 | Clean Architecture por módulo. | DA05, DA06, DA07. | Aislar reglas de fiscalización de frameworks, persistencia y proveedores. | Dominio, aplicación, presentación e infraestructura con dependencias hacia el interior. |
 | ADR-003 | Consulta pública con caché y réplica de lectura. | DA03, DA04. | Absorber el predominio de lecturas y mantener las escrituras institucionales separadas de los reportes. | Redis para fichas públicas y PostgreSQL de lectura para consultas tolerantes a desfase. |
 | ADR-004 | Integraciones mediante puertos y adaptadores. | DA06. | Evitar que cambios o indisponibilidad de proveedores invadan los casos de uso. | Adaptadores SUNAT, MINCETUR, GIS y notificaciones. |
-| ADR-005 | Registro móvil offline y sincronización idempotente. | DA02. | Continuar la captura de actas sin red y evitar duplicados cuando se reintenta el envío. | SQLite cifrada, cola local y conciliación con el backend. |
 | ADR-006 | Evidencias en objetos y tareas asíncronas recuperables. | DA05. | Separar archivos pesados del cómputo y preservar su relación con el expediente. | S3 compatible, RabbitMQ, trabajador e historial de procesamiento. |
 | ADR-007 | Autorización por rol y auditoría de acciones sensibles. | DA01, DA05. | Proteger expedientes y mantener trazabilidad de cambios. | JWT para rutas privadas, RBAC en backend y registro de auditoría con acceso restringido. |
 | ADR-008 | Recuperación y despliegue redundante. | DA03, DA05, DA08. | Evitar pérdida de datos confirmados y reducir interrupciones. | Standby síncrono, copias, broker replicado y conmutación controlada. |
@@ -17,7 +16,7 @@
 
 **Contexto:** la propuesta estima 35 inspectores, 12 coordinadores, 4 administradores, 600 prestadores y una capacidad objetivo de 1,200 solicitudes por minuto. Se necesita controlar el costo operativo y atender picos estacionales.
 
-**Decisión:** una aplicación backend Node.js/NestJS organiza módulos de negocio con interfaces explícitas. Sus instancias se replican detrás del gateway y balanceador. La aplicación móvil, los portales, los almacenes y el trabajador asíncrono constituyen unidades separadas; monolito modular describe el backend, no todo el ecosistema.
+**Decisión:** una aplicación backend Node.js/NestJS organiza módulos de negocio con interfaces explícitas. Sus instancias se replican detrás del gateway y balanceador. Los clientes web, los almacenes y el trabajador asíncrono constituyen unidades separadas; monolito modular describe el backend, no todo el ecosistema.
 
 **Alternativas:** microservicios por módulo o monolito sin límites internos. Se prefiere la modularidad porque permite separar responsabilidades con menor carga de operación que los microservicios. La existencia de una cola no transforma automáticamente el backend en microservicios.
 
@@ -25,7 +24,7 @@
 
 ## ADR-002 Dependencias hacia el núcleo
 
-**Contexto:** las reglas de riesgo, vigencias y subsanaciones deben poder revisarse sin depender de Flutter, NestJS, Redis o S3.
+**Contexto:** las reglas de riesgo, vigencias y subsanaciones deben poder revisarse sin depender de React, NestJS, Redis o S3.
 
 **Decisión:** el dominio conserva entidades y reglas; aplicación orquesta casos de uso sobre puertos definidos en el dominio; presentación transforma entradas y salidas; infraestructura implementa los puertos. La raíz de composición conecta las implementaciones.
 
@@ -53,15 +52,6 @@
 
 **Consecuencias:** una consulta externa no disponible queda pendiente de validación y no se interpreta como establecimiento conforme. El registro local del expediente puede conservarse. Acceso, permisos, cuotas, contratos de API y disponibilidad de cada integración requieren confirmación antes de implementarla.
 
-## ADR-005 Trabajo desconectado
-
-**Contexto:** RF03 y RF09 exigen persistencia local y conciliación al recuperar red.
-
-**Decisión:** la aplicación móvil guarda actas y referencias de evidencias en SQLite cifrada. Cada operación tiene identificador único, versión y estado de sincronización. El servidor registra el identificador procesado para que un reintento no cree otra acta. Un conflicto de versión se devuelve para revisión; no se sobrescribe silenciosamente un acta emitida.
-
-**Alternativa:** exigir conexión para capturar o reenviar todo el lote sin control de duplicados. No satisface continuidad ni integridad.
-
-**Consecuencias:** el inspector puede capturar con una sesión local previamente habilitada bajo una política de vigencia. Esa sesión no prueba una autorización remota actual ni habilita llamadas con JWT vencido: al sincronizar se revalida la identidad y el permiso. La hora del dispositivo se conserva como dato de captura y se distingue de la hora de recepción del servidor.
 
 ## ADR-006 Custodia de evidencias
 
@@ -71,25 +61,24 @@
 
 **Alternativas:** archivos en el disco del servidor o publicar mensajes sin registro transaccional. Se descartan por fragilidad ante cambios de instancia y pérdidas entre escritura y publicación.
 
-**Consecuencias:** PostgreSQL, S3 y RabbitMQ no participan de una única transacción ACID. El flujo necesita estados pendientes, reintentos y conciliación. No se elimina la copia local hasta confirmar la recepción durable. Se preserva el archivo original; versiones optimizadas para visualizar no lo sustituyen. Versionado, retención, copias y restauración deben configurarse y verificarse. Un hash detecta modificaciones respecto de un valor confiable; no constituye por sí mismo una firma digital certificada ni garantiza no repudio.
+**Consecuencias:** PostgreSQL, S3 y RabbitMQ no participan de una única transacción ACID. El flujo necesita estados pendientes, reintentos y conciliación. La consola web muestra el registro como confirmado solo después de recibir el acuse durable del servidor. Se preserva el archivo original; versiones optimizadas para visualizar no lo sustituyen. Versionado, retención, copias y restauración deben configurarse y verificarse. Un hash detecta modificaciones respecto de un valor confiable; no constituye por sí mismo una firma digital certificada ni garantiza no repudio.
 
 ## ADR-007 Seguridad y auditoría
 
 **Contexto:** existen rutas privadas para inspectores, coordinadores, administradores y prestadores, y RF13 exige consulta ciudadana sin inicio de sesión.
 
-**Decisión:** el gateway aplica controles perimetrales; el backend verifica JWT y permisos sobre cada operación privada y cada expediente. La consulta pública usa una proyección con campos autorizados y no exige JWT. Las mutaciones sensibles registran usuario, acción, expediente y tiempo del servidor; para captura offline se conserva además el tiempo local declarado.
+**Decisión:** el gateway aplica controles perimetrales; el backend verifica JWT y permisos sobre cada operación privada y cada expediente. La consulta pública usa una proyección con campos autorizados y no exige JWT. Las mutaciones sensibles registran usuario, acción, expediente y tiempo del servidor; los metadatos del archivo adjunto se conservan diferenciados de la hora de recepción.
 
 **Alternativa:** validar solo en la interfaz o aplicar autenticación obligatoria al portal QR. La primera deja accesos sin protección efectiva y la segunda contradice RF13.
 
-**Consecuencias:** RBAC se complementa con verificación de pertenencia del expediente. Auditoría requiere permisos de solo inserción para la aplicación, acceso de lectura controlado y detección de alteraciones; llamarla append-only no basta. La revocación inmediata de permisos no puede garantizarse en un móvil desconectado. El objetivo de protección de datos indicado en las fuentes necesita evaluación específica antes de afirmar cumplimiento.
+**Consecuencias:** RBAC se complementa con verificación de pertenencia del expediente. Auditoría requiere permisos de solo inserción para la aplicación, acceso de lectura controlado y detección de alteraciones; llamarla append-only no basta. Cada solicitud web verifica permisos vigentes en el servidor. El objetivo de protección de datos indicado en las fuentes necesita evaluación específica antes de afirmar cumplimiento.
 
 ## Validación prevista
 
 | Decisiones | Evidencia a obtener durante implementación |
 |---|---|
 | ADR-001, ADR-003 | Prueba con 1,200 solicitudes/minuto, latencia P95 y fallo de una instancia; medir retraso de réplica e invalidación. |
-| ADR-002, ADR-004 | Reglas probadas sin framework ni red; sustitución de adaptadores y simulación de caída externa. |
-| ADR-005 | Captura sin red, reconexión, reenvío repetido y conflicto de versiones sin pérdida ni duplicados. |
+| ADR-002, ADR-004 | Reglas probadas sin framework ni servicios externos; sustitución de adaptadores y simulación de caída externa. |
 | ADR-006 | Recuperación después de fallar cada paso, verificación de hashes y restauración de evidencias. |
 | ADR-007 | Consulta QR sin token; denegación de acceso a expedientes ajenos y trazabilidad de cambios. |
 
@@ -109,7 +98,7 @@ Los criterios de aceptación arquitectónica se detallan en los escenarios de ca
 
 **Alternativas:** primaria única con restauración manual o replicación asíncrona como única protección. La primera aumenta la interrupción; la segunda puede perder transacciones ya confirmadas al promover un nodo atrasado.
 
-**Consecuencias:** la redundancia incrementa costo y latencia de escritura. Si el standby síncrono no está disponible, se conserva captura móvil y se suspende la confirmación central antes de degradar silenciosamente la garantía. Las copias con recuperación a un punto temporal y el versionado de objetos protegen frente a borrado o corrupción lógica. RPO objetivo de datos confirmados: 0 ante fallo de un nodo; RTO propuesto: ≤ 5 minutos en conmutación controlada. Una pérdida regional queda fuera de esa garantía hasta definir y ensayar recuperación geográfica.
+**Consecuencias:** la redundancia incrementa costo y latencia de escritura. Si el standby síncrono no está disponible, se informa la indisponibilidad temporal en la web y se suspende la confirmación de escrituras antes de degradar silenciosamente la garantía. Las copias con recuperación a un punto temporal y el versionado de objetos protegen frente a borrado o corrupción lógica. RPO objetivo de datos confirmados: 0 ante fallo de un nodo; RTO propuesto: ≤ 5 minutos en conmutación controlada. Una pérdida regional queda fuera de esa garantía hasta definir y ensayar recuperación geográfica.
 
 **Verificación:** fallar instancia, primaria y broker; contrastar registros confirmados, eventos y hashes; medir recuperación y restaurar copias. Son objetivos de diseño, no resultados de pruebas de un despliegue existente.
 

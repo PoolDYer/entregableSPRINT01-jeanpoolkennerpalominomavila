@@ -8,7 +8,7 @@ Exportación SVG: [arquitectura-alto-nivel.svg](../../img/fuentes-svg/arquitectu
 
 ## Descripción
 
-La arquitectura es cliente-servidor multicanal. La aplicación móvil permite la inspección offline; la consola administrativa coordina operativos; el portal del administrado recibe descargos; el portal ciudadano verifica formalidad y códigos QR.
+La arquitectura es cliente-servidor web. La consola institucional permite registrar inspecciones y coordinar operativos; el portal del administrado recibe descargos; el portal ciudadano verifica formalidad y códigos QR.
 
 | Componente | Responsabilidad | Riesgo mitigado |
 |---|---|---|
@@ -28,12 +28,12 @@ La réplica no sustituye copias de seguridad. La conmutación de la primaria, re
 | Flujo | Recorrido | Garantía / degradación |
 |---|---|---|
 | Consulta pública | Portal → API → Redis; fallo o vencimiento → proyección validada en primaria. | Solo campos públicos; fecha y versión; antigüedad máxima de diseño de 60 s. |
-| Inspección | Flutter → carga autenticada → S3 → registro API → transacción primaria. | No se acusa recepción sin verificar objetos, auditoría y outbox; reintento por operación única. |
+| Inspección | Consola web React → carga autenticada → S3 → registro API → transacción primaria. | No se acusa recepción sin verificar objetos, auditoría y outbox; reintento por operación única. |
 | Emisión | Publicador outbox del trabajador → RabbitMQ → consumidor de actas → S3 y primaria. | Mensaje con referencia al objeto; no transportar fotografías completas en el broker. |
 | Notificación | Acta emitida → outbox → consumidor de notificación → pasarela. | Fallo de envío no revierte emisión; resultado y reintentos persistidos. |
 | Indicadores | Consola → API privada → réplica / proyecciones analíticas. | Muestra fecha de corte; no decide sanciones con datos retrasados. |
 
-El despliegue incorpora standby síncrono para continuidad de la primaria y réplica asíncrona para lecturas. Las capacidades se especifican en [ADR-008](../01-analisis-de-sistema/07-decisiones-arquitectonicas.md#adr-008-recuperación-y-despliegue-redundante). La app conserva la captura sin red si el servidor no puede confirmar de forma durable.
+El despliegue incorpora standby síncrono para continuidad de la primaria y réplica asíncrona para lecturas. Las capacidades se especifican en [ADR-008](../01-analisis-de-sistema/07-decisiones-arquitectonicas.md#adr-008-recuperación-y-despliegue-redundante). La consola web informa si el servidor no puede confirmar de forma durable; únicamente los borradores ya guardados en PostgreSQL pueden recuperarse.
 
 ## Herramientas y fuentes de diagramas
 

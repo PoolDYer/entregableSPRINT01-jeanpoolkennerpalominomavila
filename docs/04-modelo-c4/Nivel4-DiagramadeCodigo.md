@@ -4,7 +4,7 @@
 
 ## 1. Objetivo
 
-Detallar las clases y colaboraciones del flujo de sincronización de inspección y emisión del acta. Este flujo concentra RF09, RF10 y RF11, integridad, idempotencia y auditoría.
+Detallar las clases y colaboraciones del flujo de registro web de inspección y emisión del acta. Este flujo concentra RF09, RF10 y RF11, integridad, idempotencia y auditoría.
 
 Esta vista descompone el componente Inspecciones del [nivel 3](Nivel3-Diagrama-de-Componentes.md) en clases, interfaces y objetos del dominio. Incluye cuatro diagramas: clases y contratos, modelo del agregado, secuencia de registro y secuencia de emisión. La API recibe la inspección; el trabajador procesa su acta y la notificación posterior.
 
@@ -28,7 +28,7 @@ Exportación SVG: [nivel4-clases.svg](../../img/fuentes-svg/nivel4-clases.svg).
 | Elemento | Tipo | Responsabilidad |
 |---|---|---|
 | Inspeccion | Entidad | Datos de inspección, evidencias, firma y huella de operación. |
-| Evidencia | Objeto de valor | Identificador de objeto, hash, GPS y origen cámara. |
+| Evidencia | Objeto de valor | Identificador de objeto, hash, tipo MIME, tamaño y origen de carga web. |
 | Acta | Valor de resultado | Referencia al PDF, hash y estado emitida. |
 | RegistrarInspeccionCasoUso | Caso de uso | Verificar actor, reenvío y objetos antes de registrar. |
 | ProcesarActaCasoUso | Caso de uso | Emitir PDF y conservar tarea de notificación. |
@@ -52,15 +52,15 @@ Los paquetes UML agrupan presentación, aplicación, dominio e infraestructura. 
 
 ## 3. Diagramas de secuencia
 
-### 3.1 Registro y sincronización de inspección
+### 3.1 Registro web de inspección
 
-![C4 nivel 4: secuencia de registro y sincronización](../../img/nivel4-registro.jpg)
+![C4 nivel 4: secuencia de registro web](../../img/nivel4-registro.jpg)
 
 Exportación SVG: [secuencia de registro](../../img/fuentes-svg/nivel4-registro.svg).
 
 `InspectionController` delega en `RegistrarInspeccionCasoUso`. El caso de uso verifica asignación, operación y evidencias mediante los contratos del núcleo. La transacción T1 conserva inspección, auditoría y evento outbox antes de responder `201 RECIBIDA`; el PDF todavía puede estar pendiente. Un reenvío idéntico obtiene el registro existente con `200`; una huella distinta para la misma operación produce `409`.
 
-Las precondiciones, autorizaciones y alternativas de error se especifican en el [flujo de sincronización](../03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md#6-flujo-sincronizar-inspección).
+Las precondiciones, autorizaciones y alternativas de error se especifican en el [flujo de registro web](../03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md#6-flujo-registrar-inspección).
 
 ### 3.2 Emisión asíncrona del acta y notificación
 
@@ -87,7 +87,7 @@ La emisión no cambia por sí sola el estado de formalidad del establecimiento. 
 |---|---|
 | Contratos y adaptadores | Adapter, Repository y DIP. |
 | Inspeccion.crear | Fábrica estática y validación centralizada. |
-| Entrada de sincronización | Facade de aplicación. |
+| Entrada de registro web | Facade de aplicación. |
 | Controlador, entidad, generador y notificador separados | Responsabilidad única y segregación de interfaces. |
 
 ## 5. Frontera entre ejecución y contratos
