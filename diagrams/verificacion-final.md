@@ -43,3 +43,9 @@ Se comparó el modelo JSON con la revisión anterior: se conservan todos los ele
 La vista se organiza en entradas y servicios por fila funcional, coordinación de acceso y negocio en la columna central, y repositorios y adaptadores a la derecha. Los componentes disponen de mayor ancho para los nombres completos. Se conservan los dieciséis grupos de componentes, los 29 elementos visibles y las 43 relaciones; el modelo semántico y la distribución del nivel 2 se compararon con la revisión anterior y permanecen iguales.
 
 El trabajador, los almacenes y los clientes web quedan fuera de la frontera de la API; los cuatro sistemas externos quedan fuera del límite de SIFITUR. La regeneración aplica las distribuciones de niveles 2 y 3 antes de exportar desde el JSON de Structurizr. La revisión visual comprueba nombres, etiquetas y recorridos; el verificador comprueba posiciones, cajas y fronteras. El control final registra 166 comprobaciones y 179 enlaces, sin errores.
+
+## Estilo arquitectónico detallado
+
+El diagrama del monolito modular se amplió de seis bloques generales a 26 elementos y 33 relaciones. Presenta tres clientes web, gateway externo, controles transversales, seis columnas funcionales y las franjas de presentación, aplicación y dominio, e infraestructura y datos. Padrón, Riesgo y Operativos se agrupan visualmente y mantienen servicios separados. La evaluación institucional se delega desde ManagementController a SubsanacionService.
+
+Se verificaron la propiedad de repositorios, la colaboración mediante APIs públicas y la separación del gateway y la persistencia respecto a la API. El Markdown desarrolla módulos, protocolos, leyenda, ejecución del trabajador y coordinación durable. Archify superó validate, deliver, check y browser-check; la exportación JPG se revisó visualmente. El control final registra 170 comprobaciones y 186 enlaces, sin errores.

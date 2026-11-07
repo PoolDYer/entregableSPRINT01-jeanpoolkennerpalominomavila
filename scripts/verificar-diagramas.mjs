@@ -17,6 +17,14 @@ const rules=[];
 function check(rule,condition){rules.push({rule,result:condition?'conforme':'error'});if(!condition)errors.push(rule);}
 const specs=new Map(manifest.map(d=>[d.slug,JSON.parse(read(d.input))]));
 const clean=specs.get('arquitectura-limpia-sifitur');
+const modular=specs.get('arquitectura-monolitica-sifitur');
+const moduleColumns=['identity','management','inspection','claims','query','metrics'];
+check('Estilo modular: controladores, servicios y persistencia por área',moduleColumns.every(id=>['controller','service','repository'].every(suffix=>modular.components.some(c=>c.id===id+'_'+suffix))&&modular.connections.some(r=>r.from===id+'_controller'&&r.to===id+'_service')&&modular.connections.some(r=>r.from===id+'_service'&&r.to===id+'_repository')));
+check('Estilo modular: Padrón, Riesgo y Operativos conservan servicios separados',['management_service','risk_service','operations_service'].every(id=>modular.components.some(c=>c.id===id))&&modular.connections.some(r=>r.from==='inspection_service'&&r.to==='operations_service'&&r.variant==='dashed'));
+check('Estilo modular: servicios sin acceso a repositorios de otro módulo',modular.connections.filter(r=>r.to.endsWith('_repository')).every(r=>moduleColumns.some(id=>r.from===id+'_service'&&r.to===id+'_repository')||(r.from==='operations_service'&&r.to==='management_repository')));
+const apiBoundary=modular.boundaries.find(b=>b.label.startsWith('BACKEND API'));
+check('Estilo modular: clientes, gateway y recursos fuera de la API',['institucional','administrado','ciudadano','gateway','persistence'].every(id=>!apiBoundary.wraps.includes(id))&&apiBoundary.wraps.includes('transversales'));
+
 const layerMembers={presentacion:['controller','worker_entry','notices'],aplicacion:['register','emit'],dominio:['inspection','evidence','acta','rules','repo','store','pdf_port','notice_port'],infraestructura:['pg','s3','pdf_adapter','mail']};
 check('Enfoque organizado: cuatro capas con sus responsabilidades documentadas',clean.boundaries.length===4&&Object.values(layerMembers).every(ids=>clean.boundaries.some(b=>ids.every(id=>b.wraps.includes(id)))));
 check('Enfoque organizado: dominio contenido en el marco de aplicación',clean.boundaries.some(b=>[...layerMembers.aplicacion,...layerMembers.dominio].every(id=>b.wraps.includes(id))));

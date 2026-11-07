@@ -8,185 +8,948 @@
     "quality_profile": "showcase",
     "repository": {
       "url": "https://github.com/PoolDYer/entregableSPRINT01-jeanpoolkennerpalominomavila.git",
-      "revision": "785988a34ad8cf27fbc9fc7ef728283127ed271a"
+      "revision": "68f321a9a82c6585e20f7f895df27fa42c0f0630"
+    },
+    "subtitle": "Entradas web, módulos institucionales, colaboración y persistencia · vista de la API",
+    "legend": {
+      "mode": "auto",
+      "entries": {
+        "frontend": {
+          "label": "Clientes y presentación"
+        },
+        "backend": {
+          "label": "Servicios y reglas de negocio"
+        },
+        "security": {
+          "label": "Controles transversales"
+        },
+        "cloud": {
+          "label": "Gateway / adaptadores"
+        },
+        "database": {
+          "label": "Recursos de persistencia"
+        }
+      }
     }
   },
   "components": [
     {
-      "id": "clients",
+      "id": "institucional",
       "type": "frontend",
-      "label": "Canales independientes",
-      "sublabel": "React · Next.js",
+      "label": "Consola institucional · React",
+      "sublabel": "Inspector · coordinador · administrador TI",
+      "tag": "Inspecciones, padrón y gestión",
       "pos": [
         40,
         40
       ],
       "size": [
-        230,
-        72
+        500,
+        60
       ],
       "sources": [
         {
-          "path": "docs/02-arquitectura-software/estilo-arquitectonico.md"
+          "path": "docs/04-modelo-c4/Nivel3-Diagrama-de-Componentes.md"
+        },
+        {
+          "path": "docs/02-arquitectura-software/componentes-arquitectonicos.md"
         }
       ]
     },
     {
-      "id": "presentation",
-      "type": "security",
-      "label": "Presentación REST",
-      "sublabel": "Público / JWT, rol y ámbito",
+      "id": "administrado",
+      "type": "frontend",
+      "label": "Portal del administrado · React",
+      "sublabel": "Prestador: expediente propio y descargos",
+      "tag": "Acceso autenticado",
       "pos": [
-        430,
+        620,
         40
       ],
       "size": [
-        230,
-        72
+        500,
+        60
       ],
       "sources": [
         {
-          "path": "docs/02-arquitectura-software/estilo-arquitectonico.md"
+          "path": "docs/04-modelo-c4/Nivel3-Diagrama-de-Componentes.md"
+        },
+        {
+          "path": "docs/02-arquitectura-software/componentes-arquitectonicos.md"
         }
       ]
     },
     {
-      "id": "application",
-      "type": "backend",
-      "label": "Aplicación y dominio",
-      "sublabel": "Contratos públicos por módulo",
+      "id": "ciudadano",
+      "type": "frontend",
+      "label": "Portal ciudadano · Next.js",
+      "sublabel": "Ciudadano: directorio, formalidad y QR",
+      "tag": "Consulta pública sin sesión",
       "pos": [
-        820,
+        1200,
         40
       ],
       "size": [
-        240,
-        72
+        500,
+        60
       ],
       "sources": [
         {
-          "path": "docs/02-arquitectura-software/estilo-arquitectonico.md"
+          "path": "docs/04-modelo-c4/Nivel3-Diagrama-de-Componentes.md"
+        },
+        {
+          "path": "docs/02-arquitectura-software/componentes-arquitectonicos.md"
         }
       ]
     },
     {
-      "id": "infra",
+      "id": "gateway",
       "type": "cloud",
-      "label": "Infraestructura",
-      "sublabel": "Repositorios y adaptadores",
-      "pos": [
-        820,
-        300
-      ],
-      "size": [
-        240,
-        72
-      ],
-      "sources": [
-        {
-          "path": "docs/02-arquitectura-software/estilo-arquitectonico.md"
-        }
-      ]
-    },
-    {
-      "id": "stores",
-      "type": "database",
-      "label": "Persistencia",
-      "sublabel": "PostgreSQL · Redis · S3",
-      "pos": [
-        430,
-        300
-      ],
-      "size": [
-        230,
-        72
-      ],
-      "sources": [
-        {
-          "path": "docs/02-arquitectura-software/estilo-arquitectonico.md"
-        }
-      ]
-    },
-    {
-      "id": "worker",
-      "type": "backend",
-      "label": "Trabajador / RabbitMQ",
-      "sublabel": "Proceso y escalado separados",
+      "label": "Gateway / balanceador · NGINX + ModSecurity",
+      "sublabel": "HTTPS, filtrado y reparto a instancias saludables; clientes y API se despliegan por separado",
+      "tag": "Perímetro fuera del proceso de la API",
       "pos": [
         40,
-        300
+        150
       ],
       "size": [
-        230,
-        72
+        1660,
+        60
       ],
       "sources": [
         {
-          "path": "docs/02-arquitectura-software/estilo-arquitectonico.md"
+          "path": "docs/04-modelo-c4/Nivel3-Diagrama-de-Componentes.md"
+        },
+        {
+          "path": "docs/02-arquitectura-software/componentes-arquitectonicos.md"
+        }
+      ]
+    },
+    {
+      "id": "transversales",
+      "type": "security",
+      "label": "NestJS · controles transversales de entrada",
+      "sublabel": "JWT y RBAC en rutas privadas · institución, asignación y titularidad · DTO, formato e integridad",
+      "tag": "Consulta pública sin JWT · auditoría en la transacción de la mutación",
+      "pos": [
+        40,
+        260
+      ],
+      "size": [
+        1660,
+        60
+      ],
+      "sources": [
+        {
+          "path": "docs/04-modelo-c4/Nivel3-Diagrama-de-Componentes.md"
+        },
+        {
+          "path": "docs/02-arquitectura-software/componentes-arquitectonicos.md"
+        }
+      ]
+    },
+    {
+      "id": "identity_controller",
+      "type": "frontend",
+      "label": "IdentityController",
+      "sublabel": "Usuarios, roles y recuperación",
+      "tag": "IDENTIDAD",
+      "pos": [
+        40,
+        370
+      ],
+      "size": [
+        210,
+        65
+      ],
+      "sources": [
+        {
+          "path": "docs/04-modelo-c4/Nivel3-Diagrama-de-Componentes.md"
+        },
+        {
+          "path": "docs/02-arquitectura-software/componentes-arquitectonicos.md"
+        }
+      ]
+    },
+    {
+      "id": "identity_service",
+      "type": "backend",
+      "label": "IdentityService",
+      "sublabel": "Sesión y administración de permisos",
+      "tag": "API pública del módulo",
+      "pos": [
+        40,
+        600
+      ],
+      "size": [
+        210,
+        65
+      ],
+      "sources": [
+        {
+          "path": "docs/04-modelo-c4/Nivel3-Diagrama-de-Componentes.md"
+        },
+        {
+          "path": "docs/02-arquitectura-software/componentes-arquitectonicos.md"
+        }
+      ]
+    },
+    {
+      "id": "identity_repository",
+      "type": "cloud",
+      "label": "Persistencia de identidad",
+      "sublabel": "Usuarios, roles y sesiones",
+      "tag": "SQL / TLS · primaria",
+      "pos": [
+        40,
+        850
+      ],
+      "size": [
+        210,
+        75
+      ],
+      "sources": [
+        {
+          "path": "docs/04-modelo-c4/Nivel3-Diagrama-de-Componentes.md"
+        },
+        {
+          "path": "docs/02-arquitectura-software/componentes-arquitectonicos.md"
+        }
+      ]
+    },
+    {
+      "id": "management_controller",
+      "type": "frontend",
+      "label": "ManagementController",
+      "sublabel": "Padrón, vigencias y planificación",
+      "tag": "PADRÓN / RIESGO / OPERATIVOS",
+      "pos": [
+        330,
+        370
+      ],
+      "size": [
+        210,
+        65
+      ],
+      "sources": [
+        {
+          "path": "docs/04-modelo-c4/Nivel3-Diagrama-de-Componentes.md"
+        },
+        {
+          "path": "docs/02-arquitectura-software/componentes-arquitectonicos.md"
+        }
+      ]
+    },
+    {
+      "id": "management_service",
+      "type": "backend",
+      "label": "ProviderService",
+      "sublabel": "Ficha y validaciones pendientes",
+      "tag": "API pública del módulo",
+      "pos": [
+        330,
+        500
+      ],
+      "size": [
+        210,
+        65
+      ],
+      "sources": [
+        {
+          "path": "docs/04-modelo-c4/Nivel3-Diagrama-de-Componentes.md"
+        },
+        {
+          "path": "docs/02-arquitectura-software/componentes-arquitectonicos.md"
+        }
+      ]
+    },
+    {
+      "id": "management_repository",
+      "type": "cloud",
+      "label": "Repositorios de gestión",
+      "sublabel": "ProviderRepository · OperativoRepository",
+      "tag": "SQL / TLS · primaria",
+      "pos": [
+        330,
+        850
+      ],
+      "size": [
+        210,
+        75
+      ],
+      "sources": [
+        {
+          "path": "docs/04-modelo-c4/Nivel3-Diagrama-de-Componentes.md"
+        },
+        {
+          "path": "docs/02-arquitectura-software/componentes-arquitectonicos.md"
+        }
+      ]
+    },
+    {
+      "id": "inspection_controller",
+      "type": "frontend",
+      "label": "InspectionController",
+      "sublabel": "Operación estable y evidencias",
+      "tag": "INSPECCIONES",
+      "pos": [
+        620,
+        370
+      ],
+      "size": [
+        210,
+        65
+      ],
+      "sources": [
+        {
+          "path": "docs/04-modelo-c4/Nivel3-Diagrama-de-Componentes.md"
+        },
+        {
+          "path": "docs/02-arquitectura-software/componentes-arquitectonicos.md"
+        }
+      ]
+    },
+    {
+      "id": "inspection_service",
+      "type": "backend",
+      "label": "InspectionService",
+      "sublabel": "RegistrarInspeccionCasoUso",
+      "tag": "API pública del módulo",
+      "pos": [
+        620,
+        600
+      ],
+      "size": [
+        210,
+        65
+      ],
+      "sources": [
+        {
+          "path": "docs/04-modelo-c4/Nivel3-Diagrama-de-Componentes.md"
+        },
+        {
+          "path": "docs/02-arquitectura-software/componentes-arquitectonicos.md"
+        }
+      ]
+    },
+    {
+      "id": "inspection_repository",
+      "type": "cloud",
+      "label": "InspectionRepository",
+      "sublabel": "AuditoriaPort · unidad de trabajo T1",
+      "tag": "SQL / TLS · primaria",
+      "pos": [
+        620,
+        850
+      ],
+      "size": [
+        210,
+        75
+      ],
+      "sources": [
+        {
+          "path": "docs/04-modelo-c4/Nivel3-Diagrama-de-Componentes.md"
+        },
+        {
+          "path": "docs/02-arquitectura-software/componentes-arquitectonicos.md"
+        }
+      ]
+    },
+    {
+      "id": "claims_controller",
+      "type": "frontend",
+      "label": "AdministradoController",
+      "sublabel": "Expediente propio y descargos",
+      "tag": "SUBSANACIONES",
+      "pos": [
+        910,
+        370
+      ],
+      "size": [
+        210,
+        65
+      ],
+      "sources": [
+        {
+          "path": "docs/04-modelo-c4/Nivel3-Diagrama-de-Componentes.md"
+        },
+        {
+          "path": "docs/02-arquitectura-software/componentes-arquitectonicos.md"
+        }
+      ]
+    },
+    {
+      "id": "claims_service",
+      "type": "backend",
+      "label": "SubsanacionService",
+      "sublabel": "Plazos y evaluación autorizada",
+      "tag": "API pública del módulo",
+      "pos": [
+        910,
+        600
+      ],
+      "size": [
+        210,
+        65
+      ],
+      "sources": [
+        {
+          "path": "docs/04-modelo-c4/Nivel3-Diagrama-de-Componentes.md"
+        },
+        {
+          "path": "docs/02-arquitectura-software/componentes-arquitectonicos.md"
+        }
+      ]
+    },
+    {
+      "id": "claims_repository",
+      "type": "cloud",
+      "label": "SubsanacionRepository",
+      "sublabel": "Descargos y resoluciones propios",
+      "tag": "SQL / TLS · primaria",
+      "pos": [
+        910,
+        850
+      ],
+      "size": [
+        210,
+        75
+      ],
+      "sources": [
+        {
+          "path": "docs/04-modelo-c4/Nivel3-Diagrama-de-Componentes.md"
+        },
+        {
+          "path": "docs/02-arquitectura-software/componentes-arquitectonicos.md"
+        }
+      ]
+    },
+    {
+      "id": "query_controller",
+      "type": "frontend",
+      "label": "PublicQueryController",
+      "sublabel": "Directorio y QR sin JWT",
+      "tag": "CONSULTA PÚBLICA",
+      "pos": [
+        1200,
+        370
+      ],
+      "size": [
+        210,
+        65
+      ],
+      "sources": [
+        {
+          "path": "docs/04-modelo-c4/Nivel3-Diagrama-de-Componentes.md"
+        },
+        {
+          "path": "docs/02-arquitectura-software/componentes-arquitectonicos.md"
+        }
+      ]
+    },
+    {
+      "id": "query_service",
+      "type": "backend",
+      "label": "PublicQueryService",
+      "sublabel": "Ficha de formalidad versionada",
+      "tag": "API pública del módulo",
+      "pos": [
+        1200,
+        600
+      ],
+      "size": [
+        210,
+        65
+      ],
+      "sources": [
+        {
+          "path": "docs/04-modelo-c4/Nivel3-Diagrama-de-Componentes.md"
+        },
+        {
+          "path": "docs/02-arquitectura-software/componentes-arquitectonicos.md"
+        }
+      ]
+    },
+    {
+      "id": "query_repository",
+      "type": "cloud",
+      "label": "CacheRepository",
+      "sublabel": "ConsultaPublicaRepository",
+      "tag": "RESP / TLS · revalida primaria",
+      "pos": [
+        1200,
+        850
+      ],
+      "size": [
+        210,
+        75
+      ],
+      "sources": [
+        {
+          "path": "docs/04-modelo-c4/Nivel3-Diagrama-de-Componentes.md"
+        },
+        {
+          "path": "docs/02-arquitectura-software/componentes-arquitectonicos.md"
+        }
+      ]
+    },
+    {
+      "id": "metrics_controller",
+      "type": "frontend",
+      "label": "IndicadoresController",
+      "sublabel": "Reportes privados autorizados",
+      "tag": "INDICADORES",
+      "pos": [
+        1490,
+        370
+      ],
+      "size": [
+        210,
+        65
+      ],
+      "sources": [
+        {
+          "path": "docs/04-modelo-c4/Nivel3-Diagrama-de-Componentes.md"
+        },
+        {
+          "path": "docs/02-arquitectura-software/componentes-arquitectonicos.md"
+        }
+      ]
+    },
+    {
+      "id": "metrics_service",
+      "type": "backend",
+      "label": "IndicadoresService",
+      "sublabel": "Distrito, periodo y fecha de corte",
+      "tag": "API pública del módulo",
+      "pos": [
+        1490,
+        600
+      ],
+      "size": [
+        210,
+        65
+      ],
+      "sources": [
+        {
+          "path": "docs/04-modelo-c4/Nivel3-Diagrama-de-Componentes.md"
+        },
+        {
+          "path": "docs/02-arquitectura-software/componentes-arquitectonicos.md"
+        }
+      ]
+    },
+    {
+      "id": "metrics_repository",
+      "type": "cloud",
+      "label": "IndicadoresRepository",
+      "sublabel": "Proyecciones autorizadas de lectura",
+      "tag": "SQL / TLS · réplica",
+      "pos": [
+        1490,
+        850
+      ],
+      "size": [
+        210,
+        75
+      ],
+      "sources": [
+        {
+          "path": "docs/04-modelo-c4/Nivel3-Diagrama-de-Componentes.md"
+        },
+        {
+          "path": "docs/02-arquitectura-software/componentes-arquitectonicos.md"
+        }
+      ]
+    },
+    {
+      "id": "risk_service",
+      "type": "backend",
+      "label": "RiskAssessmentEngine",
+      "sublabel": "Criticidad y política versionada",
+      "tag": "Módulo Riesgo · RF07",
+      "pos": [
+        330,
+        600
+      ],
+      "size": [
+        210,
+        65
+      ],
+      "sources": [
+        {
+          "path": "docs/04-modelo-c4/Nivel3-Diagrama-de-Componentes.md"
+        },
+        {
+          "path": "docs/02-arquitectura-software/componentes-arquitectonicos.md"
+        }
+      ]
+    },
+    {
+      "id": "operations_service",
+      "type": "backend",
+      "label": "OperativoService",
+      "sublabel": "Campañas, asignación y versionRuta",
+      "tag": "Módulo Operativos · RF08",
+      "pos": [
+        330,
+        700
+      ],
+      "size": [
+        210,
+        65
+      ],
+      "sources": [
+        {
+          "path": "docs/04-modelo-c4/Nivel3-Diagrama-de-Componentes.md"
+        },
+        {
+          "path": "docs/02-arquitectura-software/componentes-arquitectonicos.md"
+        }
+      ]
+    },
+    {
+      "id": "persistence",
+      "type": "database",
+      "label": "Recursos de persistencia fuera de la API · PostgreSQL primaria / réplica · Redis · S3",
+      "sublabel": "Primaria: escrituras, auditoría y outbox · réplica: reportes · Redis: proyección pública ≤ 60 s · S3: originales, firma y PDF",
+      "tag": "S3 vía EvidenceManager / StorageAdapter · PDF y avisos en trabajador separado · tablas y repositorios propios por módulo",
+      "pos": [
+        40,
+        1000
+      ],
+      "size": [
+        1660,
+        65
+      ],
+      "sources": [
+        {
+          "path": "docs/04-modelo-c4/Nivel3-Diagrama-de-Componentes.md"
+        },
+        {
+          "path": "docs/02-arquitectura-software/componentes-arquitectonicos.md"
         }
       ]
     }
   ],
   "connections": [
     {
-      "id": "clients-presentation",
-      "from": "clients",
-      "to": "presentation",
-      "label": "HTTPS / REST",
+      "id": "institucional--gateway",
+      "from": "institucional",
+      "to": "gateway",
+      "label": "HTTPS",
       "variant": "default"
     },
     {
-      "id": "presentation-application",
-      "from": "presentation",
-      "to": "application",
+      "id": "administrado--gateway",
+      "from": "administrado",
+      "to": "gateway",
+      "label": "HTTPS",
+      "variant": "default"
+    },
+    {
+      "id": "ciudadano--gateway",
+      "from": "ciudadano",
+      "to": "gateway",
+      "label": "HTTPS",
+      "variant": "default"
+    },
+    {
+      "id": "gateway--transversales",
+      "from": "gateway",
+      "to": "transversales",
+      "label": "REST / JSON",
+      "variant": "default"
+    },
+    {
+      "id": "transversales--identity_controller",
+      "from": "transversales",
+      "to": "identity_controller",
+      "variant": "default"
+    },
+    {
+      "id": "identity_controller--identity_service",
+      "from": "identity_controller",
+      "to": "identity_service",
       "label": "Invoca",
+      "variant": "emphasis"
+    },
+    {
+      "id": "identity_service--identity_repository",
+      "from": "identity_service",
+      "to": "identity_repository",
+      "label": "Por contrato",
       "variant": "default"
     },
     {
-      "id": "application-infra",
-      "from": "application",
-      "to": "infra",
-      "label": "Por puerto",
+      "id": "identity_repository--persistence",
+      "from": "identity_repository",
+      "to": "persistence",
       "variant": "default"
     },
     {
-      "id": "infra-stores",
-      "from": "infra",
-      "to": "stores",
-      "label": "SQL / HTTPS",
+      "id": "transversales--management_controller",
+      "from": "transversales",
+      "to": "management_controller",
       "variant": "default"
     },
     {
-      "id": "worker-stores",
-      "from": "worker",
-      "to": "stores",
-      "label": "Outbox / T2",
+      "id": "management_controller--management_service",
+      "from": "management_controller",
+      "to": "management_service",
+      "label": "Invoca",
+      "variant": "emphasis"
+    },
+    {
+      "id": "management_service--management_repository",
+      "from": "management_service",
+      "to": "management_repository",
+      "label": "Por contrato",
       "variant": "default"
+    },
+    {
+      "id": "management_repository--persistence",
+      "from": "management_repository",
+      "to": "persistence",
+      "variant": "default"
+    },
+    {
+      "id": "transversales--inspection_controller",
+      "from": "transversales",
+      "to": "inspection_controller",
+      "variant": "default"
+    },
+    {
+      "id": "inspection_controller--inspection_service",
+      "from": "inspection_controller",
+      "to": "inspection_service",
+      "label": "Invoca",
+      "variant": "emphasis"
+    },
+    {
+      "id": "inspection_service--inspection_repository",
+      "from": "inspection_service",
+      "to": "inspection_repository",
+      "label": "Por contrato",
+      "variant": "default"
+    },
+    {
+      "id": "inspection_repository--persistence",
+      "from": "inspection_repository",
+      "to": "persistence",
+      "variant": "default"
+    },
+    {
+      "id": "transversales--claims_controller",
+      "from": "transversales",
+      "to": "claims_controller",
+      "variant": "default"
+    },
+    {
+      "id": "claims_controller--claims_service",
+      "from": "claims_controller",
+      "to": "claims_service",
+      "label": "Invoca",
+      "variant": "emphasis"
+    },
+    {
+      "id": "claims_service--claims_repository",
+      "from": "claims_service",
+      "to": "claims_repository",
+      "label": "Por contrato",
+      "variant": "default"
+    },
+    {
+      "id": "claims_repository--persistence",
+      "from": "claims_repository",
+      "to": "persistence",
+      "variant": "default"
+    },
+    {
+      "id": "transversales--query_controller",
+      "from": "transversales",
+      "to": "query_controller",
+      "variant": "default"
+    },
+    {
+      "id": "query_controller--query_service",
+      "from": "query_controller",
+      "to": "query_service",
+      "label": "Invoca",
+      "variant": "emphasis"
+    },
+    {
+      "id": "query_service--query_repository",
+      "from": "query_service",
+      "to": "query_repository",
+      "label": "Por contrato",
+      "variant": "default"
+    },
+    {
+      "id": "query_repository--persistence",
+      "from": "query_repository",
+      "to": "persistence",
+      "variant": "default"
+    },
+    {
+      "id": "transversales--metrics_controller",
+      "from": "transversales",
+      "to": "metrics_controller",
+      "variant": "default"
+    },
+    {
+      "id": "metrics_controller--metrics_service",
+      "from": "metrics_controller",
+      "to": "metrics_service",
+      "label": "Invoca",
+      "variant": "emphasis"
+    },
+    {
+      "id": "metrics_service--metrics_repository",
+      "from": "metrics_service",
+      "to": "metrics_repository",
+      "label": "Por contrato",
+      "variant": "default"
+    },
+    {
+      "id": "metrics_repository--persistence",
+      "from": "metrics_repository",
+      "to": "persistence",
+      "variant": "default"
+    },
+    {
+      "id": "management_service--risk_service",
+      "from": "management_service",
+      "to": "risk_service",
+      "label": "Evalúa",
+      "variant": "dashed"
+    },
+    {
+      "id": "management_service--operations_service",
+      "from": "management_service",
+      "to": "operations_service",
+      "label": "Coordina",
+      "variant": "dashed"
+    },
+    {
+      "id": "operations_service--management_repository",
+      "from": "operations_service",
+      "to": "management_repository",
+      "label": "Persiste",
+      "variant": "default"
+    },
+    {
+      "id": "inspection_service--operations_service",
+      "from": "inspection_service",
+      "to": "operations_service",
+      "label": "Valida asignación",
+      "variant": "dashed"
+    },
+    {
+      "id": "management_controller--claims_service",
+      "from": "management_controller",
+      "to": "claims_service",
+      "label": "Delega evaluación",
+      "variant": "dashed"
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "BACKEND API · Node.js / NestJS / TypeScript · módulos desplegados juntos; llamadas internas en memoria",
+      "wraps": [
+        "transversales",
+        "identity_controller",
+        "management_controller",
+        "inspection_controller",
+        "claims_controller",
+        "query_controller",
+        "metrics_controller",
+        "identity_service",
+        "management_service",
+        "inspection_service",
+        "claims_service",
+        "query_service",
+        "metrics_service",
+        "risk_service",
+        "operations_service",
+        "identity_repository",
+        "management_repository",
+        "inspection_repository",
+        "claims_repository",
+        "query_repository",
+        "metrics_repository"
+      ],
+      "pad": 32
+    },
+    {
+      "kind": "region",
+      "label": "1 · PRESENTACIÓN · controladores REST y traducción de entradas / resultados",
+      "wraps": [
+        "identity_controller",
+        "management_controller",
+        "inspection_controller",
+        "claims_controller",
+        "query_controller",
+        "metrics_controller"
+      ],
+      "pad": 24
+    },
+    {
+      "kind": "region",
+      "label": "2 · APLICACIÓN Y DOMINIO · reglas, casos de uso y colaboración por APIs públicas",
+      "wraps": [
+        "identity_service",
+        "management_service",
+        "inspection_service",
+        "claims_service",
+        "query_service",
+        "metrics_service",
+        "risk_service",
+        "operations_service"
+      ],
+      "pad": 24
+    },
+    {
+      "kind": "region",
+      "label": "3 · INFRAESTRUCTURA Y DATOS · repositorios y adaptadores; propiedad lógica por módulo",
+      "wraps": [
+        "identity_repository",
+        "management_repository",
+        "inspection_repository",
+        "claims_repository",
+        "query_repository",
+        "metrics_repository"
+      ],
+      "pad": 24
     }
   ],
   "cards": [
     {
       "dot": "cyan",
-      "title": "Módulos institucionales",
+      "title": "Lectura de las relaciones",
       "items": [
-        "Identidad, padrón, riesgo, operativos, inspecciones, subsanaciones, consulta, indicadores y auditoría.",
-        "Se despliegan juntos; llamadas internas en memoria por APIs públicas."
+        "Invoca: controlador a servicio. Por contrato: servicio a su persistencia privada.",
+        "Líneas discontinuas: colaboración en memoria a través de la API pública del módulo receptor; nunca acceso a repositorios ajenos.",
+        "Las conexiones a la barra inferior usan los protocolos de cada repositorio: primaria, réplica o Redis. S3 se accede mediante StorageAdapter."
       ]
     },
     {
-      "dot": "cyan",
-      "title": "Propiedad de datos",
+      "dot": "emerald",
+      "title": "Reglas de la arquitectura",
       "items": [
-        "Cada módulo controla sus tablas y repositorios.",
-        "API sin estado; generación de PDF y avisos en trabajador independiente."
+        "Los módulos de la API se publican juntos y mantienen propiedad lógica de tablas y repositorios.",
+        "Las dependencias internas siguen Clean Architecture; esta vista muestra colaboración en ejecución, no imports de código.",
+        "Datos, auditoría y outbox se confirman juntos. La emisión de PDF y los avisos se ejecutan en el trabajador independiente."
       ]
     },
     {
       "dot": "slate",
-      "title": "Alcance del diseño",
+      "title": "Alcance y límites",
       "items": [
-        "Arquitectura propuesta; implementación y validación pendientes.",
-        "La presencia de RabbitMQ no convierte los módulos en microservicios."
+        "La columna de gestión reúne Padrón, Riesgo y Operativos por legibilidad; conservan sus responsabilidades y contratos de módulo.",
+        "Los accesos a SUNAT, MINCETUR y GIS y las conexiones del trabajador se detallan en C4 niveles 2 y 3.",
+        "Un proceso por instancia de la API; sus instancias sin estado se replican detrás del balanceador. El trabajador escala por separado."
       ]
     }
   ]
